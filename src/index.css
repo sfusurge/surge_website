@@ -1,3 +1,26 @@
+:root {
+  --color-text-body: #1c307a;
+  --color-image-background: #7ca6ee;
+  --color-button-primary: #568cdb;
+  --color-button-secondary: #6d97d5;
+  --color-background-primary: #f6f6f6;
+  --color-button-dropdown: #b2cbf5;
+  --font-header: 700 24px Barlow;
+  --font-body-heading: 600 36px Barlow;
+  --font-body-title: 600 20px Barlow;
+  --font-text-body: 400 16px Barlow;
+}
+
+@media only screen and (min-width: 600px) {
+  :root {
+    --font-header: 800 72px Barlow;
+    --font-body-heading: 600 64px Barlow;
+    --font-body-subheading: 800 30px Barlow;
+    --font-body-title: 800 50px Barlow;
+    --font-text-body: 600 20px Barlow;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
