@@ -1,0 +1,98 @@
+#container {
+  width: 82%;
+  margin: auto;
+  color: #ffffff;
+  height: 275px;
+  margin-bottom: 36px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-275px);
+  margin-top: 37px;
+  height: 73px;
+}
+
+.date {
+  width: 18%;
+  text-align: right;
+}
+
+.date h1,
+.date h2 {
+  font: var(--font-upcomingEvent-date);
+  margin: 0;
+}
+
+.date h2 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.divider {
+  background: #ffffff center;
+  width: 2px;
+  height: 64px;
+  margin: 0 16px 0 16px;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  width: 60%;
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.backgroundBody {
+  width: calc(100% - 47px);
+  height: 275px;
+}
+
+.backgroundEdge {
+  width: 47px;
+  height: 275px;
+  transform: translateX(-1px);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+  transform: translateY(-275px);
+  margin-top: 25px;
+}
+
+.details {
+  width: 85%;
+  display: flex;
+  padding-left: 12%;
+}
+
+.details * {
+  margin: 0 5px;
+}
+
+.details a {
+  color: #ffffff;
+}
+
+.fbEvent {
+  width: 75%;
+  border: #ffffff solid;
+  border-width: 1px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 25px auto 0 auto;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
