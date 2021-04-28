@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 11%;
+}
+
+.textTitle {
+  margin-top: 10px;
+  margin-bottom: 14px;
+  font: var(--font-body-title);
+}
+
+.textBody {
+  margin: 0;
+  font: var(--font-text-body);
+}
+
+.text {
+  margin-left: 11%;
+  margin-right: 11%;
+}

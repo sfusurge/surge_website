@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
+import Activity from './components/Activity.js'
 import styles from './css/App.module.css'
 
 const App = () => {
@@ -7,9 +7,9 @@ const App = () => {
     <div id={styles.app}>
       <Router>
         <Switch>
-          {/* <Route path="/path">
-            <Component />
-          </Route> */}
+          <Route path="/path">
+            <Activity />
+          </Route>
         </Switch>
       </Router>
     </div>
