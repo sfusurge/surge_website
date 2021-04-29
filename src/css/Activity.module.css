@@ -1,11 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;
+}
+
+.image {
   margin-left: 11%;
+  margin-bottom: 10px;
 }
 
 .textTitle {
-  margin-top: 10px;
   margin-bottom: 14px;
   font: var(--font-body-title);
 }
@@ -18,4 +21,14 @@
 .text {
   margin-left: 11%;
   margin-right: 11%;
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    flex-direction: row;
+  }
+  .image {
+    width: 100%;
+    margin-bottom: 10%;
+  }
 }

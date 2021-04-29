@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Activity from './components/Activity.js'
+import ActivityList from './components/ActivityList.js'
 import styles from './css/App.module.css'
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route path="/path">
-            <Activity />
+            <ActivityList />
           </Route>
         </Switch>
       </Router>

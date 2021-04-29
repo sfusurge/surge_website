@@ -14,3 +14,18 @@
   right: 18%;
   position: absolute;
 }
+
+@media only screen and (min-width: 900px) {
+  .squareBackground {
+    width: 90%;
+    height: calc(35vh);
+    background-color: var(--color-image-background);
+  }
+
+  .image {
+    width: 80%;
+    top: 3%;
+    right: 3%;
+    position: absolute;
+  }
+}

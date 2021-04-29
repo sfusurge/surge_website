@@ -1,21 +1,18 @@
 import useMediaQuery from '../utils/useMediaQuery'
 import ActivityImage from './ActivityImage.js'
 import styles from '../css/Activity.module.css'
-import scooter from '../assets/scooter.svg'
 
 const Activity = props => {
+  const isDesktop = useMediaQuery('(min-width: 600px)')
+
   return (
-    <div>
-      <div className={styles.container}>
-        <ActivityImage image={scooter}></ActivityImage>
+    <div className={styles.container}>
+      <div className={styles.image}>
+        <ActivityImage image={props.image}></ActivityImage>
       </div>
       <div className={styles.text}>
-        <p className={styles.textTitle}>Projects</p>
-        <p className={styles.textBody}>
-          Surge Projects enables passionate and goal-oriented students in
-          software development and design by allowing them to build innovative
-          and practical projects in the span of a semester.
-        </p>
+        <p className={styles.textTitle}>{props.textTitle}</p>
+        <p className={styles.textBody}>{props.textBody}</p>
       </div>
     </div>
   )
