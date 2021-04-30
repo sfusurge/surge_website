@@ -1,0 +1,14 @@
+.title {
+  margin-bottom: 19px;
+  text-align: center;
+  font: var(--font-body-title);
+  color: var(--color-text-body);
+}
+
+@media only screen and (min-width: 900px) {
+  .title {
+    margin-bottom: 98px;
+    margin-left: 7%;
+    text-align: left;
+  }
+}

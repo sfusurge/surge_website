@@ -1,14 +1,15 @@
-import useMediaQuery from '../utils/useMediaQuery'
 import ActivityImage from './ActivityImage.js'
 import styles from '../css/Activity.module.css'
 
 const Activity = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
-
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <ActivityImage image={props.image}></ActivityImage>
+        <ActivityImage
+          image={props.image}
+          styling={props.styling}
+          alt={props.altText}
+        ></ActivityImage>
       </div>
       <div className={styles.text}>
         <p className={styles.textTitle}>{props.textTitle}</p>

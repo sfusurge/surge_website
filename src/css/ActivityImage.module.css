@@ -10,22 +10,15 @@
 
 .image {
   width: 70%;
-  top: 3%;
+  top: 5%;
   right: 18%;
   position: absolute;
 }
 
 @media only screen and (min-width: 900px) {
   .squareBackground {
-    width: 90%;
-    height: calc(35vh);
+    height: calc(26vw);
     background-color: var(--color-image-background);
-  }
-
-  .image {
-    width: 80%;
-    top: 3%;
-    right: 3%;
-    position: absolute;
+    margin-right: 0;
   }
 }

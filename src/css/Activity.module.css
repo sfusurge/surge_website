@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 46px;
 }
 
 .image {
@@ -11,24 +12,34 @@
 .textTitle {
   margin-bottom: 14px;
   font: var(--font-body-title);
+  color: var(--color-text-body);
 }
 
 .textBody {
   margin: 0;
+  margin-right: 12%;
   font: var(--font-text-body);
+  color: var(--color-text-body);
 }
 
 .text {
   margin-left: 11%;
-  margin-right: 11%;
+  width: 100%;
 }
 
 @media only screen and (min-width: 900px) {
   .container {
     flex-direction: row;
+    align-items: center;
+    margin-bottom: 10vh;
   }
   .image {
     width: 100%;
-    margin-bottom: 10%;
+    margin-left: 7%;
+    margin-bottom: 0;
+  }
+  .text {
+    margin-left: 0%;
+    margin-right: 23%;
   }
 }
