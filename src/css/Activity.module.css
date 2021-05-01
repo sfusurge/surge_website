@@ -17,7 +17,7 @@
 
 .textBody {
   margin: 0;
-  margin-right: 12%;
+  margin-right: 11%;
   font: var(--font-text-body);
   color: var(--color-text-body);
 }
@@ -27,7 +27,7 @@
   width: 100%;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 600px) {
   .container {
     flex-direction: row;
     align-items: center;
@@ -41,5 +41,6 @@
   .text {
     margin-left: 0%;
     margin-right: 23%;
+    padding-bottom: 8%;
   }
 }
