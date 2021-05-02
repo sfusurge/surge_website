@@ -8,7 +8,7 @@ const Leetcode = props => {
     <div className={styles.container}>
       <LeetcodeText />
       <div>
-        <img src={laptopMonitor} className></img>
+        <img className={styles.image} src={laptopMonitor} className></img>
       </div>
     </div>
   )
