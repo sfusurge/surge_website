@@ -1,7 +1,19 @@
 .container {
+  position: relative;
   background-color: var(--color-image-background);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vh), 0 100%);
+  margin-bottom: -5vh;
+}
+
+.innerContainer {
+  height: calc(35vw);
+  background-color: var(--color-button-dropdown);
 }
 
 .image {
+  position: relative;
   width: 85%;
+  margin-left: 8%;
+  margin-right: 8%;
+  transform: translateY(calc(-50% + 5vw));
 }
