@@ -1,4 +1,3 @@
-import useMediaQuery from '../utils/useMediaQuery'
 import LeetcodeText from './LeetcodeText.js'
 import laptopMonitor from '../assets/laptop-monitor.svg'
 import styles from '../css/Leetcode.module.css'
@@ -10,7 +9,11 @@ const Leetcode = props => {
         <LeetcodeText />
       </div>
       <div className={styles.innerContainer}>
-        <img src={laptopMonitor} className={styles.image}></img>
+        <img
+          src={laptopMonitor}
+          className={styles.image}
+          alt="Laptop Monitor"
+        ></img>
       </div>
     </div>
   )

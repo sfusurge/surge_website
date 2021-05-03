@@ -38,3 +38,8 @@
 .linkContainer {
   width: 94%;
 }
+
+.clearLinks {
+  border: none;
+  text-decoration: none;
+}

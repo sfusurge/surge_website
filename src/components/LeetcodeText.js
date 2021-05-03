@@ -1,4 +1,3 @@
-import useMediaQuery from '../utils/useMediaQuery'
 import styles from '../css/LeetcodeText.module.css'
 
 const LeetcodeText = props => {
@@ -11,7 +10,12 @@ const LeetcodeText = props => {
         helps students to excel in technical interviews.
       </p>
       <div className={styles.linkContainer}>
-        <a>
+        <a
+          className={styles.clearLinks}
+          href="https://www.facebook.com/sfusurge/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className={styles.btnContainer}>
             <p className={styles.btnText}>Facebook Event</p>
           </div>
