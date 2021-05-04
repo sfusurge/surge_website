@@ -5,10 +5,10 @@ import styles from '../css/Leetcode.module.css'
 const Leetcode = props => {
   return (
     <div>
-      <div className={styles.container}>
+      <div className={styles.textContainer}>
         <LeetcodeText />
       </div>
-      <div className={styles.innerContainer}>
+      <div className={styles.imageContainer}>
         <img
           src={laptopMonitor}
           className={styles.image}
