@@ -4,6 +4,14 @@ import styles from '../css/Note.module.css'
 const Note = ({ children, primaryColor, secondaryColor }) => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
 
+  if (!primaryColor) {
+    primaryColor = '#3D73C7'
+  }
+
+  if (!secondaryColor) {
+    secondaryColor = '#2B5699'
+  }
+
   return (
     <div
       className={styles.container}
@@ -25,7 +33,7 @@ const Note = ({ children, primaryColor, secondaryColor }) => {
           >
             <path
               d="M72.2627 0.610107L0.262695 53.6101C3.35196 39.8428 4.147 32.1699 0.262695 15.1101C29.4332 16.0221 45.0596 11.9848 72.2627 0.610107Z"
-              fill={secondaryColor || '#2B5699'}
+              fill={secondaryColor}
             />
           </svg>
         ) : (
@@ -39,25 +47,12 @@ const Note = ({ children, primaryColor, secondaryColor }) => {
           >
             <path
               d="M47.4272 0.845703L0.975586 35.0393C2.96866 26.1571 3.48159 21.2069 0.975586 10.2005C19.7953 10.7889 29.8768 8.18422 47.4272 0.845703Z"
-              fill={secondaryColor || '#2B5699'}
+              fill={secondaryColor}
             />
           </svg>
         )}
       </div>
-      <div
-        className={styles.hiddenTriangle}
-        style={
-          isDesktop
-            ? {
-                borderLeft: '74px solid transparent',
-                borderBottom: '54px solid var(--color-background-primary)'
-              }
-            : {
-                borderLeft: '47px solid transparent',
-                borderBottom: '35px solid var(--color-background-primary)'
-              }
-        }
-      />
+      <div className={styles.hiddenTriangle} />
     </div>
   )
 }

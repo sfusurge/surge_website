@@ -18,30 +18,15 @@ const UpcomingEvent = ({
   const isDesktop = useMediaQuery('(min-width: 600px)')
   return (
     <Note primaryColor={primaryColor} secondaryColor={secondaryColor}>
-      <div
-        className={styles.container}
-        style={
-          isDesktop
-            ? { padding: '50px 42px 70px 34px' }
-            : { padding: '33px 25px 50px 22px' }
-        }
-      >
+      <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.date}>
             <h1>{day}</h1>
             <h2>{month}</h2>
           </div>
-          <div
-            className={styles.divider}
-            style={isDesktop ? { height: '100px' } : { height: '65px' }}
-          />
+          <div className={styles.divider} />
           <div className={styles.detailsContainer}>
-            <h1
-              className={styles.title}
-              style={isDesktop ? { whiteSpace: 'nowrap' } : {}}
-            >
-              {title}
-            </h1>
+            <h1 className={styles.title}>{title}</h1>
             {isDesktop && (
               <>
                 <div className={styles.details}>
@@ -73,15 +58,7 @@ const UpcomingEvent = ({
               </div>
             </div>
           )}
-          <a
-            className={styles.fbEvent}
-            href={fbEvent}
-            style={
-              isDesktop
-                ? { padding: '12px 0' }
-                : { margin: '25px 0 0', padding: '7px 0' }
-            }
-          >
+          <a className={styles.fbEvent} href={fbEvent}>
             Facebook Event
           </a>
         </div>
