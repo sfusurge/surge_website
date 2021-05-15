@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  background-color: var(--primary-color);
+  border-top: 7px solid var(--secondary-color);
+  width: fit-content;
+}
+
+.pageCurl {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.borderEdge {
+  display: block;
+  z-index: 1;
+}
+
+.hiddenTriangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}

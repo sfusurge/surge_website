@@ -1,24 +1,16 @@
-#container {
-  width: 82%;
-  margin: auto;
-  color: #ffffff;
-  height: 275px;
-  margin-bottom: 36px;
+.container {
+  width: min-content;
 }
 
 .header {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  transform: translateY(-275px);
-  margin-top: 37px;
-  height: 73px;
+  color: #ffffff;
 }
 
 .date {
-  width: 18%;
-  text-align: right;
+  text-align: center;
 }
 
 .date h1,
@@ -29,14 +21,12 @@
 
 .date h2 {
   font-size: 20px;
-  margin-bottom: 4px;
 }
 
 .divider {
-  background: #ffffff center;
-  width: 2px;
-  height: 64px;
-  margin: 0 16px 0 16px;
+  background: #ffffff;
+  border-left: 1px solid;
+  margin: 0 20px;
 }
 
 .detailsContainer {
@@ -44,22 +34,33 @@
   flex-direction: column;
 }
 
+.detailsContainerMobile {
+  margin-left: 10px;
+}
+
 .title {
-  width: 60%;
   font-size: 30px;
   font-weight: 800;
   margin: 0;
 }
 
-.backgroundBody {
-  width: calc(100% - 47px);
-  height: 275px;
+.details {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  white-space: nowrap;
 }
 
-.backgroundEdge {
-  width: 47px;
-  height: 275px;
-  transform: translateX(-1px);
+.details * {
+  margin: 0 5px;
+}
+
+.location {
+  font: var(--font-notes-body);
+}
+
+.time {
+  font: var(--font-notes-body);
 }
 
 .body {
@@ -67,32 +68,16 @@
   flex-direction: column;
   justify-content: center;
   font-weight: 600;
-  transform: translateY(-275px);
-  margin-top: 25px;
-}
-
-.details {
-  width: 85%;
-  display: flex;
-  padding-left: 12%;
-}
-
-.details * {
-  margin: 0 5px;
-}
-
-.details a {
   color: #ffffff;
+  margin-top: 20px;
 }
 
 .fbEvent {
-  width: 75%;
-  border: #ffffff solid;
+  width: 100%;
+  border: solid;
   border-width: 1px;
   color: white;
   text-decoration: none;
   text-align: center;
-  margin: 25px auto 0 auto;
-  padding: 5px;
   background-color: rgba(255, 255, 255, 0.1);
 }
