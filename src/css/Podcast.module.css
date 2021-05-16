@@ -1,7 +1,23 @@
 .container {
+  background-color: var(--color-podcast);
   width: 43%;
 }
 
-.title {
-  margin-left: 49%;
+.text {
+  width: 52%;
+  margin-left: 42%;
+}
+
+.subTitle {
+  font: var(--font-body-subheading);
+  color: #ffffff;
+}
+
+.hosts {
+  font: var(--font-text-body);
+  color: #ffffff;
+}
+.date {
+  font: var(--font-text-podcastDate);
+  color: #ffffff;
 }
