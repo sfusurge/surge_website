@@ -1,16 +1,14 @@
 import useMediaQuery from '../utils/useMediaQuery'
 import styles from '../css/Note.module.css'
+import { ReactComponent as CurlSVG } from '../assets/note-curl.svg'
+import { ReactComponent as CurlMobileSVG } from '../assets/note-curl-mobile.svg'
 
-const Note = ({ children, primaryColor, secondaryColor }) => {
+const Note = ({
+  children,
+  primaryColor = '#3D73C7',
+  secondaryColor = '#2B5699'
+}) => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
-
-  if (!primaryColor) {
-    primaryColor = '#3D73C7'
-  }
-
-  if (!secondaryColor) {
-    secondaryColor = '#2B5699'
-  }
 
   return (
     <div
@@ -23,33 +21,9 @@ const Note = ({ children, primaryColor, secondaryColor }) => {
       <div className={styles.main}>{children}</div>
       <div className={styles.pageCurl}>
         {isDesktop ? (
-          <svg
-            className={styles.borderEdge}
-            width="73"
-            height="54"
-            viewBox="0 0 73 54"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M72.2627 0.610107L0.262695 53.6101C3.35196 39.8428 4.147 32.1699 0.262695 15.1101C29.4332 16.0221 45.0596 11.9848 72.2627 0.610107Z"
-              fill={secondaryColor}
-            />
-          </svg>
+          <CurlSVG fill={secondaryColor} className={styles.borderEdge} />
         ) : (
-          <svg
-            className={styles.borderEdge}
-            width="48"
-            height="36"
-            viewBox="0 0 48 36"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M47.4272 0.845703L0.975586 35.0393C2.96866 26.1571 3.48159 21.2069 0.975586 10.2005C19.7953 10.7889 29.8768 8.18422 47.4272 0.845703Z"
-              fill={secondaryColor}
-            />
-          </svg>
+          <CurlMobileSVG fill={secondaryColor} className={styles.borderEdge} />
         )}
       </div>
       <div className={styles.hiddenTriangle} />
