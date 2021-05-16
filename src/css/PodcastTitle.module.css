@@ -1,0 +1,40 @@
+.container {
+  font-family: Barlow;
+  font-weight: 800;
+  width: 300px;
+  height: 150px;
+  background-color: lightgray;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.date {
+  position: absolute;
+}
+
+.title {
+  color: white;
+  transform: translate(0%, 0%);
+}
+
+#title1 {
+  font-size: 30px;
+}
+
+#title2 {
+  font-size: 52px;
+  background-color: lightgray;
+  line-height: 34px;
+  padding: 3px 10px 8px 0;
+}
+
+.date {
+  font-size: 140px;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  width: calc(100% - 80px);
+  padding: 0 40px;
+  text-align: right;
+  bottom: 0%;
+}
