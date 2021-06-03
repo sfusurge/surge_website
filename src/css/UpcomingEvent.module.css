@@ -1,0 +1,106 @@
+.container {
+  width: min-content;
+  padding: 33px 25px 50px 22px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.date {
+  text-align: center;
+}
+
+.date h1,
+.date h2 {
+  font: var(--font-upcomingEvent-date);
+  margin: 0;
+}
+
+.date h2 {
+  font-size: 20px;
+}
+
+.divider {
+  height: 65px;
+  background: #ffffff;
+  border-left: 1px solid;
+  margin: 0 20px;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailsContainerMobile {
+  margin-left: 10px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+.details * {
+  margin: 0 5px;
+}
+
+.location {
+  font: var(--font-notes-body);
+}
+
+.time {
+  font: var(--font-notes-body);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.fbEvent {
+  width: 100%;
+  border: solid;
+  border-width: 1px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 25px 0 0;
+  padding: 7px 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    padding: 50px 42px 70px 34px;
+  }
+
+  .divider {
+    height: 100px;
+  }
+
+  .title {
+    white-space: nowrap;
+  }
+
+  .fbEvent {
+    margin: 0;
+    padding: 12px 0;
+  }
+}

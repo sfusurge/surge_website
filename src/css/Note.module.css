@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  background-color: var(--primary-color);
+  border-top: 7px solid var(--secondary-color);
+  width: fit-content;
+}
+
+.pageCurl {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.borderEdge {
+  display: block;
+  z-index: 1;
+  fill: var(--secondary-color);
+}
+
+.hiddenTriangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+  border-left: 47px solid transparent;
+  border-bottom: 35px solid var(--color-background-primary);
+}
+
+@media only screen and (min-width: 600px) {
+  .hiddenTriangle {
+    border-left: 74px solid transparent;
+    border-bottom: 54px solid var(--color-background-primary);
+  }
+}
