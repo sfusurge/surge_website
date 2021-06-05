@@ -5,12 +5,15 @@
   --color-button-secondary: #6d97d5;
   --color-podcast: #c5d0e2;
   --color-background-primary: #f6f6f6;
+  --color-text-subBody: #ffffff;
   --color-button-dropdown: #b2cbf5;
   --font-header: 700 24px Barlow;
   --font-body-heading: 600 36px Barlow;
   --font-body-title: 600 20px Barlow;
   --font-text-body: 400 16px Barlow;
   --font-upcomingEvent-date: 600 30px Barlow;
+  --font-body-subheading: 800 20px Barlow;
+  --font-body-podcastLink: 500 11px Barlow;
 }
 
 @media only screen and (min-width: 600px) {
@@ -22,6 +25,7 @@
     --font-text-body: 600 20px Barlow;
     --font-upcomingEvent-date: 600 60px Barlow;
     --font-text-podcastDate: 400 11px Barlow;
+    --font-text-pageSelector: 700 18px Barlow;
   }
 }
 
