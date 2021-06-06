@@ -32,7 +32,7 @@ const activities = [
 
 const ActivityList = props => {
   return (
-    <div>
+    <>
       <p className={styles.title}>Here's what we're up to!</p>
       {activities.map((label, i) => (
         <Activity
@@ -43,7 +43,7 @@ const ActivityList = props => {
           styling={label.style}
         />
       ))}
-    </div>
+    </>
   )
 }
 

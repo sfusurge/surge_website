@@ -1,7 +1,8 @@
 .title {
+  margin: 0;
   margin-bottom: 19px;
   text-align: center;
-  font: var(--font-body-title);
+  font: var(--font-body-secondTitle);
   color: var(--color-text-body);
 }
 
