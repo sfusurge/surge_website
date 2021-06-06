@@ -10,7 +10,9 @@
   --font-body-heading: 600 30px Barlow;
   --font-body-title: 600 20px Barlow;
   --font-text-body: 400 16px Barlow;
-  --font-text-btn: 600 16px Barlow;
+  --font-leetcode-btn: 600 16px Barlow;
+  --font-upcomingEvent-date: 600 30px Barlow;
+  --font-notes-body: 600 16px Barlow;
 }
 
 @media only screen and (min-width: 600px) {
@@ -20,7 +22,7 @@
     --font-body-subheading: 800 30px Barlow;
     --font-body-title: 800 50px Barlow;
     --font-text-body: 600 20px Barlow;
-    --font-text-btn: 500 20px Barlow;
+    --font-leetcode-btn: 500 20px Barlow;
   }
 }
 
