@@ -67,6 +67,7 @@
     align-items: center;
     margin-bottom: 10vh;
   }
+
   .image {
     width: 100%;
     margin-left: 7%;
@@ -80,6 +81,7 @@
   .btnContent {
     text-align: center;
   }
+
   .text {
     margin-left: 0%;
     margin-right: 23%;

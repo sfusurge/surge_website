@@ -34,7 +34,7 @@ const Activity = props => {
             </div>
             <a
               className={styles.streamingLink}
-              href="https://open.spotify.com/show/5GAuw7brERfbZSfnKpURvE?si=09bf7b886d3a448b"
+              href="https://anchor.fm/sfu-surge"
             >
               More Streaming Platforms
             </a>
