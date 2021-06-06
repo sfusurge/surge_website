@@ -4,7 +4,7 @@ import styles from '../css/Leetcode.module.css'
 
 const Leetcode = props => {
   return (
-    <div>
+    <>
       <div className={styles.textContainer}>
         <LeetcodeText />
       </div>
@@ -15,7 +15,7 @@ const Leetcode = props => {
           alt="Laptop Monitor"
         ></img>
       </div>
-    </div>
+    </>
   )
 }
 

@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Leetcode from './components/Leetcode'
 
 import styles from './css/App.module.css'
 
@@ -8,9 +7,9 @@ const App = () => {
     <div id={styles.app}>
       <Router>
         <Switch>
-          <Route path="/path">
-            <Leetcode />
-          </Route>
+          {/* <Route path="/path">
+            <Component />
+          </Route> */}
         </Switch>
       </Router>
     </div>

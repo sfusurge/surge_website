@@ -7,16 +7,13 @@
 
 .title {
   margin: 0;
-  margin-bottom: 16px;
-  padding-left: 1%;
-  font: var(--font-body-title);
+  font: var(--font-body-heading);
   color: var(--color-text-white);
 }
 
 .bodyText {
   margin: 0;
   margin-bottom: 23px;
-  padding-left: 1%;
   font: var(--font-text-body);
   color: var(--color-text-white);
 }
@@ -26,6 +23,7 @@
   font: var(--font-text-btn);
   color: var(--color-text-white);
 }
+
 .btnContainer {
   height: 43px;
   display: flex;
@@ -33,10 +31,6 @@
   align-items: center;
   background-color: #89aff0;
   border: 1px solid var(--color-text-white);
-}
-
-.linkContainer {
-  width: 94%;
 }
 
 .clearLinks {
