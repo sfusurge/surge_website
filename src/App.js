@@ -8,7 +8,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route path="/path">
-            <div style={{ height: '240px' }}>
+            <div style={{ height: '1240px' }}>
               <div>Block</div>
               <div>Block</div>
               <div>Block</div>

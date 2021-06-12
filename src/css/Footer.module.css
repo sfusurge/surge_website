@@ -10,35 +10,48 @@
   margin-left: 12%;
 }
 
+.iconsMobile {
+  margin: 0;
+}
+
 .images {
   height: 124px;
   width: 450px;
+  margin-right: 2%;
 }
 
 .scooter {
   width: 141px;
   height: 153px;
   padding-right: 39px;
-  transform: translateY(-130%);
+  transform: translateY(-200px);
 }
 
 .robot {
   width: 112px;
-  transform: translateY(-70%);
+  transform: translateY(-73%);
 }
 
 .notepad {
-  transform: translateY(-120%);
+  transform: translateY(-115%);
   padding-left: 8px;
 }
 
 @media only screen and (max-width: 700px) {
+  .images {
+    width: 380px;
+  }
+
   .scooter {
-    padding-right: 0px;
+    width: 120px;
+    transform: translateY(-90%);
+  }
+
+  .robot {
+    width: 90px;
   }
 
   .notepad {
-    padding-left: 0px;
-    width: 30%;
+    width: 110px;
   }
 }

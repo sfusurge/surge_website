@@ -4,9 +4,9 @@ import instagram from '../assets/instagram.svg'
 import github from '../assets/github.svg'
 
 const socials = [
-  { link: 'https://github.com/sfusurge', img: github },
+  { link: 'https://www.facebook.com/sfusurge', img: facebook },
   { link: 'https://www.instagram.com/sfusurge/', img: instagram },
-  { link: 'https://www.facebook.com/sfusurge', img: facebook }
+  { link: 'https://github.com/sfusurge', img: github }
 ]
 const SocialsIcons = props => {
   return (
@@ -19,7 +19,7 @@ const SocialsIcons = props => {
           rel="noreferrer"
           className={styles.iconLink}
         >
-          <img className={styles.img} src={img} />
+          <img className={styles.img} src={img} alt={img} />
         </a>
       ))}
     </div>
