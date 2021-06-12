@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  height: 124px;
+  background-color: var(--color-button-dropdown);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  margin-left: 12%;
+}
+
+.images {
+  height: 124px;
+  width: 450px;
+}
+
+.scooter {
+  width: 141px;
+  height: 153px;
+  padding-right: 39px;
+  transform: translateY(-130%);
+}
+
+.robot {
+  width: 112px;
+  transform: translateY(-70%);
+}
+
+.notepad {
+  transform: translateY(-120%);
+  padding-left: 8px;
+}
