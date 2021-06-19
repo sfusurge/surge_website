@@ -2,9 +2,15 @@ import useMediaQuery from '../utils/useMediaQuery'
 import styles from '../css/FormSheet.module.css'
 
 const FormSheet = () => {
+  const isDesktop = useMediaQuery('(min-width: 600px)')
   return (
     <div>
-      <p>Keep up to date with our events</p>
+      <p
+        style={isDesktop ? { marginBottom: '60px' } : { marginBottom: '17px' }}
+        className={styles.title}
+      >
+        Keep up to date with our events
+      </p>
       <form
         action="https://gmail.us4.list-manage.com/subscribe/post?u=33345c9bc17f10bac6afdd0ac&amp;id=736d801cb8"
         method="post"
@@ -12,7 +18,12 @@ const FormSheet = () => {
         target="_blank"
         noValidate
       >
-        <div className={styles.textBox}>
+        <div
+          style={
+            isDesktop ? { marginBottom: '74px' } : { marginBottom: '43px' }
+          }
+          className={styles.textBox}
+        >
           <input
             id="name"
             className={styles.signUpInput}
@@ -24,19 +35,31 @@ const FormSheet = () => {
             Name
           </label>
         </div>
-        <div className={styles.textBox}>
+        <div
+          style={
+            isDesktop ? { marginBottom: '54px' } : { marginBottom: '33px' }
+          }
+          className={styles.textBox}
+        >
           <input
-            id="Naz"
+            id="Email"
             className={styles.signUpInput}
             type="text"
             required
-            name="Name"
+            name="Email"
           />
-          <label for="Naz" className={styles.formLabel}>
-            Name
+          <label for="Email" className={styles.formLabel}>
+            Email
           </label>
         </div>
       </form>
+      <button
+        style={isDesktop ? { height: '66px' } : { height: '46px' }}
+        className={styles.signUpButton}
+        type="submit"
+      >
+        <p className={styles.signUpText}>Sign up for mailing list</p>
+      </button>
     </div>
   )
 }

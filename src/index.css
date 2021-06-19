@@ -4,6 +4,7 @@
   --color-button-primary: #568cdb;
   --color-button-secondary: #6d97d5;
   --color-background-primary: #f6f6f6;
+  --color-textBtn-primary: #ffffff;
   --color-button-dropdown: #b2cbf5;
   --font-header: 700 24px Barlow;
   --font-body-heading: 600 36px Barlow;
@@ -11,6 +12,7 @@
   --font-text-body: 400 16px Barlow;
   --font-upcomingEvent-date: 600 30px Barlow;
   --font-notes-body: 600 16px Barlow;
+  --font-mailList: 600 16px Barlow;
 }
 
 @media only screen and (min-width: 600px) {
@@ -21,6 +23,7 @@
     --font-body-title: 800 50px Barlow;
     --font-text-body: 600 20px Barlow;
     --font-upcomingEvent-date: 600 60px Barlow;
+    --font-mailList: 600 30px Barlow;
   }
 }
 

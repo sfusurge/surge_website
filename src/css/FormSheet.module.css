@@ -1,3 +1,9 @@
+.title {
+  margin: 0;
+  font: var(--font-body-title);
+  color: var(--color-text-body);
+}
+
 .textBox {
   position: relative;
   margin-bottom: 50px;
@@ -37,10 +43,27 @@
 .formLabel {
   cursor: text;
   position: absolute;
-  top: -10px;
+  top: -6px;
   display: block;
   transition: all 0.2s ease-in-out;
   font: var(--font-text-body);
   color: var(--color-text-body);
   opacity: 0.3;
+}
+
+.signUpButton {
+  width: 100%;
+  background-color: var(--color-button-primary);
+  border: none;
+  cursor: pointer;
+}
+
+.signUpButton:hover {
+  opacity: 0.8;
+}
+
+.signUpText {
+  margin: 0;
+  font: var(--font-mailList);
+  color: var(--color-textBtn-primary);
 }
