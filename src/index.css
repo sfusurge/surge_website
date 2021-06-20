@@ -1,6 +1,7 @@
 :root {
   --color-text-body: #1c307a;
   --color-image-background: #7ca6ee;
+  --color-signUp-background: #e0e9f9;
   --color-button-primary: #568cdb;
   --color-button-secondary: #6d97d5;
   --color-background-primary: #f6f6f6;
@@ -13,6 +14,7 @@
   --font-upcomingEvent-date: 600 30px Barlow;
   --font-notes-body: 600 16px Barlow;
   --font-mailList: 600 16px Barlow;
+  --font-upToDate: 600 20px Barlow;
 }
 
 @media only screen and (min-width: 600px) {
@@ -24,6 +26,7 @@
     --font-text-body: 600 20px Barlow;
     --font-upcomingEvent-date: 600 60px Barlow;
     --font-mailList: 600 30px Barlow;
+    --font-upToDate: 700 36px Barlow;
   }
 }
 

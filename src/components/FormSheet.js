@@ -53,11 +53,7 @@ const FormSheet = () => {
           </label>
         </div>
       </form>
-      <button
-        style={isDesktop ? { height: '66px' } : { height: '46px' }}
-        className={styles.signUpButton}
-        type="submit"
-      >
+      <button className={styles.signUpButton} type="submit">
         <p className={styles.signUpText}>Sign up for mailing list</p>
       </button>
     </div>

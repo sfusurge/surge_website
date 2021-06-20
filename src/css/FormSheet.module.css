@@ -66,4 +66,5 @@
   margin: 0;
   font: var(--font-mailList);
   color: var(--color-textBtn-primary);
+  margin: 12px 0;
 }

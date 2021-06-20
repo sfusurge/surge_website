@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 93px;
+}
+
+.mobileContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 37px;
+}
+
+.formSheet {
+  margin-right: 10%;
+  margin-left: 7%;
+}
+
+.letter {
+  width: 50%;
+  margin-right: 1%;
+}
+
+.mobileLetter {
+  width: 82%;
+  margin-left: 13%;
+  margin-right: 4%;
+  margin-bottom: 9px;
+}
+
+.mobileFormSheet {
+  margin: 0 15%;
+}
