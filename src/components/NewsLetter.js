@@ -21,11 +21,11 @@ const NewsLetter = () => {
               <FormSheet setSubmitted={setSubmitted} />
             )}
           </div>
-          <img src={mail} className={styles.letter}></img>
+          <img src={mail} className={styles.letter} alt="Letter"></img>
         </div>
       ) : (
         <div className={styles.mobileContainer}>
-          <img src={mail} className={styles.mobileLetter}></img>
+          <img src={mail} className={styles.mobileLetter} alt="Letter"></img>
           <div className={styles.mobileFormSheet}>
             {submitted ? (
               <CheckMarkBox setSubmitted={setSubmitted} />

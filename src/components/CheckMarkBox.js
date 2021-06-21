@@ -16,6 +16,7 @@ const CheckMarkBox = props => {
       <img
         style={isDesktop ? { width: '200px' } : { width: '100px' }}
         src={checkMark}
+        alt="Check Mark"
       ></img>
       <button
         style={isDesktop ? { marginTop: '39px' } : { marginTop: '26px' }}
