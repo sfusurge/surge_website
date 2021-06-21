@@ -1,12 +1,12 @@
 import useMediaQuery from '../utils/useMediaQuery'
 import styles from '../css/FormSheet.module.css'
 
-const FormSheet = () => {
+const FormSheet = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
   return (
     <div>
       <p
-        style={isDesktop ? { marginBottom: '60px' } : { marginBottom: '17px' }}
+        style={isDesktop ? { marginBottom: '60px' } : { marginBottom: '26px' }}
         className={styles.title}
       >
         Keep up to date with our events
@@ -53,7 +53,13 @@ const FormSheet = () => {
           </label>
         </div>
       </form>
-      <button className={styles.signUpButton} type="submit">
+      <button
+        className={styles.signUpButton}
+        type="submit"
+        onClick={() => {
+          props.setSubmitted(true)
+        }}
+      >
         <p className={styles.signUpText}>Sign up for mailing list</p>
       </button>
     </div>

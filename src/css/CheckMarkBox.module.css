@@ -6,7 +6,7 @@
 
 .title {
   margin: 0;
-  margin-bottom: 12px;
+
   font: var(--font-upToDate);
   color: var(--color-text-body);
 }
@@ -16,7 +16,11 @@
   background-color: var(--color-signUp-background);
   border: 1px solid var(--color-button-primary);
   cursor: pointer;
-  margin-top: 44px;
+}
+
+.btn:hover {
+  font: var(--font-mailList);
+  color: var(--color-button-primary);
 }
 
 .btnText {

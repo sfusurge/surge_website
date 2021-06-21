@@ -11,6 +11,7 @@
   --font-body-heading: 600 36px Barlow;
   --font-body-title: 600 20px Barlow;
   --font-text-body: 400 16px Barlow;
+  --font-text-input: 400 16px Barlow;
   --font-upcomingEvent-date: 600 30px Barlow;
   --font-notes-body: 600 16px Barlow;
   --font-mailList: 600 16px Barlow;
@@ -24,6 +25,7 @@
     --font-body-subheading: 800 30px Barlow;
     --font-body-title: 800 50px Barlow;
     --font-text-body: 600 20px Barlow;
+    --font-text-input: 500 30px Barlow;
     --font-upcomingEvent-date: 600 60px Barlow;
     --font-mailList: 600 30px Barlow;
     --font-upToDate: 700 36px Barlow;
