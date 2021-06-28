@@ -84,7 +84,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           >
             <p className={styles.signUpText}>Sign up for mailing list</p>
           </button>
-          {status === 'sending' && <p className={styles.sendMsg}>sending...</p>}
+          {status === 'sending' && <p className={styles.sendMsg}>Sending...</p>}
           {status === 'error' && (
             <p className={styles.errorMsg}>
               Invalid email or email already exists!
