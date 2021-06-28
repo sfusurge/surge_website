@@ -1,0 +1,83 @@
+.textBox {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.signUpInput {
+  font: var(--font-text-input);
+  color: var(--color-text-body);
+  border: 0;
+  border-bottom: 2px solid var(--color-text-body);
+  transition: border-color 0.2s;
+  width: calc(100% - 5px);
+  outline: none;
+  background-color: var(--color-signUp-background);
+}
+
+.signUpInput::placeholder {
+  color: transparent;
+  font: var(--font-email-placeholder);
+  color: var(--color-text-body);
+}
+
+.signUpInput:focus ~ .formLabel {
+  top: -20px;
+  opacity: 1;
+  font-size: 1rem;
+}
+
+.signUpInput:not(:placeholder-shown) ~ .formLabel {
+  top: -20px;
+  opacity: 1;
+  font-size: 1rem;
+}
+
+.formLabel {
+  cursor: text;
+  position: absolute;
+  top: 0px;
+  display: block;
+  transition: all 0.2s ease-in-out;
+  font: var(--font-text-body);
+  color: var(--color-text-body);
+  opacity: 0.3;
+}
+
+.signUpInput::placeholder {
+  color: transparent;
+}
+
+.signUpButton {
+  width: 100%;
+  background-color: var(--color-button-primary);
+  border: none;
+  cursor: pointer;
+}
+
+.signUpButton:hover {
+  opacity: 0.8;
+}
+
+.signUpText {
+  margin: 0;
+  font: var(--font-mailList);
+  color: var(--color-textBtn-primary);
+  margin: 12px 0;
+}
+
+.sendMsg {
+  margin: 0;
+  font: var(--font-text-input);
+  color: var(--color-button-primary);
+}
+
+.errorMsg {
+  margin: 0;
+  font: var(--font-text-input);
+  color: #ca2525;
+}
