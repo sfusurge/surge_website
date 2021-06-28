@@ -1,25 +1,18 @@
-import { useState } from 'react'
 import useMediaQuery from '../utils/useMediaQuery'
 import styles from '../css/NewsLetter.module.css'
 
 import FormSheet from './FormSheet'
-import CheckMarkBox from './CheckMarkBox'
 import mail from '../assets/mail-with-background.svg'
 
 const NewsLetter = () => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
-  const [submitted, setSubmitted] = useState(false)
 
   return (
     <>
       {isDesktop ? (
         <div className={styles.container}>
           <div className={styles.formSheet}>
-            {submitted ? (
-              <CheckMarkBox setSubmitted={setSubmitted} />
-            ) : (
-              <FormSheet setSubmitted={setSubmitted} />
-            )}
+            <FormSheet />
           </div>
           <img src={mail} className={styles.letter} alt="Letter"></img>
         </div>
@@ -27,11 +20,7 @@ const NewsLetter = () => {
         <div className={styles.mobileContainer}>
           <img src={mail} className={styles.mobileLetter} alt="Letter"></img>
           <div className={styles.mobileFormSheet}>
-            {submitted ? (
-              <CheckMarkBox setSubmitted={setSubmitted} />
-            ) : (
-              <FormSheet setSubmitted={setSubmitted} />
-            )}
+            <FormSheet />
           </div>
         </div>
       )}

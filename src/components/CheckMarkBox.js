@@ -7,12 +7,6 @@ const CheckMarkBox = props => {
 
   return (
     <div className={styles.container}>
-      <p
-        style={isDesktop ? { marginBottom: '39px' } : { marginBottom: '26px' }}
-        className={styles.title}
-      >
-        Keep up to date with our events
-      </p>
       <img
         style={isDesktop ? { width: '200px' } : { width: '100px' }}
         src={checkMark}
@@ -22,6 +16,8 @@ const CheckMarkBox = props => {
         style={isDesktop ? { marginTop: '39px' } : { marginTop: '26px' }}
         className={styles.btn}
         onClick={() => {
+          props.setName('')
+          props.setEmail('')
           props.setSubmitted(false)
         }}
       >
