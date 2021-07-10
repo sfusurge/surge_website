@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Execs from './components/Execs'
+import OurStory from './components/OurStory'
 import styles from './css/App.module.css'
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route path="/path">
-            <Execs />
+            <OurStory />
           </Route>
         </Switch>
       </Router>

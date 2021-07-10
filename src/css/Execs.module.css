@@ -8,7 +8,13 @@
   font: var(--font-text-body);
   color: var(--color-text-body);
   margin: 0;
-  margin-top: 33px;
+}
+
+.subParagraph {
+  font: var(--font-text-body);
+  color: var(--color-text-body);
+  margin: 0;
+  margin-top: 32px;
 }
 
 .boldText {
@@ -21,17 +27,23 @@
   margin-bottom: 168px;
 }
 
-.innerContainer {
+.execGroup {
   margin-top: 19px;
   display: grid;
   grid-gap: 38px;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
-.text {
+.mobileExecGroup {
+  margin-top: 12px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+}
+
+.bottomText {
   margin: 0;
   margin-left: 1%;
-  margin-top: 90px;
   font: var(--font-text-body);
   color: var(--color-text-body);
 }
