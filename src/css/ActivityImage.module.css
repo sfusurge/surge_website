@@ -1,0 +1,24 @@
+.container {
+  position: relative;
+}
+
+.squareBackground {
+  width: 75%;
+  height: calc(65vw);
+  background-color: var(--color-image-background);
+}
+
+.image {
+  width: 70%;
+  top: 5%;
+  right: 18%;
+  position: absolute;
+}
+
+@media only screen and (min-width: 600px) {
+  .squareBackground {
+    height: calc(26vw);
+    background-color: var(--color-image-background);
+    margin-right: 0;
+  }
+}
