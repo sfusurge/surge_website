@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  background-color: var(--color-home-primary);
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.spaceLinks {
+  padding: 67px 0;
+  padding-right: 4%;
+}
+
+.linkText {
+  font: var(--font-navLinks);
+  color: var(--color-text-body);
+  text-decoration: none;
+}
