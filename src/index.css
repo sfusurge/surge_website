@@ -1,15 +1,17 @@
 :root {
   --color-text-body: #1c307a;
+  --color-text-white: #ffffff;
   --color-image-background: #7ca6ee;
   --color-button-primary: #568cdb;
   --color-button-secondary: #6d97d5;
   --color-background-primary: #f6f6f6;
   --color-button-dropdown: #b2cbf5;
   --font-header: 700 24px Barlow;
-  --font-body-heading: 600 36px Barlow;
+  --font-body-heading: 600 30px Barlow;
   --font-body-title: 600 20px Barlow;
   --font-body-secondTitle: 600 20px Barlow;
   --font-text-body: 400 16px Barlow;
+  --font-leetcode-btn: 600 16px Barlow;
   --font-upcomingEvent-date: 600 30px Barlow;
   --font-spotify-btn: 600 20px Barlow;
   --font-notes-body: 600 16px Barlow;
@@ -25,6 +27,7 @@
     --font-text-body: 600 20px Barlow;
     --font-upcomingEvent-date: 600 60px Barlow;
     --font-spotify-btn: 600 30px Barlow;
+    --font-leetcode-btn: 500 20px Barlow;
   }
 }
 
