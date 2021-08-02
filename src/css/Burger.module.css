@@ -1,0 +1,19 @@
+/** @format */
+
+.container {
+  width: 21px;
+  height: 21px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  padding: 25px 0;
+}
+
+.lines {
+  width: 21px;
+  height: 0.25rem;
+  background-color: var(--color-text-body);
+  border-radius: 10px;
+  transform-origin: 1px;
+  transition: transform 0.3s ease-in-out;
+}

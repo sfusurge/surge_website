@@ -1,0 +1,68 @@
+.innerContainer {
+  display: flex;
+}
+.container {
+  width: 100%;
+  height: max(100vh);
+  overflow-y: auto;
+  background: url('../assets/header-background.svg') center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.image {
+  width: 50%;
+  transform: translateY(-130px);
+}
+
+.mainText {
+  width: 34%;
+  padding-right: 15%;
+}
+
+.scrollDown {
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: max(85vh, 700px);
+  transition: ease-in-out 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrollDownText {
+  text-align: center;
+  font: 600 18px Barlow;
+  margin: 0;
+  margin-bottom: 10px;
+  color: var(--color-text-body);
+}
+
+.mobileContainer {
+  background-image: url('../assets/header-background.svg');
+  background-size: cover;
+  background-position: top;
+}
+
+.navBarMobile {
+  position: absolute;
+  right: 0;
+}
+
+.imageMobile {
+  padding-top: 29px;
+  margin-left: 7%;
+  margin-right: 13%;
+  width: 78%;
+}
+
+.imageBackground {
+  background-color: var(--color-background-primary);
+}
+
+@media only screen and (max-width: 900px) {
+  .scrollDown {
+    top: max(85vh, 800px);
+  }
+}
