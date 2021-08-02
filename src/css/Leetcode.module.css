@@ -1,0 +1,31 @@
+.textContainer {
+  position: relative;
+  background-color: var(--color-image-background);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vh), 0 100%);
+  margin-bottom: -5vh;
+}
+
+.imageContainer {
+  height: calc(35vw);
+  background-color: var(--color-button-dropdown);
+}
+
+.image {
+  position: relative;
+  width: 85%;
+  margin-left: 8%;
+  margin-right: 8%;
+  transform: translateY(-45%);
+}
+
+@media only screen and (min-width: 900px) {
+  .imageContainer {
+    height: calc(22vw);
+  }
+  .image {
+    width: 64%;
+    margin-left: 1%;
+    margin-right: 35%;
+    transform: translateY(-55%);
+  }
+}
