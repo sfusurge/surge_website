@@ -59,6 +59,7 @@
 
 .location {
   font: var(--font-notes-body);
+  color: #ffffff;
 }
 
 .time {
