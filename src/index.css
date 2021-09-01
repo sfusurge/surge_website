@@ -5,8 +5,10 @@
   --color-signUp-background: #e0e9f9;
   --color-button-primary: #568cdb;
   --color-button-secondary: #6d97d5;
+  --color-podcast: #c5d0e2;
   --color-home-primary: #78a8f2;
   --color-background-primary: #f6f6f6;
+  --color-text-subBody: #ffffff;
   --color-textBtn-primary: #ffffff;
   --color-button-dropdown: #b2cbf5;
   --color-button-podcast: #f1f2f4;
@@ -21,6 +23,8 @@
   --font-upToDate: 600 20px Barlow;
   --font-leetcode-btn: 600 16px Barlow;
   --font-upcomingEvent-date: 600 30px Barlow;
+  --font-body-subheading: 800 20px Barlow;
+  --font-body-podcastLink: 500 11px Barlow;
   --font-notes-body: 600 16px Barlow;
   --font-navLinks: 600 20px Barlow;
   --font-heavy-bold: 600 20px Barlow;
@@ -35,6 +39,8 @@
     --font-text-body: 600 20px Barlow;
     --font-text-input: 500 30px Barlow;
     --font-upcomingEvent-date: 600 60px Barlow;
+    --font-text-podcastDate: 400 11px Barlow;
+    --font-text-pageSelector: 700 18px Barlow;
     --font-mailList: 600 30px Barlow;
     --font-upToDate: 700 36px Barlow;
     --font-navLinks: 600 24px Barlow;
