@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import OurStory from './components/OurStory'
+
 import styles from './css/App.module.css'
 
 const App = () => {
