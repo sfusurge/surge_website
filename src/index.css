@@ -15,6 +15,7 @@
   --font-header: 700 24px Barlow;
   --font-body-heading: 600 30px Barlow;
   --font-body-title: 600 20px Barlow;
+  --font-body-secondTitle: 600 20px Barlow;
   --font-text-body: 400 16px Barlow;
   --font-text-input: 400 16px Barlow;
   --font-upcomingEvent-date: 600 30px Barlow;
@@ -23,6 +24,7 @@
   --font-upToDate: 600 20px Barlow;
   --font-leetcode-btn: 600 16px Barlow;
   --font-upcomingEvent-date: 600 30px Barlow;
+  --font-spotify-btn: 600 20px Barlow;
   --font-body-subheading: 800 20px Barlow;
   --font-body-podcastLink: 500 11px Barlow;
   --font-notes-body: 600 16px Barlow;
@@ -36,9 +38,11 @@
     --font-body-heading: 600 64px Barlow;
     --font-body-subheading: 800 30px Barlow;
     --font-body-title: 800 50px Barlow;
+    --font-body-secondTitle: 600 64px Barlow;
     --font-text-body: 600 20px Barlow;
     --font-text-input: 500 30px Barlow;
     --font-upcomingEvent-date: 600 60px Barlow;
+    --font-spotify-btn: 600 30px Barlow;
     --font-text-podcastDate: 400 11px Barlow;
     --font-text-pageSelector: 700 18px Barlow;
     --font-mailList: 600 30px Barlow;
