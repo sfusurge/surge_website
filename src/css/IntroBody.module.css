@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   position: relative;
+  overflow-y: auto;
 }
 
 .image {

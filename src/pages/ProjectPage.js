@@ -1,5 +1,5 @@
 import ActivityList from '../components/ActivityList'
-import HomeSection from '../components/HomeSection'
+import ProjectSection from '../components/ProjectSection'
 import ShortUpcomingEvent from '../components/ShortUpcomingEvent'
 import NewsLetter from '../components/NewsLetter'
 import Footer from '../components/Footer'
@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 const ProjectPage = props => {
   return (
     <div>
-      <HomeSection />
+      <ProjectSection />
       <ActivityList />
       <ShortUpcomingEvent />
       <NewsLetter />
