@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 46px;
+  padding-bottom: 46px;
 }
 
 .image {
@@ -65,7 +65,7 @@
   .container {
     flex-direction: row;
     align-items: center;
-    margin-bottom: 10vh;
+    padding-bottom: 10vh;
   }
 
   .image {

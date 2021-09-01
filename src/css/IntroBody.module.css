@@ -4,9 +4,10 @@
 .container {
   width: 100%;
   height: max(100vh);
-  overflow-y: auto;
   background: url('../assets/header-background.svg') center center fixed;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   position: relative;
 }
 

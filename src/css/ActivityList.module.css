@@ -1,6 +1,10 @@
+.container {
+  background-color: var(--color-background-primary);
+}
+
 .title {
   margin: 0;
-  margin-bottom: 19px;
+  padding-bottom: 19px;
   text-align: center;
   font: var(--font-body-secondTitle);
   color: var(--color-text-body);
