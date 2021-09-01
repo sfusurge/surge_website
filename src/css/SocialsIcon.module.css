@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 129px;
+}
+
+.iconLink:hover {
+  opacity: 0.95;
+}
+
+.img {
+  opacity: 1;
+}
+
+.img:hover {
+  opacity: 0.95;
+}
