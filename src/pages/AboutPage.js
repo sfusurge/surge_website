@@ -1,12 +1,13 @@
 import AboutSection from '../components/AboutSection'
 import Footer from '../components/Footer'
+import OurStory from '../components/OurStory'
 import SocialsIcons from '../components/SocialsIcon'
 
 const AboutPage = props => {
   return (
     <div>
       <AboutSection />
-      <SocialsIcons />
+      <OurStory />
       <Footer />
     </div>
   )
