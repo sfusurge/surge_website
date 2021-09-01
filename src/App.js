@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import AllProjects from './components/AllProjects'
-import ProjectNote from './components/ProjectNote'
 
 import styles from './css/App.module.css'
 
@@ -10,7 +8,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route path="/path">
-            <AllProjects />
+            <OurStory />
           </Route>
         </Switch>
       </Router>
