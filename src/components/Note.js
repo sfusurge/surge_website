@@ -6,19 +6,28 @@ import { ReactComponent as CurlMobileSVG } from '../assets/note-curl-mobile.svg'
 const Note = ({
   children,
   primaryColor = '#3D73C7',
-  secondaryColor = '#2B5699'
+  secondaryColor = '#2B5699',
+  contentHeight,
+  setHovering
 }) => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
 
   return (
     <div
       className={styles.container}
+      onMouseEnter={() => {
+        setHovering(true)
+      }}
+      onMouseLeave={() => {
+        setHovering(false)
+      }}
       style={{
         '--primary-color': primaryColor,
-        '--secondary-color': secondaryColor
+        '--secondary-color': secondaryColor,
+        height: contentHeight
       }}
     >
-      <div className={styles.main}>{children}</div>
+      {children}
       <div className={styles.pageCurl}>
         {isDesktop ? (
           <CurlSVG fill={secondaryColor} className={styles.borderEdge} />

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import OurStory from './components/OurStory'
+
 import styles from './css/App.module.css'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
