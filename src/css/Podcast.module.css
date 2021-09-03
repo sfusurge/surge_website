@@ -16,18 +16,18 @@
 .subTitle {
   font: var(--font-body-subheading);
   margin: 0;
-  color: #ffffff;
+  color: var(--color-textBtn-primary);
 }
 
 .hosts {
   font: var(--font-text-body);
   margin: 0;
-  color: #ffffff;
+  color: var(--color-textBtn-primary);
 }
 
 .date {
   font: var(--font-text-podcastDate);
-  color: #ffffff;
+  color: var(--color-textBtn-primary);
   margin-bottom: 14px;
 }
 
@@ -40,7 +40,7 @@
   width: 100%;
   border: solid;
   border-width: 1px;
-  color: white;
+  color: var(--color-textBtn-primary);
   font: var(--font-body-podcastLink);
   text-align: center;
   background-color: rgba(255, 255, 255, 0.1);

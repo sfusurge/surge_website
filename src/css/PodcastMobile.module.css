@@ -21,7 +21,7 @@
   width: 80%;
   font: var(--font-body-subheading);
   margin: 0;
-  color: #ffffff;
+  color: var(--color-textBtn-primary);
 }
 
 .titleNumber {
@@ -29,14 +29,14 @@
   font-family: Barlow;
   font-weight: 800;
   color: transparent;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px var(--color-textBtn-primary);
   font-size: 20px;
 }
 
 .host {
   margin: 0;
   font: var(--font-text-body);
-  color: #ffffff;
+  color: var(--color-textBtn-primary);
 }
 
 .link {
@@ -48,7 +48,7 @@
   width: 100%;
   border: solid;
   border-width: 1px;
-  color: white;
+  color: var(--color-textBtn-primary);
   text-decoration: none;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.1);

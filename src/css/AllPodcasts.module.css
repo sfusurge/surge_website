@@ -68,12 +68,12 @@
   cursor: pointer;
   background: var(--color-text-body);
   font: var(--font-text-pageSelector);
-  color: var(--color-text-subBody);
+  color: var(--color-textBtn-primary);
 }
 
 .btn:hover {
   box-shadow: inset 38px 0 0 0 var(--color-button-primary);
-  color: var(--color-text-subBody);
+  color: var(--color-textBtn-primary);
 }
 
 .btnText {

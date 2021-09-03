@@ -35,6 +35,11 @@ const NavBar = props => {
               Events
             </Link>
           </li>
+          <li className={styles.spaceLinks}>
+            <Link to="/podcast" className={styles.linkText}>
+              Podcasts
+            </Link>
+          </li>
         </ul>
       ) : (
         <div
@@ -75,6 +80,11 @@ const NavBar = props => {
                 <li className={styles.spaceLinksMobile}>
                   <Link to="/events" className={styles.linkText}>
                     Events
+                  </Link>
+                </li>
+                <li className={styles.spaceLinksMobile}>
+                  <Link to="/podcast" className={styles.linkText}>
+                    Podcasts
                   </Link>
                 </li>
               </ul>

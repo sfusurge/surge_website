@@ -7,14 +7,14 @@
   padding-left: 36px;
   padding-right: 31px;
   font: var(--font-notes-body);
-  color: #ffffff;
+  color: var(--color-textBtn-primary);
 }
 
 .textMobileContainer {
   width: 213px;
   padding: 0 25px;
   font: var(--font-notes-body);
-  color: #ffffff;
+  color: var(--color-textBtn-primary);
 }
 
 .noteTitle {
@@ -33,7 +33,7 @@
 }
 
 .fbEvent {
-  color: white;
+  color: var(--color-textBtn-primary);
   width: 100%;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.1);

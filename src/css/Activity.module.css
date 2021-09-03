@@ -58,7 +58,7 @@
 .btnContent {
   margin: 0;
   font: var(--font-spotify-btn);
-  color: #ffffff;
+  color: var(--color-textBtn-primary);
 }
 
 @media only screen and (min-width: 600px) {

@@ -27,7 +27,7 @@
   position: absolute;
   left: 40%;
   right: 40%;
-  top: 680px;
+  top: calc(30vw + 300px);
   transition: ease-in-out 0.4s;
   display: flex;
   flex-direction: column;

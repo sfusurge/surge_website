@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ProjectPage from './pages/ProjectPage'
 import EventsPage from './pages/EventsPage'
+import PodcastPage from './pages/PodcastPage'
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
           </Route>
           <Route path="/events">
             <EventsPage />
+          </Route>
+          <Route path="/podcast">
+            <PodcastPage />
           </Route>
         </Switch>
       </Router>
