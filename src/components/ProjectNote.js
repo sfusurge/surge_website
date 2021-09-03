@@ -25,7 +25,7 @@ const ProjectNote = ({
       onMouseLeave={() => {
         setHovering(false)
       }}
-      className={styles.container}
+      style={isDesktop ? { width: '403px' } : { width: '263px' }}
     >
       <Note contentHeight={isDesktop ? '282px' : '270px'}>
         <div>
