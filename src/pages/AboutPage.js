@@ -5,7 +5,7 @@ import SocialsIcons from '../components/SocialsIcon'
 
 const AboutPage = props => {
   return (
-    <div>
+    <div style={{ backgroundColor: 'var(--color-background-primary)' }}>
       <AboutSection />
       <OurStory />
       <Footer />

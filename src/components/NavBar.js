@@ -16,7 +16,7 @@ const NavBar = props => {
       {isDesktop ? (
         <ul className={styles.navLinks}>
           <li className={styles.spaceLinks}>
-            <Link to="/path" className={styles.linkText}>
+            <Link to="/" className={styles.linkText}>
               Home
             </Link>
           </li>

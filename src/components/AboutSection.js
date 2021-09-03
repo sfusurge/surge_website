@@ -13,7 +13,6 @@ const AboutSection = props => {
         stylingImg={
           isLaptop
             ? {
-                position: 'absolute',
                 width: '75%',
                 paddingLeft: '6%',
                 transform: 'translateY(0px)'
@@ -23,10 +22,11 @@ const AboutSection = props => {
         stylingTextGroup={
           isLaptop
             ? {
-                marginTop: '75px',
-                paddingLeft: '61%',
-                paddingRight: '9%',
-                lineHeight: '32px'
+                position: 'absolute',
+                top: '200px',
+                left: '60%',
+                lineHeight: '32px',
+                padding: '0'
               }
             : { paddingLeft: '4%', paddingRight: '4%', lineHeight: '32px' }
         }

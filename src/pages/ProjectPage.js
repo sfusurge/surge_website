@@ -1,15 +1,13 @@
-import ActivityList from '../components/ActivityList'
 import ProjectSection from '../components/ProjectSection'
-import ShortUpcomingEvent from '../components/ShortUpcomingEvent'
+import AllProjects from '../components/AllProjects'
 import NewsLetter from '../components/NewsLetter'
 import Footer from '../components/Footer'
 
 const ProjectPage = props => {
   return (
-    <div>
+    <div style={{ backgroundColor: 'var(--color-background-primary)' }}>
       <ProjectSection />
-      <ActivityList />
-      <ShortUpcomingEvent />
+      <AllProjects />
       <NewsLetter />
       <Footer />
     </div>

@@ -18,11 +18,16 @@ const ProjectNote = ({
   const [hovering, setHovering] = useState(false)
   const isDesktop = useMediaQuery('(min-width: 600px)')
   return (
-    <div>
-      <Note
-        setHovering={setHovering}
-        contentHeight={isDesktop ? '282px' : '270px'}
-      >
+    <div
+      onMouseEnter={() => {
+        setHovering(true)
+      }}
+      onMouseLeave={() => {
+        setHovering(false)
+      }}
+      className={styles.container}
+    >
+      <Note contentHeight={isDesktop ? '282px' : '270px'}>
         <div>
           {!hovering ? (
             <img

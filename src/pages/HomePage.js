@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 const HomePage = props => {
   return (
-    <div>
+    <div style={{ backgroundColor: 'var(--color-background-primary)' }}>
       <HomeSection />
       <ActivityList />
       <ShortUpcomingEvent />

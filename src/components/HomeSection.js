@@ -17,7 +17,7 @@ const HomeSection = props => {
         <IntroBody
           imageSrc={rocketMonitor}
           stylingTextGroup={{
-            marginTop: '13vh'
+            marginTop: '25px'
           }}
           scrollBar={true}
         >
