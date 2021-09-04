@@ -63,7 +63,7 @@ const NavBar = props => {
             <>
               <ul className={styles.navLinksMobile}>
                 <li className={styles.spaceLinksMobile}>
-                  <Link to="/path" className={styles.linkText}>
+                  <Link to="/" className={styles.linkText}>
                     Home
                   </Link>
                 </li>

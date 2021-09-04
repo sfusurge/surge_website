@@ -22,7 +22,7 @@
 .link {
   text-decoration: none;
   font: var(--font-notes-body);
-  color: var(--color-textBtn-primary);
+  color: var(--color-text-white);
   width: inherit;
 }
 

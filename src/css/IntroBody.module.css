@@ -15,7 +15,7 @@
 .image {
   width: 50%;
   transform: translateY(-130px);
-  padding-bottom: 14vw;
+  padding-bottom: 10vw;
 }
 
 .mainText {
@@ -27,8 +27,8 @@
   position: absolute;
   left: 40%;
   right: 40%;
-  top: calc(30vw + 300px);
-  transition: ease-in-out 0.4s;
+  top: calc(32vw + 320px);
+  transition: opacity ease-in-out 0.4s;
   display: flex;
   flex-direction: column;
   align-items: center;

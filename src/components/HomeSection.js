@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react'
 
 const HomeSection = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
+  const isLaptop = useMediaQuery('(min-width: 1200px)')
   const [scrollBar, setScrollBar] = useState(true)
   useEffect(() => {
     window.addEventListener('scroll', changeBackground)
@@ -30,6 +31,13 @@ const HomeSection = props => {
       {isDesktop ? (
         <IntroBody
           imageSrc={rocketMonitor}
+          stylingImg={
+            !isLaptop
+              ? {
+                  transform: 'translateY(-100px)'
+                }
+              : { transform: 'translateY(-130px)' }
+          }
           stylingTextGroup={{
             marginTop: '25px'
           }}
