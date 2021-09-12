@@ -1,11 +1,11 @@
 .container {
-  width: min-content;
+  width: 240px;
   padding: 33px 25px 50px 22px;
 }
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   color: var(--color-text-white);
 }
@@ -89,6 +89,7 @@
 
 @media only screen and (min-width: 600px) {
   .container {
+    width: 320px;
     padding: 50px 42px 70px 34px;
   }
 

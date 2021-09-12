@@ -1,26 +1,23 @@
 const upcomingEvent = [
   {
-    title: 'Linux Workshop',
-    day: '22',
-    month: 'Nov',
-    location: 'SFU Surge Discord Server',
-    time: '7:00PM - 9:00PM',
-    link: 'https://mail.sfu.ca/owa/#path=/mail',
-    fbEvent: 'https://www.facebook.com/',
+    title: "Club's day",
+    day: '15',
+    month: 'Sept',
+    location: 'Hop In',
+    time: '11:00AM - 5:00PM',
+    link: 'https://hopin.com/events/sfss-clubs-day',
     filterSetting: 'Workshops'
   },
   {
     primaryColor: 'var(--color-button-secondary)',
     secondaryColor: '#447CCE',
-    title: 'Linux Workshop',
-    day: '22',
-    month: 'Nov',
-    location: 'SFU Surge Discord Server',
-    time: '7:00PM - 9:00PM',
-    link: 'https://mail.sfu.ca/owa/#path=/mail',
-    fbEvent: 'https://www.facebook.com/',
-    filterSetting: 'Workshops'
-  },
+    title: 'Club Icebreaker',
+    day: '24',
+    month: 'Sept',
+    location: 'TBA',
+    time: '6:00PM - 9:00PM'
+  }
+  /*
   {
     primaryColor: 'var(--color-image-background)',
     secondaryColor: '#ADBED8',
@@ -99,6 +96,7 @@ const upcomingEvent = [
     fbEvent: 'https://www.facebook.com/',
     filterSetting: 'TechTalks'
   }
+  */
 ]
 
 export default upcomingEvent

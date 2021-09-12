@@ -99,11 +99,18 @@ const OurStory = props => {
         <p className={styles.title}>Our Team</p>
         <div className={isDesktop ? styles.execGroup : styles.mobileExecGroup}>
           {execs.map((exec, i) => (
-            <img
-              src={execResolver(exec.src).default}
-              width={isDesktop ? exec.width : exec.mobileWidth}
-              alt={exec.src}
-            />
+            <a
+              className={styles.hyperLink}
+              href={exec.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={execResolver(exec.src).default}
+                width={isDesktop ? exec.width : exec.mobileWidth}
+                alt={exec.src}
+              />
+            </a>
           ))}
         </div>
         <p
