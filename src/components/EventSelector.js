@@ -7,10 +7,10 @@ import { useState } from 'react'
 
 const EventSelector = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
-  const [filter, setFilter] = useState('Workshops')
+  const [filter, setFilter] = useState('Socials')
   const [listOpen, setListOpen] = useState(false)
 
-  const filterTypes = ['Workshops', 'TechTalks', 'Socials']
+  const filterTypes = ['Socials', 'Workshops', 'TechTalks']
 
   return (
     <div

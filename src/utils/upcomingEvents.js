@@ -1,12 +1,12 @@
 const upcomingEvent = [
   {
-    title: "Club's day",
+    title: "Club's Day",
     day: '15',
     month: 'Sept',
     location: 'Hop In',
     time: '11:00AM - 5:00PM',
     link: 'https://hopin.com/events/sfss-clubs-day',
-    filterSetting: 'Workshops'
+    filterSetting: 'Socials'
   },
   {
     primaryColor: 'var(--color-button-secondary)',
@@ -15,7 +15,8 @@ const upcomingEvent = [
     day: '24',
     month: 'Sept',
     location: 'TBA',
-    time: '6:00PM - 9:00PM'
+    time: '6:00PM - 9:00PM',
+    filterSetting: 'Socials'
   }
   /*
   {

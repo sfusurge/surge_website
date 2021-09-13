@@ -2,7 +2,7 @@ import EventsSection from '../components/EventsSection'
 import Leetcode from '../components/Leetcode'
 import NewsLetter from '../components/NewsLetter'
 import Footer from '../components/Footer'
-import EventSelector from '../components/ShortUpcomingEvent'
+import EventSelector from '../components/EventSelector'
 
 const EventsPage = props => {
   return (
