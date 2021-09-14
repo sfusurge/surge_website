@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 46px;
+}
+
+.image {
+  margin-left: 11%;
+  margin-bottom: 10px;
+}
+
+.textTitle {
+  margin-bottom: 14px;
+  font: var(--font-body-title);
+  color: var(--color-text-body);
+}
+
+.textBody {
+  margin: 0;
+  font: var(--font-text-body);
+  color: var(--color-text-body);
+}
+
+.text {
+  margin: 0 11%;
+  width: auto;
+}
+
+.btn {
+  margin: 20px 0;
+  background-color: var(--color-button-primary);
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.streamingLink {
+  cursor: pointer;
+  text-decoration: underline;
+  font: var(--font-text-body);
+  color: var(--color-button-secondary);
+}
+
+.verticalAlign {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  vertical-align: center;
+  padding: 13px 0;
+}
+
+.spotifyIcon {
+  padding-right: 7%;
+}
+
+.btnContent {
+  margin: 0;
+  font: var(--font-spotify-btn);
+  color: var(--color-text-white);
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 10vh;
+  }
+
+  .image {
+    width: 100%;
+    margin-left: 7%;
+    margin-bottom: 0;
+  }
+
+  .btn {
+    width: max(362px, 80%);
+  }
+
+  .btnContent {
+    text-align: center;
+  }
+
+  .text {
+    margin-left: 0%;
+    margin-right: 23%;
+    padding-bottom: 8%;
+    width: 100%;
+  }
+
+  .verticalAlign {
+    justify-content: flex-start;
+    margin-left: 9%;
+    margin-right: 11%;
+  }
+}

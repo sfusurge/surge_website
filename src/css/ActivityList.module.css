@@ -1,0 +1,19 @@
+.container {
+  background-color: var(--color-background-primary);
+}
+
+.title {
+  margin: 0;
+  padding-bottom: 19px;
+  text-align: center;
+  font: var(--font-body-secondTitle);
+  color: var(--color-text-body);
+}
+
+@media only screen and (min-width: 600px) {
+  .title {
+    margin-bottom: 98px;
+    margin-left: 7%;
+    text-align: left;
+  }
+}

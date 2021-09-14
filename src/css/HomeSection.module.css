@@ -1,0 +1,65 @@
+.logo {
+  width: 100%;
+}
+
+.header {
+  margin: 0;
+  font: var(--font-heavy-bold);
+  color: var(--color-text-body);
+}
+
+.boldText {
+  font: var(--font-header);
+  font-size: 20px;
+  color: var(--color-text-body);
+}
+
+.bodyText {
+  font: var(--font-text-body);
+  color: var(--color-text-body);
+}
+
+.btn {
+  background-color: var(--color-button-primary);
+  text-align: center;
+  width: 160px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.link {
+  text-decoration: none;
+  font: var(--font-notes-body);
+  color: var(--color-text-white);
+}
+
+.mobileContainer {
+  background-image: url('../assets/header-background.svg');
+  background-size: cover;
+  background-position: top;
+  height: 473px;
+  padding-bottom: 250px;
+}
+
+.navBarMobile {
+  position: absolute;
+  right: 0;
+}
+
+.mobileText {
+  padding-top: 50px;
+  margin-left: 6%;
+  margin-right: 14%;
+}
+
+.boldTextMobile {
+  font: var(--font-notes-body);
+  font-weight: 600;
+  color: var(--color-text-body);
+}
+
+.rocketMonitorMobile {
+  margin: 0 9%;
+  width: 81%;
+  margin-top: 32px;
+}

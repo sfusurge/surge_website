@@ -1,0 +1,40 @@
+.textContainer {
+  width: 336px;
+  padding-left: 36px;
+  padding-right: 31px;
+  font: var(--font-notes-body);
+  color: var(--color-text-white);
+}
+
+.textMobileContainer {
+  width: 213px;
+  padding: 0 25px;
+  font: var(--font-notes-body);
+  color: var(--color-text-white);
+}
+
+.noteTitle {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+.noteText {
+  margin: 0;
+}
+
+.fbEventLink {
+  text-decoration: none;
+}
+
+.fbEvent {
+  color: var(--color-text-white);
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  padding: 7px 0;
+  border: solid;
+  border-width: 1px;
+}

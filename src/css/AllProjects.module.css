@@ -1,0 +1,30 @@
+.container {
+  background-color: var(--color-background-primary);
+  padding-left: 8%;
+  padding-right: 5%;
+  padding-top: 52px;
+  padding-bottom: 151px;
+}
+
+.mobileContainer {
+  background-color: var(--color-background-primary);
+  padding-bottom: 29px;
+}
+
+.projectList {
+  display: grid;
+  grid-gap: 55px 2%;
+  grid-template-columns: repeat(auto-fit, minmax(404px, 1fr));
+}
+
+.projectListMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font: var(--font-body-heading);
+  color: var(--color-text-body);
+  margin: 0;
+}

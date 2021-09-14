@@ -1,0 +1,58 @@
+.container {
+  background-color: var(--color-podcast);
+  display: flex;
+  height: 183px;
+}
+
+.innerContainer {
+  width: 80%;
+  margin: auto;
+  margin-top: 26px;
+  margin-bottom: 36px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.titleText {
+  width: 80%;
+  font: var(--font-body-subheading);
+  margin: 0;
+  color: var(--color-text-white);
+}
+
+.titleNumber {
+  margin: 0;
+  font-family: Barlow;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-text-white);
+  font-size: 20px;
+}
+
+.host {
+  margin: 0;
+  font: var(--font-text-body);
+  color: var(--color-text-white);
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn {
+  width: 100%;
+  border: solid;
+  border-width: 1px;
+  color: var(--color-text-white);
+  text-decoration: none;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 0;
+  margin-top: 14px;
+  font: var(--font-body-podcastLink);
+}
