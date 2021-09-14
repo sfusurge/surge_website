@@ -22,7 +22,7 @@ const LeetcodeText = props => {
 
       <a
         className={styles.clearLinks}
-        href="https://www.facebook.com/sfusurge/"
+        href="https://www.facebook.com/events/1085453905185159"
         target="_blank"
         rel="noreferrer"
       >
