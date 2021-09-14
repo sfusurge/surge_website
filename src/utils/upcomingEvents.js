@@ -1,9 +1,9 @@
 const upcomingEvent = [
   {
-    title: "Club's Day",
+    title: 'Clubs Day',
     day: '15',
     month: 'Sept',
-    location: 'Hop In',
+    location: 'Hopin',
     time: '11:00AM - 5:00PM',
     link: 'https://hopin.com/events/sfss-clubs-day',
     filterSetting: 'Socials'

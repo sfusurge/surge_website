@@ -86,7 +86,7 @@ const podcastInfo = [
   {
     image: './praneer.png',
     subTitle: 'Turning jealousy into positive energy',
-    host: 'with Alvin David',
+    host: 'with Praneer Shrestha',
     num: '04',
     date: 'Released on June 12, 2020',
     link: 'https://open.spotify.com/episode/6cgnCqW5MLXyunGXSlZMRM?si=2186593786a14d79'
