@@ -30,7 +30,7 @@
 .link {
   text-decoration: none;
   font: var(--font-notes-body);
-  color: #ffffff;
+  color: var(--color-text-white);
 }
 
 .mobileContainer {
@@ -38,6 +38,7 @@
   background-size: cover;
   background-position: top;
   height: 473px;
+  padding-bottom: 250px;
 }
 
 .navBarMobile {

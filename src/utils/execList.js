@@ -21,13 +21,13 @@ const execs = [
     src: './harsha.png',
     width: '100px',
     mobileWidth: '75px',
-    link: ''
+    link: 'https://www.linkedin.com/in/harsha-gidwani-1a9576194/'
   },
   {
     src: './alex.png',
     width: '100px',
     mobileWidth: '75px',
-    link: ''
+    link: 'https://www.linkedin.com/in/a-svoboda/'
   },
   {
     src: './isshan.png',
@@ -51,7 +51,7 @@ const execs = [
     src: './moe.png',
     width: '100px',
     mobileWidth: '75px',
-    link: ''
+    link: 'https://www.linkedin.com/in/moe-alhatti/'
   },
   {
     src: './ali.png',
@@ -83,7 +83,7 @@ const execs = [
     src: './kevin.png',
     width: '100px',
     mobileWidth: '75px',
-    link: ''
+    link: 'https://www.linkedin.com/in/sjhe/'
   },
   {
     src: './michelle.png',
@@ -101,7 +101,7 @@ const execs = [
     src: './bonnie.png',
     width: '100px',
     mobileWidth: '75px',
-    link: ''
+    link: 'https://www.linkedin.com/in/bonniehychen/'
   },
   {
     src: './nathan.png',
@@ -119,7 +119,7 @@ const execs = [
     src: './priscilla.png',
     width: '100px',
     mobileWidth: '75px',
-    link: ''
+    link: 'https://www.linkedin.com/in/priscilla-cho-039442205/'
   },
   {
     src: './karren.png',
@@ -131,13 +131,13 @@ const execs = [
     src: './nadia.png',
     width: '100px',
     mobileWidth: '75px',
-    link: ''
+    link: 'https://www.linkedin.com/in/nadia-angeline-s-778284135/'
   },
   {
     src: './zoey.png',
     width: '100px',
     mobileWidth: '75px',
-    link: ''
+    link: 'https://www.linkedin.com/in/zoey-le/'
   },
   {
     src: './emma.png',
@@ -167,7 +167,7 @@ const execs = [
     src: './denzel.png',
     width: '100px',
     mobileWidth: '75px',
-    link: ''
+    link: 'https://www.linkedin.com/in/dtjokroa/'
   },
   {
     src: './jocelyn.png',

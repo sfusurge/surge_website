@@ -8,18 +8,40 @@ import { Link } from 'react-router-dom'
 
 import IntroBody from './IntroBody'
 import NavBar from './NavBar'
+import { useEffect, useState } from 'react'
 
 const HomeSection = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
+  const isLaptop = useMediaQuery('(min-width: 1200px)')
+  const [scrollBar, setScrollBar] = useState(true)
+  useEffect(() => {
+    window.addEventListener('scroll', changeBackground)
+  }, [])
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setScrollBar(false)
+    } else {
+      setScrollBar(true)
+    }
+  }
+
   return (
     <>
       {isDesktop ? (
         <IntroBody
           imageSrc={rocketMonitor}
+          stylingImg={
+            !isLaptop
+              ? {
+                  transform: 'translateY(-100px)'
+                }
+              : { transform: 'translateY(-130px)' }
+          }
           stylingTextGroup={{
-            marginTop: '13vh'
+            marginTop: '25px'
           }}
-          scrollBar={true}
+          scrollBar={scrollBar}
         >
           <img className={styles.logo} src={sfuSurge} alt={sfuSurge} />
           <p className={styles.header}>Engage • Empower • Innovate</p>

@@ -32,7 +32,10 @@ const ProjectSection = props => {
   return (
     <>
       <IntroBody
-        stylingImg={{ paddingLeft: '4%', transform: 'translateY(0px)' }}
+        stylingImg={{
+          paddingLeft: '4%',
+          transform: 'translateY(0px)'
+        }}
         stylingImgMobile={{
           paddingTop: '46px'
         }}
@@ -76,31 +79,37 @@ const ProjectSection = props => {
           </span>
         </p>
         {timeLeft && (
-          <p
-            style={isDesktop ? { textAlign: 'left' } : { textAlign: 'center' }}
-            className={styles.timer}
-          >
-            {timeLeft.days}
-            {' : '}
-            {timeLeft.hours}
-            {' : '}
-            {timeLeft.minutes}
-            {' : '}
-            {timeLeft.seconds}
-          </p>
+          <>
+            <p
+              style={
+                isDesktop ? { textAlign: 'left' } : { textAlign: 'center' }
+              }
+              className={styles.timer}
+            >
+              {timeLeft.days}
+              {' : '}
+              {timeLeft.hours}
+              {' : '}
+              {timeLeft.minutes}
+              {' : '}
+              {timeLeft.seconds}
+            </p>
+            <div
+              style={
+                isDesktop ? { width: 'max(160px, 74%)' } : { width: '100%' }
+              }
+            >
+              <a
+                className={styles.link}
+                href="google.ca"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className={styles.btn}>Apply Now</div>
+              </a>
+            </div>
+          </>
         )}
-        <div
-          style={isDesktop ? { width: 'max(160px, 74%)' } : { width: '100%' }}
-        >
-          <a
-            className={styles.link}
-            href="google.ca"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className={styles.btn}>Apply Now</div>
-          </a>
-        </div>
       </IntroBody>
     </>
   )

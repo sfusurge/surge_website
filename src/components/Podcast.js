@@ -1,12 +1,18 @@
 import styles from '../css/Podcast.module.css'
 import PodcastTitle from './PodcastTitle'
 
+const podcastResolver = require.context(
+  '../assets/podcastHosts',
+  false,
+  /.*\.png/
+)
+
 const Podcast = props => {
   return (
     <div className={styles.container}>
       <img
         className={styles.person}
-        src={props.details.image}
+        src={podcastResolver(props.details.image).default}
         alt={props.details.image}
       ></img>
       <div className={styles.text}>

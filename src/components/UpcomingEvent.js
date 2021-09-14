@@ -31,7 +31,12 @@ const UpcomingEvent = ({
               <>
                 <div className={styles.details}>
                   <img src={mapMarker} alt="Location" />
-                  <a className={styles.location} href={link}>
+                  <a
+                    className={styles.location}
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {location}
                   </a>
                 </div>
@@ -58,9 +63,16 @@ const UpcomingEvent = ({
               </div>
             </div>
           )}
-          <a className={styles.fbEvent} href={fbEvent}>
-            Facebook Event
-          </a>
+          {fbEvent && (
+            <a
+              className={styles.fbEvent}
+              href={fbEvent}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook Event
+            </a>
+          )}
         </div>
       </div>
     </Note>

@@ -19,7 +19,7 @@
 }
 
 .btn:hover {
-  color: var(--color-textBtn-primary);
+  color: var(--color-text-white);
   background-color: var(--color-button-primary);
 }
 

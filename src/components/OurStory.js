@@ -1,5 +1,5 @@
 import useMediaQuery from '../utils/useMediaQuery'
-import styles from '../css/Execs.module.css'
+import styles from '../css/OurStory.module.css'
 import execs from '../utils/execList'
 const execResolver = require.context('../assets/execs', false, /.*\.png/)
 
@@ -7,7 +7,7 @@ const OurStory = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
 
   return (
-    <>
+    <div className={styles.container}>
       <div
         style={
           isDesktop
@@ -18,7 +18,7 @@ const OurStory = props => {
         <p className={styles.title}>Our Story</p>
         <p
           className={styles.storyText}
-          style={isDesktop ? { marginTop: '33px' } : { marginTop: '9px' }}
+          style={isDesktop ? { paddingTop: '33px' } : { paddingTop: '9px' }}
         >
           SFU Surge is an all-inclusive organization to promote
           <span className={styles.boldText}>
@@ -99,11 +99,18 @@ const OurStory = props => {
         <p className={styles.title}>Our Team</p>
         <div className={isDesktop ? styles.execGroup : styles.mobileExecGroup}>
           {execs.map((exec, i) => (
-            <img
-              src={execResolver(exec.src).default}
-              width={isDesktop ? exec.width : exec.mobileWidth}
-              alt={exec.src}
-            />
+            <a
+              className={styles.hyperLink}
+              href={exec.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={execResolver(exec.src).default}
+                width={isDesktop ? exec.width : exec.mobileWidth}
+                alt={exec.src}
+              />
+            </a>
           ))}
         </div>
         <p
@@ -118,7 +125,7 @@ const OurStory = props => {
           sfusurge@gmail.com if you are interested in collaborating.
         </p>
       </div>
-    </>
+    </div>
   )
 }
 

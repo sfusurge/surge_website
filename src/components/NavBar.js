@@ -16,7 +16,7 @@ const NavBar = props => {
       {isDesktop ? (
         <ul className={styles.navLinks}>
           <li className={styles.spaceLinks}>
-            <Link to="/path" className={styles.linkText}>
+            <Link to="/" className={styles.linkText}>
               Home
             </Link>
           </li>
@@ -33,6 +33,11 @@ const NavBar = props => {
           <li className={styles.spaceLinks}>
             <Link to="/events" className={styles.linkText}>
               Events
+            </Link>
+          </li>
+          <li className={styles.spaceLinks}>
+            <Link to="/podcast" className={styles.linkText}>
+              Podcasts
             </Link>
           </li>
         </ul>
@@ -58,7 +63,7 @@ const NavBar = props => {
             <>
               <ul className={styles.navLinksMobile}>
                 <li className={styles.spaceLinksMobile}>
-                  <Link to="/path" className={styles.linkText}>
+                  <Link to="/" className={styles.linkText}>
                     Home
                   </Link>
                 </li>
@@ -75,6 +80,11 @@ const NavBar = props => {
                 <li className={styles.spaceLinksMobile}>
                   <Link to="/events" className={styles.linkText}>
                     Events
+                  </Link>
+                </li>
+                <li className={styles.spaceLinksMobile}>
+                  <Link to="/podcast" className={styles.linkText}>
+                    Podcasts
                   </Link>
                 </li>
               </ul>

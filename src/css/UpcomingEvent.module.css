@@ -1,13 +1,13 @@
 .container {
-  width: min-content;
+  width: 240px;
   padding: 33px 25px 50px 22px;
 }
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  color: #ffffff;
+  color: var(--color-text-white);
 }
 
 .date {
@@ -26,7 +26,7 @@
 
 .divider {
   height: 65px;
-  background: #ffffff;
+  background: var(--color-text-white);
   border-left: 1px solid;
   margin: 0 20px;
 }
@@ -59,7 +59,7 @@
 
 .location {
   font: var(--font-notes-body);
-  color: #ffffff;
+  color: var(--color-text-white);
 }
 
 .time {
@@ -71,7 +71,7 @@
   flex-direction: column;
   justify-content: center;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--color-text-white);
   margin-top: 20px;
 }
 
@@ -79,7 +79,7 @@
   width: 100%;
   border: solid;
   border-width: 1px;
-  color: white;
+  color: var(--color-text-white);
   text-decoration: none;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.1);
@@ -89,6 +89,7 @@
 
 @media only screen and (min-width: 600px) {
   .container {
+    width: 320px;
     padding: 50px 42px 70px 34px;
   }
 

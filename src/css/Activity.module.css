@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 46px;
+  padding-bottom: 46px;
 }
 
 .image {
@@ -58,14 +58,14 @@
 .btnContent {
   margin: 0;
   font: var(--font-spotify-btn);
-  color: #ffffff;
+  color: var(--color-text-white);
 }
 
 @media only screen and (min-width: 600px) {
   .container {
     flex-direction: row;
     align-items: center;
-    margin-bottom: 10vh;
+    padding-bottom: 10vh;
   }
 
   .image {

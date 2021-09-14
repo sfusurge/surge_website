@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import useMediaQuery from '../utils/useMediaQuery'
 import styles from '../css/AllProjects.module.css'
 import projectTitles from '../utils/projectTitles'

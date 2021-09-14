@@ -15,12 +15,6 @@ const Note = ({
   return (
     <div
       className={styles.container}
-      onMouseEnter={() => {
-        setHovering(true)
-      }}
-      onMouseLeave={() => {
-        setHovering(false)
-      }}
       style={{
         '--primary-color': primaryColor,
         '--secondary-color': secondaryColor,
