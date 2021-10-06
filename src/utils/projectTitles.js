@@ -11,7 +11,7 @@ const projectTitles = [
     srcMobile: './pacMacroMobile.svg',
     title: 'Pac Macro',
     text: 'Players track the locations of other enemy players through a mobile application, and hunt them down mercilessly. Play Pac-Man in real life across five square blocks of Downtown Vancouver!',
-    link: 'https://github.com/sfusurge/build-a-bot-royale'
+    link: 'https://github.com/pacmacro'
   },
   {
     src: './battleBots.svg',
@@ -35,7 +35,7 @@ const projectTitles = [
     srcMobile: './scheduleMeMobile.svg',
     title: 'Schedule Me',
     text: 'A simple and powerful way to organize meetings. A link is shared to all relevant people to poll for their availability and from there, the organizer can determine the optimal time for a meeting.',
-    link: 'https://github.com/sfusurge/StormArea52'
+    link: 'https://github.com/brianmakesthings/scheduleMe'
   },
   {
     src: './sfuCarpool.svg',
@@ -44,7 +44,7 @@ const projectTitles = [
     text: 'Make new friends, beat the bus, save the environment all by simply entering the number of seats you have available in your car as a driver and by selecting your pick up location and university campus as a passenger.',
     mobileText:
       'Make new friends, beat the bus, save the environment all by simply entering the number of seats you have available in your car as a driver.',
-    link: 'https://github.com/sfusurge/StormArea52'
+    link: 'https://github.com/ShubhamNegi1701/sfu_carpool_app_v1'
   }
 ]
 
