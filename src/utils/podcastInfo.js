@@ -5,7 +5,7 @@ const podcastInfo = [
     host: 'with Arvin Amini',
     date: 'Released on May 7, 2021',
     font: { font: '800 20px Barlow' },
-    num: '14',
+    num: '15',
     link: 'https://open.spotify.com/episode/5dYDyTw5HYTmTGWoA3e0PM?si=b4cd99564e7e4363'
   },
   {
@@ -13,7 +13,7 @@ const podcastInfo = [
     subTitle: 'Then vs Now: Surge’s Dynamic Duo',
     host: 'with Vivian Wong & Noble Tan',
     date: 'Released on April 9, 2021',
-    num: '13',
+    num: '14',
     link: 'https://open.spotify.com/episode/0dQBVOrG4pvaNKMOvzp1aS?si=bd88e93b57c143e1'
   },
   {
@@ -21,7 +21,7 @@ const podcastInfo = [
     subTitle: 'Women in STEM & AI Ethics',
     host: 'with Paniz Najjarezaparast',
     date: 'Released on February 28, 2021',
-    num: '12',
+    num: '13',
     link: 'https://open.spotify.com/episode/5JxPVGPSaOM0agOtY7ofbT?si=3d0da04b57704e42'
   },
   {
@@ -29,7 +29,7 @@ const podcastInfo = [
     subTitle: 'Meet the new Surge Spotlight host!',
     host: 'with Linda Kanyamuna',
     date: 'Released on January 25, 2021 ',
-    num: '11',
+    num: '12',
     link: 'https://open.spotify.com/episode/7sN3z9NtPiw7wkQHW8cnv2?si=fd0fd85b2440415b'
   },
   {
@@ -37,7 +37,7 @@ const podcastInfo = [
     subTitle: 'Student life in the time of COVID-19 (2/2)',
     host: 'with Nikola Filipovic',
     date: 'Released on December 3, 2020 ',
-    num: '10',
+    num: '11',
     link: 'https://open.spotify.com/episode/6UDuFa60Cz9YZkTfZvvuJ2?si=86a041c2d2e345b7'
   },
   {
@@ -45,7 +45,7 @@ const podcastInfo = [
     subTitle: 'Student life in the time of COVID-19 (1/2)',
     host: 'with Nikola Filipovic',
     date: 'Released on November 19, 2020',
-    num: '09',
+    num: '10',
     link: 'https://open.spotify.com/episode/117ejZRiZThZ20ve0rBVHs?si=165b347449fc43d0'
   },
   {
@@ -55,14 +55,14 @@ const podcastInfo = [
     host: 'with Josh Fernandez',
     date: 'Released on October 30, 2020',
     font: { font: '800 20px Barlow' },
-    num: '08',
+    num: '09',
     link: 'https://open.spotify.com/episode/2UxI2ufK9Xg0Vtor2rv53V?si=9b0cd8f2ae2d45dc'
   },
   {
     image: './chris.png',
     subTitle: 'The tech community on the global scale',
     host: 'with Chris Pereira',
-    num: '07',
+    num: '08',
     date: 'Released on September 28, 2020',
     link: 'https://open.spotify.com/episode/5KKrA9MUgCW3XTK10pbSBp?si=753aa52b3d7a42f0'
   },
@@ -70,7 +70,7 @@ const podcastInfo = [
     image: './qaid.png',
     subTitle: 'The ins and outs of digital working and job searching',
     host: 'with Qaid Jivan',
-    num: '06',
+    num: '07',
     date: 'Released on September 4, 2020',
     font: { font: '800 20px Barlow' },
     link: 'https://open.spotify.com/episode/1IS3XmrGnRydiyALU70R6N?si=0cbf07665d1a47a0'
@@ -79,7 +79,7 @@ const podcastInfo = [
     image: './alvin.png',
     subTitle: 'Building connections beyond the surface',
     host: 'with Alvin David',
-    num: '05',
+    num: '06',
     date: 'Released on Jul 4, 2020',
     link: 'https://open.spotify.com/episode/6j3gUB59SZGu15T1xo3DUx?si=6ee499d2244c4955'
   },
@@ -87,7 +87,7 @@ const podcastInfo = [
     image: './praneer.png',
     subTitle: 'Turning jealousy into positive energy',
     host: 'with Praneer Shrestha',
-    num: '04',
+    num: '05',
     date: 'Released on June 12, 2020',
     link: 'https://open.spotify.com/episode/6cgnCqW5MLXyunGXSlZMRM?si=2186593786a14d79'
   },
@@ -95,7 +95,7 @@ const podcastInfo = [
     image: './alex.png',
     subTitle: 'How gaming helped me redirect my career path',
     host: 'with Alex Land',
-    num: '03',
+    num: '04',
     date: 'Released on May 29, 2020',
     font: { font: '800 20px Barlow' },
     link: 'https://open.spotify.com/episode/7cBiKAmdmxvXZXEXrDO2Zm?si=2e25c8a338684300'
