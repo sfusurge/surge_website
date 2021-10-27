@@ -1,22 +1,27 @@
 const upcomingEvent = [
   {
-    title: 'Clubs Day',
-    day: '15',
-    month: 'Sept',
-    location: 'Hopin',
-    time: '11:00AM - 5:00PM',
-    link: 'https://hopin.com/events/sfss-clubs-day',
-    filterSetting: 'Socials'
+    title: 'Leetcode with Surge',
+    day: '28',
+    month: 'Oct',
+    location: 'Discord',
+    time: '7:00PM - 8:00PM',
+    link: 'https://discord.com/invite/xu7CqKc',
+    filterSetting: 'Workshops',
+    fbEvent:
+      'https://www.facebook.com/events/897474257552678?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22search_results%22%2C%22surface%22%3A%22search%22%7D]%2C%22ref_notif_type%22%3Anull%7D'
   },
   {
     primaryColor: 'var(--color-button-secondary)',
     secondaryColor: '#447CCE',
-    title: 'Club Icebreaker',
-    day: '24',
-    month: 'Sept',
-    location: 'TBA',
-    time: '6:00PM - 9:00PM',
-    filterSetting: 'Socials'
+    title: 'CSS Battles',
+    day: '2',
+    month: 'Nov',
+    location: 'Discord',
+    time: '7:30PM - 8:30PM',
+    link: 'https://discord.com/invite/xu7CqKc',
+    filterSetting: 'Workshops',
+    fbEvent:
+      'https://www.facebook.com/events/970682430329081/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22search_results%22%2C%22surface%22%3A%22search%22%7D]%2C%22ref_notif_type%22%3Anull%7D'
   }
   /*
   {
