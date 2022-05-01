@@ -1,7 +1,7 @@
 import styles from '../css/EventSelector.module.css'
 import useMediaQuery from '../utils/useMediaQuery'
-import allEvents from '../utils/upcomingEvents'
-import UpcomingEvent from './UpcomingEvent'
+// import allEvents from '../utils/upcomingEvents'
+// import UpcomingEvent from './UpcomingEvent'
 import downArrowIcon from '../assets/downArrow.svg'
 import { useState } from 'react'
 
