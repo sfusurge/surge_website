@@ -85,11 +85,11 @@ const OurStory = props => {
           , or{' '}
           <a
             className={styles.hyperLink}
-            href="https://twitter.com/sfusurge?lang=en"
+            href="https://www.linkedin.com/company/sfu-surge/?originalSubdomain=ca"
             target="_blank"
             rel="noreferrer"
           >
-            <span className={styles.hyperLinks}>{'Twitter'}</span>
+            <span className={styles.hyperLinks}>{'LinkedIn'}</span>
           </a>
           . Also, be sure to sign up for our Newsletter to stay up to date with
           all our events!

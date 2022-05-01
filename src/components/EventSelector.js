@@ -88,7 +88,8 @@ const EventSelector = props => {
       <div
         className={isDesktop ? styles.eventsNotes : styles.eventsNotesMobile}
       >
-        {allEvents.map((event, i) => (
+        {/* TODO for future devs: uncomment below line when there are events*/}
+        {/* {allEvents.map((event, i) => (
           <>
             {filter === event.filterSetting && (
               <div className={!isDesktop && styles.notesMargin}>
@@ -106,7 +107,13 @@ const EventSelector = props => {
               </div>
             )}
           </>
-        ))}
+        ))} */}
+        <p
+          style={isDesktop ? { fontSize: '30px' } : { fontSize: '18px' }}
+          className={styles.title}
+        >
+          Stay tuned for future events
+        </p>
       </div>
     </div>
   )

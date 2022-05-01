@@ -41,7 +41,7 @@ const AboutSection = props => {
           style={isDesktop ? { lineHeight: '32px' } : { lineHeight: '20px' }}
           className={styles.bodyText}
         >
-          The SFU Surge Executive Team is a team of 20 interdisciplinary
+          The SFU Surge Executive Team is a team of 20+ interdisciplinary
           students across 5+ SFU Programs. Together, we aim to: Empower,
           Innovate, and Inspire the local tech community with workshops, events,
           and projects.
