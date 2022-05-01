@@ -8,12 +8,12 @@ import { useEffect, useState } from 'react'
 
 const getTime = dueDate => {
   const timeLeft = calculateTimeLeft(dueDate)
-
+  const timeStrings = {}
   if (timeLeft) {
-    timeLeft.days = formatDoubleDigitTime(timeLeft.days)
-    timeLeft.hours = formatDoubleDigitTime(timeLeft.hours)
-    timeLeft.minutes = formatDoubleDigitTime(timeLeft.minutes)
-    timeLeft.seconds = formatDoubleDigitTime(timeLeft.seconds)
+    timeStrings.days = formatDoubleDigitTime(timeLeft.days)
+    timeStrings.hours = formatDoubleDigitTime(timeLeft.hours)
+    timeStrings.minutes = formatDoubleDigitTime(timeLeft.minutes)
+    timeStrings.seconds = formatDoubleDigitTime(timeLeft.seconds)
   }
 
   return timeLeft
@@ -65,8 +65,7 @@ const ProjectSection = props => {
         >
           We open applications for{' '}
           <span className={styles.boldText}>Project Team Members</span>,{' '}
-          <span className={styles.boldText}>Team</span>
-          <span className={styles.boldText}>Leads</span>, and
+          <span className={styles.boldText}>Team Leads</span>, and
           <span className={styles.boldText}>{' Mentors'} </span> every semester.
         </p>
         <p
