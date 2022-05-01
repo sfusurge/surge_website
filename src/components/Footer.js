@@ -15,6 +15,14 @@ const Footer = props => {
       <div className={isDesktop ? styles.icons : styles.mobileIcons}>
         <SocialsIcon />
       </div>
+      {/* TODO: Try to incorporate these images in the footer without increasing height*/}
+      {/* {isDesktop && (
+        <div className={styles.images}>
+          <img className={styles.scooter} src={scooter} alt="scooter"></img>
+          <img className={styles.robot} src={robot} alt="robot"></img>
+          <img className={styles.notepad} src={notepad} alt="notepad"></img>
+        </div>
+      )} */}
     </div>
   )
 }
