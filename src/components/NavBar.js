@@ -37,7 +37,7 @@ const NavBar = props => {
           </li>
           <li className={styles.spaceLinks}>
             <Link to="/podcast" className={styles.linkText}>
-              Podcasts
+              Podcast
             </Link>
           </li>
         </ul>
