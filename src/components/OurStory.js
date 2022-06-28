@@ -106,7 +106,7 @@ const OurStory = props => {
               rel="noreferrer"
             >
               <img
-                src={execResolver(exec.src).default}
+                src={execResolver(exec.src)}
                 width={isDesktop ? exec.width : exec.mobileWidth}
                 alt={exec.src}
               />

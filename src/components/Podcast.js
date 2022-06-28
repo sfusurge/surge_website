@@ -12,7 +12,7 @@ const Podcast = props => {
     <div className={styles.container}>
       <img
         className={styles.person}
-        src={podcastResolver(props.details.image).default}
+        src={podcastResolver(props.details.image)}
         alt={props.details.image}
       ></img>
       <div className={styles.text}>
