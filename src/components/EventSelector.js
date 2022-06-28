@@ -1,16 +1,25 @@
 import styles from '../css/EventSelector.module.css'
 import useMediaQuery from '../utils/useMediaQuery'
-// import allEvents from '../utils/upcomingEvents'
-// import UpcomingEvent from './UpcomingEvent'
+import allEvents from '../utils/upcomingEvents'
+import UpcomingEvent from './UpcomingEvent'
 import downArrowIcon from '../assets/downArrow.svg'
 import { useState } from 'react'
 
 const EventSelector = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
-  const [filter, setFilter] = useState('Socials')
+  const [filter, setFilter] = useState('Workshops')
   const [listOpen, setListOpen] = useState(false)
 
   const filterTypes = ['Socials', 'Workshops', 'TechTalks']
+
+  let containsAnyEvent = (eventType) => {
+    for (let i = 0; i < allEvents.length; i++) {
+      if (allEvents[i].filterSetting === eventType) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   return (
     <div
@@ -89,7 +98,7 @@ const EventSelector = props => {
         className={isDesktop ? styles.eventsNotes : styles.eventsNotesMobile}
       >
         {/* TODO for future devs: uncomment below line when there are events*/}
-        {/* {allEvents.map((event, i) => (
+        {allEvents.map((event, i) => (
           <>
             {filter === event.filterSetting && (
               <div className={!isDesktop && styles.notesMargin}>
@@ -107,13 +116,13 @@ const EventSelector = props => {
               </div>
             )}
           </>
-        ))} */}
-        <p
-          style={isDesktop ? { fontSize: '30px' } : { fontSize: '18px' }}
+        ))}
+        {!containsAnyEvent(filter) && (<p
+          style={isDesktop ? { fontSize: '2rem' } : { fontSize: '1rem' }}
           className={styles.title}
         >
           Stay tuned for future events
-        </p>
+        </p>)}
       </div>
     </div>
   )
