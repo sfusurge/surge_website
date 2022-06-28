@@ -22,6 +22,7 @@ const AllProjects = props => {
       >
         {projectTitles.map((project, i) => (
           <div
+            key={project.src}
             style={isDesktop ? { margin: '0' } : { marginBottom: '39px' }}
             className={styles.gridSpacing}
           >
