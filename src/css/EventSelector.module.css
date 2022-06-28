@@ -42,7 +42,7 @@
   min-height: 631px;
   grid-row-gap: 31px;
   grid-column-gap: 49px;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: 1fr 2fr;
 }
 
 .eventsNotesMobile {
