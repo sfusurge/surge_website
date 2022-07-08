@@ -21,7 +21,7 @@ const getTime = dueDate => {
 
 const ProjectSection = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
-  const dueDate = '2021-09-02T21:00:00Z'
+  const dueDate = '2022-07-23T06:59:59Z'
   const [timeLeft, setTimeLeft] = useState(getTime(dueDate))
   useEffect(() => {
     const timer = setInterval(() => {
@@ -101,7 +101,7 @@ const ProjectSection = props => {
             >
               <a
                 className={styles.link}
-                href="google.ca"
+                href="https://docs.google.com/forms/d/1uppE0jiHmQX0uqxFeaKFfd5mP2-4IMMMTAUsx47sYz8/edit"
                 target="_blank"
                 rel="noreferrer"
               >
