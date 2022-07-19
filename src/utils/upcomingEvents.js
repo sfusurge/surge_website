@@ -1,16 +1,5 @@
 const upcomingEvent = [
-  {
-    title: 'Python Workshop for Data Science',
-    day: '30',
-    month: 'Jun',
-    location: 'Zoom',
-    time: '5:30PM – 7:00PM',
-    link: 'https://lu.ma/ik5xfjbj',
-    filterSetting: 'Workshops',
-    fbEvent:
-      'https://www.facebook.com/events/575454677332556'
-  },
-/*
+  /*
   {
     title: 'Leetcode with Surge',
     day: '28',
