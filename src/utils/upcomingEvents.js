@@ -116,4 +116,18 @@ const upcomingEvent = [
   */
 ]
 
-export default upcomingEvent
+export default upcomingEvent;
+
+// Internal Utility Functions:
+function dateOf(event) {
+  const time = event.time.split(' - ')[0].replace(/ *([AP]M)/g, ' $1');
+  return new Date(`${event.month} ${event.day} ${time}`);
+}
+
+// byDate: The events, listed in order of closest to furthest.
+export const byDate = upcomingEvent.sort((a, b) => {
+  const aDate = dateOf(a);
+  const bDate = dateOf(b);
+  return bDate - aDate;
+});
+
