@@ -53,7 +53,7 @@ const CustomForm = ({ status, message, onValidated }) => {
               placeholder="Name"
               required
             />
-            <label for="Name" className={styles.formLabel}>
+            <label htmlFor="Name" className={styles.formLabel}>
               Name
             </label>
           </div>
@@ -73,7 +73,7 @@ const CustomForm = ({ status, message, onValidated }) => {
               placeholder="Email"
               required
             />
-            <label for="Email" className={styles.formLabel}>
+            <label htmlFor="Email" className={styles.formLabel}>
               Email
             </label>
           </div>

@@ -34,8 +34,8 @@ const ProjectNote = ({
               style={isDesktop ? { width: '403px' } : { width: '263px' }}
               src={
                 isDesktop
-                  ? projectResolver(src).default
-                  : projectResolver(srcMobile).default
+                  ? projectResolver(src)
+                  : projectResolver(srcMobile)
               }
               alt="MealMovers"
             ></img>

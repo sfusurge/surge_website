@@ -100,13 +100,14 @@ const OurStory = props => {
         <div className={isDesktop ? styles.execGroup : styles.mobileExecGroup}>
           {execs.map((exec, i) => (
             <a
+              key={exec.link}
               className={styles.hyperLink}
               href={exec.link}
               target="_blank"
               rel="noreferrer"
             >
               <img
-                src={execResolver(exec.src).default}
+                src={execResolver(exec.src)}
                 width={isDesktop ? exec.width : exec.mobileWidth}
                 alt={exec.src}
               />
