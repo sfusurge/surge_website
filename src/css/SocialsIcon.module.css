@@ -3,17 +3,24 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 129px;
+  width: max-content;
+}
+
+.iconLink {
+  margin-right: 0.75rem;
 }
 
 .iconLink:hover {
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 .img {
   opacity: 1;
+  width: 2.5rem;
+  height: 2.5rem;
+  filter: invert(12%) sepia(41%) saturate(5654%) hue-rotate(226deg) brightness(89%) contrast(90%);
 }
 
 .img:hover {
-  opacity: 0.95;
+  opacity: 0.9;
 }
