@@ -101,7 +101,7 @@ const EventSelector = props => {
         {allEvents.map((event, i) => (
           <>
             {filter === event.filterSetting && (
-              <div className={!isDesktop && styles.notesMargin}>
+              <div {...!isDesktop && {className: styles.notesMargin}}>
                 <UpcomingEvent
                   primaryColor={event.primaryColor && event.primaryColor}
                   secondaryColor={event.secondaryColor && event.secondaryColor}
