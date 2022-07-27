@@ -8,13 +8,18 @@ const Note = ({
   primaryColor = '#3D73C7',
   secondaryColor = '#2B5699',
   contentHeight,
+  expandable,
   setHovering
 }) => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
+  const classes = [
+    styles.container,
+    expandable ? styles.containerExpandable : null,
+  ]
 
   return (
     <div
-      className={styles.container}
+      className={classes.filter(x => x != null).join(' ')}
       style={{
         '--primary-color': primaryColor,
         '--secondary-color': secondaryColor,
