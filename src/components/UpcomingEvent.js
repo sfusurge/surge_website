@@ -13,11 +13,12 @@ const UpcomingEvent = ({
   location,
   time,
   link,
-  fbEvent
+  fbEvent,
+  noteProps,
 }) => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
   return (
-    <Note primaryColor={primaryColor} secondaryColor={secondaryColor}>
+    <Note primaryColor={primaryColor} secondaryColor={secondaryColor} {...noteProps}>
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.date}>

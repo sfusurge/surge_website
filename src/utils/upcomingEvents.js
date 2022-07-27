@@ -10,6 +10,39 @@ const upcomingEvent = [
     fbEvent:
       'https://www.facebook.com/events/589045982841057'
   },
+  {
+    title: 'Audio Workshop',
+    day: '28',
+    month: 'Jul',
+    location: 'SFU Library',
+    time: '5:30PM – 7:30PM',
+    link: 'https://lu.ma/a5m6mqwe',
+    filterSetting: 'Workshops',
+    fbEvent:
+      'https://www.facebook.com/events/589045982841057'
+  },
+  {
+    title: 'Audio Workshop',
+    day: '28',
+    month: 'Jul',
+    location: 'SFU Library',
+    time: '5:30PM – 7:30PM',
+    link: 'https://lu.ma/a5m6mqwe',
+    filterSetting: 'Workshops',
+    fbEvent:
+      'https://www.facebook.com/events/589045982841057'
+  },
+  {
+    title: 'Audio Workshop',
+    day: '28',
+    month: 'Jul',
+    location: 'SFU Library',
+    time: '5:30PM – 7:30PM',
+    link: 'https://lu.ma/a5m6mqwe',
+    filterSetting: 'Workshops',
+    fbEvent:
+      'https://www.facebook.com/events/589045982841057'
+  },
   /*
   {
     title: 'Leetcode with Surge',
@@ -116,4 +149,18 @@ const upcomingEvent = [
   */
 ]
 
-export default upcomingEvent
+export default upcomingEvent;
+
+// Internal Utility Functions:
+function dateOf(event) {
+  const time = event.time.split(' - ')[0].replace(/ *([AP]M)/g, ' $1');
+  return new Date(`${event.month} ${event.day} ${time}`);
+}
+
+// byDate: The events, listed in order of closest to furthest.
+export const byDate = upcomingEvent.sort((a, b) => {
+  const aDate = dateOf(a);
+  const bDate = dateOf(b);
+  return bDate - aDate;
+});
+

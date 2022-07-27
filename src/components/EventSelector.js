@@ -112,6 +112,7 @@ const EventSelector = props => {
                   time={event.time}
                   link={event.link}
                   fbEvent={event.fbEvent}
+                  noteProps={{expandable: true}}
                 />
               </div>
             )}

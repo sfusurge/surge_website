@@ -5,6 +5,11 @@
   width: fit-content;
 }
 
+.container.containerExpandable {
+  width: 100%;
+  max-width: 500px;
+}
+
 .pageCurl {
   position: absolute;
   bottom: 0;

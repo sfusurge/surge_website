@@ -1,10 +1,11 @@
 import styles from '../css/ShortUpcomingEvent.module.css'
 import useMediaQuery from '../utils/useMediaQuery'
-import allEvents from '../utils/upcomingEvents'
+import {byDate} from '../utils/upcomingEvents'
 import UpcomingEvent from './UpcomingEvent'
 
 const EventSelector = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
+  const events = byDate.slice(0, 3);
 
   return (
     <div
@@ -19,9 +20,9 @@ const EventSelector = props => {
       <div
         className={isDesktop ? styles.eventsNotes : styles.eventsNotesMobile}
       >
-        {allEvents.map((event, i) => (
+        {events.map((event, i) => (
           <>
-            {i < 3 && (
+            {
               <div className={!isDesktop && styles.notesMargin}>
                 <UpcomingEvent
                   primaryColor={event.primaryColor && event.primaryColor}
@@ -33,19 +34,18 @@ const EventSelector = props => {
                   time={event.time}
                   link={event.link}
                   fbEvent={event.fbEvent}
+                  noteProps={{expandable: true}}
                 />
               </div>
-            )}
+            }
           </>
         ))}
-        {allEvents.length <= 0 && 
-          <p
-            style={isDesktop ? { fontSize: '2rem' } : { fontSize: '1rem' }}
-            className={styles.title}
-          >
-            Stay tuned for future events
-          </p>
-        }
+        <p
+          style={isDesktop ? { fontSize: '30px' } : { fontSize: '18px' }}
+          className={styles.title}
+        >
+          {events.length > 0 ? '' : 'Stay tuned for future events'}
+        </p>
       </div>
     </div>
   )
