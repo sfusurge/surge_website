@@ -1,4 +1,5 @@
 const upcomingEvent = [
+/*
   {
     title: 'Audio Workshop',
     day: '28',
@@ -10,7 +11,6 @@ const upcomingEvent = [
     fbEvent:
       'https://www.facebook.com/events/589045982841057'
   },
-  /*
   {
     title: 'Leetcode with Surge',
     day: '28',
