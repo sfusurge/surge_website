@@ -34,6 +34,7 @@ const EventSelector = props => {
           <div className={styles.filter}>
             {filterTypes.map((filterType, i) => (
               <button
+                key={filterType}
                 className={styles.filterText}
                 style={
                   filter === filterType
@@ -64,6 +65,7 @@ const EventSelector = props => {
                 {filterTypes.map((filterType, i) => (
                   <>
                     <button
+                      key={i}
                       className={styles.filterText}
                       style={
                         filter === filterType
@@ -103,6 +105,7 @@ const EventSelector = props => {
             {filter === event.filterSetting && (
               <div {...!isDesktop && {className: styles.notesMargin}}>
                 <UpcomingEvent
+                  key={event.title}
                   primaryColor={event.primaryColor && event.primaryColor}
                   secondaryColor={event.secondaryColor && event.secondaryColor}
                   title={event.title}
