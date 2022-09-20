@@ -21,7 +21,8 @@ const getTime = dueDate => {
 
 const ProjectSection = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
-  const dueDate = '2022-07-23T06:59:59Z'
+  const dueDate = '2022-09-22T06:59:59Z' //add 7 hours to get pst
+  console.log(dueDate)
   const [timeLeft, setTimeLeft] = useState(getTime(dueDate))
   useEffect(() => {
     const timer = setInterval(() => {
@@ -100,7 +101,7 @@ const ProjectSection = props => {
             >
               <a
                 className={styles.link}
-                href="https://docs.google.com/forms/d/1uppE0jiHmQX0uqxFeaKFfd5mP2-4IMMMTAUsx47sYz8/edit"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeEhUgDf7FKz6LH4D9Qhi0JV9rxfk3Fqvl5uQ0KPkARZTGakA/viewform"
                 target="_blank"
                 rel="noreferrer"
               >
