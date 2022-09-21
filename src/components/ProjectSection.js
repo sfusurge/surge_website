@@ -1,10 +1,14 @@
 import useMediaQuery from '../utils/useMediaQuery'
+import upcomingApplications, { defaultRoles } from '../utils/upcomingApplications'
 import { calculateTimeLeft, formatDoubleDigitTime } from '../utils/timeLeft'
 import styles from '../css/ProjectSection.module.css'
 import monitorProjects from '../assets/monitor-projects.svg'
 import monitorProjectMobile from '../assets/monitor-project-mobile.svg'
 import IntroBody from './IntroBody'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+// NOTE: Looking to modify the application dates or add a new one?
+//       Check under `src/utils/upcomingApplication.js`!
 
 const getTime = dueDate => {
   const timeLeft = calculateTimeLeft(dueDate)
@@ -21,8 +25,25 @@ const getTime = dueDate => {
 
 const ProjectSection = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
-  const dueDate = '2022-09-22T06:59:59Z' //add 7 hours to get pst
-  console.log(dueDate)
+
+  // Get the current application.
+  const now = Date.now();
+  const application = upcomingApplications.find(app => now >= (new Date(app.from)) && now < (new Date(app.to)));
+  const applicationOpen = application != null;
+
+  // If there's no application open right now, look for the next application date.
+  // TODO(eth-p): Implement this to show when the next round of applications are open.
+
+  // if (!applicationOpen) {
+  //   application = upcomingApplications
+  //     .filter(app => now > (new Date(app.to)))
+  //     .reduce((closestApp, app) => (new Date(app.from)) < (new Date(closestApp.from)) ? app : closestApp);
+  // }
+
+  const rolesOpen = application == null ? defaultRoles : application.roles;
+  const dueDate = application == null ? '' : application.to;
+
+  // Set up an effect to refresh for the countdown.
   const [timeLeft, setTimeLeft] = useState(getTime(dueDate))
   useEffect(() => {
     const timer = setInterval(() => {
@@ -30,6 +51,8 @@ const ProjectSection = props => {
     }, 1000)
     return () => clearInterval(timer)
   }, [])
+
+  // Render the component.
   return (
     <>
       <IntroBody
@@ -65,9 +88,11 @@ const ProjectSection = props => {
           className={styles.bodyText}
         >
           We open applications for{' '}
-          <span className={styles.boldText}>Project Team Members</span>,{' '}
-          <span className={styles.boldText}>Team Leads</span>, and
-          <span className={styles.boldText}>{' Mentors'} </span> every semester.
+          {rolesOpen.map((role, i) => <React.Fragment key={i}>
+              <span className={styles.boldText}>{role}</span>
+              {i == (rolesOpen.length - 1) ? '' : i < (rolesOpen.length - 2) ? ', ' : ', and '}
+          </React.Fragment>)}{' '}
+          every semester.
         </p>
         <p
           style={isDesktop ? { lineHeight: '32px' } : { lineHeight: '20px' }}
@@ -75,10 +100,11 @@ const ProjectSection = props => {
         >
           Currently, Projects applications are{' '}
           <span className={styles.boldText}>
-            {timeLeft ? 'OPEN' : 'CLOSED'}{' '}
+            {applicationOpen ? 'OPEN' : 'CLOSED'}
           </span>
+          .
         </p>
-        {timeLeft && (
+        {(timeLeft && application != null) && (
           <>
             <p
               style={
@@ -101,11 +127,11 @@ const ProjectSection = props => {
             >
               <a
                 className={styles.link}
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeEhUgDf7FKz6LH4D9Qhi0JV9rxfk3Fqvl5uQ0KPkARZTGakA/viewform"
+                href={application.button.href}
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className={styles.btn}>Apply Now</div>
+                <div className={styles.btn}>{application.button.text}</div>
               </a>
             </div>
           </>
