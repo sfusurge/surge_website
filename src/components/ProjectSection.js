@@ -28,29 +28,38 @@ const ProjectSection = props => {
 
   // Get the current application.
   const now = Date.now();
-  const application = upcomingApplications.find(app => now >= (new Date(app.from)) && now < (new Date(app.to)));
-  const applicationOpen = application != null;
+  let application = upcomingApplications.find(app => now >= (new Date(app.from)) && now < (new Date(app.to)));
+  let applicationOpen = application != null;
+  let applicationQueued = false;
+  let targetDate = application == null ? '' : application.to;
 
   // If there's no application open right now, look for the next application date.
-  // TODO(eth-p): Implement this to show when the next round of applications are open.
+  // If we find one, show a countdown for that instead.
+  if (!applicationOpen) {
+    application = upcomingApplications
+      .filter(app => now < (new Date(app.from)))
+      .reduce((closestApp, app) => {
+        if (closestApp == null) return app;
+        if ((new Date(app.from)) < (new Date(closestApp.from))) return app;
+        return closestApp;
+      }, null);
 
-  // if (!applicationOpen) {
-  //   application = upcomingApplications
-  //     .filter(app => now > (new Date(app.to)))
-  //     .reduce((closestApp, app) => (new Date(app.from)) < (new Date(closestApp.from)) ? app : closestApp);
-  // }
+    if (application != null) {
+      applicationQueued = true;
+      targetDate = application.from;
+    }
+  }
 
   const rolesOpen = application == null ? defaultRoles : application.roles;
-  const dueDate = application == null ? '' : application.to;
 
   // Set up an effect to refresh for the countdown.
-  const [timeLeft, setTimeLeft] = useState(getTime(dueDate))
+  const [timeLeft, setTimeLeft] = useState(getTime(targetDate))
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(getTime(dueDate))
+      setTimeLeft(getTime(targetDate))
     }, 1000)
     return () => clearInterval(timer)
-  }, [])
+  }, [targetDate])
 
   // Render the component.
   return (
@@ -89,8 +98,8 @@ const ProjectSection = props => {
         >
           We open applications for{' '}
           {rolesOpen.map((role, i) => <React.Fragment key={i}>
-              <span className={styles.boldText}>{role}</span>
-              {i == (rolesOpen.length - 1) ? '' : i < (rolesOpen.length - 2) ? ', ' : ', and '}
+            <span className={styles.boldText}>{role}</span>
+            {i === (rolesOpen.length - 1) ? '' : i < (rolesOpen.length - 2) ? ', ' : ', and '}
           </React.Fragment>)}{' '}
           every semester.
         </p>
@@ -98,11 +107,17 @@ const ProjectSection = props => {
           style={isDesktop ? { lineHeight: '32px' } : { lineHeight: '20px' }}
           className={styles.bodyText}
         >
-          Currently, Projects applications are{' '}
-          <span className={styles.boldText}>
-            {applicationOpen ? 'OPEN' : 'CLOSED'}
-          </span>
-          .
+          {
+            applicationQueued ? 
+              'Applications will open in:' :
+              <>
+                Currently, Projects applications are{' '}
+                <span className={styles.boldText}>
+                  {applicationOpen ? 'OPEN' : 'CLOSED'}
+                </span>
+                .
+              </>
+          }
         </p>
         {(timeLeft && application != null) && (
           <>
@@ -125,14 +140,16 @@ const ProjectSection = props => {
                 isDesktop ? { width: 'max(160px, 74%)' } : { width: '100%' }
               }
             >
-              <a
-                className={styles.link}
-                href={application.button.href}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className={styles.btn}>{application.button.text}</div>
-              </a>
+              { applicationOpen && 
+                <a
+                  className={styles.link}
+                  href={application.button.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className={styles.btn}>{application.button.text}</div>
+                </a>
+              }
             </div>
           </>
         )}
