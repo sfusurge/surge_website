@@ -88,11 +88,11 @@ const ProjectSection = props => {
             >
               {timeLeft.days}
               {' : '}
-              {timeLeft.hours}
+              {timeLeft.hours.toString().padStart(2, '0')}
               {' : '}
-              {timeLeft.minutes}
+              {timeLeft.minutes.toString().padStart(2, '0')}
               {' : '}
-              {timeLeft.seconds}
+              {timeLeft.seconds.toString().padStart(2, '0')}
             </p>
             <div
               style={
