@@ -1,10 +1,14 @@
 import useMediaQuery from '../utils/useMediaQuery'
+import upcomingApplications, { defaultRoles } from '../utils/upcomingApplications'
 import { calculateTimeLeft, formatDoubleDigitTime } from '../utils/timeLeft'
 import styles from '../css/ProjectSection.module.css'
 import monitorProjects from '../assets/monitor-projects.svg'
 import monitorProjectMobile from '../assets/monitor-project-mobile.svg'
 import IntroBody from './IntroBody'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+// NOTE: Looking to modify the application dates or add a new one?
+//       Check under `src/utils/upcomingApplication.js`!
 
 const getTime = dueDate => {
   const timeLeft = calculateTimeLeft(dueDate)
@@ -21,15 +25,43 @@ const getTime = dueDate => {
 
 const ProjectSection = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
-  const dueDate = '2022-09-22T06:59:59Z' //add 7 hours to get pst
-  console.log(dueDate)
-  const [timeLeft, setTimeLeft] = useState(getTime(dueDate))
+
+  // Get the current application.
+  const now = Date.now();
+  let application = upcomingApplications.find(app => now >= (new Date(app.from)) && now < (new Date(app.to)));
+  let applicationOpen = application != null;
+  let applicationQueued = false;
+  let targetDate = application == null ? '' : application.to;
+
+  // If there's no application open right now, look for the next application date.
+  // If we find one, show a countdown for that instead.
+  if (!applicationOpen) {
+    application = upcomingApplications
+      .filter(app => now < (new Date(app.from)))
+      .reduce((closestApp, app) => {
+        if (closestApp == null) return app;
+        if ((new Date(app.from)) < (new Date(closestApp.from))) return app;
+        return closestApp;
+      }, null);
+
+    if (application != null) {
+      applicationQueued = true;
+      targetDate = application.from;
+    }
+  }
+
+  const rolesOpen = application == null ? defaultRoles : application.roles;
+
+  // Set up an effect to refresh for the countdown.
+  const [timeLeft, setTimeLeft] = useState(getTime(targetDate))
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(getTime(dueDate))
+      setTimeLeft(getTime(targetDate))
     }, 1000)
     return () => clearInterval(timer)
-  }, [])
+  }, [targetDate])
+
+  // Render the component.
   return (
     <>
       <IntroBody
@@ -65,20 +97,29 @@ const ProjectSection = props => {
           className={styles.bodyText}
         >
           We open applications for{' '}
-          <span className={styles.boldText}>Project Team Members</span>,{' '}
-          <span className={styles.boldText}>Team Leads</span>, and
-          <span className={styles.boldText}>{' Mentors'} </span> every semester.
+          {rolesOpen.map((role, i) => <React.Fragment key={i}>
+            <span className={styles.boldText}>{role}</span>
+            {i === (rolesOpen.length - 1) ? '' : i < (rolesOpen.length - 2) ? ', ' : ', and '}
+          </React.Fragment>)}{' '}
+          every semester.
         </p>
         <p
           style={isDesktop ? { lineHeight: '32px' } : { lineHeight: '20px' }}
           className={styles.bodyText}
         >
-          Currently, Projects applications are{' '}
-          <span className={styles.boldText}>
-            {timeLeft ? 'OPEN' : 'CLOSED'}{' '}
-          </span>
+          {
+            applicationQueued ? 
+              'Applications will open in:' :
+              <>
+                Currently, Projects applications are{' '}
+                <span className={styles.boldText}>
+                  {applicationOpen ? 'OPEN' : 'CLOSED'}
+                </span>
+                .
+              </>
+          }
         </p>
-        {timeLeft && (
+        {(timeLeft && application != null) && (
           <>
             <p
               style={
@@ -99,14 +140,16 @@ const ProjectSection = props => {
                 isDesktop ? { width: 'max(160px, 74%)' } : { width: '100%' }
               }
             >
-              <a
-                className={styles.link}
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeEhUgDf7FKz6LH4D9Qhi0JV9rxfk3Fqvl5uQ0KPkARZTGakA/viewform"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className={styles.btn}>Apply Now</div>
-              </a>
+              { applicationOpen && 
+                <a
+                  className={styles.link}
+                  href={application.button.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className={styles.btn}>{application.button.text}</div>
+                </a>
+              }
             </div>
           </>
         )}
