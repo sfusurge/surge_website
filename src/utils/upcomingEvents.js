@@ -1,16 +1,15 @@
 const upcomingEvent = [
-/*
   {
-    title: 'Audio Workshop',
-    day: '28',
-    month: 'Jul',
-    location: 'SFU Library',
-    time: '5:30PM – 7:30PM',
-    link: 'https://lu.ma/a5m6mqwe',
-    filterSetting: 'Workshops',
+    title: 'Fall 2022 Icebreaker',
+    day: '27',
+    month: 'Sep',
+    location: 'SFU Forum Chamber',
+    time: '5:30PM – 7:00PM',
+    filterSetting: 'Socials',
     fbEvent:
-      'https://www.facebook.com/events/589045982841057'
+      'https://www.facebook.com/events/573997151171441/'
   },
+/*
   {
     title: 'Leetcode with Surge',
     day: '28',
