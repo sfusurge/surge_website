@@ -23,15 +23,7 @@ const EventSelector = props => {
     }
   })())
 
-  let containsAnyEvent = (eventType) => {
-    for (let i = 0; i < allEvents.length; i++) {
-      if (allEvents[i].filterSetting === eventType) {
-        return true;
-      }
-    }
-    return false;
-  }
-
+  const filteredEvents = allEvents.filter(event => event.filterSetting === filter);
   return (
     <div
       className={styles.container}
@@ -43,7 +35,7 @@ const EventSelector = props => {
         <p className={styles.title}>Upcoming Events</p>
         {isDesktop ? (
           <div className={styles.filter}>
-            {EventSelectorFilters.map((filterType, i) => (
+            {EventSelectorFilters.map(filterType => (
               <button
                 key={filterType}
                 className={styles.filterText}
@@ -73,10 +65,10 @@ const EventSelector = props => {
               </button>
             ) : (
               <div className={styles.filterMobile}>
-                {EventSelectorFilters.map((filterType, i) => (
+                {EventSelectorFilters.map(filterType => (
                   <>
                     <button
-                      key={i}
+                      key={filterType}
                       className={styles.filterText}
                       style={
                         filter === filterType
@@ -110,32 +102,26 @@ const EventSelector = props => {
       <div
         className={isDesktop ? styles.eventsNotes : styles.eventsNotesMobile}
       >
-        {/* TODO for future devs: uncomment below line when there are events*/}
-        {allEvents.map((event, i) => (
-          <>
-            {filter === event.filterSetting && (
-              <div {...!isDesktop && {className: styles.notesMargin}}>
-                <UpcomingEvent
-                  key={event.title}
-                  primaryColor={event.primaryColor && event.primaryColor}
-                  secondaryColor={event.secondaryColor && event.secondaryColor}
-                  title={event.title}
-                  day={event.day}
-                  month={event.month}
-                  location={event.location}
-                  time={event.time}
-                  link={event.link}
-                  fbEvent={event.fbEvent}
-                />
-              </div>
-            )}
-          </>
+        {filteredEvents.map(event => (
+          <div key={event.title} {...!isDesktop && {className: styles.notesMargin}}>
+            <UpcomingEvent
+              primaryColor={event.primaryColor && event.primaryColor}
+              secondaryColor={event.secondaryColor && event.secondaryColor}
+              title={event.title}
+              day={event.day}
+              month={event.month}
+              location={event.location}
+              time={event.time}
+              link={event.link}
+              fbEvent={event.fbEvent}
+            />
+          </div>
         ))}
-        {!containsAnyEvent(filter) && (<p
+        {filteredEvents.length > 0 || (<p
           style={isDesktop ? { fontSize: '2rem' } : { fontSize: '1rem' }}
           className={styles.title}
         >
-          Stay tuned for future events
+          Stay tuned for future events!
         </p>)}
       </div>
     </div>
