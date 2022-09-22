@@ -5,12 +5,23 @@ import UpcomingEvent from './UpcomingEvent'
 import downArrowIcon from '../assets/downArrow.svg'
 import { useState } from 'react'
 
+const EventSelectorFilters = [
+  'Socials',
+  'Workshops',
+  'TechTalks',
+]
+
 const EventSelector = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
-  const [filter, setFilter] = useState('Workshops')
   const [listOpen, setListOpen] = useState(false)
-
-  const filterTypes = ['Socials', 'Workshops', 'TechTalks']
+  const [filter, setFilter] = useState((() => {
+    // Set the default filter to the first category which has an event.
+    for (const filterType of EventSelectorFilters) {
+      if (allEvents.some(event => event.filterSetting === filterType)) {
+        return filterType;
+      }
+    }
+  })())
 
   let containsAnyEvent = (eventType) => {
     for (let i = 0; i < allEvents.length; i++) {
@@ -32,7 +43,7 @@ const EventSelector = props => {
         <p className={styles.title}>Upcoming Events</p>
         {isDesktop ? (
           <div className={styles.filter}>
-            {filterTypes.map((filterType, i) => (
+            {EventSelectorFilters.map((filterType, i) => (
               <button
                 key={filterType}
                 className={styles.filterText}
@@ -62,7 +73,7 @@ const EventSelector = props => {
               </button>
             ) : (
               <div className={styles.filterMobile}>
-                {filterTypes.map((filterType, i) => (
+                {EventSelectorFilters.map((filterType, i) => (
                   <>
                     <button
                       key={i}
