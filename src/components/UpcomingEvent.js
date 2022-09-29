@@ -70,7 +70,7 @@ const UpcomingEvent = ({
               target="_blank"
               rel="noreferrer"
             >
-              Facebook Event
+              Register Here
             </a>
           )}
         </div>

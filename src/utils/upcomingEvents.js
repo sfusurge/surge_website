@@ -1,13 +1,15 @@
 const upcomingEvent = [
+
   {
-    title: 'Fall 2022 Icebreaker',
-    day: '27',
-    month: 'Sep',
-    location: 'SFU Forum Chamber',
-    time: '5:30PM – 7:00PM',
-    filterSetting: 'Socials',
+    title: 'Audio Workshop',
+    day: '4',
+    month: 'Oct',
+    location: 'Makers Common Space (Library)',
+    time: '5:00PM – 7:00PM',
+    filterSetting: 'Workshops',
+    link: 'https://lu.ma/eoo6fukj',
     fbEvent:
-      'https://www.facebook.com/events/573997151171441/'
+      'https://lu.ma/eoo6fukj'
   },
 /*
   {
