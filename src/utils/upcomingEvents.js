@@ -1,15 +1,14 @@
 const upcomingEvent = [
-
   {
     title: 'Audio Workshop',
-    day: '4',
-    month: 'Oct',
+    day: '1',
+    month: 'Nov',
     location: 'Makers Common Space (Library)',
     time: '5:00PM – 7:00PM',
     filterSetting: 'Workshops',
-    link: 'https://lu.ma/eoo6fukj',
+    link: 'https://lu.ma/t5paxfxn',
     fbEvent:
-      'https://lu.ma/eoo6fukj'
+      'https://lu.ma/t5paxfxn'
   },
 /*
   {
