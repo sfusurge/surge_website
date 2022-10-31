@@ -1,5 +1,4 @@
 .container {
-  width: 240px;
   padding: 33px 25px 50px 22px;
 }
 
@@ -89,7 +88,6 @@
 
 @media only screen and (min-width: 600px) {
   .container {
-    width: 320px;
     padding: 50px 42px 70px 34px;
   }
 
@@ -98,7 +96,7 @@
   }
 
   .title {
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .fbEvent {

@@ -36,6 +36,7 @@ const ActivityList = props => {
       <p className={styles.title}>Here's what we're up to!</p>
       {activities.map((label, i) => (
         <Activity
+          key={i}
           image={label.image}
           altText={label.altText}
           textTitle={label.textTitle}

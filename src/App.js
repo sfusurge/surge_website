@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import styles from './css/App.module.css'
 import HomePage from './pages/HomePage'
@@ -11,23 +11,13 @@ const App = () => {
   return (
     <div id={styles.app}>
       <Router>
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route path="/about">
-            <AboutPage />
-          </Route>
-          <Route path="/projects">
-            <ProjectPage />
-          </Route>
-          <Route path="/events">
-            <EventsPage />
-          </Route>
-          <Route path="/podcast">
-            <PodcastPage />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/podcast" element={<PodcastPage />} />
+        </Routes>
       </Router>
     </div>
   )

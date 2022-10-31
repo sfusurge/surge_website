@@ -7,10 +7,19 @@ import { useState } from 'react'
 
 const EventSelector = props => {
   const isDesktop = useMediaQuery('(min-width: 600px)')
-  const [filter, setFilter] = useState('Socials')
+  const [filter, setFilter] = useState('Workshops')
   const [listOpen, setListOpen] = useState(false)
 
   const filterTypes = ['Socials', 'Workshops', 'TechTalks']
+
+  let containsAnyEvent = (eventType) => {
+    for (let i = 0; i < allEvents.length; i++) {
+      if (allEvents[i].filterSetting === eventType) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   return (
     <div
@@ -25,6 +34,7 @@ const EventSelector = props => {
           <div className={styles.filter}>
             {filterTypes.map((filterType, i) => (
               <button
+                key={filterType}
                 className={styles.filterText}
                 style={
                   filter === filterType
@@ -55,6 +65,7 @@ const EventSelector = props => {
                 {filterTypes.map((filterType, i) => (
                   <>
                     <button
+                      key={i}
                       className={styles.filterText}
                       style={
                         filter === filterType
@@ -88,11 +99,13 @@ const EventSelector = props => {
       <div
         className={isDesktop ? styles.eventsNotes : styles.eventsNotesMobile}
       >
+        {/* TODO for future devs: uncomment below line when there are events*/}
         {allEvents.map((event, i) => (
           <>
             {filter === event.filterSetting && (
-              <div className={!isDesktop && styles.notesMargin}>
+              <div {...!isDesktop && {className: styles.notesMargin}}>
                 <UpcomingEvent
+                  key={event.title}
                   primaryColor={event.primaryColor && event.primaryColor}
                   secondaryColor={event.secondaryColor && event.secondaryColor}
                   title={event.title}
@@ -107,6 +120,12 @@ const EventSelector = props => {
             )}
           </>
         ))}
+        {!containsAnyEvent(filter) && (<p
+          style={isDesktop ? { fontSize: '2rem' } : { fontSize: '1rem' }}
+          className={styles.title}
+        >
+          Stay tuned for future events
+        </p>)}
       </div>
     </div>
   )

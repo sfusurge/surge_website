@@ -38,6 +38,14 @@ const EventSelector = props => {
             )}
           </>
         ))}
+        {allEvents.length <= 0 && 
+          <p
+            style={isDesktop ? { fontSize: '2rem' } : { fontSize: '1rem' }}
+            className={styles.title}
+          >
+            Stay tuned for future events
+          </p>
+        }
       </div>
     </div>
   )

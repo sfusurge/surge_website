@@ -3,17 +3,24 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 129px;
+  width: max-content;
 }
 
-.iconLink:hover {
-  opacity: 0.95;
+.iconLink {
+  margin-right: 0.75rem;
+}
+
+.iconLink:focus {
+  outline: none;
+}
+
+.iconLink:hover .img, .iconLink:focus .img {
+  filter: invert(27%) sepia(45%) saturate(2658%) hue-rotate(202deg) brightness(100%) contrast(73%);
 }
 
 .img {
   opacity: 1;
-}
-
-.img:hover {
-  opacity: 0.95;
+  width: 2.5rem;
+  height: 2.5rem;
+  filter: invert(12%) sepia(41%) saturate(5654%) hue-rotate(226deg) brightness(89%) contrast(90%);
 }

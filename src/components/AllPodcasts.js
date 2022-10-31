@@ -51,7 +51,7 @@ const AllPodcasts = props => {
                   pageNum * (isLaptop ? 6 : 3) + (isLaptop ? 6 : 3)
                 )
                 .map((podcast, i) => (
-                  <div className={styles.podcast}>
+                  <div key={podcast.num} className={styles.podcast}>
                     <Podcast details={podcast} />
                   </div>
                 ))}
@@ -71,6 +71,7 @@ const AllPodcasts = props => {
             <div className={styles.options}>
               {pageTotal.map(page => (
                 <button
+                  key={page}
                   className={pageNum === page ? styles.btnActive : styles.btn}
                   onClick={() => {
                     setPageNum(page)
@@ -94,7 +95,7 @@ const AllPodcasts = props => {
       ) : (
         <div className={styles.mobileContainer}>
           {podcasts.slice(0, 4).map((podcast, i) => (
-            <div className={styles.mobilePodcast}>
+            <div key={i} className={styles.mobilePodcast}>
               <PodcastMobile details={podcast} />
             </div>
           ))}
