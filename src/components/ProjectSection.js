@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react'
 
 const getTime = dueDate => {
   const timeLeft = calculateTimeLeft(dueDate)
-
   if (timeLeft) {
     timeLeft.days = formatDoubleDigitTime(timeLeft.days)
     timeLeft.hours = formatDoubleDigitTime(timeLeft.hours)

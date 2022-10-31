@@ -1,13 +1,17 @@
 const upcomingEvent = [
+  /*
   {
-    title: 'Clubs Day',
-    day: '15',
-    month: 'Sept',
-    location: 'Hopin',
+    title: 'Audio Workshop',
+    day: '22',
+    month: 'November',
+    location: 'Library Makerspace Commons',
     time: '11:00AM - 5:00PM',
     link: 'https://hopin.com/events/sfss-clubs-day',
-    filterSetting: 'Socials'
+    fbEvent: 'https://lu.ma/t5paxfxn',
+    filterSetting: 'Workshops'
   },
+  */
+  /*
   {
     primaryColor: 'var(--color-button-secondary)',
     secondaryColor: '#447CCE',
@@ -17,20 +21,22 @@ const upcomingEvent = [
     location: 'TBA',
     time: '6:00PM - 9:00PM',
     filterSetting: 'Socials'
-  }
-  /*
+  },
+  
+  */
   {
     primaryColor: 'var(--color-image-background)',
     secondaryColor: '#ADBED8',
-    title: 'Linux Workshop',
-    day: '22',
+    title: 'Audio Workshop',
+    day: '1',
     month: 'Nov',
-    location: 'SFU Surge Discord Server',
-    time: '7:00PM - 9:00PM',
-    link: 'https://mail.sfu.ca/owa/#path=/mail',
-    fbEvent: 'https://www.facebook.com/',
+    location: 'Media & Makers Common (Library)',
+    time: '5:00PM - 7:00PM',
+    link: 'https://lu.ma/t5paxfxn',
+    fbEvent: 'https://lu.ma/t5paxfxn',
     filterSetting: 'Workshops'
   },
+  /*
   {
     title: 'Linux Workshop',
     day: '22',
