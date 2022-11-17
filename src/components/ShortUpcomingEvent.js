@@ -1,10 +1,10 @@
 import styles from '../css/ShortUpcomingEvent.module.css'
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import allEvents from '../utils/upcomingEvents'
 import UpcomingEvent from './UpcomingEvent'
 
 const EventSelector = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
 
   return (
     <div

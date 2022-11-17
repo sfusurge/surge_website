@@ -1,12 +1,12 @@
 import styles from '../css/Footer.module.css'
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks'
 import SocialsIcon from './SocialsIcon'
 // import scooter from '../assets/scooter.svg'
 // import robot from '../assets/robot-standing.svg'
 // import notepad from '../assets/notepad.svg'
 
 const Footer = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
   return (
     <div
       className={styles.container}

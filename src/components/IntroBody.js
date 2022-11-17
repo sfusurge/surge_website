@@ -1,7 +1,7 @@
 import styles from '../css/IntroBody.module.css'
 import NavBar from './NavBar'
 import triangle from '../assets/triangle.svg'
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks'
 
 const IntroBody = ({
   children,
@@ -12,7 +12,7 @@ const IntroBody = ({
   imageSrc,
   scrollBar
 }) => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
   return (
     <>
       {isDesktop ? (

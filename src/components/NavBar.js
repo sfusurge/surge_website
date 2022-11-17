@@ -1,4 +1,4 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks'
 import styles from '../css/NavBar.module.css'
 import sfuSurgeMobile from '../assets/sfu-surgeMobile.svg'
 import { Link } from 'react-router-dom'
@@ -10,7 +10,7 @@ import { useState } from 'react'
 
 const NavBar = props => {
   const [open, setOpen] = useState(false)
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
   return (
     <div className={styles.container}>
       {isDesktop ? (

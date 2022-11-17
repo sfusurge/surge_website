@@ -1,5 +1,5 @@
 import styles from '../css/EventSelector.module.css'
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import allEvents from '../utils/upcomingEvents'
 import UpcomingEvent from './UpcomingEvent'
 import downArrowIcon from '../assets/downArrow.svg'
@@ -12,7 +12,7 @@ const EventSelectorFilters = [
 ]
 
 const EventSelector = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
   const [listOpen, setListOpen] = useState(false)
   const [filter, setFilter] = useState((() => {
     // Set the default filter to the first category which has an event.

@@ -1,10 +1,10 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import styles from '../css/FormSheet.module.css'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import CustomForm from './CustomForm'
 
 const FormSheet = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
 
   const url =
     'https://gmail.us4.list-manage.com/subscribe/post?u=33345c9bc17f10bac6afdd0ac&amp;id=736d801cb8'

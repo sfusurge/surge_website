@@ -1,4 +1,4 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import { useEffect, useState } from 'react'
 import styles from '../css/AllPodcasts.module.css'
 import podcasts from '../utils/podcastInfo'
@@ -26,18 +26,17 @@ const countPages = isLaptop => {
 }
 
 const AllPodcasts = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
-  const isLaptop = useMediaQuery('(min-width: 1392px)')
-  const [pageTotal, setPageTotal] = useState(countPages(isLaptop))
+  const { isDesktop, isLaptop1392 } = useLayoutChecks();
+  const [pageTotal, setPageTotal] = useState(countPages(isLaptop1392))
   const [pageNum, setPageNum] = useState(0)
 
   useEffect(() => {
-    const newSize = countPages(isLaptop)
+    const newSize = countPages(isLaptop1392)
     setPageTotal(newSize)
     if (pageNum + 1 > newSize.length) {
       setPageNum(pageNum - 1)
     }
-  }, [isLaptop, pageNum])
+  }, [isLaptop1392, pageNum])
 
   return (
     <>
@@ -47,8 +46,8 @@ const AllPodcasts = props => {
             <div className={styles.innerContainer}>
               {podcasts
                 .slice(
-                  pageNum * (isLaptop ? 6 : 3),
-                  pageNum * (isLaptop ? 6 : 3) + (isLaptop ? 6 : 3)
+                  pageNum * (isLaptop1392 ? 6 : 3),
+                  pageNum * (isLaptop1392 ? 6 : 3) + (isLaptop1392 ? 6 : 3)
                 )
                 .map((podcast, i) => (
                   <div key={podcast.num} className={styles.podcast}>

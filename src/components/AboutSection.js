@@ -1,12 +1,11 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks'
 import styles from '../css/AboutSection.module.css'
 import AboutMonitor from '../assets/monitor-about.svg'
 import AboutMonitorMobile from '../assets/monitor-about-mobile.svg'
 import IntroBody from './IntroBody'
 
 const AboutSection = props => {
-  const isLaptop = useMediaQuery('(min-width: 1200px)')
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop, isLaptop } = useLayoutChecks();
   return (
     <>
       <IntroBody

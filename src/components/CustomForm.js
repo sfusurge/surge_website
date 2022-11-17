@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks'
 import styles from '../css/CustomForm.module.css'
 import CheckMarkBox from './CheckMarkBox'
 
 const CustomForm = ({ status, message, onValidated }) => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [submitted, setSubmitted] = useState(false)

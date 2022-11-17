@@ -1,4 +1,4 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import Note from '../components/Note'
 import styles from '../css/UpcomingEvent.module.css'
 import mapMarker from '../assets/map-marker.svg'
@@ -15,7 +15,7 @@ const UpcomingEvent = ({
   link,
   fbEvent
 }) => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
   return (
     <Note primaryColor={primaryColor} secondaryColor={secondaryColor}>
       <div className={styles.container}>
