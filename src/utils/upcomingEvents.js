@@ -1,14 +1,14 @@
 const upcomingEvent = [
   {
-    title: 'Audio Workshop',
-    day: '1',
+    title: 'Leetcode Workshop',
+    day: '22',
     month: 'Nov',
-    location: 'Makers Common Space (Library)',
-    time: '5:00PM – 7:00PM',
+    location: 'TASC 9204',
+    time: '5:30PM – 7:00PM',
     filterSetting: 'Workshops',
-    link: 'https://lu.ma/t5paxfxn',
+    link: 'https://roomfinder.sfu.ca/apps/sfuroomfinder_web/?q=TASC19204',
     fbEvent:
-      'https://lu.ma/t5paxfxn'
+      'https://lu.ma/vso0yu68'
   },
 /*
   {
