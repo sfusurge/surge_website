@@ -24,15 +24,13 @@ const EventSelector = props => {
             {i < 3 && (
               <div className={!isDesktop && styles.notesMargin}>
                 <UpcomingEvent
-                  primaryColor={event.primaryColor && event.primaryColor}
-                  secondaryColor={event.secondaryColor && event.secondaryColor}
+                  colors={event.colors}
                   title={event.title}
                   day={event.day}
                   month={event.month}
                   location={event.location}
                   time={event.time}
-                  link={event.link}
-                  fbEvent={event.fbEvent}
+                  links={event.links}
                 />
               </div>
             )}
