@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import Note from './Note'
 import styles from '../css/ProjectNote.module.css'
 
@@ -16,7 +16,7 @@ const ProjectNote = ({
   link
 }) => {
   const [hovering, setHovering] = useState(false)
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
   return (
     <div
       onMouseEnter={() => {

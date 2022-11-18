@@ -1,10 +1,10 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import styles from '../css/OurStory.module.css'
 import execs from '../utils/execList'
 const execResolver = require.context('../assets/execs', false, /.*\.png/)
 
 const OurStory = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
 
   return (
     <div className={styles.container}>

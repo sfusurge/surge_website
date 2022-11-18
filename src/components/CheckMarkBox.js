@@ -1,9 +1,9 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import styles from '../css/CheckMarkBox.module.css'
 import checkMark from '../assets/checkmark.svg'
 
 const CheckMarkBox = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
 
   return (
     <div className={styles.container}>

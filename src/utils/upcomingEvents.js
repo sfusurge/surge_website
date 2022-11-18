@@ -1,119 +1,53 @@
+/// <reference path="./upcomingEvents.d.ts" />
+
+/** @type {EventInfo[]} */
 const upcomingEvent = [
   {
-    title: 'Audio Workshop',
-    day: '1',
-    month: 'Nov',
-    location: 'Makers Common Space (Library)',
-    time: '5:00PM – 7:00PM',
-    filterSetting: 'Workshops',
-    link: 'https://lu.ma/t5paxfxn',
-    fbEvent:
-      'https://lu.ma/t5paxfxn'
-  },
-/*
-  {
-    title: 'Leetcode with Surge',
-    day: '28',
-    month: 'Oct',
-    location: 'Discord',
-    time: '7:00PM - 8:00PM',
-    link: 'https://discord.com/invite/xu7CqKc',
-    filterSetting: 'Workshops',
-    fbEvent:
-      'https://www.facebook.com/events/897474257552678?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22search_results%22%2C%22surface%22%3A%22search%22%7D]%2C%22ref_notif_type%22%3Anull%7D'
-  },
-  {
-    primaryColor: 'var(--color-button-secondary)',
-    secondaryColor: '#447CCE',
-    title: 'CSS Battles',
-    day: '2',
-    month: 'Nov',
-    location: 'Discord',
-    time: '7:30PM - 8:30PM',
-    link: 'https://discord.com/invite/xu7CqKc',
-    filterSetting: 'Workshops',
-    fbEvent:
-      'https://www.facebook.com/events/970682430329081/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22search_results%22%2C%22surface%22%3A%22search%22%7D]%2C%22ref_notif_type%22%3Anull%7D'
-  },
-  {
-    primaryColor: 'var(--color-image-background)',
-    secondaryColor: '#ADBED8',
-    title: 'Linux Workshop',
+    title: 'Leetcode Workshop',
+    type: 'Workshops',
+
     day: '22',
     month: 'Nov',
-    location: 'SFU Surge Discord Server',
-    time: '7:00PM - 9:00PM',
-    link: 'https://mail.sfu.ca/owa/#path=/mail',
-    fbEvent: 'https://www.facebook.com/',
-    filterSetting: 'Workshops'
+    time: '5:30PM - 7:00PM',
+
+    location: 'TASC 9204',
+    links: {
+      location: 'https://roomfinder.sfu.ca/apps/sfuroomfinder_web/?q=TASC19204',
+      register: 'https://lu.ma/vso0yu68',
+    }
   },
+
+  // EXAMPLE OF AN EVENT:
+  /*
   {
-    title: 'Linux Workshop',
+    title: 'Event Name',
+    type: 'Workshops', // Or 'Socials', 'TechTalks'.
+
     day: '22',
     month: 'Nov',
-    location: 'SFU Surge Discord Server',
-    time: '7:00PM - 9:00PM',
-    link: 'https://mail.sfu.ca/owa/#path=/mail',
-    fbEvent: 'https://www.facebook.com/',
-    filterSetting: 'Workshops'
+    time: '5:30PM - 7:00PM',
+
+    location: 'TASC 9204',
+    links: {
+      location: 'https://roomfinder.sfu.ca/apps/sfuroomfinder_web/?q=TASC19204', // A Google Maps or SFU RoomFinder link. <<OPTIONAL>>
+
+      // Must have AT LEAST one of the below:
+      register: 'https://lu.ma/vso0yu68',                                        // A link to register for the event.
+      discord:  'https://discord.com/...',                                       // A Discord link. <<WILL BE HIDDEN IF SAME AS REGISTER LINK>>
+      facebook: 'https://facebook.com/...',                                      // A Facebook link. <<WILL BE HIDDEN IF SAME AS REGISTER LINK>>
+
+      other: {
+        text: "Click Here for Free Spoons",
+        href: "https://spoons-r-us.co.uk/",
+      },
+    },
+
+    colors: { // <<OPTIONAL>>
+      primary: "#f00",
+      secondary: "#c00",
+    },
   },
-  {
-    primaryColor: 'var(--color-button-secondary)',
-    secondaryColor: '#447CCE',
-    title: 'Linux Workshop',
-    day: '22',
-    month: 'Nov',
-    location: 'SFU Surge Discord Server',
-    time: '7:00PM - 9:00PM',
-    link: 'https://mail.sfu.ca/owa/#path=/mail',
-    fbEvent: 'https://www.facebook.com/',
-    filterSetting: 'Workshops'
-  },
-  {
-    title: 'Linux Tech talk',
-    day: '22',
-    month: 'Nov',
-    location: 'SFU Surge Discord Server',
-    time: '7:00PM - 9:00PM',
-    link: 'https://mail.sfu.ca/owa/#path=/mail',
-    fbEvent: 'https://www.facebook.com/',
-    filterSetting: 'TechTalks'
-  },
-  {
-    primaryColor: 'var(--color-button-primary)',
-    secondaryColor: 'var(--color-button-secondary)',
-    title: 'Linux Tech talk',
-    day: '22',
-    month: 'Nov',
-    location: 'SFU Surge Discord Server',
-    time: '7:00PM - 9:00PM',
-    link: 'https://mail.sfu.ca/owa/#path=/mail',
-    fbEvent: 'https://www.facebook.com/',
-    filterSetting: 'TechTalks'
-  },
-  {
-    primaryColor: 'var(--color-image-background)',
-    secondaryColor: '#ADBED8',
-    title: 'Linux Tech talk',
-    day: '22',
-    month: 'Nov',
-    location: 'SFU Surge Discord Server',
-    time: '7:00PM - 9:00PM',
-    link: 'https://mail.sfu.ca/owa/#path=/mail',
-    fbEvent: 'https://www.facebook.com/',
-    filterSetting: 'TechTalks'
-  },
-  {
-    title: 'Linux Tech talk',
-    day: '22',
-    month: 'Nov',
-    location: 'SFU Surge Discord Server',
-    time: '7:00PM - 9:00PM',
-    link: 'https://mail.sfu.ca/owa/#path=/mail',
-    fbEvent: 'https://www.facebook.com/',
-    filterSetting: 'TechTalks'
-  }
   */
 ]
 
-export default upcomingEvent
+export default upcomingEvent;

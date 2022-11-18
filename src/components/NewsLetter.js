@@ -1,11 +1,11 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks'
 import styles from '../css/NewsLetter.module.css'
 
 import FormSheet from './FormSheet'
 import mail from '../assets/mail-with-background.svg'
 
 const NewsLetter = () => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
 
   return (
     <>

@@ -1,11 +1,11 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import styles from '../css/EventSection.module.css'
 import monitorEvents from '../assets/monitor-events.svg'
 import monitorEventsMobile from '../assets/monitor-events-mobile.svg'
 import IntroBody from './IntroBody'
 
 const EventSection = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
 
   return (
     <div className={styles.container}>

@@ -1,10 +1,10 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import styles from '../css/PodcastSection.module.css'
 import monitorPodcast from '../assets/monitor-podcast.svg'
 import IntroBody from './IntroBody'
 
 const PodcastSection = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
 
   return (
     <div className={styles.container}>

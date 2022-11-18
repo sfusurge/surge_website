@@ -74,7 +74,7 @@
   margin-top: 20px;
 }
 
-.fbEvent {
+.eventLinkButton {
   width: 100%;
   border: solid;
   border-width: 1px;
@@ -84,6 +84,11 @@
   background-color: rgba(255, 255, 255, 0.1);
   margin: 25px 0 0;
   padding: 7px 0;
+}
+
+.eventLinkButton + .eventLinkButton {
+  /* All the links after the first one. */
+  margin-top: 5px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -99,8 +104,13 @@
     white-space: normal;
   }
 
-  .fbEvent {
+  .eventLinkButton {
     margin: 0;
     padding: 12px 0;
+  }
+
+  .eventLinkButton + .eventLinkButton {
+    /* All the links after the first one. */
+    margin-top: 10px;
   }
 }

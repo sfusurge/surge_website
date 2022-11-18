@@ -1,4 +1,4 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import upcomingApplications, { defaultRoles } from '../utils/upcomingApplications'
 import { calculateTimeLeft, formatDoubleDigitTime } from '../utils/timeLeft'
 import styles from '../css/ProjectSection.module.css'
@@ -24,7 +24,7 @@ const getTime = dueDate => {
 }
 
 const ProjectSection = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
 
   // Get the current application.
   const now = Date.now();

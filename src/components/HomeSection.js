@@ -1,4 +1,3 @@
-import useMediaQuery from '../utils/useMediaQuery'
 import styles from '../css/HomeSection.module.css'
 import rocketMonitor from '../assets/rocket-monitor.svg'
 import rocketMonitorMobile from '../assets/rocket-monitor-mobile.svg'
@@ -9,10 +8,10 @@ import { Link } from 'react-router-dom'
 import IntroBody from './IntroBody'
 import NavBar from './NavBar'
 import { useEffect, useState } from 'react'
+import useLayoutChecks from '../utils/useLayoutChecks'
 
 const HomeSection = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
-  const isLaptop = useMediaQuery('(min-width: 1200px)')
+  const { isDesktop, isLaptop1200 } = useLayoutChecks();
   const [scrollBar, setScrollBar] = useState(true)
   useEffect(() => {
     window.addEventListener('scroll', changeBackground)
@@ -32,7 +31,7 @@ const HomeSection = props => {
         <IntroBody
           imageSrc={rocketMonitor}
           stylingImg={
-            !isLaptop
+            !isLaptop1200
               ? {
                   transform: 'translateY(-100px)'
                 }

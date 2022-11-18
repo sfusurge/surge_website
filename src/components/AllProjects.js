@@ -1,10 +1,10 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import styles from '../css/AllProjects.module.css'
 import projectTitles from '../utils/projectTitles'
 import ProjectNote from './ProjectNote'
 
 const AllProjects = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
   return (
     <div className={isDesktop ? styles.container : styles.mobileContainer}>
       <p

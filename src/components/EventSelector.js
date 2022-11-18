@@ -1,9 +1,9 @@
 import styles from '../css/EventSelector.module.css'
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import allEvents from '../utils/upcomingEvents'
 import UpcomingEvent from './UpcomingEvent'
 import downArrowIcon from '../assets/downArrow.svg'
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 
 const EventSelectorFilters = [
   'Socials',
@@ -12,18 +12,18 @@ const EventSelectorFilters = [
 ]
 
 const EventSelector = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
   const [listOpen, setListOpen] = useState(false)
   const [filter, setFilter] = useState((() => {
     // Set the default filter to the first category which has an event.
     for (const filterType of EventSelectorFilters) {
-      if (allEvents.some(event => event.filterSetting === filterType)) {
+      if (allEvents.some(event => event.type === filterType)) {
         return filterType;
       }
     }
   })())
 
-  const filteredEvents = allEvents.filter(event => event.filterSetting === filter);
+  const filteredEvents = allEvents.filter(event => event.type === filter);
   return (
     <div
       className={styles.container}
@@ -105,15 +105,13 @@ const EventSelector = props => {
         {filteredEvents.map(event => (
           <div key={event.title} {...!isDesktop && {className: styles.notesMargin}}>
             <UpcomingEvent
-              primaryColor={event.primaryColor && event.primaryColor}
-              secondaryColor={event.secondaryColor && event.secondaryColor}
               title={event.title}
               day={event.day}
               month={event.month}
               location={event.location}
               time={event.time}
-              link={event.link}
-              fbEvent={event.fbEvent}
+              links={event.links}
+              colors={event.colors}
             />
           </div>
         ))}

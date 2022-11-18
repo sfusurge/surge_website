@@ -1,4 +1,4 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks';
 import styles from '../css/Note.module.css'
 import { ReactComponent as CurlSVG } from '../assets/note-curl.svg'
 import { ReactComponent as CurlMobileSVG } from '../assets/note-curl-mobile.svg'
@@ -10,7 +10,7 @@ const Note = ({
   contentHeight,
   setHovering
 }) => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
 
   return (
     <div

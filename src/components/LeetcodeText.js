@@ -1,8 +1,8 @@
-import useMediaQuery from '../utils/useMediaQuery'
+import useLayoutChecks from '../utils/useLayoutChecks'
 import styles from '../css/LeetcodeText.module.css'
 
 const LeetcodeText = props => {
-  const isDesktop = useMediaQuery('(min-width: 600px)')
+  const { isDesktop } = useLayoutChecks();
   return (
     <div className={styles.container}>
       <p
