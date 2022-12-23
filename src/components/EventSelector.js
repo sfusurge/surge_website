@@ -106,10 +106,9 @@ const EventSelector = props => {
           <div key={event.title} {...!isDesktop && {className: styles.notesMargin}}>
             <UpcomingEvent
               title={event.title}
-              day={event.day}
-              month={event.month}
+              start={event.start}
+              end={event.end}
               location={event.location}
-              time={event.time}
               links={event.links}
               colors={event.colors}
             />

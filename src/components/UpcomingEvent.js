@@ -1,15 +1,15 @@
 import useLayoutChecks from '../utils/useLayoutChecks';
-import Note from '../components/Note'
+import Note from './Note'
 import styles from '../css/UpcomingEvent.module.css'
 import mapMarker from '../assets/map-marker.svg'
 import clock from '../assets/clock.svg'
+import { formatDateMonthShort, formatTime12 } from '../utils/dateFormat';
 
 const UpcomingEvent = ({
   title,
-  day,
-  month,
   location,
-  time,
+  start,
+  end,
   links,
   ...props
 }) => {
@@ -18,8 +18,23 @@ const UpcomingEvent = ({
   // Default properties.
   const colors = Object.assign({}, props.colors);
 
-  // Use an ndash instead of a hyphen in the time string.
-  const timeString = time.replace("-", "\u2013" /* ndash */);
+  // Calculate month/day.
+  const month = formatDateMonthShort(start);
+  const day = start.getDate();
+
+  const spansMultipleDays = start.getMonth() !== end.getMonth()
+    || start.getDate() !== end.getDate();
+
+  // Calculate time range.
+  //   Single-day:   12PM - 3PM
+  //   Multi-day:    6PM  - 8AM December 26
+  const timeRangeStart = formatTime12(start);
+  const timeRangeEnd = formatTime12(end);
+  const timeRangeEndDay = spansMultipleDays ? 
+    ` ${formatDateMonthShort(end)} ${end.getDate()}` :
+    "";
+
+  const timeString = `${timeRangeStart} \u2013 ${timeRangeEnd}${timeRangeEndDay}`;
 
   // Render.
   return (

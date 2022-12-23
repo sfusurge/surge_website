@@ -1,4 +1,4 @@
-declare export interface EventInfo {
+export declare interface EventInfo<D extends string|Date = Date> {
 
     /**
      * The event title.
@@ -6,20 +6,14 @@ declare export interface EventInfo {
     title: string;
 
     /**
-     * The month in which the event takes place.
+     * The start date.
      */
-     month: 'Jan'|'Feb'|'Mar'|'Apr'|'May'|'Jun'|'Jul'|'Aug'|'Sep'|'Oct'|'Nov'|'Dec';
+    start: D;
 
     /**
-     * The day of the month in which the event takes place.
+     * The end date.
      */
-    day: '1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'10'|'11'|'12'|'13'|'14'|'15'|'16'
-        |'17'|'18'|'19'|'20'|'21'|'22'|'23'|'24'|'25'|'26'|'27'|'28'|'29'|'30'|'31';
-
-    /**
-     * The time of the event.
-     */
-    time: `${string} - ${string}`,
+    end: D;
 
     /**
      * The location of the event.

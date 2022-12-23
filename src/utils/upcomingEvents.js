@@ -6,9 +6,8 @@ const upcomingEvent = [
     title: 'Leetcode Workshop',
     type: 'Workshops',
 
-    day: '22',
-    month: 'Nov',
-    time: '5:30PM - 7:00PM',
+    start: new Date("2022-11-22T17:30-0700"),
+    end: new Date("2022-11-22T19:00-0700"),
 
     location: 'TASC 9204',
     links: {

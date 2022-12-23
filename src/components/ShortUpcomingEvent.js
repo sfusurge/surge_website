@@ -26,10 +26,9 @@ const EventSelector = props => {
                 <UpcomingEvent
                   colors={event.colors}
                   title={event.title}
-                  day={event.day}
-                  month={event.month}
+                  start={event.day}
+                  end={event.month}
                   location={event.location}
-                  time={event.time}
                   links={event.links}
                 />
               </div>
