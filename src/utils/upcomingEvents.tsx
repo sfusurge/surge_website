@@ -1,7 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-import upcomingEvents from "./upcomingEvents_data";
-
 export interface EventInfo<D extends string|Date = Date> {
 
     /**
@@ -69,17 +67,46 @@ export const EventsLoading = Symbol("Events Loading");
 export const EventsError = Symbol("Events Failed to Load");
 
 // React context.
-type EventsStatus = {events: EventInfo[], status: typeof EventsLoading | typeof EventsError | typeof EventsLoaded};
+type EventsStatus = {events: EventInfo<Date>[], status: typeof EventsLoading | typeof EventsError | typeof EventsLoaded};
 const context = createContext<EventsStatus>({events: [], status: EventsLoading});
 
+/**
+ * A React context provider that provides upcoming events to the {@link useEvents} hook.
+ *
+ * @param props
+ * @returns
+ */
 export function EventsProvider(props: React.PropsWithChildren<{}>) {
+    const ENDPOINT = '/.netlify/functions/events';
     const [state, setState] = useState<EventsStatus>({events: [], status: EventsLoading});
 
+    function parseDates(events: EventInfo<string>[]): EventInfo<Date>[] {
+        return events.map(event => ({
+            ...event,
+            start: new Date(event.start),
+            end: new Date(event.end),
+        }));
+    }
+
     useEffect(() => {
-        // TODO: Implement dynamic loading for event data.
-        setState({
-            events: upcomingEvents,
-            status: EventsLoaded,
+        async function load() {
+            const response = await fetch(ENDPOINT);
+            if (response.status === 200) {
+                setState({
+                    events: parseDates(await response.json()),
+                    status: EventsLoaded
+                });
+            } else {
+                setState((state) => ({
+                    ...state,
+                    status: EventsError,
+                }));
+                throw new Error(`${response.status} ${response.statusText}`);
+            }
+        }
+
+        load().catch((ex) => {
+            console.error("Unable to fetch events.\n", ex);
         });
     }, []);
 
