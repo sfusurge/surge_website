@@ -1,0 +1,16 @@
+{
+    "include": ["src"],
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": false,
+        "strict": true,
+        "jsx": "react",
+        "jsxFactory": "React.createElement",
+        "jsxFragmentFactory": "React.Fragment",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "noEmit": true,
+    }
+}

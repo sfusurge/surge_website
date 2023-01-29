@@ -1,9 +1,9 @@
 import styles from '../css/EventSelector.module.css'
 import useLayoutChecks from '../utils/useLayoutChecks';
-import allEvents from '../utils/upcomingEvents'
 import UpcomingEvent from './UpcomingEvent'
 import downArrowIcon from '../assets/downArrow.svg'
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
+import { EventsLoaded, useEvents } from '../utils/upcomingEvents';
 
 const EventSelectorFilters = [
   'Socials',
@@ -13,17 +13,28 @@ const EventSelectorFilters = [
 
 const EventSelector = props => {
   const { isDesktop } = useLayoutChecks();
+  const { events, status } = useEvents({returnEmpty: true});
+
   const [listOpen, setListOpen] = useState(false)
-  const [filter, setFilter] = useState((() => {
-    // Set the default filter to the first category which has an event.
+  const [filter, setFilter] = useState('');
+
+  // Select the default category.
+  useEffect(() => {
+    if (filter !== '' || status !== EventsLoaded) {
+      return;
+    }
+
     for (const filterType of EventSelectorFilters) {
-      if (allEvents.some(event => event.type === filterType)) {
-        return filterType;
+      if (events.some(event => event.type === filterType)) {
+        setFilter(filterType);
+        return;
       }
     }
-  })())
+  }, [filter, events, status])
 
-  const filteredEvents = allEvents.filter(event => event.type === filter);
+  // TODO: Loading screen?
+
+  const filteredEvents = events.filter(event => event.type === filter);
   return (
     <div
       className={styles.container}
@@ -106,10 +117,9 @@ const EventSelector = props => {
           <div key={event.title} {...!isDesktop && {className: styles.notesMargin}}>
             <UpcomingEvent
               title={event.title}
-              day={event.day}
-              month={event.month}
+              start={event.start}
+              end={event.end}
               location={event.location}
-              time={event.time}
               links={event.links}
               colors={event.colors}
             />
