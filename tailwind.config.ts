@@ -16,6 +16,11 @@ const config: Config = {
         "brand-primary-hover": "var(--brand-primary-hover)",
         "brand-primary-pressed": "var(--brand-primary-pressed)",      }
     },
+    fontFamily:{
+      GeistSans:['var(--font-geist-sans)'],
+      GeistMono:['var(--font-geist-mono)'],
+
+    }
   },
   plugins: [],
 };
