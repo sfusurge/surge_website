@@ -18,8 +18,8 @@ const config: Config = {
         "brand-primary-pressed": "var(--brand-primary-pressed)",      },
         
         fontSize:{
-          xs:['0.75rem',{lineHeight:"100%", letterSpacing: "0rem"}],
-          s:['0.875rem',{lineHeight:"100%", letterSpacing: "0rem"}],
+          xs:['0.75rem',{lineHeight:"100%", letterSpacing: "0.0rem"}],
+          sm:['0.875rem',{lineHeight:"100%", letterSpacing: "0rem"}],
           base:['1.125rem',{lineHeight:"150%", letterSpacing: "0rem"}],
           lg:['1.25rem',{lineHeight:"100%", letterSpacing: "0rem"}],
           xl:['1.5625rem',{lineHeight:"125%", letterSpacing: "0rem"}],
