@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --sunken: #0D0E13;
+
+    --surface: #121318;
+
+    --overlay: #1B1D21;
+
+    --raised: #292A2F;
+    --raised-hover: #212226;
+    --raised-pressed: #19191C;
+
+    --raised-highest: #34343A;
+
+    --brand-primary: #364FB8;
+    --brand-primary-hover: #3147a6;
+    --brand-primary-pressed: #2b3f93; 
+
+    /* TEXT COLORS */
+    --text-primary: #FFFFFF;
+    --text-secondary: #EBEBF560; 
+    --text-tertiary: #EBEBF530;
+
+    --text-brand-primary: #60A5FA;
+
+    /* BORDER COLORS */
+    --border-tertiary: #FFFFFF09;
+}
+
+body {
+    background-color: var(--sunken);
+    color: var(--text-primary);
+}
+
+@layer components {
+    .button-link {
+        @apply block cursor-pointer rounded-full w-fit flex items-center font-medium transition-colors; 
+    }
+
+    .button-link.md {
+        @apply h-11 px-3;
+    }
+
+    .button-link.primary {
+        @apply bg-brand-primary hover:bg-brand-primary-hover active:bg-brand-primary-pressed focus:ring focus:ring-brand-primary;
+    }
+
+    .large-title {
+        @apply text-text-primary font-semibold;
+    }
+}
