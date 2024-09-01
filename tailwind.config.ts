@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "sunken": "var(--sunken)",
+        "sunken": "rgba(var(--sunken), <alpha-value>)",
+        "overlay": "rgba(var(--overlay), <alpha-value>)",
         "text-primary": "var(--text-primary)",
         "text-secondary": "var(--text-secondary)",
         "brand-primary": "var(--brand-primary)",

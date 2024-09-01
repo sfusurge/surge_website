@@ -11,11 +11,11 @@ function NavBar() {
     };
 
     return (
-        <div className="relative bg-purple-800 p-3">
-            <div className="flex items-center justify-between w-full mx-auto">
+        <div className="relative my-6">
+            <div className="flex items-center justify-between w-full mx-auto bg-overlay/60 text-sm p-5 font-GeistMono backdrop-blur-md rounded-xl border border-white/5">
                 <p className="text-white">SFU SURGE</p>
                 <div className="hidden md:flex space-x-4 text-white">
-                    <ul className="flex space-x-4">
+                    <ul className="flex space-x-8">
                         <li>HOME</li>
                         <li>ABOUT</li>
                         <li>EVENTS</li>

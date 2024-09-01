@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Landing() {
     return (
-        <div className="bg-purple-800">
+        <div className="">
             <div className="fixed top-0 left-0 w-full z-20">
                 <NavBar />
             </div>
