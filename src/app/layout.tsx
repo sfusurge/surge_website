@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className={`${GeistSans.variable} ${GeistMono.variable}`}  lang="en">
-      <body className="font-GeistSans">{children}</body>
+      <body className="font-GeistSans">
+      <div className="w-full h-[200vh] bg-[radial-gradient(circle,_rgba(54,79,184,0.3)_0%,_rgba(24,35,82,0)_70%)] fixed top-[-100%] z-100 pointer-events-none "></div>
+        {children}</body>
     </html>
   );
 }

@@ -6,8 +6,9 @@ import EventCard from "../components/EventCard";
 
 export default function Playground() {
   return (
+
     <main className="grid grid-cols-4 lg:grid-cols-12  h-full gap-8 overflow-hidden max-w-[1200px] mx-auto px-8">
-      <h2 className=" flex text-4xl font-semibold col-span-full justify-center">
+      <h2 className=" flex text-4xl font-medium col-span-full justify-center">
         Event Cards
       </h2>
       <div className="col-span-full flex flex-col md:flex-row gap-8 ">
@@ -23,7 +24,7 @@ export default function Playground() {
          />
       </div>
 
-      <h2 className=" flex text-4xl font-semibold col-span-full justify-center">
+      <h2 className=" flex text-4xl font-medium col-span-full justify-center">
         Role Cards
       </h2>
 
