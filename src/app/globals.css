@@ -3,52 +3,101 @@
 @tailwind utilities;
 
 :root {
-    --sunken: #0D0E13;
+  --sunken: 13 14 19;
+  --surface: 18 19 24;
 
-    --surface: #121318;
+  --overlay: 27 29 33;
 
-    --overlay: #1B1D21;
+  --raised: 41 42 47;
+  --raised-hover: 33 34 38;
+  --raised-pressed: 25 25 28;
 
-    --raised: #292A2F;
-    --raised-hover: #212226;
-    --raised-pressed: #19191C;
+  --raised-highest: 52 52 58;
 
-    --raised-highest: #34343A;
+  --brand-primary: 54 79 184;
+  --brand-primary-hover: 49 71 166;
+  --brand-primary-pressed: 43 63 147;
 
-    --brand-primary: #364FB8;
-    --brand-primary-hover: #3147a6;
-    --brand-primary-pressed: #2b3f93; 
+  /* TEXT COLORS */
+  --text-primary: 255 255 255;
+  --text-secondary: 162 162 170;
+  --text-tertiary: 107 107 114;
 
-    /* TEXT COLORS */
-    --text-primary: #FFFFFF;
-    --text-secondary: #EBEBF560; 
-    --text-tertiary: #EBEBF530;
+  --text-brand-primary: 96 165 250;
 
-    --text-brand-primary: #60A5FA;
+  /* BORDER COLORS */
+  --border-tertiary: #ffffff18;
 
-    /* BORDER COLORS */
-    --border-tertiary: #FFFFFF09;
-}
-
-body {
-    background-color: var(--sunken);
-    color: var(--text-primary);
+  background-color: rgb(var(--sunken));
+  color: rgb(var(--text-primary));
 }
 
 @layer components {
-    .button-link {
-        @apply block cursor-pointer rounded-full w-fit flex items-center font-medium transition-colors; 
-    }
+  .button-link {
+    @apply border-t border-border-tertiary block cursor-pointer rounded-full w-fit flex items-center transition-colors;
+  }
 
-    .button-link.md {
-        @apply h-11 px-3;
-    }
+  .button-link.md {
+    @apply h-11 px-4;
+  }
 
-    .button-link.primary {
-        @apply bg-brand-primary hover:bg-brand-primary-hover active:bg-brand-primary-pressed focus:ring focus:ring-brand-primary;
-    }
+  .button-link.sm {
+    @apply h-9 px-3;
+  }
 
-    .large-title {
-        @apply text-text-primary font-semibold;
-    }
+  .button-link.primary {
+    @apply bg-brand-primary hover:bg-brand-primary-hover active:bg-brand-primary-pressed focus:ring focus:ring-brand-primary;
+  }
+
+  .button-link.secondary {
+    @apply bg-raised hover:bg-raised-hover;
+  }
+
+  .large-title {
+    @apply text-text-primary text-4xl tracking-tight;
+  }
+
+  .large-title.emphasized {
+    @apply font-medium;
+  }
+
+  .title-1 {
+    @apply text-3xl;
+  }
+
+  .title-1.emphasized {
+    @apply font-medium;
+  }
+
+  .title-2 {
+    @apply text-2xl;
+  }
+
+  .title-2.emphasized {
+    @apply font-medium;
+  }
+
+  .title-3 {
+    @apply text-xl;
+  }
+
+  .title-3.emphasized {
+    @apply font-medium;
+  }
+
+  .paragraph {
+    @apply text-base text-text-secondary font-light max-w-xl mb-6;
+  }
+
+  .link {
+    @apply text-s font-medium font-GeistMono uppercase hover:underline underline-offset-4 decoration-2 decoration-brand-primary;
+  }
+
+  .icon-link {
+    @apply transition-transform hover:scale-125 focus:scale-125 origin-center;
+  }
+
+  :focus {
+    @apply outline-2 outline-brand-primary outline-offset-4;
+  }
 }
