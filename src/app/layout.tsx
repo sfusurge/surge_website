@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
-import Footer from "./components/footer";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html className={`${GeistSans.variable} ${GeistMono.variable}`} lang="en">
-      <body className="font-GeistSans">{children}</body>
-      <Footer></Footer>
+      <body className="font-GeistSans content-wrapper">
+      <div className="surge-radial-gradient"></div>
+        <Nav/>
+        {children}
+      <Footer/>
+      </body>
+      
     </html>
   );
 }
