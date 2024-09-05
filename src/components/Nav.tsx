@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { useEffect } from "react";
 
-
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -31,7 +30,7 @@ export default function NavBar() {
   return (
     <div className="fixed w-full left-0 top-0 text-sm px-6 sm:px-12 ">
       {/* used for progressive blur behind navbar */}
-      <div className="w-screen h-full absolute top-0 left-0 bg-black/20  [mask-image:linear-gradient(180deg,_rgba(0,0,0,1)_20%,_rgba(255,255,255,0)_80%)]  backdrop-blur-[12px] "></div>
+      <div className="w-screen h-full absolute top-0 left-0 bg-black/20  [mask-image:linear-gradient(180deg,_rgba(0,0,0,1)_20%,_rgba(255,255,255,0)_80%)]  backdrop-blur-[8px] "></div>
 
       <div
         className={` ${
@@ -40,7 +39,7 @@ export default function NavBar() {
       >
         <ul className={` flex w-full sm:w-auto items-center  `}>
           {/* surge logo */}
-          <li className="flex items-center ml-2">
+          <li className="flex items-center ml-0.5">
             <Link href="/">
               <svg
                 width="16"
@@ -96,7 +95,7 @@ export default function NavBar() {
 
         {/* content box for nav links */}
         <div className="flex justify-center sm:justify-normal">
-          <ul className="flex flex-col sm:flex-row  gap-8 font-GeistMono mt-8 sm:mt-0 items-center uppercase">
+          <ul className="flex flex-col sm:flex-row  gap-4 font-GeistMono mt-8 sm:mt-0 items-center uppercase">
             <li>
               <Link className="link" href="/">
                 Home
@@ -118,7 +117,7 @@ export default function NavBar() {
               </Link>
             </li>
             <li>
-              <Link className="link" href="/">
+              <Link className="link mr-0.5" href="/">
                 Join Our Team
               </Link>
             </li>
@@ -204,5 +203,3 @@ export default function NavBar() {
     </div>
   );
 }
-
-

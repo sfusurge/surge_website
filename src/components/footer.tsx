@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-border-tertiary my-8 mb-12 md:my-12 px-8 lg:my-20 md:px-16 pt-12 grid grid-rows-2 gap-12 md:grid-cols-4">
+    <footer className="border-t border-border-tertiary my-8 mb-12 md:my-12 px-8 lg:my-20 md:px-16 pt-12 grid grid-rows-2 md:grid-rows-1 gap-12 md:grid-cols-4">
       <div className="col-span-2 flex flex-col items-center sm:items-start">
         <img src="surge-logomark.svg" className="h-5 mb-4 w-fit"></img>
         <p className="text-text-secondary font-light text-center sm:text-left">
