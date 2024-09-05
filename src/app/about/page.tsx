@@ -2,12 +2,12 @@
 import { useState } from "react";
 import RoleButton from "../../components/RoleButton";
 import TeamCard from "../../components/TeamCard";
-import {teams,} from "./teamData";
+import {teams} from "./teamData";
 import data from "./data.json"
 
 export default function Page() {
 
-  const [activeButton, setActiveButton] = useState<string | null>("President");
+  const [activeButton, setActiveButton] = useState<string | null>("Directors");
 
   const handleClick = (buttonId: string) => {
     setActiveButton(buttonId);
@@ -17,12 +17,12 @@ export default function Page() {
   return (
     <main className="flex flex-col gap-40">
       <section className="flex justify-center">
-        <div className="flex flex-col items-center max-w-[38rem] text-center">
-          <div className="mb-5">About Surge</div>
-          <h2 className="mb-6 text-5xl">
+        <div className="flex flex-col items-center max-w-[38rem] text-center gap-4">
+          <div className=" text-caption">About Surge</div>
+          <h2 className="large-title emphasized">
             SFU Surge is the place for you if you’re blah blah
           </h2>
-          <p className=" text-xl ">
+          <p className=" paragraph ">
             The organizers of Simon Fraser University’s largest hackathon, SFU
             Surge provides an inclusive space for students to explore their
             passions, connect with industry professionals.
@@ -30,25 +30,27 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="flex flex-col lg:flex-row gap-12 relative">
-      {/* <div className="w-full absolute h-36  z-50  top-[-2rem] left-[40%] bg-sunken/20  [mask-image:linear-gradient(180deg,_rgba(0,0,0,1)_20%,_rgba(255,255,255,0)_80%)]  backdrop-blur-[12px] text-xl "> </div> */}
+      <section className="flex flex-col lg:flex-row gap-12 relative text-pretty">
+
         <div className="w-full lg:w-[40%]">
-          <div className=" flex gap-4 flex-col">
-            <h2>MEET THE TEAM</h2>
-            <h3 className="text-4xl">We’re all super cracked here at Surge</h3>
-            <p className="text-xl">
+          <div className=" flex gap-8 flex-col">
+            <h2 className="text-caption">MEET THE TEAM</h2>
+            <h3 className="title-1 emphasized">We’re all super cracked here at Surge</h3>
+            <p className="paragraph ">
               The organizers of Simon Fraser University’s largest hackathon, SFU
               Surge provides an inclusive space for students to explore...
             </p>
-            <div className=" flex flex-row gap-2 flex-wrap ">
+            <div className=" grid grid-cols-4 md:grid-cols-5  lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
               {teams.map((team) => {
                 return (
                   <RoleButton
                     buttonFunction={() => handleClick(team.name)}
                     key={team.id}
                     title={team.name}
+                    icon = {team.icon}
+
                     className={`${
-                      activeButton === team.name ? "bg-red-300" : "bg-slate-500"
+                      activeButton === team.name ? "bg-brand-primary/30 text-text-brand-primary " : "bg-gray-800/10 text-text-secondary hover:bg-brand-primary-hover/20"
                     }`}
                   />
                 );
@@ -56,10 +58,9 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className=" flex flex-col w-full lg:w-[60%] h-[40rem] rounded-2xl  overflow-y-scroll relative ">
-
-       
-          <div className=" flex flex-col bg-gray-700 rounded-2xl p-4 gap-4 transition-all ">
+        <div className=" flex flex-col w-full lg:w-[65%] lg:ml-8 rounded-2xl
+        max-h-[50rem] overflow-y-scroll  bg-[#121318]/80 p-5">
+          <div className=" flex flex-col  rounded-2xl  gap-5 transition-all ">
 
           {data.map((member) =>
             activeButton === member.team ? (
@@ -68,6 +69,7 @@ export default function Page() {
                 name={member.name}
                 title={member.major}
                 description={member.position}
+                url = {member.url}
               />
             ) : null
           )}

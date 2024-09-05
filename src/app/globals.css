@@ -89,6 +89,7 @@
     @apply text-base text-text-secondary font-light max-w-xl;
   }
 
+
   .link {
     @apply text-s font-medium font-GeistMono uppercase hover:underline underline-offset-4 decoration-2 decoration-brand-primary;
   }
@@ -97,8 +98,12 @@
     @apply transition-transform hover:scale-125 focus:scale-125 origin-center;
   }
 
+  .text-caption{
+    @apply text-sm text-text-brand-primary uppercase font-GeistMono font-semibold
+  }
+
   .surge-radial-gradient{
-    @apply w-screen h-[200vh] bg-[radial-gradient(circle,_rgba(54,79,184,0.3)_0%,_rgba(24,35,82,0)_70%)] fixed top-[-100%] left-0 z-[-100] pointer-events-none 
+    @apply w-screen h-[200vh] bg-[radial-gradient(circle,_rgba(54,79,184,0.3)_0%,_rgba(24,35,82,0)_50%)] fixed top-[-100%] left-0 z-[-100] pointer-events-none 
   }
 
   .content-wrapper{

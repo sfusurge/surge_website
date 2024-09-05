@@ -14,6 +14,7 @@ const config: Config = {
         "raised-hover": "rgb(var(--raised-hover) / <alpha-value>)",
         "text-primary": "rgb(var(--text-primary) / <alpha-value>)",
         "text-secondary": "rgb(var(--text-secondary) / <alpha-value>)",
+        "text-brand-primary": "rgb(var(--text-brand-primary) / <alpha-value>)",
         "brand-primary": "rgb(var(--brand-primary) / <alpha-value>)",
         "brand-primary-hover":
           "rgb(var(--brand-primary-hover) / <alpha-value>)",

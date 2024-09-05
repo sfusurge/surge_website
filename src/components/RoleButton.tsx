@@ -3,16 +3,23 @@ import { MouseEventHandler } from "react";
 type RoleButtonProps = {
     className?: string,
     title: string,
-    buttonFunction?:()=> void
+    icon: JSX.Element,
+    buttonFunction?:()=> void,
+
   };
+
   export default function RoleButton({
     title,
     className,
+    icon,
     buttonFunction,
   }: RoleButtonProps) {
+
+    
+
     return (
-      <button onClick={buttonFunction} className={`${className}  bg-slate-400 rounded-lg overflow-hidden flex flex-col gap-2 text-sm items-center p-3 w-24 transition-all`}>
-        <div className="w-9 aspect-square bg-slate-300"></div>
+      <button onClick={buttonFunction} className={`${className}  font-medium rounded-lg overflow-hidden flex flex-col gap-2 text-sm items-center aspect-square justify-center p-3  transition-all`}>
+      <div className=" " >{icon}</div>
       {title}</button>
     );
   }
