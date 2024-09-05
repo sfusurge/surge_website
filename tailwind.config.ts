@@ -19,7 +19,7 @@ const config: Config = {
           "rgb(var(--brand-primary-hover) / <alpha-value>)",
         "brand-primary-pressed":
           "rgb(var(--brand-primary-pressed) / <alpha-value>)",
-        "border-tertiary": "var(--border-tertiary)",
+        "border-tertiary": "rgb(var(--border-tertiary) / <alpha-value>)",
       },
 
       fontSize: {

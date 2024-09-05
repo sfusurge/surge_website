@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
-import Nav from "./components/Nav";
-import Footer from "./components/footer";
+import Nav from "../components/Nav";
+import Footer from "../components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,10 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html className={`${GeistSans.variable} ${GeistMono.variable}`} lang="en">
-      <body className="font-GeistSans content-wrapper">
+      <body className="font-GeistSans ">
+        <div className="content-wrapper mt-[8.5rem]">
         <div className="surge-radial-gradient"></div>
         <Nav />
         {children}
+
+     
         <h1 className="large-title">This is a large title</h1>
         <p className="paragraph"> Or is it a large title?</p>
         <h2 className="title-1">Tbh I'm not too sure</h2>
@@ -41,6 +44,15 @@ export default function RootLayout({
           Suspendisse sodales id libero a luctus. Proin et elementum tellus, at
           gravida metus.
         </p>
+        <p className="paragraph text-base">
+          Tbh Im just tryna make the content scrollable. Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Donec porttitor lectus dignissim
+          purus blandit, vitae mattis enim varius. Mauris eu porta lacus. Nullam
+          eget ultrices mauris. Donec posuere lorem id dui vestibulum, id tempor
+          massa efficitur. Nullam sed dui a dolor scelerisque lacinia. Donec
+        
+        </p>
+        </div>
         <Footer />
       </body>
     </html>

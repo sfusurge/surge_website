@@ -26,7 +26,7 @@
   --text-brand-primary: 96 165 250;
 
   /* BORDER COLORS */
-  --border-tertiary: #ffffff18;
+  --border-tertiary: 38 38 38;
 
   background-color: rgb(var(--sunken));
   color: rgb(var(--text-primary));
@@ -86,7 +86,7 @@
   }
 
   .paragraph {
-    @apply text-base text-text-secondary font-light max-w-xl mb-6;
+    @apply text-base text-text-secondary font-light max-w-xl;
   }
 
   .link {
@@ -102,7 +102,7 @@
   }
 
   .content-wrapper{
-    @apply mx-auto px-6 sm:px-8 max-w-[80rem] mt-[8.5rem]  
+    @apply mx-auto px-6 sm:px-12 md:px-24 lg:px-48 max-w-[80rem]
   }
 
   :focus {
