@@ -34,7 +34,7 @@ export default function NavBar() {
 
       <div
         className={` ${
-          isOpen ? "h-[25rem]" : "h-[3.5rem]"
+          isOpen ? "h-[23rem]" : "h-[3.5rem]"
         } mx-auto  bg-raised/80 border border-white/5 transition-all duration-300  mt-4 backdrop-blur-md rounded-xl overflow-hidden flex flex-col sm:flex-row sm:justify-between p-4 max-w-[40rem] z-[1000rem]`}
       >
         <ul className={` flex w-full sm:w-auto items-center  `}>
@@ -95,7 +95,7 @@ export default function NavBar() {
 
         {/* content box for nav links */}
         <div className="flex justify-center sm:justify-normal">
-          <ul className="flex flex-col sm:flex-row  gap-4 font-GeistMono mt-8 sm:mt-0 items-center uppercase">
+          <ul className="flex flex-col sm:flex-row sm:gap-4  gap-6 font-GeistMono mt-8 sm:mt-0 items-center uppercase">
             <li>
               <Link className="link" href="/">
                 Home

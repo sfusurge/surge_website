@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
-import Nav from "./components/Nav";
-import Footer from "./components/footer";
+import Nav from "../components/Nav";
+import Footer from "../components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
