@@ -28,14 +28,14 @@ export default function NavBar() {
   }, []); // Empty dependency array ensures this effect runs only on mount and unmount
 
   return (
-    <div className="fixed w-full left-0 top-0 text-sm px-6 sm:px-12 ">
+    <div className="fixed w-full left-0 top-0 text-sm px-6 sm:px-12  z-[1000]">
       {/* used for progressive blur behind navbar */}
       <div className="w-screen h-full absolute top-0 left-0 bg-black/20  [mask-image:linear-gradient(180deg,_rgba(0,0,0,1)_20%,_rgba(255,255,255,0)_80%)]  backdrop-blur-[8px] "></div>
 
       <div
         className={` ${
           isOpen ? "h-[25rem]" : "h-[3.5rem]"
-        } mx-auto  bg-raised/80 border border-white/5 transition-all duration-300  mt-[1.5rem] backdrop-blur-md rounded-xl overflow-hidden flex flex-col sm:flex-row sm:justify-between p-4 max-w-[40rem] z-[1000]`}
+        } mx-auto  bg-raised/80 border border-white/5 transition-all duration-300  mt-[1.5rem] backdrop-blur-md rounded-xl overflow-hidden flex flex-col sm:flex-row sm:justify-between p-4 max-w-[40rem]`}
       >
         <ul className={` flex w-full sm:w-auto items-center  `}>
           {/* surge logo */}

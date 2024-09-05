@@ -30,9 +30,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="flex flex-col lg:flex-row gap-12 overflow-hidden">
+      <section className="flex flex-col lg:flex-row gap-12 relative">
+      {/* <div className="w-full absolute h-36  z-50  top-[-2rem] left-[40%] bg-sunken/20  [mask-image:linear-gradient(180deg,_rgba(0,0,0,1)_20%,_rgba(255,255,255,0)_80%)]  backdrop-blur-[12px] text-xl "> </div> */}
         <div className="w-full lg:w-[40%]">
-          <div className="lg:max-w-[26rem] flex gap-4 flex-col">
+          <div className=" flex gap-4 flex-col">
             <h2>MEET THE TEAM</h2>
             <h3 className="text-4xl">We’re all super cracked here at Surge</h3>
             <p className="text-xl">
@@ -55,8 +56,11 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className=" flex flex-col w-full lg:w-[60%]">
+        <div className=" flex flex-col w-full lg:w-[60%] h-[40rem] rounded-2xl  overflow-y-scroll relative ">
+
+       
           <div className=" flex flex-col bg-gray-700 rounded-2xl p-4 gap-4 transition-all ">
+
           {data.map((member) =>
             activeButton === member.team ? (
               <TeamCard
