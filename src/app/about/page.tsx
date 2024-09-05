@@ -2,11 +2,12 @@
 import { useState } from "react";
 import RoleButton from "../../components/RoleButton";
 import TeamCard from "../../components/TeamCard";
-import {teams, teamMembers} from "./teamData"
+import {teams,} from "./teamData";
+import data from "./data.json"
 
 export default function Page() {
 
-  const [activeButton, setActiveButton] = useState<string | null>("Directors");
+  const [activeButton, setActiveButton] = useState<string | null>("President");
 
   const handleClick = (buttonId: string) => {
     setActiveButton(buttonId);
@@ -29,7 +30,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="max-w-[80rem] mx-auto flex flex-col lg:flex-row mt-48 gap-12 overflow-hidden">
+      <section className=" mx-auto flex flex-col lg:flex-row mt-48 gap-12 overflow-hidden">
         <div className="w-full lg:w-[40%]">
           <div className="lg:max-w-[26rem] flex gap-4 flex-col">
             <h2>MEET THE TEAM</h2>
@@ -56,13 +57,13 @@ export default function Page() {
         </div>
         <div className=" flex flex-col w-full lg:w-[60%]">
           <div className=" flex flex-col bg-gray-700 rounded-2xl p-4 gap-4 transition-all ">
-          {teamMembers.map((member) =>
+          {data.map((member) =>
             activeButton === member.team ? (
               <TeamCard
                 key={member.id}
                 name={member.name}
-                title={member.title}
-                description={member.description}
+                title={member.major}
+                description={member.position}
               />
             ) : null
           )}
