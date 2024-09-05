@@ -35,7 +35,7 @@ export default function NavBar() {
       <div
         className={` ${
           isOpen ? "h-[25rem]" : "h-[3.5rem]"
-        } mx-auto  bg-raised/80 border border-white/5 transition-all duration-300  mt-4 backdrop-blur-md rounded-xl overflow-hidden flex flex-col sm:flex-row sm:justify-between p-4 max-w-[40rem] z-[1000rem]`}
+        } mx-auto  bg-raised/80 border border-white/5 transition-all duration-300  mt-[1.5rem] backdrop-blur-md rounded-xl overflow-hidden flex flex-col sm:flex-row sm:justify-between p-4 max-w-[40rem] z-[1000]`}
       >
         <ul className={` flex w-full sm:w-auto items-center  `}>
           {/* surge logo */}

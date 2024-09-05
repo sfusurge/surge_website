@@ -15,8 +15,8 @@ export default function Page() {
 
 
   return (
-    <main className="">
-      <section className="  flex justify-center ">
+    <main className="flex flex-col gap-40">
+      <section className="flex justify-center">
         <div className="flex flex-col items-center max-w-[38rem] text-center">
           <div className="mb-5">About Surge</div>
           <h2 className="mb-6 text-5xl">
@@ -30,7 +30,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className=" mx-auto flex flex-col lg:flex-row mt-48 gap-12 overflow-hidden">
+      <section className="flex flex-col lg:flex-row gap-12 overflow-hidden">
         <div className="w-full lg:w-[40%]">
           <div className="lg:max-w-[26rem] flex gap-4 flex-col">
             <h2>MEET THE TEAM</h2>
@@ -71,8 +71,6 @@ export default function Page() {
          
         </div>
       </section>
-
-      <section className="h-screen"></section>
     </main>
   );
 }

@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html className={`${GeistSans.variable} ${GeistMono.variable}`} lang="en">
       <body className="font-GeistSans ">
-        <div className="content-wrapper mt-[8.5rem]">
+        <div className="content-wrapper mt-[calc(10rem+3.5rem)]">
         <div className="surge-radial-gradient"></div>
         <Nav />
         {children}
