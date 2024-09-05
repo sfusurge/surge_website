@@ -25,7 +25,8 @@ type TeamCardProps = {
         src={url}
         width={500}
         height={500}
-        alt="hello"
+        alt="Portait of SFU Surge team member"
+        loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-2 py-2">
