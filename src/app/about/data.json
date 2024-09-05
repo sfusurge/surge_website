@@ -1,0 +1,296 @@
+[
+    {
+      "id": "1",
+      "name": "Matthew Wong",
+      "position": "President",
+      "major": "Computer Science",
+      "team": "President"
+    },
+    {
+      "id": "2",
+      "name": "Maria Zia",
+      "position": "Co-Director\nof Logistics",
+      "major": "Computer Science",
+      "team": "Logistics"
+    },
+    {
+      "id": "3",
+      "name": "Brian Rahadi",
+      "position": "Co-Director\nof Logistics",
+      "major": "Software Systems",
+      "team": "Logistics"
+    },
+    {
+      "id": "4",
+      "name": "Brian Wang",
+      "position": "Logistics Coordinator",
+      "major": "Business",
+      "team": "Logistics"
+    },
+    {
+      "id": "5",
+      "name": "Rasya Hadaayaa",
+      "position": "Logistics Coordinator",
+      "major": "Business",
+      "team": "Logistics"
+    },
+    {
+      "id": "6",
+      "name": "Christine Vu",
+      "position": "Logistics Coordinator",
+      "major": "Business",
+      "team": "Logistics"
+    },
+    {
+      "id": "7",
+      "name": "Emily Ko",
+      "position": "Logistics Coordinator",
+      "major": "Business",
+      "team": "Logistics"
+    },
+    {
+      "id": "8",
+      "name": "Angela Lim",
+      "position": "Logistics Coordinator",
+      "major": "Business",
+      "team": "Logistics"
+    },
+    {
+      "id": "9",
+      "name": "Fady Nasr",
+      "position": "Logistics Coordinator",
+      "major": "Computer Science",
+      "team": "Logistics"
+    },
+    {
+      "id": "10",
+      "name": "Alex Mei",
+      "position": "Logistics Coordinator",
+      "major": "Computer Science",
+      "team": "Logistics"
+    },
+    {
+      "id": "11",
+      "name": "Paul Lee",
+      "position": "Co-Director of External Relations",
+      "major": "Business (MIS and Operations)",
+      "team": "External Relations"
+    },
+    {
+      "id": "12",
+      "name": "Michael Tran",
+      "position": "External Relations Coordinator",
+      "major": "Computing Science",
+      "team": "External Relations"
+    },
+    {
+      "id": "13",
+      "name": "Keyaan Vegdani",
+      "position": "Director of Visual Design",
+      "major": "Interactive Art and Technology Business Joint major",
+      "team": "Visual Design"
+    },
+    {
+      "id": "14",
+      "name": "Arriyan Ali",
+      "position": "Visual Design Coordinator",
+      "major": "SIAT (Interactive Arts and Technology)",
+      "team": "Visual Design"
+    },
+    {
+      "id": "15",
+      "name": "Natalie Kayda",
+      "position": "Visual Design Coordinator",
+      "major": "IAT major, CS Minor",
+      "team": "Visual Design"
+    },
+    {
+      "id": "16",
+      "name": "Angela Shen",
+      "position": "Visual Design Coordinator",
+      "major": "CMNS Joint IAT",
+      "team": "Visual Design"
+    },
+    {
+      "id": "17",
+      "name": "Tinay Yernazarova",
+      "position": "Visual Design Coordinator",
+      "major": "Business",
+      "team": "Visual Design"
+    },
+    {
+      "id": "18",
+      "name": "Yifei Wang",
+      "position": "Visual Design Coordinator",
+      "major": "Interactive Arts and Technology",
+      "team": "Visual Design"
+    },
+    {
+      "id": "19",
+      "name": "Kaia Do",
+      "position": "Director of Marketing",
+      "major": "Business",
+      "team": "Marketing"
+    },
+    {
+      "id": "20",
+      "name": "Kylie Seto",
+      "position": "Technology team - Project Manager",
+      "major": "Business",
+      "team": "Marketing"
+    },
+    {
+      "id": "21",
+      "name": "Sabina Yelyubayeva",
+      "position": "Social Media Coordinator",
+      "major": "major: Communication Minor: Print & Digital Publishing",
+      "team": "Marketing"
+    },
+    {
+      "id": "22",
+      "name": "Josie Trinh",
+      "position": "Social Media Coordinator",
+      "major": "Business",
+      "team": "Marketing"
+    },
+    {
+      "id": "23",
+      "name": "Mackenzie Scholz",
+      "position": "Photgrapher/videographer",
+      "major": "SIAT",
+      "team": "Marketing"
+    },
+    {
+      "id": "24",
+      "name": "Nafisha Djamalus",
+      "position": "Video Editor",
+      "major": "IAT",
+      "team": "Marketing"
+    },
+    {
+      "id": "25",
+      "name": "Christopher Fong",
+      "position": "Co-Director of Technology",
+      "major": "Computing Science",
+      "team": "Technology"
+    },
+    {
+      "id": "26",
+      "name": "Kevin Shi",
+      "position": "Developer",
+      "major": "Computing Science",
+      "team": "Technology"
+    },
+    {
+      "id": "27",
+      "name": "Brendan Shen",
+      "position": "Developer",
+      "major": "Computing Science and Business Joint major",
+      "team": "Technology"
+    },
+    {
+      "id": "28",
+      "name": "Jenna Lee",
+      "position": "Developer",
+      "major": "Computing Science",
+      "team": "Technology"
+    },
+    {
+      "id": "29",
+      "name": "Ayana Hussain",
+      "position": "Developer",
+      "major": "Computing Science",
+      "team": "Technology"
+    },
+    {
+      "id": "30",
+      "name": "Christina Raganit",
+      "position": "Co-Director of Technology",
+      "major": "Interactive Arts and Technology",
+      "team": "Technology"
+    },
+    {
+      "id": "31",
+      "name": "Celine",
+      "position": "Product Design team",
+      "major": "Interactive Arts and Technology",
+      "team": "Technology"
+    },
+    {
+      "id": "32",
+      "name": "Kasey Le",
+      "position": "Product Design team",
+      "major": "Interactive Arts and Technology",
+      "team": "Technology"
+    },
+    {
+      "id": "33",
+      "name": "Michael Dresler",
+      "position": "Product Design team",
+      "major": "Interactive Arts and Technology",
+      "team": "Technology"
+    },
+    {
+      "id": "34",
+      "name": "Kelvin Kwan",
+      "position": "Product Design team",
+      "major": "Interactive Arts and Technology",
+      "team": "Technology"
+    },
+    {
+      "id": "35",
+      "name": "Vicky Xu",
+      "position": "Director of Finance",
+      "major": "Business",
+      "team": "Finance"
+    },
+    {
+      "id": "36",
+      "name": "Samiha Raida",
+      "position": "Finance Coordinator",
+      "major" :"",
+      "team": "Finance"
+    },
+    {
+      "id": "37",
+      "name": "Lily Lin",
+      "position": "Finance Coordinator",
+      "major": "Business",
+      "team": "Finance"
+    },
+    {
+      "id": "38",
+      "name": "Rosa Chen",
+      "position": "Finance Coordinator",
+      "major": "Business",
+      "team": "Finance"
+    },
+    {
+      "id": "39",
+      "name": "Johnson Luong",
+      "position": "Finance Coordinator",
+      "major": "Computer Science",
+      "team": "Finance"
+    },
+    {
+      "id": "40",
+      "name": "Alexandra Svoboda",
+      "position": "Director of Human Resources",
+      "major": "Business (Marketing), Minor in SIAT",
+      "team": "HR"
+    },
+    {
+      "id": "41",
+      "name": "Darian Wong",
+      "position": "Human Resources Coordinator",
+      "major": "Math and Computing Science",
+      "team": "HR"
+    },
+    {
+      "id": "42",
+      "name": "Angela Kurian",
+      "position": "Human Resources Coordinator",
+      "major": "Business",
+      "team": "HR"
+    }
+  ]
