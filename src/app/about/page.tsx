@@ -14,11 +14,12 @@ export default function Page() {
   const handleClick = (buttonId: string) => {
     setActiveButton(buttonId);
     localStorage.setItem("selectedTeam", buttonId);
+    document.getElementById("team")?.scrollIntoView({behavior:"smooth", block:"start"});
   };
 
 
   return (
-    <main className="flex flex-col gap-40">
+    <main className="flex flex-col gap-28">
       <section className="flex justify-center">
         <div className="flex flex-col items-center max-w-[38rem] text-center gap-4">
           <div className=" text-caption">About Surge</div>
@@ -33,10 +34,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="flex flex-col lg:flex-row gap-12 relative text-pretty">
+      <section id="team" className=" pt-24 flex flex-col lg:flex-row gap-12 relative text-pretty">
 
         <div className="w-full lg:w-[40%]">
-          <div className=" flex gap-8 flex-col sticky top-12">
+          <div className=" flex gap-8 flex-col sticky top-24 ">
             <h2 className="text-caption">MEET THE TEAM</h2>
             <h3 className="title-1 emphasized">We’re all super cracked here at Surge</h3>
             <p className="paragraph ">
@@ -62,8 +63,8 @@ export default function Page() {
           </div>
         </div>
         <div className=" flex flex-col w-full lg:w-[65%] lg:ml-8 rounded-2xl
-        bg-[#121318]/80 p-5">
-          <div className=" flex flex-col  rounded-2xl  gap-5 transition-all ">
+       ">
+          <div className=" flex flex-col  bg-[#121318]/80  p-5 rounded-2xl  gap-5 transition-all ">
 
           {data.map((member) =>
             activeButton === member.team ? (
@@ -80,9 +81,7 @@ export default function Page() {
          
         </div>
       </section>
-      <section className="w-screen h-screen">
 
-      </section>
     </main>
   );
 }

@@ -20,7 +20,7 @@ type TeamCardProps = {
   }: TeamCardProps) {
     return (
       <div className={` w-full  bg-[#1B1D21]/60  p-3 flex flex-col md:flex-row gap-6 rounded-lg ${className}`}>
-      <div className="aspect-square w-[5rem] rounded-full md:rounded-lg md:w-auto md:h-[12.5rem] overflow-hidden">
+      <div className="aspect-square w-[5rem] rounded-full md:rounded-lg md:w-auto md:h-[8rem] overflow-hidden">
         <Image
         src={url}
         width={500}
