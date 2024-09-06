@@ -109,9 +109,3 @@
     @apply outline-2 outline-brand-primary outline-offset-4;
   }
 }
-
-.font-feature-settings{
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: 'dlig' 1, 'ss01' 1, 'ss02' 1, 'ss08' 1;
-}
-

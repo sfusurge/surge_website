@@ -7,20 +7,17 @@ const TitleSection = () => {
     return (
         <>
             <section
-                className="flex flex-col
-                gap-[16px]"
-            >
+                className="flex flex-col gap-4">
                 <h6
-                    className="text-brand-primary text-center
-                    font-mono text-[14px] font-semibold uppercase">
+                    className="text-GeistMono text-brand-primary text-center
+                    text-s font-semibold">
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     WHAT'S SFU SURGE?
                 </h6>
-                <h1
-                    className="text-white text-center
-                    font-geist text-[40px] font-medium">
+                <h2
+                    className="text-center title-1 emphasized">
                     We do cool events or something idk
-                </h1>
+                </h2>
             </section>
         </>
     );
@@ -30,9 +27,9 @@ const EventSection = () => {
     return (
         <>
             <section
-                className="mt-[40px] mb-[100px]
+                className="mt-10 mb-24
                 flex flex-row items-center justify-center
-                gap-[40px]"
+                gap-10"
             >
                 <SurgeEvent
                 heading={'StormHacks'}
@@ -61,32 +58,26 @@ const SurgeEvent = ({heading, subheading, image, description}) => {
     return (
         <>
             <border
-                className= "bg-surface flex flex-col
-                gap-[32px]
+                className="bg-surface flex flex-col
                 flex-[1_0_0]
-                pt-[40px] pb-0 pl-[40px] pr-[44.2px]
-                rounded-custom-radius
-                font-geist text-white not-italic"
+                pt-10 pb-0 pl-10 pr-11 gap-8
+                rounded-custom-radius"
             >
                 <section
-                    className="gap-custom-gap"
-                >
-                    <h1
-                        className="text-[40px] text-left font-medium leading-[50px] tracking-[-0.6px]"
-                    >
-                        {heading}
-                    </h1>
+                    className="gap-custom-gap">
                     <h2
-                        className="text-[20px] font-normal leading-[30px]"
-                    >
+                        className="text-left title-1 emphasized leading-10 tracking-tight">
+                        {heading}
+                    </h2>
+                    <h2
+                        className="text-base leading-10">
                         {subheading}
                     </h2>
                 </section>
                 <Image
-                    src={image}
                     alt={description}
-                    layout="fill"
-                    className="!relative"
+                    src={image}
+                    style={{ width: "100%", height: "auto" }}
                 />
             </border>
         </>
@@ -95,10 +86,8 @@ const SurgeEvent = ({heading, subheading, image, description}) => {
 
 const InfoSection = () => {
     return (
-        <section className="my-[100px]
-        px-[80px]
-        flex flex-row items-center justify-center
-        gap-[20px]"
+        <section className="my-24 px-20 gap-5
+        flex flex-row items-center justify-center"
         >
             <InfoItem
                 stat={'2,543'}
@@ -125,14 +114,14 @@ const InfoItem = ({stat, description}) => {
         <section className="flex flex-col items-center justify-center
         flex-[1_0_0]
         gap-custom-gap
-        text-white font-geist not-italic font-medium"
+        text-white font-GeistSans not-italic font-medium"
         >
-            <stat className="text-[52px] leading-[58.5px] tracking-[-0.91px]">
+            <h1 className="large-title emphasized leading-10 tracking-tight">
                 {stat}
-            </stat>
-            <h2 className="text-[25px] leading-[31.25px] tracking-[-0.312px]">
+            </h1>
+            <h4 className="title-3 emphasized leading-8 tracking-tight text-center">
                 {description}
-            </h2>
+            </h4>
         </section>
     );
 };
@@ -140,14 +129,9 @@ const InfoItem = ({stat, description}) => {
 const Events = () => {
     return (
         <>
-            <section className="mx-[100px]
-            font-feature-settings
-            pt-[40px] pb-[20px]"
-            >
                 <TitleSection />
                 <EventSection />
                 <InfoSection />
-            </section>
         </>
     );
 };

@@ -21,7 +21,15 @@ const config: Config = {
           "rgb(var(--brand-primary-pressed) / <alpha-value>)",
         "border-tertiary": "var(--border-tertiary)",
       },
-
+      backgroundColor: {
+        "surface": "rgb(var(--surface) / <alpha-value>)"
+      },
+      borderRadius: {
+        'custom-radius': 'var(--Spacing-8, 32px)',
+      },
+      gap: {
+        'custom-gap': 'var(--Radius-lg, 8px)',
+      },
       fontSize: {
         xs: [
           "0.75rem",
@@ -60,22 +68,6 @@ const config: Config = {
     fontFamily: {
       GeistSans: ["var(--font-geist-sans)"],
       GeistMono: ["var(--font-geist-mono)"],
-      fontFamily:{
-        geist: ['var(--font-geist-sans)'],
-        mono: ['var(--font-geist-mono)'],
-      },
-      colors: {
-        'brand-primary': '#60A5FA',
-      },
-      backgroundColor: {
-        'surface': '#121318',
-      },
-      borderRadius: {
-        'custom-radius': 'var(--Spacing-8, 32px)',
-      },
-      gap: {
-        'custom-gap': 'var(--Radius-lg, 8px)',
-      },
     },
   },
   plugins: [],
