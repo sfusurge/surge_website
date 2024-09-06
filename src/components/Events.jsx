@@ -1,6 +1,6 @@
-import StormHacksImage from "/public/images/placehold.png";
-import JourneyHacksImage from "/public/images/placehold.png";
-import WorkshopsImage from "/public/images/placehold.png";
+import StormHacksImage from "/public/placeholder.jpg";
+import JourneyHacksImage from "/public/placeholder.jpg";
+import WorkshopsImage from "/public/placeholder.jpg";
 import Image from "next/image";
 
 const TitleSection = () => {
@@ -9,7 +9,7 @@ const TitleSection = () => {
             <section
                 className="flex flex-col gap-4">
                 <h6
-                    className="text-GeistMono text-brand-primary text-center
+                    className="font-GeistMono text-brand-primary text-center
                     text-s font-semibold">
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     WHAT'S SFU SURGE?
@@ -27,9 +27,10 @@ const EventSection = () => {
     return (
         <>
             <section
-                className="mt-10 mb-24
-                flex flex-row items-center justify-center
-                gap-10"
+                className="flex mt-10 mb-24
+                min-[1230px]:flex-row max-[1230px]:flex-col
+                items-center justify-center
+                min-[1230px]:gap-10 max-[1230px]:gap-5"
             >
                 <SurgeEvent
                 heading={'StormHacks'}
@@ -86,8 +87,10 @@ const SurgeEvent = ({heading, subheading, image, description}) => {
 
 const InfoSection = () => {
     return (
-        <section className="my-24 px-20 gap-5
-        flex flex-row items-center justify-center"
+        <section className="flex my-24 px-20
+        min-[1230px]:gap-5 max-[1230px]:gap-16
+        min-[1230px]:flex-row max-[1230px]:flex-col
+        items-center justify-center"
         >
             <InfoItem
                 stat={'2,543'}
