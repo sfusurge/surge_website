@@ -10,17 +10,17 @@ const TitleSection = () => {
                 className="flex flex-col
                 gap-[16px]"
             >
-                <div
+                <h6
                     className="text-brand-primary text-center
                     font-mono text-[14px] font-semibold uppercase">
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     WHAT'S SFU SURGE?
-                </div>
-                <div
+                </h6>
+                <h1
                     className="text-white text-center
                     font-geist text-[40px] font-medium">
                     We do cool events or something idk
-                </div>
+                </h1>
             </section>
         </>
     );
@@ -38,23 +38,26 @@ const EventSection = () => {
                 heading={'StormHacks'}
                 subheading={'Our beginner-friendly hackathon'}
                 image={StormHacksImage}
+                description={"StormHacks"}
                 />
                 <SurgeEvent
                     heading={'JourneyHacks'}
                     subheading={'Our beginner-friendly hackathon'}
                     image={JourneyHacksImage}
+                    description={"JourneyHacks"}
                 />
                 <SurgeEvent
                     heading={'Workshops'}
                     subheading={'Learn new skills'}
                     image={WorkshopsImage}
+                    description={"Workshops"}
                 />
             </section>
         </>
     );
 };
 
-const SurgeEvent = ({heading, subheading, image}) => {
+const SurgeEvent = ({heading, subheading, image, description}) => {
     return (
         <>
             <border
@@ -81,7 +84,7 @@ const SurgeEvent = ({heading, subheading, image}) => {
                 </section>
                 <Image
                     src={image}
-                    alt="img"
+                    alt={description}
                     layout="fill"
                     className="!relative"
                 />
