@@ -57,6 +57,14 @@ const config: Config = {
           { lineHeight: "112.5%", letterSpacing: "0rem" },
         ] /* 52px */,
       },
+      screens: {
+        xs: "430px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
     },
     fontFamily: {
       GeistSans: ["var(--font-geist-sans)"],

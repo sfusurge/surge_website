@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RoleButton from "../../components/RoleButton";
 import TeamCard from "../../components/TeamCard";
 import {teams} from "./teamData";
@@ -10,11 +10,28 @@ export default function Page() {
   const selectedTeam = localStorage.getItem("selectedTeam") || "Directors"
 
   const [activeButton, setActiveButton] = useState<string | null>(selectedTeam);
+  const [isMobile, setIsMobile] = useState<boolean | null >(null);
+  
+
+  useEffect(() => {
+    const handleResize = () => {
+      const newWidth: number = window.innerWidth;
+      newWidth > 1024? setIsMobile(true): setIsMobile(false)
+    };
+
+    // Add event listener to handle window resize
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array ensures this effect runs only on mount and unmount
 
   const handleClick = (buttonId: string) => {
     setActiveButton(buttonId);
     localStorage.setItem("selectedTeam", buttonId);
-    document.getElementById("team")?.scrollIntoView({behavior:"smooth", block:"start"});
+
+    isMobile?document.getElementById("team")?.scrollIntoView({behavior:"smooth", block:"start"}): null;
   };
 
 
@@ -37,14 +54,14 @@ export default function Page() {
       <section id="team" className=" pt-24 flex flex-col lg:flex-row gap-12 relative text-pretty">
 
         <div className="w-full lg:w-[40%]">
-          <div className=" flex gap-8 flex-col sticky top-24 ">
+          <div className=" flex gap-8 flex-col lg:sticky top-24 ">
             <h2 className="text-caption">MEET THE TEAM</h2>
             <h3 className="title-1 emphasized">We’re all super cracked here at Surge</h3>
             <p className="paragraph ">
               The organizers of Simon Fraser University’s largest hackathon, SFU
               Surge provides an inclusive space for students to explore...
             </p>
-            <div className=" grid grid-cols-4 md:grid-cols-5  lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
+            <div className=" grid grid-cols-3 xs:grid-cols-4 md:grid-cols-5  lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
               {teams.map((team) => {
                 return (
                   <RoleButton
