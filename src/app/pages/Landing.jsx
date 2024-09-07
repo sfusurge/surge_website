@@ -3,9 +3,11 @@ import Background from "../assets/landing.png";
 import BodyImage from "../assets/landing-2.png";
 import Image from "next/image";
 
+// gray box 
+// meet the team branch has blue color
 function Landing() {
   return (
-    <div className="bg-surface">
+    <div>
       <div className="flex flex-col items-center justify-center">
         <button className="bg-surface text-text-primary px-4 py-2 rounded-custom-radius hover:bg-brand-primary-hover">
           Apply to StormHacks x Enactus now! &rarr;
@@ -29,7 +31,7 @@ function Landing() {
         </div>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row pb-10 md:mt-20 justify-between">
+      <div className="flex flex-col-reverse md:flex-row pb-5 mb-5 md:mt-20 justify-between px-5 md:px-10 md:py-8 rounded-custom-radius items-center" style={{ backgroundColor: "rgba(18, 19, 24, 1)" }}>
         <div className="">
           <h2 className="text-brand-primary">WHAT'S SFU SURGE</h2>
           <h1 className="text-text-primary mt-2 text-2xl max-w-lg">
