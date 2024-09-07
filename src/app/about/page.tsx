@@ -95,7 +95,8 @@ export default function Page() {
                 name={member.name}
                 major={member.major}
                 role={member.position}
-                url = {member.url}
+                src = {member.src}
+                fallbackSrc="/headshots/placeholder.png"
               />
             ) : null
           )}
