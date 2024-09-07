@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "url":"logistics-video-editor" ,
+        "title": "Video editor",
+        "description":"bla blah blah",
+        "team":"logistics"
+
+    },
+
+    {
+        "id": 2,
+        "url":"design-ux-designer" ,
+        "title": "UX Designer",
+        "description":"description",
+        "team":"Design"
+
+    },
+
+    {
+        "id": 3,
+        "url":"marketing-social-media-coordinator" ,
+        "title": "social media coordinator",
+        "description":"description",
+        "team":"Marketing"
+
+    }
+]
