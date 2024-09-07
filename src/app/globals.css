@@ -98,11 +98,11 @@
   }
 
   .surge-radial-gradient{
-    @apply w-screen h-[200vh] bg-[radial-gradient(circle,_rgba(54,79,184,0.3)_0%,_rgba(24,35,82,0)_70%)] fixed top-[-100%] left-0 z-[-100rem] pointer-events-none 
+    @apply w-screen h-[200vh] bg-[radial-gradient(circle,_rgba(54,79,184,0.3)_0%,_rgba(24,35,82,0)_70%)] fixed top-[-100%] left-0 z-[-100rem] pointer-events-none
   }
 
   .content-wrapper{
-    @apply mx-auto px-6 sm:px-8 max-w-[80rem] mt-[8.5rem]  
+    @apply mx-auto px-6 sm:px-8 max-w-[80rem] mt-[8.5rem]
   }
 
   :focus {
