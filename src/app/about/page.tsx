@@ -7,17 +7,23 @@ import data from "./data.json"
 
 export default function Page() {
 
-  const selectedTeam = localStorage.getItem("selectedTeam") || "Directors"
-
-  const [activeButton, setActiveButton] = useState<string | null>(selectedTeam);
-  const [isMobile, setIsMobile] = useState<boolean | null >(null);
-  
+  const [activeButton, setActiveButton] = useState<string | null> (null);
+  const [isDesktop, setIsDesktop] = useState<boolean | null> (null);
 
   useEffect(() => {
     const handleResize = () => {
       const newWidth: number = window.innerWidth;
-      newWidth > 1024? setIsMobile(true): setIsMobile(false)
+      const isDesktopValue = newWidth > 1024;
+      setIsDesktop(isDesktopValue);
     };
+
+    const newWidth: number = window.innerWidth;
+    const isDesktopValue = newWidth > 1024;
+    setIsDesktop(isDesktopValue);
+
+    const selectedTeam = localStorage.getItem("selectedTeam") || "Directors"
+    setActiveButton(selectedTeam)
+    window.innerWidth > 1024? setIsDesktop(true): setIsDesktop(false)
 
     // Add event listener to handle window resize
     window.addEventListener("resize", handleResize);
@@ -25,13 +31,12 @@ export default function Page() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Empty dependency array ensures this effect runs only on mount and unmount
+  }, ); 
 
-  const handleClick = (buttonId: string) => {
+  const changeTeam = (buttonId: string) => {
     setActiveButton(buttonId);
     localStorage.setItem("selectedTeam", buttonId);
-
-    isMobile?document.getElementById("team")?.scrollIntoView({behavior:"smooth", block:"start"}): null;
+    isDesktop!?document.getElementById("team")?.scrollIntoView({behavior:"smooth", block:"start"}): null;
   };
 
 
@@ -40,9 +45,9 @@ export default function Page() {
       <section className="flex justify-center">
         <div className="flex flex-col items-center max-w-[38rem] text-center gap-4">
           <div className=" text-caption">About Surge</div>
-          <h2 className="large-title emphasized">
+          <h1 className="large-title emphasized">
             SFU Surge is the place for you if you’re blah blah
-          </h2>
+          </h1>
           <p className=" paragraph ">
             The organizers of Simon Fraser University’s largest hackathon, SFU
             Surge provides an inclusive space for students to explore their
@@ -65,7 +70,7 @@ export default function Page() {
               {teams.map((team) => {
                 return (
                   <RoleButton
-                    buttonFunction={() => handleClick(team.name)}
+                    buttonFunction={() => changeTeam(team.name)}
                     key={team.id}
                     title={team.name}
                     icon = {team.icon}
@@ -88,8 +93,8 @@ export default function Page() {
               <TeamCard
                 key={member.id}
                 name={member.name}
-                title={member.major}
-                description={member.position}
+                major={member.major}
+                role={member.position}
                 url = {member.url}
               />
             ) : null
