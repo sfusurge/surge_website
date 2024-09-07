@@ -1,3 +1,111 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --sunken: 13 14 19;
+  --surface: 18 19 24;
+
+  --overlay: 27 29 33;
+
+  --raised: 41 42 47;
+  --raised-hover: 33 34 38;
+  --raised-pressed: 25 25 28;
+
+  --raised-highest: 52 52 58;
+
+  --brand-primary: 54 79 184;
+  --brand-primary-hover: 49 71 166;
+  --brand-primary-pressed: 43 63 147;
+
+  /* TEXT COLORS */
+  --text-primary: 255 255 255;
+  --text-secondary: 162 162 170;
+  --text-tertiary: 107 107 114;
+
+  --text-brand-primary: 96 165 250;
+
+  /* BORDER COLORS */
+  --border-tertiary: #ffffff18;
+
+  background-color: rgb(var(--sunken));
+  color: rgb(var(--text-primary));
+}
+
+@layer components {
+  .button-link {
+    @apply border-t border-border-tertiary block cursor-pointer rounded-full w-fit flex items-center transition-colors;
+  }
+
+  .button-link.md {
+    @apply h-11 px-4;
+  }
+
+  .button-link.sm {
+    @apply h-9 px-3;
+  }
+
+  .button-link.primary {
+    @apply bg-brand-primary hover:bg-brand-primary-hover active:bg-brand-primary-pressed focus:ring focus:ring-brand-primary;
+  }
+
+  .button-link.secondary {
+    @apply bg-raised hover:bg-raised-hover;
+  }
+
+  .large-title {
+    @apply text-text-primary text-4xl tracking-tight;
+  }
+
+  .large-title.emphasized {
+    @apply font-medium;
+  }
+
+  .title-1 {
+    @apply text-3xl;
+  }
+
+  .title-1.emphasized {
+    @apply font-medium;
+  }
+
+  .title-2 {
+    @apply text-2xl;
+  }
+
+  .title-2.emphasized {
+    @apply font-medium;
+  }
+
+  .title-3 {
+    @apply text-xl;
+  }
+
+  .title-3.emphasized {
+    @apply font-medium;
+  }
+
+  .paragraph {
+    @apply text-base text-text-secondary font-light max-w-xl mb-6;
+  }
+
+  .link {
+    @apply text-s font-medium font-GeistMono uppercase hover:underline underline-offset-4 decoration-2 decoration-brand-primary;
+  }
+
+  .icon-link {
+    @apply transition-transform hover:scale-125 focus:scale-125 origin-center;
+  }
+
+  .surge-radial-gradient{
+    @apply w-screen h-[200vh] bg-[radial-gradient(circle,_rgba(54,79,184,0.3)_0%,_rgba(24,35,82,0)_70%)] fixed top-[-100%] left-0 z-[-100rem] pointer-events-none
+  }
+
+  .content-wrapper{
+    @apply mx-auto px-6 sm:px-8 max-w-[80rem] mt-[8.5rem]
+  }
+
+  :focus {
+    @apply outline-2 outline-brand-primary outline-offset-4;
+  }
+}

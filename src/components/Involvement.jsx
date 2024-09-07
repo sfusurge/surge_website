@@ -2,7 +2,7 @@ import React from 'react';
 import InvolvementImage from '@/images/involvement.png'
 import Image from 'next/image';
 
-const InvolvementSection = () => {
+const Involvement = () => {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center py-16 px-6">
       <div className="w-full md:w-[594px] md:h-[264px] flex flex-col justify-center items-center text-center mb-16 bg-black">
@@ -59,4 +59,4 @@ const InvolvementSection = () => {
   );
 };
 
-export default InvolvementSection;
+export default Involvement;
