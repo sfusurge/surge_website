@@ -6,7 +6,7 @@ import text_content from "/public/content/text_content.json";
 
 const Involvement = () => {
   return (
-    <div className="min-h-screen text-primary flex flex-col items-center pt-16 px-6">
+    <div className="text-primary flex flex-col items-center pt-16 px-6">
       <div className="w-full md:w-[594px] md:h-[264px] flex flex-col justify-center items-center text-center mb-16">
         <div className="text-center mb-16">
           <h2 className="text-brand-primary uppercase tracking-wider text-s mb-4">
