@@ -1,5 +1,5 @@
-import Testimonials from "@/sections/about/Testimonials";
-import TeamGallery from "@/sections/about/TeamGallery";
+import Testimonials from "@/app/sections/about/Testimonials";
+import TeamGallery from "@/app/sections/about/TeamGallery";
 
 export default function Page() {
   return (
