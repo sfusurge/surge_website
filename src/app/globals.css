@@ -34,7 +34,7 @@
 
 @layer components {
   .button-link {
-    @apply border-t border-border-tertiary/15 block cursor-pointer rounded-full w-fit flex items-center transition-colors;
+    @apply border-t border-border-tertiary/15 cursor-pointer rounded-full w-fit flex items-center transition-colors;
   }
 
   .button-link.md {
@@ -46,7 +46,7 @@
   }
 
   .button-link.primary {
-    @apply bg-brand-primary hover:bg-brand-primary-hover active:bg-brand-primary-pressed focus:ring focus:ring-brand-primary;
+    @apply bg-brand-primary hover:bg-brand-primary-hover active:bg-brand-primary-pressed focus-visible:ring focus-visible:ring-brand-primary;
   }
 
   .button-link.secondary {
@@ -106,7 +106,7 @@
   }
 
   .content-wrapper{
-    @apply mx-auto px-6 sm:px-12 md:px-24 max-w-[90rem];
+    @apply mx-auto px-6 sm:px-12 md:px-16 max-w-[90rem];
   }
 
   :focus {

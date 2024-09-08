@@ -1,7 +1,6 @@
 import jobs from "@/lib/jobListing.json"; // Assuming your jobs.json file is here
 import { Metadata } from "next";
 
-
 type JobPageProps = {
   params: {
     jobId: string;
@@ -22,8 +21,8 @@ export default function JobPage({ params: { jobId } }: JobPageProps) {
   const job = jobs.find((job) => job.url === jobId);
 
   return (
-    <main className="flex gap-12 md:gap-12 flex-col md:flex-row">
-      <div className="flex flex-col gap-5 md:w-[40%]">
+    <main className="flex gap-12 xl:gap-48 flex-col md:flex-row w-full justify-center">
+      <div className="flex flex-col gap-5  ">
         <h1 className="large-title emphasized">{job?.title}</h1>
         <div className=" flex flex-col gap-2">
           <span className="text-base text-text-secondary font-medium flex gap-2">
@@ -80,14 +79,11 @@ export default function JobPage({ params: { jobId } }: JobPageProps) {
           </span>
         </div>
 
-        <a
-          href={`${job?.listing}`}
-          className=" button-link primary md items-center "
-        >
+        <a href={`${job?.listing}`} className=" button-link primary md w-full md:w-fit items-center justify-center ">
           Apply Now
         </a>
       </div>
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-12  ">
         <div>
           <h2 className="title-2 mb-4">About this Role</h2>
           <p className="text-text-secondary paragraph">{job?.about}</p>
@@ -96,7 +92,9 @@ export default function JobPage({ params: { jobId } }: JobPageProps) {
           <h2 className="title-2 mb-4">Responsibilities</h2>
           <ul className="paragraph flex flex-col gap-2 text-text-secondary list-disc list-outside px-5">
             {job?.resonsibilities.map((responsibility, index) => (
-              <li className="text-lg leading-8" key={index}>{responsibility}</li>
+              <li className="text-lg leading-8" key={index}>
+                {responsibility}
+              </li>
             ))}
           </ul>
         </div>
@@ -104,7 +102,9 @@ export default function JobPage({ params: { jobId } }: JobPageProps) {
           <h2 className="title-2 mb-4">Skills</h2>
           <ul className="paragraph flex flex-col gap-2 text-text-secondary list-disc list-outside px-5">
             {job?.skills.map((responsibility, index) => (
-              <li className="text-lg leading-8" key={index}>{responsibility}</li>
+              <li className="text-lg leading-8" key={index}>
+                {responsibility}
+              </li>
             ))}
           </ul>
         </div>
@@ -112,7 +112,9 @@ export default function JobPage({ params: { jobId } }: JobPageProps) {
           <h2 className="title-2 mb-4">Commitement</h2>
           <ul className="paragraph flex flex-col gap-2 text-text-secondary list-disc list-outside px-5">
             {job?.commitment.map((responsibility, index) => (
-              <li className="text-lg leading-8" key={index}>{responsibility}</li>
+              <li className="text-lg leading-8" key={index}>
+                {responsibility}
+              </li>
             ))}
           </ul>
         </div>

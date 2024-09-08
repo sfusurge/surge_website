@@ -1,6 +1,6 @@
 import { MouseEventHandler } from "react";
 
-type RoleButtonProps = {
+type AboutTeamButtonProps = {
     className?: string,
     title: string,
     icon: JSX.Element,
@@ -8,12 +8,12 @@ type RoleButtonProps = {
 
   };
 
-  export default function RoleButton({
+  export default function AboutTeamButton({
     title,
     className,
     icon,
     buttonFunction,
-  }: RoleButtonProps) {
+  }: AboutTeamButtonProps) {
 
     
 

@@ -1,29 +1,33 @@
 import type { Metadata } from "next";
-import jobs from "@/lib/jobListing.json";
-import Link from "next/link";
 import Image from "next/image";
-import JobCard from "@/components/JobCard";
 import Card from "@/components/Card";
+import OpenRolesSection from "@/components/OpenRolesSection";
+
 
 export const metadata: Metadata = {
   title: "Join SFU Surge",
 };
 
 export default function joinTeam() {
+
+  
+
   return (
-    <main className="flex flex-col gap-24">
-      <section className="grid grid-cols-1 gap-12 md:grid-cols-2">
-        <div className="flex md:justify-center  ">
+    <main className="flex flex-col gap-24 md:gap-36">
+
+      <section className="flex  md:flex-row  w-full gap-8 lg:gap-12 flex-col-reverse items-center justify-center ">
+
+      <div className="flex md:justify-center h-full md:w-[40%]   ">
           <Image
             src={"/boo.png"}
-            width={1928}
-            height={1598}
+            width={1659}
+            height={1421}
             alt={"hello"}
-            className="object-contain  "
+            className="object-contain max-h-full"
           />
         </div>
 
-        <div className="flex flex-col gap-5 justify-center">
+      <div className="flex flex-col gap-5 justify-center w-fit  ">
           <h1 className="large-title emphasized text-pretty max-w-xl">
             Ready to Make an Impact With Surge?
           </h1>
@@ -32,13 +36,13 @@ export default function joinTeam() {
             technology, design, and beyond. Whether you're passionate about
             coding, logistics, or media, your skills can make a difference.{" "}
           </p>
-        </div>
+        </div>  
+        
+        
       </section>
 
       <section className="flex flex-col items-center text-center gap-2">
-        <span className="text-caption">
-          Benefits
-        </span>
+        <span className="text-caption">Benefits</span>
         <h2 className="title-1 emphasized mb-12"> Why Volunteer With Surge?</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -62,29 +66,16 @@ export default function joinTeam() {
       </section>
 
       <section className="flex flex-col items-center text-center gap-2">
-        <span className="text-caption">
-          Upcoming Oppurtunity
-        </span>
+        <span className="text-caption">Upcoming Oppurtunity</span>
         <h2 className="title-1 emphasized mb-4"> Stormhacks 2024</h2>
-        <p className="paragraph">Join us as we prepare for our upcoming Hackathon event, where your contributions could help shape the future of technology! Be part of the team that brings innovative ideas to life.</p>
-        
+        <p className="paragraph">
+          Join us as we prepare for our upcoming Hackathon event, where your
+          contributions could help shape the future of technology! Be part of
+          the team that brings innovative ideas to life.
+        </p>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {jobs.length != 0 ? (
-          jobs.map((job, index) => (
-            <JobCard
-              url={`join/${job.url}`}
-              key={index}
-              title={job.title}
-              description={job.about}
-              team={job.team}
-            />
-          ))
-        ) : (
-          <div>no Jobs available</div>
-        )}
-      </div>
+     <OpenRolesSection/>
     </main>
   );
 }
