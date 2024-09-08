@@ -1,7 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-border-tertiary my-8 mb-12 md:my-12 px-8 lg:my-20 md:px-16 pt-12 grid grid-rows-2 md:grid-rows-1 gap-12 md:grid-cols-4">
-      <div className="col-span-2 flex flex-col items-center sm:items-start">
+    <footer className="pt-40">
+      <div className="h-[1px] bg-gradient-to-r from-border-tertiary/0 via-border-tertiary/15 to-border-tertiary/0"></div>
+    <div className="py-12 grid grid-rows-2 md:grid-rows-1 gap-12 md:grid-cols-5 content-wrapper">
+      <div className="col-span-3 flex flex-col items-center sm:items-start">
         <img src="surge-logomark.svg" className="h-5 mb-4 w-fit"></img>
         <p className="text-text-secondary font-light text-center sm:text-left">
           Some cheesy tagline here <br></br>
@@ -139,6 +141,7 @@ export default function Footer() {
           Projects
         </a>
       </div>
+    </div>
     </footer>
   );
 }

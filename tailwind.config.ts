@@ -20,7 +20,7 @@ const config: Config = {
           "rgb(var(--brand-primary-hover) / <alpha-value>)",
         "brand-primary-pressed":
           "rgb(var(--brand-primary-pressed) / <alpha-value>)",
-        "border-tertiary": "var(--border-tertiary)",
+        "border-tertiary": "rgb(var(--border-tertiary) / <alpha-value>)",
       },
       backgroundColor: {
         "surface": "rgb(var(--surface) / <alpha-value>)"
@@ -64,6 +64,14 @@ const config: Config = {
           "3.25rem",
           { lineHeight: "112.5%", letterSpacing: "0rem" },
         ] /* 52px */,
+      },
+      screens: {
+        xs: "430px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
     },
     fontFamily: {
