@@ -36,11 +36,8 @@ const Involvement = () => {
             <p className="text-gray-400 mb-8">
               {text_content.homepage.involvement.card.paragraph}
             </p>
-            <button className="button-link bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 px-6 rounded-custom-radius transition">
-              <a
-                href="#discord" // TODO: Replace with the actual link URL
-                // mobile layout in figma shows "Read our lore" - TODO: update to correct text
-              >
+            <button className="button-link bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 my-8 px-6 rounded-custom-radius transition">
+              <a href="https://discord.gg/UcFkUktxfy">
                 {text_content.homepage.involvement.card.button_text}
               </a>
             </button>
