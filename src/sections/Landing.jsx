@@ -1,6 +1,5 @@
-import NavBar from "../components/NavBar";
-import Background from "../assets/landing.png";
-import BodyImage from "../assets/landing-2.png";
+import Background from "/public/assets/landing.png"
+import BodyImage from "/public/assets/landing-2.png";
 import Image from "next/image";
 
 // gray box 
