@@ -1,3 +1,5 @@
+"use client";
+
 import Background from "/public/assets/landing.png";
 import BodyImage from "/public/assets/landing-2.png";
 import Image from "next/image";
@@ -7,7 +9,7 @@ import text_content from "/public/content/text_content.json";
 // meet the team branch has blue color
 function Landing() {
   return (
-    <div>
+    <>
       <div className="flex flex-col items-center justify-center">
         <button className="bg-surface text-text-primary px-4 py-2 rounded-custom-radius hover:bg-brand-primary-hover">
           {text_content.homepage.landing.button_text}
@@ -57,7 +59,7 @@ function Landing() {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
