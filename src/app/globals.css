@@ -86,9 +86,8 @@
   }
 
   .paragraph {
-    @apply text-base text-text-secondary font-light max-w-xl;
+    @apply text-base text-text-secondary font-light max-w-xl mb-6;
   }
-
 
   .link {
     @apply text-s font-medium font-GeistMono uppercase hover:underline underline-offset-4 decoration-2 decoration-brand-primary;

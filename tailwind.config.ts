@@ -20,9 +20,17 @@ const config: Config = {
           "rgb(var(--brand-primary-hover) / <alpha-value>)",
         "brand-primary-pressed":
           "rgb(var(--brand-primary-pressed) / <alpha-value>)",
-        "border-tertiary": "rgb(var(--border-tertiary) / <alpha-value>)",
+        "border-tertiary": "var(--border-tertiary)",
       },
-
+      backgroundColor: {
+        "surface": "rgb(var(--surface) / <alpha-value>)"
+      },
+      borderRadius: {
+        'custom-radius': 'var(--Spacing-8, 32px)',
+      },
+      gap: {
+        'custom-gap': 'var(--Radius-lg, 8px)',
+      },
       fontSize: {
         xs: [
           "0.75rem",
