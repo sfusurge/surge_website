@@ -1,0 +1,30 @@
+{
+  "homepage": {
+    "landing": {
+      "button_text": "Apply to Stormhacks X Enactus right now! →",
+      "title": "SFU Surge lorem ipsum dolor sit amet consectetur",
+      "subtitle": "The organizers of Simon Fraser University's largest hackathon, SFU Surge provides an inclusive space for students to explore their passions, connect with industry professionals.",
+      "card": {
+        "subtitle": "WHAT'S SFU SURGE?",
+        "title": "All we do is play LOL and Stardew all day",
+        "paragraph": "The organizers of Simon Fraser University's largest hackathon, SFU Surge provides an inclusive space for students to explore their passions, connect with industry professionals.",
+        "button_text": "Read our lore"
+      }
+    },
+    "events": {
+      "title": "WHAT'S SFU SURGE?",
+      "subtitle": "We do cool events or something idk"
+    },
+    "involvement": {
+      "subtitle": "Get Involved",
+      "title": "Are you a student at SFU hoping to build connections & host events for the tech community?",
+      "button_text": "View opportunities",
+      "card": {
+        "subtitle": "STAY IN THE LOOP",
+        "title": "Be the first to find out about exciting news, like when our next events are!",
+        "paragraph": "The organizers of Simon Fraser University's largest hackathon, SFU Surge provides an inclusive space for students to explore their passions, connect with industry professionals.",
+        "button_text": "Join our discord server"
+      }
+    }
+  }
+}
