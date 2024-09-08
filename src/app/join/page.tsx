@@ -36,7 +36,7 @@ export default function joinTeam() {
       </section>
 
       <section className="flex flex-col items-center text-center gap-2">
-        <span className="text-sm font-GeistMono uppercase text-[#60A5FA] font-semibold">
+        <span className="text-caption">
           Benefits
         </span>
         <h2 className="title-1 emphasized mb-12"> Why Volunteer With Surge?</h2>
@@ -62,7 +62,7 @@ export default function joinTeam() {
       </section>
 
       <section className="flex flex-col items-center text-center gap-2">
-        <span className="text-sm font-GeistMono uppercase text-[#60A5FA] font-semibold">
+        <span className="text-caption">
           Upcoming Oppurtunity
         </span>
         <h2 className="title-1 emphasized mb-4"> Stormhacks 2024</h2>

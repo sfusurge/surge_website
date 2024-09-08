@@ -82,9 +82,9 @@ export default function JobPage({ params: { jobId } }: JobPageProps) {
 
         <a
           href={`${job?.listing}`}
-          className="border-t border-border-tertiary cursor-pointer rounded-full flex items-center text-center justify-center transition-colors h-11 px-4 bg-brand-primary hover:bg-brand-primary-hover w-full active:bg-brand-primary-pressed focus:ring focus:ring-brand-primary md:w-[8rem]"
+          className=" button-link primary md items-center "
         >
-          apply now
+          Apply Now
         </a>
       </div>
       <div className="flex flex-col gap-12">
