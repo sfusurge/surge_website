@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import RoleButton from "../../../components/RoleButton";
-import TeamCard from "../../../components/TeamCard";
+import RoleButton from "@/components/RoleButton";
+import TeamCard from "@/components/TeamCard";
 import { teams } from "./teamData";
 import data from "./data.json";
 
