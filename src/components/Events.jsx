@@ -3,6 +3,8 @@ import JourneyHacksImage from "/public/placeholder.jpg";
 import WorkshopsImage from "/public/placeholder.jpg";
 import Image from "next/image";
 
+import text_content from "/public/content/text_content.json"
+
 const TitleSection = () => {
     return (
         <>
@@ -11,12 +13,11 @@ const TitleSection = () => {
                 <h6
                     className="font-GeistMono text-brand-primary text-center
                     text-s font-semibold">
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    WHAT'S SFU SURGE?
+                    {text_content.homepage.events.title}
                 </h6>
                 <h2
                     className="text-center title-1 emphasized">
-                    We do cool events or something idk
+                        {text_content.homepage.events.subtitle}
                 </h2>
             </section>
         </>
