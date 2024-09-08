@@ -26,7 +26,7 @@
   --text-brand-primary: 96 165 250;
 
   /* BORDER COLORS */
-  --border-tertiary: 38 38 38;
+  --border-tertiary: 255 255 255;
 
   background-color: rgb(var(--sunken));
   color: rgb(var(--text-primary));
@@ -34,7 +34,7 @@
 
 @layer components {
   .button-link {
-    @apply border-t border-border-tertiary block cursor-pointer rounded-full w-fit flex items-center transition-colors;
+    @apply border-t border-border-tertiary/15 block cursor-pointer rounded-full w-fit flex items-center transition-colors;
   }
 
   .button-link.md {
