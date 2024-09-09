@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Card from "@/components/Card";
 import OpenRolesSection from "@/components/OpenRolesSection";
+import ButtonScroll from "@/components/ButtonScroll";
 
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function joinTeam() {
   return (
     <main className="flex flex-col gap-24 md:gap-36">
 
-      <section className="flex  md:flex-row  w-full gap-8 lg:gap-12 flex-col-reverse items-center justify-center ">
+      <section className="flex  md:flex-row  w-full gap-16 lg:gap-12 flex-col-reverse items-center justify-center ">
 
       <div className="flex md:justify-center h-full md:w-[40%]   ">
           <Image
@@ -36,6 +37,7 @@ export default function joinTeam() {
             technology, design, and beyond. Whether you're passionate about
             coding, logistics, or media, your skills can make a difference.{" "}
           </p>
+          <ButtonScroll section="openroles">See Open Positions</ButtonScroll>
         </div>  
         
         
@@ -65,7 +67,7 @@ export default function joinTeam() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center text-center gap-2">
+      <section className="flex flex-col items-center text-center gap-2 ">
         <span className="text-caption">Upcoming Oppurtunity</span>
         <h2 className="title-1 emphasized mb-4"> Stormhacks 2024</h2>
         <p className="paragraph">
@@ -75,7 +77,9 @@ export default function joinTeam() {
         </p>
       </section>
 
-     <OpenRolesSection/>
+    <OpenRolesSection id="openroles"/>
+
+
     </main>
   );
 }

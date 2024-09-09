@@ -6,7 +6,11 @@ import { useEffect, useState } from "react";
 
 import JobTeamButton from "./JobTeamButton";
 
-export default function OpenRolesSection() {
+type OpenRolesSectionProps = {
+id:string
+};
+
+export default function OpenRolesSection({id}:OpenRolesSectionProps) {
   const [activeButton, setActiveButton] = useState<string | null>(null);
 
   useEffect(() => {
@@ -20,7 +24,7 @@ export default function OpenRolesSection() {
   };
 
   return (
-    <section className="flex items-center flex-col gap-12">
+    <section id={id} className="flex items-center flex-col gap-12">
       <div className=" max-w-xl text-center">
         <span className="text-caption">Open Roles</span>
       <h2 className="title-1">We want you to help us run hackathons and events</h2>
