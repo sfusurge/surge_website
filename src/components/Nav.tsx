@@ -1,29 +1,34 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
+import path from "path";
 
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  let navRef = useRef<HTMLDivElement>(null)
+  const navRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      const newWidth: number = window.innerWidth;
-      if (newWidth > 640) {
-        setIsOpen(false);
-      }
-    };
-
-    const handleClick = (e:MouseEvent) => {
-      if(!navRef.current?.contains(e.target as Node)){
-        setIsOpen(false)
-      }
+  const handleResize = () => {
+    const newWidth: number = window.innerWidth;
+    if (newWidth > 640) {
+      setIsOpen(false);
     }
+  };
+
+  const handleClick = (e:MouseEvent) => {
+    if(!navRef.current?.contains(e.target as Node)){
+      setIsOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    setIsOpen(false)
     // Add event listener to handle window resize
     window.addEventListener("resize", handleResize);
     document.addEventListener("mousedown", handleClick)
@@ -32,8 +37,7 @@ export default function NavBar() {
       window.removeEventListener("resize", handleResize);
       document.removeEventListener("mousedown", handleClick)
     };
-
-  },); // Empty dependency array ensures this effect runs only on mount and unmount
+  },[pathname]); 
 
   return (
     <div className="fixed w-full left-0 top-0 text-sm px-6 sm:px-12  z-[1000]">
