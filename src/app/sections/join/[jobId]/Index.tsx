@@ -1,29 +1,32 @@
 import jobs from "@/lib/jobListing.json"; // Assuming your jobs.json file is here
 import { Metadata } from "next";
 
-type JobPageProps = {
-  params: {
-    jobId: string;
-  };
+
+type Job = {
+  url: string;
+  team: string;
+  title: string;
+  description: string;
+  director: string;
+  about: string;
+  responsibilities: string[];
+  skills: string[];
+  commitment: string[];
+  listing: string;
 };
 
-export function generateMetadata({
-  params: { jobId },
-}: JobPageProps): Metadata {
-  const job = jobs.find((job) => job.url === jobId);
-  return {
-    title: `${job?.team + " " + job?.title}`,
-    description: "job",
-  };
-}
+type JobPageProps = {
+    job?: Job;
+};
 
-export default function JobPage({ params: { jobId } }: JobPageProps) {
-  const job = jobs.find((job) => job.url === jobId);
+
+export default function JobPage({ job }: JobPageProps) {
+  const pagejob = jobs.find((role) => role.url === job?.url);
 
   return (
     <main className="flex gap-12 xl:gap-48 flex-col md:flex-row w-full justify-center">
       <div className="flex flex-col gap-5  ">
-        <h1 className="large-title emphasized">{job?.title}</h1>
+        <h1 className="large-title emphasized">{pagejob?.title}</h1>
         <div className=" flex flex-col gap-2">
           <span className="text-base text-text-secondary font-medium flex gap-2">
             <svg
@@ -40,7 +43,7 @@ export default function JobPage({ params: { jobId } }: JobPageProps) {
                 d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
               />
             </svg>
-            {job?.team}
+            {pagejob?.team}
           </span>
           <span className="text-base text-text-secondary font-medium flex gap-2 items-center">
             <svg
@@ -57,7 +60,7 @@ export default function JobPage({ params: { jobId } }: JobPageProps) {
                 d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
               />
             </svg>
-            {job?.description}
+            {pagejob?.description}
           </span>
           <span className="text-base text-text-secondary font-medium flex gap-2">
             <svg
@@ -75,23 +78,23 @@ export default function JobPage({ params: { jobId } }: JobPageProps) {
               />
             </svg>
 
-            {`Director of ${job?.team}: ${job?.director}`}
+            {`Director of ${pagejob?.team}: ${pagejob?.director}`}
           </span>
         </div>
 
-        <a href={`${job?.listing}`} className=" button-link primary md w-full md:w-fit items-center justify-center ">
+        <a href={`${pagejob?.listing}`} className=" button-link primary md w-full md:w-fit items-center justify-center ">
           Apply Now
         </a>
       </div>
       <div className="flex flex-col gap-12  ">
         <div>
           <h2 className="title-2 mb-4">About this Role</h2>
-          <p className="text-text-secondary paragraph">{job?.about}</p>
+          <p className="text-text-secondary paragraph">{pagejob?.about}</p>
         </div>
         <div>
           <h2 className="title-2 mb-4">Responsibilities</h2>
           <ul className="paragraph flex flex-col gap-2 text-text-secondary list-disc list-outside px-5">
-            {job?.resonsibilities.map((responsibility, index) => (
+            {pagejob?.responsibilities.map((responsibility, index) => (
               <li className="text-lg leading-8" key={index}>
                 {responsibility}
               </li>
@@ -101,7 +104,7 @@ export default function JobPage({ params: { jobId } }: JobPageProps) {
         <div>
           <h2 className="title-2 mb-4">Skills</h2>
           <ul className="paragraph flex flex-col gap-2 text-text-secondary list-disc list-outside px-5">
-            {job?.skills.map((responsibility, index) => (
+            {pagejob?.skills.map((responsibility, index) => (
               <li className="text-lg leading-8" key={index}>
                 {responsibility}
               </li>
@@ -111,7 +114,7 @@ export default function JobPage({ params: { jobId } }: JobPageProps) {
         <div>
           <h2 className="title-2 mb-4">Commitement</h2>
           <ul className="paragraph flex flex-col gap-2 text-text-secondary list-disc list-outside px-5">
-            {job?.commitment.map((responsibility, index) => (
+            {pagejob?.commitment.map((responsibility, index) => (
               <li className="text-lg leading-8" key={index}>
                 {responsibility}
               </li>
