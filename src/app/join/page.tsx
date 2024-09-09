@@ -13,8 +13,6 @@ export const metadata: Metadata = {
 
 export default function joinTeam() {
 
-  
-
   return (
     <JoinTeam/>
   );

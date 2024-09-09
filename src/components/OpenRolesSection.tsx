@@ -27,7 +27,7 @@ export default function OpenRolesSection({id}:OpenRolesSectionProps) {
     <section id={id} className="flex items-center flex-col gap-12">
       <div className=" max-w-xl text-center">
         <span className="text-caption">Open Roles</span>
-      <h2 className="title-1">We want you to help us run hackathons and events</h2>
+      <h2 className="title-1 emphasized">We want you to help us run hackathons and events</h2>
 
       </div>
      

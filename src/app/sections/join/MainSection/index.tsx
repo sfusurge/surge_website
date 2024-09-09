@@ -3,20 +3,17 @@ import Image from "next/image";
 import Card from "@/components/Card";
 import OpenRolesSection from "@/components/OpenRolesSection";
 import ButtonScroll from "@/components/ButtonScroll";
-
+import InfoItem from "@/components/InfoItem";
 
 export const metadata: Metadata = {
   title: "Join SFU Surge",
 };
 
 export default function JoinTeam() {
-
   return (
-    <main className="flex flex-col gap-24 md:gap-36">
-
+    <main className="flex flex-col gap-24 md:gap-48">
       <section className="flex  md:flex-row  w-full gap-16 lg:gap-12 flex-col-reverse items-center justify-center ">
-
-      <div className="flex md:justify-center h-full md:w-[40%]   ">
+        <div className="flex md:justify-center h-full md:w-[40%]   ">
           <Image
             src={"/boo.png"}
             width={1659}
@@ -26,7 +23,7 @@ export default function JoinTeam() {
           />
         </div>
 
-      <div className="flex flex-col gap-5 justify-center w-fit  ">
+        <div className="flex flex-col gap-5 justify-center w-fit  ">
           <h1 className="large-title emphasized text-pretty max-w-xl">
             Ready to Make an Impact With Surge?
           </h1>
@@ -36,9 +33,7 @@ export default function JoinTeam() {
             coding, logistics, or media, your skills can make a difference.{" "}
           </p>
           <ButtonScroll section="openroles">See Open Positions</ButtonScroll>
-        </div>  
-        
-        
+        </div>
       </section>
 
       <section className="flex flex-col items-center text-center gap-2">
@@ -73,11 +68,15 @@ export default function JoinTeam() {
           contributions could help shape the future of technology! Be part of
           the team that brings innovative ideas to life.
         </p>
+        <div className="grid grid-cols-1 xs:grid-cols-2 gap-8 gap-y-16 md:grid-cols-4 mt-8">
+          <InfoItem stat={"2,543"} description={"total hackers"} />
+          <InfoItem stat={"134"} description={"Projects"} />
+          <InfoItem stat={"$12,000"} description={"awarded in prizes"} />
+          <InfoItem stat={"300"} description={"participants"} />
+        </div>
       </section>
 
-    <OpenRolesSection id="openroles"/>
-
-
+      <OpenRolesSection id="openroles" />
     </main>
   );
 }

@@ -17,7 +17,7 @@ const Involvement = () => {
           </h1>
           <button className="bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 px-6 rounded-custom-radius transition">
             <a
-              href="#opportunities" // TODO: Replace with the actual link URL
+              href="/join#openroles" // TODO: Replace with the actual link URL
             >
               {text_content.homepage.involvement.button_text}
             </a>
