@@ -1,7 +1,7 @@
 "use client";
 import jobs from "@/lib/jobListing.json";
 import JobCard from "@/components/JobCard";
-import { teams } from "@/app/about/teamData";
+import { teams } from "@/lib/teamData";
 import { useEffect, useState } from "react";
 
 import JobTeamButton from "./JobTeamButton";
