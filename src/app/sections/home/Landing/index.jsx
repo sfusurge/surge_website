@@ -1,7 +1,7 @@
 "use client";
 
 import Background from "/public/assets/landing.png";
-import BodyImage from "/public/assets/landing-2.png";
+import BodyImage from "/public/about us.png";
 import Rocket from "/public/rocket-no-elements.png";
 import Image from "next/image";
 
@@ -12,16 +12,16 @@ function Landing() {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <button className="bg-surface text-text-primary px-4 py-2 rounded-custom-radius hover:bg-brand-primary-hover">
-          {text_content.homepage.landing.callout}
-        </button>
-        <h1 className="mt-5 text-3xl max-w-lg text-center text-text-primary">
-          {text_content.homepage.landing.heading}
-        </h1>
-        <p className="mt-5 text-center max-w-lg text-text-secondary">
-          {text_content.homepage.landing.description}
-        </p>
-        <div className="relative w-full max-w-5xl">
+        <div className="mt-4 content-wrapper text-center flex flex-col items-center">
+          <h1 className="large-title emphasized">
+            {text_content.homepage.landing.heading}
+          </h1>
+          <p className="mt-5 text-text-secondary paragraph lg:mb-0">
+            {text_content.homepage.landing.description}
+          </p>
+        </div>
+
+        <div className="relative w-full">
           {/* <Image
             src={Rocket}
             alt="Background Image"
@@ -30,7 +30,10 @@ function Landing() {
             quality={100}
             className="w-full"
           /> */}
-          <img src="rocket-no-elements.png" className="w-full"></img>
+          <img
+            src="rocket-no-elements.png"
+            className="w-full max-w-[90rem]"
+          ></img>
 
           <div className="absolute top-0 left-0 w-full h-full">
             <img
@@ -46,7 +49,6 @@ function Landing() {
             ></img>
           </div>
 
-          
           <div className="absolute top-0 left-0 w-full h-full">
             <img
               src="yellow star 1.png"
@@ -75,18 +77,17 @@ function Landing() {
             ></img>
           </div>
 
-          
           <div className="absolute top-0 left-0 w-full h-full">
             <img
               src="large pink star 2.png"
-              className="w-[4.279%] h-auto relative left-[83.2225%] top-[78.778%] animate-ping"
+              className="w-[4.279%] h-auto relative left-[83.2225%] top-[78.778%] animate-spin"
             ></img>
           </div>
 
           <div className="absolute top-0 left-0 w-full h-full">
             <img
               src="large purple star.png"
-              className="w-[6.269%] h-auto relative left-[80.508%] top-[54.25477%] animate-spin"
+              className="w-[6.269%] h-auto relative left-[80.508%] top-[54.25477%] animate-pulse"
             ></img>
           </div>
 
@@ -103,7 +104,7 @@ function Landing() {
               className="w-[7.291%] h-auto relative left-[37.18%] top-[8.71%]"
             ></img>
           </div>
-         
+
           <div className="absolute top-0 left-0 w-full h-full">
             <img
               src="big-bubble.png"
@@ -175,32 +176,21 @@ function Landing() {
       </div>
 
       <div
-        className="flex flex-col-reverse md:flex-row pb-5 mb-5 md:mt-20 justify-between px-5 md:px-10 md:py-8 rounded-custom-radius items-center"
-        style={{ backgroundColor: "rgba(18, 19, 24, 1)" }}
+        className="flex flex-col-reverse lg:flex-row pb-5 mt-16 md:mt-20 justify-between px-5 md:px-10 md:py-8 rounded-custom-radius items-center gap-8 lg:gap-8 bg-surface"
       >
-        <div className="">
+        <div className="lg:m-4">
           <h2 className="text-caption">
             {text_content.homepage.about.callout}
           </h2>
-          <h1 className="text-text-primary mt-2 text-2xl max-w-lg">
+          <h1 className="title-2 emphasized mb-4 mt-3">
             {text_content.homepage.about.heading}
           </h1>
-          <p className="mt-3 text-text-secondary max-w-lg">
-            {text_content.homepage.about.description}
-          </p>
+          <p className="paragraph">{text_content.homepage.about.description}</p>
           <button className="mt-5 bg-brand-primary text-text-primary px-4 py-2 rounded-custom-radius hover:bg-brand-primary-hover">
             {text_content.homepage.about.cta}
           </button>
         </div>
-        <div className="relative w-full max-w-2xl h-80 mb-12">
-          <Image
-            src={BodyImage}
-            alt="Body Image"
-            layout="fill"
-            objectFit="contain"
-            quality={100}
-          />
-        </div>
+        <img src="about us.png" className="w-full md:w-3/4 lg:w-1/2" />
       </div>
     </>
   );
