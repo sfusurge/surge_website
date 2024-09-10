@@ -12,13 +12,13 @@ function Landing() {
     <>
       <div className="flex flex-col items-center justify-center">
         <button className="bg-surface text-text-primary px-4 py-2 rounded-custom-radius hover:bg-brand-primary-hover">
-          {text_content.homepage.landing.button_text}
+          {text_content.homepage.landing.callout}
         </button>
         <h1 className="mt-5 text-3xl max-w-lg text-center text-text-primary">
-          {text_content.homepage.landing.title}
+          {text_content.homepage.landing.heading}
         </h1>
         <p className="mt-5 text-center max-w-lg text-text-secondary">
-          {text_content.homepage.landing.subtitle}
+          {text_content.homepage.landing.description}
         </p>
         <div className="relative w-full max-w-4xl h-[25rem]">
           <Image
@@ -37,16 +37,16 @@ function Landing() {
       >
         <div className="">
           <h2 className="text-brand-primary">
-            {text_content.homepage.landing.card.subtitle}
+            {text_content.homepage.about.callout}
           </h2>
           <h1 className="text-text-primary mt-2 text-2xl max-w-lg">
-            {text_content.homepage.landing.card.title}
+            {text_content.homepage.about.heading}
           </h1>
           <p className="mt-3 text-text-secondary max-w-lg">
-            {text_content.homepage.landing.card.paragraph}
+            {text_content.homepage.about.description}
           </p>
           <button className="mt-5 bg-brand-primary text-text-primary px-4 py-2 rounded-custom-radius hover:bg-brand-primary-hover">
-            {text_content.homepage.landing.card.button_text}
+            {text_content.homepage.about.cta}
           </button>
         </div>
         <div className="relative w-full max-w-2xl h-80 mb-12">
