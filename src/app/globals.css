@@ -54,7 +54,7 @@
   }
 
   .large-title {
-    @apply text-text-primary text-4xl tracking-tight;
+    @apply text-text-primary text-4xl tracking-tight text-balance;
   }
 
   .large-title.emphasized {
@@ -62,7 +62,7 @@
   }
 
   .title-1 {
-    @apply text-3xl;
+    @apply text-3xl text-balance;
   }
 
   .title-1.emphasized {
@@ -70,7 +70,7 @@
   }
 
   .title-2 {
-    @apply text-2xl;
+    @apply text-2xl text-balance;
   }
 
   .title-2.emphasized {
@@ -78,7 +78,7 @@
   }
 
   .title-3 {
-    @apply text-xl;
+    @apply text-xl text-balance;
   }
 
   .title-3.emphasized {
@@ -86,7 +86,11 @@
   }
 
   .paragraph {
-    @apply text-base text-text-secondary font-light max-w-xl mb-6;
+    @apply text-text-secondary font-light max-w-xl;
+  }
+
+  .paragraph-lg {
+    @apply text-base text-text-secondary font-light max-w-xl;
   }
 
   .link {

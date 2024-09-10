@@ -1,12 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="mt-40">
+    <footer className="mt-32">
       <div className="h-[1px] bg-gradient-to-r from-border-tertiary/0 via-border-tertiary/15 to-border-tertiary/0"></div>
     <div className="py-12 grid grid-rows-2 md:grid-rows-1 gap-12 md:grid-cols-5 content-wrapper">
       <div className="col-span-3 flex flex-col items-center sm:items-start">
         <img src="surge-logomark.svg" className="h-5 mb-4 w-fit"></img>
         <p className="text-text-secondary font-light text-center sm:text-left">
-          Some cheesy tagline here <br></br>
+          Engage. Empower. Innovate. <br></br>
           Built by the SFU Surge tech team 💪
         </p>
 
