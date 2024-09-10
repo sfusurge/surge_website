@@ -24,7 +24,7 @@ export default function JobPage({ job }: JobPageProps) {
 
   return (
     <main className="flex gap-12 xl:gap-48 flex-col md:flex-row w-full justify-center">
-      <div className="flex flex-col gap-5 sticky top-28 h-full">
+      <div className="flex flex-col gap-5 md:sticky md:top-28 h-full">
         <h1 className="large-title emphasized">{pagejob?.title}</h1>
         <div className=" flex flex-col gap-2">
           <span className="text-base text-text-secondary font-medium flex gap-2">
