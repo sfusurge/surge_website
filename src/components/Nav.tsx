@@ -112,12 +112,12 @@ export default function NavBar() {
               </Link>
             </li>
             <li>
-              <Link className="link" href="/">
+              <Link className="link" href="/sponsor">
                 Sponsor Us
               </Link>
             </li>
             <li>
-              <Link className="link mr-0.5" href="/">
+              <Link className="link mr-0.5" href="/join">
                 Join Our Team
               </Link>
             </li>
