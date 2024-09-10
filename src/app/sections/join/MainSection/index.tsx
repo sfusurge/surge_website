@@ -5,6 +5,8 @@ import OpenRolesSection from "@/components/OpenRolesSection";
 import ButtonScroll from "@/components/ButtonScroll";
 import InfoItem from "@/components/InfoItem";
 
+import text_content from "/public/content/text_content.json";
+
 export const metadata: Metadata = {
   title: "Join SFU Surge",
 };
@@ -12,22 +14,17 @@ export const metadata: Metadata = {
 export default function JoinTeam() {
   return (
     <main className="flex flex-col gap-24 md:gap-48">
-
       <section className="flex flex-col items-center justify-center text-center overflow-hidden gap-16">
-
         <div className="flex flex-col gap-5 justify-center w-fit items-center  ">
           <h1 className="large-title emphasized text-pretty max-w-xl">
-            Ready to Make an Impact With Surge?
+            {text_content.join.heading}
           </h1>
-          <p className="paragraph mb-0">
-            Join Surge and be a part of a community driving innovation in
-            technology, design, and beyond. Whether you're passionate about
-            coding, logistics, or media, your skills can make a difference.{" "}
-          </p>
+          <p className="paragraph mb-0">{text_content.join.description}</p>
 
-          <ButtonScroll section="openroles">See Open Positions</ButtonScroll>
+          <ButtonScroll section="openroles">
+            {text_content.join.cta}
+          </ButtonScroll>
         </div>
-
 
         <div className="flex md:justify-center h-full min-w-[25rem] max-w-[50rem]   ">
           <Image
@@ -41,8 +38,12 @@ export default function JoinTeam() {
       </section>
 
       <section className="flex flex-col items-center text-center gap-2">
-        <span className="text-caption">Benefits</span>
-        <h2 className="title-1 emphasized mb-12"> Why Volunteer With Surge?</h2>
+        <span className="text-caption">
+          {text_content.join.benefits.callout}
+        </span>
+        <h2 className="title-1 emphasized mb-12">
+          {text_content.join.benefits.heading}
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card
@@ -65,12 +66,15 @@ export default function JoinTeam() {
       </section>
 
       <section className="flex flex-col items-center text-center gap-2 ">
-        <span className="text-caption">Upcoming Oppurtunity</span>
-        <h2 className="title-1 emphasized mb-4"> Stormhacks 2024</h2>
+        <span className="text-caption">
+          {text_content.join.opportunities.callout}
+        </span>
+        <h2 className="title-1 emphasized mb-4">
+          {" "}
+          {text_content.join.opportunities.heading}
+        </h2>
         <p className="paragraph">
-          Join us as we prepare for our upcoming Hackathon event, where your
-          contributions could help shape the future of technology! Be part of
-          the team that brings innovative ideas to life.
+          {text_content.join.opportunities.description}
         </p>
         <div className="grid grid-cols-1 xs:grid-cols-2 gap-8 gap-y-16 md:grid-cols-4 mt-8">
           <InfoItem stat={"2,543"} description={"total hackers"} />

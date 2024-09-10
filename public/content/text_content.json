@@ -35,5 +35,25 @@
       "description": "Don't miss out on any of our exciting hackathons and workshops! Join our Discord server to stay updated on new opportunities and network with fellow tech enthusiasts. We also play a lot of League of Legends.",
       "cta": "Join our Discord server"
     }
+  },
+  "join": {
+    "heading": "Ready to Make an Impact with Surge?",
+    "description": "Join Surge and be a part of a community driving innovation in technology, design, and beyond. Whether you're passionate about coding, logistics, or media, your skills can make a difference.",
+    "cta": "See Open Positions",
+    "benefits": {
+      "callout": "Benefits",
+      "heading": "Why volunteer with Surge?",
+      "cards": {}
+    },
+    "opportunities": {
+      "callout": "Upcoming Opportunity",
+      "heading": "Stormhacks 2024",
+      "description": " Join us as we prepare for our upcoming Hackathon event, where your contributions could help shape the future of technology! Be part of the team that brings innovative ideas to life."
+    }
+  },
+  "under_construction": {
+    "caption": "Hey, sorry to inform but...",
+    "title": "This page is currently under construction. Check back later to see what's changed!",
+    "redirect_button": "Back to homepage"
   }
 }
