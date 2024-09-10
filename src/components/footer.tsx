@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="col-span-3 flex flex-col items-center sm:items-start">
         <img src="surge-logomark.svg" className="h-5 mb-4 w-fit"></img>
         <p className="text-text-secondary font-light text-center sm:text-left">
-          Some cheesy tagline here <br></br>
+          Engage. Empower. Innovate. <br></br>
           Built by the SFU Surge tech team 💪
         </p>
 

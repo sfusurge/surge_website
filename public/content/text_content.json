@@ -1,29 +1,29 @@
 {
   "homepage": {
     "landing": {
-      "button_text": "Apply to Stormhacks X Enactus right now! →",
-      "title": "SFU Surge lorem ipsum dolor sit amet consectetur",
-      "subtitle": "The organizers of Simon Fraser University's largest hackathon, SFU Surge provides an inclusive space for students to explore their passions, connect with industry professionals.",
+      "button_text": "Apply to Stormhacks × Enactus × MSESS! →",
+      "title": "Empowering Students to Thrive in Tech",
+      "subtitle": "SFU Surge is an inclusive, student-led organization that aims to ignite curiosity and excitement for the future of technology while guiding students in developing the skills they need for career success.",
       "card": {
         "subtitle": "WHAT'S SFU SURGE?",
-        "title": "All we do is play LOL and Stardew all day",
-        "paragraph": "The organizers of Simon Fraser University's largest hackathon, SFU Surge provides an inclusive space for students to explore their passions, connect with industry professionals.",
+        "title": "Home to Simon Fraser University's largest hackathon",
+        "paragraph": "A super cracked team of technology enthusiasts dedicated to hosting events, workshops and programs that help students explore their passion for technology, connect with industry professionals, and gain valuable skills.",
         "button_text": "Read our lore"
       }
     },
     "events": {
-      "title": "WHAT'S SFU SURGE?",
-      "subtitle": "We do cool events or something idk"
+      "title": "EVENTS",
+      "subtitle": "Check out our exciting lineup of events designed to inspire, educate, and connect tech enthusiasts!"
     },
     "involvement": {
       "subtitle": "Get Involved",
-      "title": "Are you a student at SFU hoping to build connections & host events for the tech community?",
+      "title": "Join SFU Surge in shaping the future of technology.",
       "button_text": "View opportunities",
       "card": {
         "subtitle": "STAY IN THE LOOP",
         "title": "Be the first to find out about exciting news, like when our next events are!",
         "paragraph": "The organizers of Simon Fraser University's largest hackathon, SFU Surge provides an inclusive space for students to explore their passions, connect with industry professionals.",
-        "button_text": "Join our discord server"
+        "button_text": "Join our Discord server"
       }
     }
   }
