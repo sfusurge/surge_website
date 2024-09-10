@@ -6,6 +6,7 @@ import ButtonScroll from "@/components/ButtonScroll";
 import InfoItem from "@/components/InfoItem";
 
 import text_content from "@/lib/content/text_content.json";
+import HomeCard from "@/components/HomeCard";
 
 export const metadata: Metadata = {
   title: "Join SFU Surge",
@@ -37,31 +38,31 @@ export default function JoinTeam() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center text-center gap-2">
-        <span className="text-caption">
+      <section className="flex flex-col  gap-2">
+        <span className="text-caption text-center">
           {text_content.join.benefits.callout}
         </span>
-        <h2 className="title-1 emphasized mb-12">
+        <h2 className="title-1 emphasized mb-12 text-center">
           {text_content.join.benefits.heading}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <Card
-            title="Cross-Disciplinary Skills"
+            title="Learn New Skills"
             description="Learn to blend tech, design, and business for comprehensive projects."
-            src="picture url here"
+            src="/join/skills.png"
           />
           <Card
             title="Hands-on Experience"
             description="Work on real-world projects and enhance your tech skills."
-            src="picture url here"
+            src="/join/experience.png"
           />
           <Card
             title="Meet Friends"
             description="Connect with like-minded peers and build lasting friendships."
-            src="picture url here"
-            className="col-span-full md:col-span-1"
+            src="/join/friends.png"
           />
+         
         </div>
       </section>
 

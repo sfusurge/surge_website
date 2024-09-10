@@ -7,7 +7,7 @@ import { teams } from "../../../../lib/teamData";
 import teamMembers from "@/lib/teamMemberData.json";
 
 export default function TeamGallery() {
-  const [activeButton, setActiveButton] = useState<string | null>(null);
+  const [activeButton, setActiveButton] = useState<string>(null);
   const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
 
   useEffect(() => {
@@ -113,6 +113,7 @@ export default function TeamGallery() {
                   major={member.major}
                   role={member.position}
                   src={member.src}
+                  socials={member.socials}
                   fallbackSrc="/headshots/placeholder.png"
                 />
               ) : null

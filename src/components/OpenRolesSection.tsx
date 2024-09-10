@@ -14,13 +14,13 @@ export default function OpenRolesSection({id}:OpenRolesSectionProps) {
   const [activeButton, setActiveButton] = useState<string | null>(null);
 
   useEffect(() => {
-    const selectedTeam = localStorage.getItem("selectedTeam") || "All";
-    setActiveButton(selectedTeam);
+    const selectedJobTeam = localStorage.getItem("selectedJobTeam") || "All";
+    setActiveButton(selectedJobTeam);
   },[]);
 
   const changeTeam = (buttonId: string) => {
     setActiveButton(buttonId);
-    localStorage.setItem("selectedTeam", buttonId);
+    localStorage.setItem("selectedJobTeam", buttonId);
   };
 
   return (

@@ -2,6 +2,7 @@ import StormHacksImage from "/public/stormhacks.png";
 import JourneyHacksImage from "/public/journeyhacks.png";
 import WorkshopsImage from "/public/workshops.png";
 import Image from "next/image";
+import HomeCard from "@/components/HomeCard";
 
 import text_content from "@/lib/content/text_content.json";
 
@@ -23,84 +24,27 @@ const TitleSection = () => {
 const EventSection = () => {
   return (
     <>
-      <section
-        className="flex mt-8 mb-24
-                items-center justify-center gap-6
-           flex-col lg:flex-row"
-      >
-        {/* <SurgeEvent
-          heading={"StormHacks"}
-          subheading={"Our beginner-friendly hackathon"}
-          image={StormHacksImage}
-          description={"StormHacks"}
-        /> */}
+     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
 
-        {/* <div className="bg-[#2A1B34] lg:w-1/3 rounded-2xl hover:scale-105 transition-transform hover:rotate-1 hover:shadow-xl hover:shadow-[#50337A]/30">
-          <div className="p-4 md:p-8 pb-0">
-          <img src="stormhacks-logo.png" className="h-20 w-auto mx-auto -mb-16 mt-2"></img>
-          </div>
-          <img src="stormhacks.png" className="w-full aspect-square object-cover object-top"></img>
-        </div> */}
-        {/* 
-        <SurgeEvent
-          heading={"StormHacks"}
-          subheading={"Our flagship hackathon"}
-          image={StormHacksImage}
-          description={"JourneyHacks"}
-        /> */}
-
-        <div
-          className="bg-[#2D1367] flex flex-row lg:flex-col items-center
-                flex-[1_0_0]
-               pb-0 gap-8
-                rounded-custom-radius w-full hover:scale-105 transition-transform"
-        >
-          <section className="gap-custom-gap w-1/2 lg:w-full px-4 md:px-10 lg:pt-10">
-            <h2 className="title-2 emphasized mb-2">StormHacks</h2>
-            <h2 className="paragraph-lg text-text-primary">
-              Our flagship hackathon
-            </h2>
-          </section>
-          <Image
-            src={StormHacksImage}
-            className="w-1/2 lg:w-full aspect-square object-top object-cover rounded-bl-custom-radius rounded-br-custom-radius"
+          <HomeCard
+            title="Stormhacks"
+            description="Our flagship hackathon"
+            src="/stormhacks.png"
+            className="bg-[#2d1367]"
+          />
+          <HomeCard
+            title="Journeyhacks"
+            description="Our beginner-friendly hackathon"
+            src="/journeyhacks.png"
+            className="bg-[#32269F]"
+          />
+          <HomeCard
+            title="workshops"
+            description="Learn new skills"
+            src="/workshops.png"
+            className="bg-[#1E293B]"
           />
         </div>
-
-        <div
-          className="bg-[#32279F] flex lg:flex-col flex-col md:flex-row lg:flex-col items-center 
-                flex-[1_0_0]
-               pb-0 lg:gap-8
-                rounded-custom-radius w-full hover:scale-105 transition-transform "
-        >
-          <section className="gap-custom-gap w-full md:w-1/2 lg:w-full px-5 pt-8 md:px-8 lg:pt-8">
-            <h2 className="title-2 emphasized mb-1">JourneyHacks</h2>
-            <h2 className="paragraph-lg text-text-primary">
-              Our beginner-friendly hackathon
-            </h2>
-          </section>
-          <Image
-            src={JourneyHacksImage}
-            className="w-full md:w-1/2 lg:w-full aspect-square object-bottom object-cover rounded-bl-custom-radius md:rounded-bl-none rounded-tr-custom-radius lg:rounded-bl-custom-radius rounded-br-custom-radius"
-          />
-        </div>
-
-        <div
-          className="bg-slate-800 flex flex-row lg:flex-col items-center
-                flex-[1_0_0]
-               pb-0 gap-8
-                rounded-custom-radius w-full hover:scale-105 transition-transform"
-        >
-          <section className="gap-custom-gap w-1/2 lg:w-full px-4 md:px-10 lg:pt-10">
-            <h2 className="title-2 emphasized mb-2">Workshops</h2>
-            <h2 className="paragraph-lg text-text-primary">Learn new skills</h2>
-          </section>
-          <Image
-            src={WorkshopsImage}
-            className="w-1/2 lg:w-full aspect-square object-bottom object-contain lg:object-cover rounded-tr-custom-radius lg:rounded-bl-custom-radius rounded-br-custom-radius"
-          />
-        </div>
-      </section>
     </>
   );
 };

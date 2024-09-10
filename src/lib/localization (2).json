@@ -6,13 +6,24 @@
     "major": "Computing Science",
     "src": "/headshots/matthewwong.jpg",
     "team": "Directors",
-    
-   "socials": [
-    { "platform": "Portfolio", "url": "https://wongmatt.dev/" },
-    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/matthewwong1129/" },
-    { "platform": "Instagram", "url": "https://www.instagram.com/ermergesh" },
-    { "platform": "Devpost", "url": "https://devpost.com/wongmatthew357" }
-  ]
+    "socials": [
+      {
+        "platform": "Portfolio",
+        "url": "https://wongmatt.dev/"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/matthewwong1129/"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/ermergesh"
+      },
+      {
+        "platform": "Devpost",
+        "url": "https://devpost.com/wongmatthew357"
+      }
+    ]
   },
   {
     "id": "2",
@@ -70,7 +81,6 @@
     "src": "/headshots/rasyahadaayaa.jpg",
     "team": "Logistics",
     "socials": [{"platform": "LinkedIn", "url": "https://www.linkedin.com/in/rah99/"}]
-    
   },
   {
     "id": "6",
@@ -78,7 +88,8 @@
     "position": "Logistics Coordinator",
     "major": "Business",
     "src": "/headshots/christinevu.jpg",
-    "team": "Logistics"
+    "team": "Logistics",
+   "socials": [{"platform": "LinkedIn", "url": "https://www.linkedin.com/in/christine-vu-8b2121264/"}]
   },
   {
     "id": "7",
@@ -86,7 +97,8 @@
     "position": "Logistics Coordinator",
     "major": "Business",
     "src": "/headshots/angelalim.jpg",
-    "team": "Logistics"
+    "team": "Logistics",
+    "socials": "[{\"platform\": \"LinkedIn\", \"url\": \"https://www.linkedin.com/in/angelalim-\"}, {\"platform\": \"Instagram\", \"url\": \"https://www.instagram.com/angelaxlim/\"}]"
   },
   {
     "id": "8",
@@ -320,7 +332,6 @@
     "src": "/headshots/vickyxu.jpg",
     "team": "Finance"
   },
-
   {
     "id": "37",
     "name": "Samiha Raida",
@@ -329,7 +340,6 @@
     "src": "/headshots/samiharaida.jpg",
     "team": "Finance"
   },
-
   {
     "id": "38",
     "name": "Lily Li",
@@ -338,7 +348,6 @@
     "src": "/headshots/lilyli.jpg",
     "team": "Finance"
   },
-
   {
     "id": "39",
     "name": "Rosa Chen",
@@ -347,7 +356,6 @@
     "src": "/headshots/rosachen.jpg",
     "team": "Finance"
   },
-
   {
     "id": "40",
     "name": "Alexandra Svoboda",
@@ -356,7 +364,6 @@
     "src": "/headshots/alexandrasvoboda.jpg",
     "team": "HR"
   },
-
   {
     "id": "41",
     "name": "Darian Wong",
@@ -365,7 +372,6 @@
     "src": "/headshots/darianwong.jpg",
     "team": "HR"
   },
-
   {
     "id": "42",
     "name": "Angela Kurian",
@@ -374,7 +380,6 @@
     "src": "/headshots/angelakurian.jpg",
     "team": "HR"
   },
-
   {
     "id": "43",
     "name": "Maria Zia",
