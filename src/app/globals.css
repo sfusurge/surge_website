@@ -126,20 +126,20 @@
   .gridMedium {
 
     grid-template-areas:
-    "a a"
-    "a a"
-    "b c"
+    "b b"
+    "b b"
+    "a c"
     "d e"
-    "f f"
-    "g g"
+    "f g"
+
 
   }
 
   .gridSmall {
 
     grid-template-areas:
-    "a"
     "b"
+    "a"
     "c"
     "d"
     "e"

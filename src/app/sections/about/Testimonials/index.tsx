@@ -10,7 +10,7 @@ export default function Testimonials() {
       {eventData.map((thisEvent, index) =>{
           return(
             <div key={index} style={{gridArea: thisEvent.area}}>
-              <TestimonialCard name={thisEvent.name} position={thisEvent.position} testimonial={thisEvent.testimonial} />
+              <TestimonialCard cardStyle={thisEvent.cardStyle} name={thisEvent.name} position={thisEvent.position} testimonial={thisEvent.testimonial} />
             </div>
           )
       } )}

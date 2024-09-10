@@ -61,7 +61,7 @@ export default function TeamGallery() {
 
       <section
         id="team"
-        className=" pt-24 flex flex-col lg:flex-row gap-12 relative text-pretty"
+        className=" flex flex-col lg:flex-row gap-12 relative text-pretty"
       >
         <div className="w-full lg:w-[40%]">
           <div className=" flex gap-8 flex-col lg:sticky top-24 ">
