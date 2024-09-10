@@ -5,7 +5,7 @@ import BodyImage from "/public/about us.png";
 import Rocket from "/public/rocket-no-elements.png";
 import Image from "next/image";
 
-import text_content from "/public/content/text_content.json";
+import text_content from "@/lib/content/text_content.json";
 // gray box
 // meet the team branch has blue color
 function Landing() {
@@ -177,9 +177,7 @@ function Landing() {
         </div>
       </div>
 
-      <div
-        className="flex flex-col-reverse lg:flex-row pb-5 mt-16 md:mt-20 justify-between px-5 md:px-10 md:py-8 rounded-custom-radius items-center gap-8 lg:gap-8 bg-surface"
-      >
+      <div className="flex flex-col-reverse lg:flex-row pb-5 mt-16 md:mt-20 justify-between px-5 md:px-10 md:py-8 rounded-custom-radius items-center gap-8 lg:gap-8 bg-surface">
         <div className="lg:m-4">
           <h2 className="text-caption">
             {text_content.homepage.about.callout}

@@ -1,9 +1,8 @@
 import Image from "next/image";
 import StormHacksImage from "/public/stormhacks.png";
-import RoleButton from "@/components/RoleButton";
 import Link from "next/link";
 
-import text_content from "/public/content/text_content.json";
+import text_content from "@/lib/content/text_content.json";
 
 const UnderConstruction = () => {
   return (

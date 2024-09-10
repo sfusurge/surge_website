@@ -5,7 +5,7 @@ import OpenRolesSection from "@/components/OpenRolesSection";
 import ButtonScroll from "@/components/ButtonScroll";
 import InfoItem from "@/components/InfoItem";
 
-import text_content from "/public/content/text_content.json";
+import text_content from "@/lib/content/text_content.json";
 
 export const metadata: Metadata = {
   title: "Join SFU Surge",

@@ -3,7 +3,7 @@ import JourneyHacksImage from "/public/journeyhacks.png";
 import WorkshopsImage from "/public/workshops.png";
 import Image from "next/image";
 
-import text_content from "/public/content/text_content.json";
+import text_content from "@/lib/content/text_content.json";
 
 const TitleSection = () => {
   return (
@@ -41,7 +41,7 @@ const EventSection = () => {
           </div>
           <img src="stormhacks.png" className="w-full aspect-square object-cover object-top"></img>
         </div> */}
-{/* 
+        {/* 
         <SurgeEvent
           heading={"StormHacks"}
           subheading={"Our flagship hackathon"}
@@ -49,7 +49,7 @@ const EventSection = () => {
           description={"JourneyHacks"}
         /> */}
 
-<div
+        <div
           className="bg-[#2D1367] flex flex-row lg:flex-col items-center
                 flex-[1_0_0]
                pb-0 gap-8
@@ -57,7 +57,9 @@ const EventSection = () => {
         >
           <section className="gap-custom-gap w-1/2 lg:w-full px-4 md:px-10 lg:pt-10">
             <h2 className="title-2 emphasized mb-2">StormHacks</h2>
-            <h2 className="paragraph-lg text-text-primary">Our flagship hackathon</h2>
+            <h2 className="paragraph-lg text-text-primary">
+              Our flagship hackathon
+            </h2>
           </section>
           <Image
             src={StormHacksImage}
@@ -65,7 +67,7 @@ const EventSection = () => {
           />
         </div>
 
-<div
+        <div
           className="bg-[#32279F] flex lg:flex-col flex-col md:flex-row lg:flex-col items-center 
                 flex-[1_0_0]
                pb-0 lg:gap-8
@@ -73,7 +75,9 @@ const EventSection = () => {
         >
           <section className="gap-custom-gap w-full md:w-1/2 lg:w-full px-5 pt-8 md:px-8 lg:pt-8">
             <h2 className="title-2 emphasized mb-1">JourneyHacks</h2>
-            <h2 className="paragraph-lg text-text-primary">Our beginner-friendly hackathon</h2>
+            <h2 className="paragraph-lg text-text-primary">
+              Our beginner-friendly hackathon
+            </h2>
           </section>
           <Image
             src={JourneyHacksImage}
