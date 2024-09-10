@@ -12,8 +12,16 @@ export const metadata: Metadata = {
 export default function JoinTeam() {
   return (
     <main className="flex flex-col gap-24 md:gap-48">
-
-      <section className="flex flex-col items-center justify-center text-center overflow-hidden gap-8">
+      <section className="flex  md:flex-row  w-full gap-16 lg:gap-12 flex-col-reverse items-center justify-center ">
+        <div className="flex md:justify-center h-full md:w-[40%]   ">
+          <Image
+            src={"/boo.png"}
+            width={1659}
+            height={1421}
+            alt={"hello"}
+            className="object-contain max-h-full"
+          />
+        </div>
 
         <div className="flex flex-col gap-5 justify-center w-fit  ">
           <h1 className="large-title emphasized text-pretty max-w-xl">
@@ -24,17 +32,7 @@ export default function JoinTeam() {
             technology, design, and beyond. Whether you're passionate about
             coding, logistics, or media, your skills can make a difference.{" "}
           </p>
-          {/* <ButtonScroll section="openroles">See Open Positions</ButtonScroll> */}
-        </div>
-
-        <div className="flex md:justify-center h-full min-w-[25rem] max-w-[50rem]   ">
-          <Image
-            src={"/workshop.png"}
-            width={1824}
-            height={1099}
-            alt={"hello"}
-            className="object-contain max-h-full"
-          />
+          <ButtonScroll section="openroles">See Open Positions</ButtonScroll>
         </div>
       </section>
 

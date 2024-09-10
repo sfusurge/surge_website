@@ -1,6 +1,6 @@
 "use client";
 
-import Background from "/public/assets/landing.png";
+import Background from "/public/assets/ship.png";
 import BodyImage from "/public/assets/landing-2.png";
 import Image from "next/image";
 
@@ -20,14 +20,38 @@ function Landing() {
         <p className="mt-5 text-center max-w-lg text-text-secondary">
           {text_content.homepage.landing.subtitle}
         </p>
-        <div className="relative w-full max-w-4xl h-[25rem]">
+        <div className="relative w-full mt-8  ">
           <Image
             src={Background}
             alt="Background Image"
-            layout="fill"
+            width={2498}
+            height={1255}
             objectFit="contain"
+            className=" h-full w-full  lg:w-[50%] mx-auto "
             quality={100}
           />
+          <div className="absolute top-0 w-full h-full overflow-x-clip">
+            <div className="relative  h-full ">
+              <Image
+                src="/assets/rub.png"
+                alt="Background Image"
+                width={300}
+                height={300}
+                objectFit="cover"
+                className="w-[30%] lg:h-[80%] lg:w-auto absolute bottom-10 right-0 lg:right-[12%] "
+                quality={100}
+              />
+              <Image
+                src="/assets/rub2.png"
+                alt="Background Image"
+                width={300}
+                height={300}
+                objectFit="cover"
+                className=" w-[30%] lg:h-[80%] lg:w-auto absolute lg:left-[12%] top-0 lg:top-[-12%] "
+                quality={100}
+              />
+            </div>
+          </div>
         </div>
       </div>
 

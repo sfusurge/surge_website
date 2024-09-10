@@ -3,7 +3,7 @@
       "id": "1",
       "name": "Matthew Wong",
       "position": "President",
-      "major": "Computer Science",
+      "major": "Computing Science",
       "src": "/headshots/matthewwong.jpg",
       "team": "Directors"
     },
@@ -11,7 +11,7 @@
       "id": "2",
       "name": "Maria Zia",
       "position": "Co-Director of Logistics",
-      "major": "Computer Science",
+      "major": "Computing Science",
       "src": "/headshots/mariazia.jpg",
       "team": "Logistics"
     },
@@ -59,7 +59,7 @@
       "id": "8",
       "name": "Fady Nasr",
       "position": "Logistics Coordinator",
-      "major": "Computer Science",
+      "major": "Computing Science",
       "src": "/headshots/fadynasr.jpg",
       "team": "Logistics"
     },
@@ -67,7 +67,7 @@
       "id": "9",
       "name": "Alex Mei",
       "position": "Logistics Coordinator",
-      "major": "Computer Science",
+      "major": "Computing Science",
       "src": "/headshots/alexmei.jpg",
       "team": "Logistics"
     },
@@ -75,7 +75,7 @@
       "id": "10",
       "name": "Johnson Luong",
       "position": "Director of External Relations",
-      "major": "Computer Science",
+      "major": "Computing Science",
       "src": "/headshots/johnsonluong.jpg",
       "team": "External Relations"
     },
@@ -99,7 +99,7 @@
       "id": "13",
       "name": "Keyaan Vegdani",
       "position": "Director of Visual Design",
-      "major": "Interactive Art and Technology Business Joint Major",
+      "major": "SIAT Business Joint Major",
       "src": "/headshots/keyaanvegdani.jpg",
       "team": "Visual Design"
     },
@@ -107,7 +107,7 @@
       "id": "14",
       "name": "Arriyan Ali",
       "position": "Visual Design Coordinator",
-      "major": "SIAT (Interactive Arts and Technology)",
+      "major": "Interactive Art and Technology ",
       "src": "/headshots/arriyanali.jpg",
       "team": "Visual design"
     },
@@ -115,7 +115,7 @@
       "id": "15",
       "name": "Natalie Kayda",
       "position": "Visual Design Coordinator",
-      "major": "IAT Major, CS Minor",
+      "major": "SIAT Major, CS Minor",
       "src": "/headshots/nataliekayda.jpg",
       "team": "Visual Design"
     },
@@ -123,7 +123,7 @@
       "id": "16",
       "name": "Angela Shen",
       "position": "Visual Design Coordinator",
-      "major": "CMNS Joint IAT",
+      "major": "CMNS Joint SIAT",
       "src": "/headshots/angelashen.jpg",
       "team": "Visual Design"
     },
@@ -137,6 +137,14 @@
     },
     {
       "id": "18",
+      "name": "Linda Jolly",
+      "position": "Visual Design Coordinator",
+      "major": "Interactive Arts and Technology",
+      "src": "/headshots/lindajolly.jpg",
+      "team": "Visual Design"
+    },
+    {
+      "id": "19",
       "name": "Yifei Wang",
       "position": "Visual Design Coordinator",
       "major": "Interactive Arts and Technology",
@@ -144,7 +152,7 @@
       "team": "Visual Design"
     },
     {
-      "id": "19",
+      "id": "20",
       "name": "Kaia Do",
       "position": "Director of Marketing",
       "major": "Business",
@@ -152,15 +160,15 @@
       "team": "Marketing"
     },
     {
-      "id": "20",
+      "id": "21",
       "name": "Sabina Yelyubayeva",
       "position": "Social Media Coordinator",
-      "major": "Major: Communication Minor: Print & Digital Publishing",
+      "major": "Communication Major, Print & Digital Publishing Minor",
       "src": "/headshots/sabinayelyubayeva.jpg",
       "team": "Marketing"
     },
     {
-      "id": "21",
+      "id": "22",
       "name": "Josie Trinh",
       "position": "Social Media Coordinator",
       "major": "Business",
@@ -168,23 +176,23 @@
       "team": "Marketing"
     },
     {
-      "id": "22",
+      "id": "23",
       "name": "Mackenzie Scholz",
       "position": "Photgrapher/videographer",
-      "major": "SIAT",
+      "major": "Interactive Arts and Technology",
       "src": "/headshots/mackenziescholz.jpg",
       "team": "Marketing"
     },
     {
-      "id": "23",
+      "id": "24",
       "name": "Nafisha Djamalus",
       "position": "Video Editor",
-      "major": "IAT",
+      "major": "Interactive Arts and Technology",
       "src": "/headshots/nafishadjamalus.jpg",
       "team": "Marketing"
     },
     {
-      "id": "24",
+      "id": "25",
       "name": "Christopher Fong",
       "position": "Co-Director of Technology",
       "major": "Computing Science",
@@ -192,7 +200,7 @@
       "team": "Technology"
     },
     {
-      "id": "25",
+      "id": "26",
       "name": "Christina Raganit",
       "position": "Co-Director of Technology",
       "major": "Interactive Arts and Technology",
@@ -200,7 +208,7 @@
       "team": "Technology"
     },
     {
-      "id": "26",
+      "id": "27",
       "name": "Kylie Seto",
       "position": "Project Manager",
       "major": "Business",
@@ -208,7 +216,7 @@
       "team": "Technology"
     },
     {
-      "id": "27",
+      "id": "28",
       "name": "Kevin Shi",
       "position": "Developer",
       "major": "Computing Science",
@@ -216,7 +224,7 @@
       "team": "Technology"
     },
     {
-      "id": "28",
+      "id": "29",
       "name": "Brendan Shen",
       "position": "Developer",
       "major": "Computing Science and Business Joint Major",
@@ -224,7 +232,7 @@
       "team": "Technology"
     },
     {
-      "id": "29",
+      "id": "30",
       "name": "Jenna Lee",
       "position": "Developer",
       "major": "Computing Science",
@@ -232,7 +240,7 @@
       "team": "Technology"
     },
     {
-      "id": "30",
+      "id": "31",
       "name": "Ayana Hussain",
       "position": "Developer",
       "major": "Computing Science",
@@ -240,15 +248,15 @@
       "team": "Technology"
     },
     {
-      "id": "31",
-      "name": "Celine August Santoso\n\n",
+      "id": "32",
+      "name": "Celine August Santoso",
       "position": "Product Design Team",
       "major": "Interactive Arts and Technology",
       "src": "/headshots/celineaugustsantoso.jpg",
       "team": "Technology"
     },
     {
-      "id": "32",
+      "id": "33",
       "name": "Kasey Le",
       "position": "Product Design Team",
       "major": "Interactive Arts and Technology",
@@ -256,7 +264,7 @@
       "team": "Technology"
     },
     {
-      "id": "33",
+      "id": "34",
       "name": "Michael Dresler",
       "position": "Product Design Team",
       "major": "Interactive Arts and Technology",
@@ -264,7 +272,7 @@
       "team": "Technology"
     },
     {
-      "id": "34",
+      "id": "35",
       "name": "Kelvin Kwan",
       "position": "Product Design Team",
       "major": "Interactive Arts and Technology",
@@ -272,7 +280,7 @@
       "team": "Technology"
     },
     {
-      "id": "35",
+      "id": "36",
       "name": "Vicky Xu",
       "position": "Director of Finance",
       "major": "Business",
@@ -280,7 +288,7 @@
       "team": "Finance"
     },
     {
-      "id": "36",
+      "id": "37",
       "name": "Samiha Raida",
       "position": "Finance Coordinator",
       "major": "Business",
@@ -288,7 +296,7 @@
       "team": "Finance"
     },
     {
-      "id": "37",
+      "id": "38",
       "name": "Lily Li",
       "position": "Finance Coordinator",
       "major": "Business",
@@ -296,7 +304,7 @@
       "team": "Finance"
     },
     {
-      "id": "38",
+      "id": "39",
       "name": "Rosa Chen",
       "position": "Finance Coordinator",
       "major": "Business",
@@ -304,7 +312,7 @@
       "team": "Finance"
     },
     {
-      "id": "39",
+      "id": "40",
       "name": "Alexandra Svoboda",
       "position": "Director of Human Resources",
       "major": "Business (Marketing), Minor in SIAT",
@@ -312,7 +320,7 @@
       "team": "HR"
     },
     {
-      "id": "40",
+      "id": "41",
       "name": "Darian Wong",
       "position": "Human Resources Coordinator",
       "major": "Math and Computing Science",
@@ -320,7 +328,7 @@
       "team": "HR"
     },
     {
-      "id": "41",
+      "id": "42",
       "name": "Angela Kurian",
       "position": "Human Resources Coordinator",
       "major": "Business",
@@ -328,15 +336,15 @@
       "team": "HR"
     },
     {
-      "id": "42",
+      "id": "43",
       "name": "Maria Zia",
       "position": "Co-Director\nof Logistics",
-      "major": "Computer Science",
+      "major": "Computing Science",
       "src": "/headshots/mariazia.jpg",
       "team": "Directors"
     },
     {
-      "id": "43",
+      "id": "44",
       "name": "Brian Rahadi",
       "position": "Co-Director\nof Logistics",
       "major": "Software Systems",
@@ -344,7 +352,7 @@
       "team": "Directors"
     },
     {
-      "id": "44",
+      "id": "45",
       "name": "Keyaan Vegdani",
       "position": "Director of Visual Design",
       "major": "Interactive Art and Technology Business Joint Major",
@@ -352,7 +360,7 @@
       "team": "Directors"
     },
     {
-      "id": "45",
+      "id": "46",
       "name": "Kaia Do",
       "position": "Director of Marketing",
       "major": "Business",
@@ -360,7 +368,7 @@
       "team": "Directors"
     },
     {
-      "id": "46",
+      "id": "47",
       "name": "Christopher Fong",
       "position": "Co-Director of Technology",
       "major": "Computing Science",
@@ -368,7 +376,7 @@
       "team": "Directors"
     },
     {
-      "id": "47",
+      "id": "48",
       "name": "Christina Raganit",
       "position": "Co-Director of Technology",
       "major": "Interactive Arts and Technology",
@@ -376,7 +384,7 @@
       "team": "Directors"
     },
     {
-      "id": "48",
+      "id": "49",
       "name": "Vicky Xu",
       "position": "Director of Finance",
       "major": "Business",
@@ -384,7 +392,7 @@
       "team": "Directors"
     },
     {
-      "id": "49",
+      "id": "50",
       "name": "Alexandra Svoboda",
       "position": "Director of Human Resources",
       "major": "Business (Marketing), Minor in SIAT",
@@ -392,12 +400,11 @@
       "team": "Directors"
     },
     {
-      "id": "50",
+      "id": "51",
       "name": "Johnson Luong",
       "position": "Director of External Relations",
-      "major": "Computer Science",
+      "major": "Computing Science",
       "src": "/headshots/johnsonluong.jpg",
       "team": "Directors"
     }
-
   ]
