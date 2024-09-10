@@ -1,5 +1,5 @@
 import React from "react";
-import InvolvementImage from "/public/involvement.png";
+import InvolvementImage from "/public/Discord image.png";
 import Image from "next/image";
 
 import text_content from "/public/content/text_content.json";
@@ -15,6 +15,9 @@ const Involvement = () => {
           <h1 className="text-3xl mb-6">
           {text_content.homepage.get_involved.heading}
           </h1>
+          <p className="text-gray-400 mb-8">
+              {text_content.homepage.get_involved.description}
+            </p>
           <button className="bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 px-6 rounded-custom-radius transition">
             <a
               href="#opportunities" // TODO: Replace with the actual link URL
@@ -24,7 +27,7 @@ const Involvement = () => {
           </button>
         </div>
       </div>
-      <div className="md:max-w-[1240px] bg-surface rounded-custom-radius p-8 w-full flex sm:flex-row md:flex-row lg:flex-col items-start">
+      <div className="md:max-w-[1240px] bg-surface rounded-custom-radius p-8 pb-0 lg:pb-8 w-full flex sm:flex-row md:flex-row lg:flex-col items-start">
         <div className="flex flex-col md:flex-row items-start custom-gap">
           <div className="flex-1">
             <h2 className="uppercase tracking-wider text-brand-primary text-s mb-4">
