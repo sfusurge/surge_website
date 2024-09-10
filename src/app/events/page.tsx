@@ -3,7 +3,7 @@ import CurrentEvents from "@/app/sections/events/CurrentEvents";
 
 export default function Page() {
   return (
-    <main>
+    <main className="flex flex-col gap-36">
       <EventsHero/>
       <CurrentEvents />
     </main>
