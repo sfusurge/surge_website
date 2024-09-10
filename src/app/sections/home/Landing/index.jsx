@@ -25,8 +25,10 @@ function Landing() {
           {/* <Image
             src={Rocket}
             alt="Background Image"
-            layout="fill"
+            width={2498}
+            height={1255}
             objectFit="contain"
+            className=" h-full w-full  lg:w-[50%] mx-auto "
             quality={100}
             className="w-full"
           /> */}

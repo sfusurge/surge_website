@@ -34,7 +34,7 @@
 
 @layer components {
   .button-link {
-    @apply border-t border-border-tertiary/15 block cursor-pointer rounded-full w-fit flex items-center transition-colors;
+    @apply border-t border-border-tertiary/15 cursor-pointer rounded-full w-fit flex items-center transition-colors;
   }
 
   .button-link.md {
@@ -46,7 +46,7 @@
   }
 
   .button-link.primary {
-    @apply bg-brand-primary hover:bg-brand-primary-hover active:bg-brand-primary-pressed focus:ring focus:ring-brand-primary;
+    @apply bg-brand-primary hover:bg-brand-primary-hover active:bg-brand-primary-pressed focus-visible:ring focus-visible:ring-brand-primary;
   }
 
   .button-link.secondary {
@@ -101,19 +101,54 @@
     @apply transition-transform hover:scale-125 focus:scale-125 origin-center;
   }
 
-  .text-caption{
-    @apply text-sm text-text-brand-primary uppercase font-GeistMono font-semibold
+  .text-caption {
+    @apply text-sm text-text-brand-primary uppercase font-GeistMono font-semibold;
   }
 
-  .surge-radial-gradient{
-    @apply w-screen h-[200vh] bg-[radial-gradient(circle,_rgba(54,79,184,0.2)_0%,_rgba(24,35,82,0)_50%)] fixed top-[-100%] left-0 z-[-100] pointer-events-none 
+  .surge-radial-gradient {
+    @apply w-screen h-[200vh] bg-[radial-gradient(circle,_rgba(54,79,184,0.2)_0%,_rgba(24,35,82,0)_50%)] fixed top-[-100%] left-0 z-[-100] pointer-events-none;
   }
 
-  .content-wrapper{
-    @apply mx-auto px-6 sm:px-12 md:px-24 max-w-[90rem];
+  .content-wrapper {
+    @apply mx-auto px-6 sm:px-12 md:px-16 max-w-[90rem];
   }
 
   :focus {
     @apply outline-2 outline-brand-primary outline-offset-4;
+  }
+  .gridLarge {
+
+    grid-template-areas:
+      "a a b b b b c c"
+      "a a b b b b c c"
+      "d d b b b b e e"
+      "d d f f g g e e"
+      "d d f f g g e e"
+      ". . f f g g . ."
+  }
+
+  .gridMedium {
+
+    grid-template-areas:
+    "b b"
+    "b b"
+    "a c"
+    "d e"
+    "f g"
+
+
+  }
+
+  .gridSmall {
+
+    grid-template-areas:
+    "b"
+    "a"
+    "c"
+    "d"
+    "e"
+    "f"
+    "g"
+
   }
 }

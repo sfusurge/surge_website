@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         sunken: "rgb(var(--sunken) / <alpha-value>)",
         raised: "rgb(var(--raised) / <alpha-value>)",
+        overlay: "rgb(var(--overlay) / <alpha-value>)",
         "raised-hover": "rgb(var(--raised-hover) / <alpha-value>)",
         "text-primary": "rgb(var(--text-primary) / <alpha-value>)",
         "text-secondary": "rgb(var(--text-secondary) / <alpha-value>)",

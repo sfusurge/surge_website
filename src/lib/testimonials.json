@@ -1,0 +1,52 @@
+[
+    {
+      "name": "Jordan Taylor",
+      "position": "Web Developer",
+      "testimonial": "\"This project gave me a fantastic opportunity to grow my skills and collaborate with a great team.\"",
+      "area": "a",
+      "cardStyle": "small"
+    },
+    {
+      "name": "Alexis Martinez",
+      "position": "Project Manager",
+      "testimonial": "\"Collaborating with this team made everything feel achievable, and the outcome exceeded my expectations.\"",
+      "area": "b",
+      "cardStyle": "big"
+    },
+    {
+      "name": "Cameron Lee",
+      "position": "UI/UX Designer",
+      "testimonial": "\"This project was a rewarding challenge, with a focus on user experience and attention to detailThis project was a rewarding challenge, with a focus on user experience and attention to detail.\"",
+      "area": "c",
+      "cardStyle": "small"
+    },
+    {
+      "name": "Morgan Chen",
+      "position": "Content Strategist",
+      "testimonial": "\"I loved being part of a creative, collaborative team where everyone's ideas were valued.\"",
+      "area": "d",
+      "cardStyle": "small"
+    },
+    {
+      "name": "Taylor Morgan",
+      "position": "Marketing Specialist",
+      "testimonial": "\"This was one of the most organized and well-executed projects I’ve been a part of.\"",
+      "area": "e",
+      "cardStyle": "small"
+    },
+    {
+      "name": "Chris Nguyen",
+      "position": "Software Engineer",
+      "testimonial": "\"The technical challenges pushed me to grow in a supportive, learning-focused environment.\"",
+      "area": "f",
+      "cardStyle": "small"
+    },
+    {
+      "name": "Sydney Patel",
+      "position": "Graphic Designer",
+      "testimonial": "\"This project stretched my design skills, and the team's feedback helped me deliver work I'm proud of.\"",
+      "area": "g",
+      "cardStyle": "small"
+    }
+  ]
+  

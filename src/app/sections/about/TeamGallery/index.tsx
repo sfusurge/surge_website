@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import RoleButton from "@/components/RoleButton";
 import TeamCard from "@/components/TeamCard";
-import { teams } from "./teamData";
-import data from "./data.json";
+import { teams } from "../../../../lib/teamData";
+import teamMembers from "@/lib/teamMemberData.json";
 
 export default function TeamGallery() {
   const [activeButton, setActiveButton] = useState<string | null>(null);
@@ -62,7 +62,7 @@ export default function TeamGallery() {
 
       <section
         id="team"
-        className=" pt-24 flex flex-col lg:flex-row gap-12 relative text-pretty"
+        className=" flex flex-col lg:flex-row gap-12 relative text-pretty"
       >
         <div className="w-full lg:w-[40%]">
           <div className=" flex flex-col lg:sticky top-24 ">
@@ -97,7 +97,7 @@ export default function TeamGallery() {
        "
         >
           <div className=" flex flex-col  bg-[#121318]/80  p-5 rounded-2xl  gap-5 transition-all ">
-            {data.map((member) =>
+            {teamMembers.map((member) =>
               activeButton === member.team ? (
                 <TeamCard
                   key={member.id}

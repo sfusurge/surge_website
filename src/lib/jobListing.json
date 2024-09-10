@@ -1,0 +1,95 @@
+[
+    {
+      "id": 2,
+      "url": "design-graphic-designer",
+      "title": "Graphic Designer",
+      "description": "8-12 hours/week",
+      "director" : "Christina Raganit",
+      "about": "Create visual content for marketing materials, events, and social media campaigns.",
+      "responsibilities": [
+        "Design posters, brochures, and other visual content for marketing",
+        "Create event branding and promotional materials",
+        "Collaborate with the marketing team to develop engaging graphics",
+        "Ensure consistency in branding across all platforms",
+        "Prepare graphics for print and digital distribution"
+      ],
+      "skills": [
+        "Proficient in Adobe Photoshop, Illustrator, and InDesign",
+        "Strong understanding of color theory and typography",
+        "Creativity and attention to detail",
+        "Time management and ability to meet deadlines",
+        "Experience in digital and print media"
+      ],
+      "commitment": [
+        "Attend weekly design meetings",
+        "Complete design tasks within assigned deadlines",
+        "Collaborate with other departments to meet project goals",
+        "Be responsive to feedback and iterate on designs",
+        "Manage multiple design projects simultaneously"
+      ],
+      "team": "Visual Design",
+      "listing": "https:\\youtube.com"
+    },
+    {
+      "id": 3,
+      "url": "marketing-content-writer",
+      "title": "Content Writer",
+      "description": "6-10 hours/week",
+      "director" : "Christina Raganit",
+      "about": "Craft engaging copy for blogs, newsletters, and social media posts.",
+      "responsibilities": [
+        "Write blog posts and articles that align with our mission",
+        "Draft engaging content for social media platforms",
+        "Assist in writing newsletters and press releases",
+        "Collaborate with the design team on content presentation",
+        "Edit and proofread content for clarity and accuracy"
+      ],
+      "skills": [
+        "Strong writing and editing skills",
+        "Experience with SEO best practices",
+        "Ability to write in a clear and concise manner",
+        "Familiarity with social media platforms",
+        "Attention to detail and creativity"
+      ],
+      "commitment": [
+        "Produce 2-3 blog posts per month",
+        "Draft weekly social media posts",
+        "Collaborate with the marketing team on content strategy",
+        "Meet deadlines for content submission",
+        "Incorporate feedback and revise content as needed"
+      ],
+      "team": "Marketing",
+      "listing": "https:\\youtube.com"
+    },
+    {
+      "id": 4,
+      "url": "technology-web-developer",
+      "title": "Web Developer",
+      "description": "12-16 hours/week",
+      "director" : "Christopher phong",
+      "about": "Develop and maintain the club’s website and other digital platforms.",
+      "responsibilities": [
+        "Build and maintain the club’s website",
+        "Ensure the website is up-to-date and functioning properly",
+        "Implement new features and improvements",
+        "Collaborate with the design team on website layout",
+        "Troubleshoot and fix website issues"
+      ],
+      "skills": [
+        "Proficient in HTML, CSS, and JavaScript",
+        "Experience with WordPress or other CMS platforms",
+        "Understanding of web design principles",
+        "Attention to detail and problem-solving skills",
+        "Ability to work with cross-functional teams"
+      ],
+      "commitment": [
+        "Regularly update website content",
+        "Attend weekly tech team meetings",
+        "Respond promptly to website issues",
+        "Implement feature requests from other teams",
+        "Stay up-to-date with the latest web development trends"
+      ],
+      "team": "Technology",
+      "listing": "https:\\youtube.com"
+    }
+]

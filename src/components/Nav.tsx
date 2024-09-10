@@ -1,38 +1,51 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
+import path from "path";
+
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const navRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      const newWidth: number = window.innerWidth;
-      if (newWidth > 640) {
-        setIsOpen(false);
-      }
-    };
+  const handleResize = () => {
+    const newWidth: number = window.innerWidth;
+    if (newWidth > 640) {
+      setIsOpen(false);
+    }
+  };
 
+  const handleClick = (e:MouseEvent) => {
+    if(!navRef.current?.contains(e.target as Node)){
+      setIsOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    setIsOpen(false)
     // Add event listener to handle window resize
     window.addEventListener("resize", handleResize);
-
+    document.addEventListener("mousedown", handleClick)
     // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
+      document.removeEventListener("mousedown", handleClick)
     };
-  }, []); // Empty dependency array ensures this effect runs only on mount and unmount
+  },[pathname]); 
 
   return (
     <div className="fixed w-full left-0 top-0 text-sm px-6 sm:px-12  z-[1000]">
       {/* used for progressive blur behind navbar */}
-      <div className="w-screen h-full absolute top-0 left-0 bg-black/20  [mask-image:linear-gradient(180deg,_rgba(0,0,0,1)_20%,_rgba(255,255,255,0)_80%)]  backdrop-blur-[8px] "></div>
+      <div className="w-screen h-full absolute top-0 left-0 bg-black/20  [mask-image:linear-gradient(180deg,_rgba(0,0,0,1)_20%,_rgba(255,255,255,0)_80%)]  backdrop-blur-[8px]" ></div>
 
       <div
+      ref={navRef}
         className={` ${
           isOpen ? "h-[23rem]" : "h-[3.5rem]"
         } mx-auto  bg-raised/80 border border-white/5 transition-all duration-300  mt-4 backdrop-blur-md rounded-xl overflow-hidden flex flex-col sm:flex-row sm:justify-between p-4 max-w-[40rem] z-[1000]`}
@@ -107,7 +120,7 @@ export default function NavBar() {
               </Link>
             </li>
             <li>
-              <Link className="link" href="/">
+              <Link className="link" href="/events">
                 Events
               </Link>
             </li>
