@@ -105,6 +105,7 @@ export default function TeamGallery() {
                   major={member.major}
                   role={member.position}
                   src={member.src}
+                  socials = {member.socials}
                   fallbackSrc="/headshots/placeholder.png"
                 />
               ) : null
