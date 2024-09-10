@@ -13,19 +13,21 @@ export default function JoinTeam() {
   return (
     <main className="flex flex-col gap-24 md:gap-48">
 
-      <section className="flex flex-col items-center justify-center text-center overflow-hidden gap-8">
+      <section className="flex flex-col items-center justify-center text-center overflow-hidden gap-16">
 
-        <div className="flex flex-col gap-5 justify-center w-fit  ">
+        <div className="flex flex-col gap-5 justify-center w-fit items-center  ">
           <h1 className="large-title emphasized text-pretty max-w-xl">
             Ready to Make an Impact With Surge?
           </h1>
-          <p className="paragraph">
+          <p className="paragraph mb-0">
             Join Surge and be a part of a community driving innovation in
             technology, design, and beyond. Whether you're passionate about
             coding, logistics, or media, your skills can make a difference.{" "}
           </p>
-          {/* <ButtonScroll section="openroles">See Open Positions</ButtonScroll> */}
+
+          <ButtonScroll section="openroles">See Open Positions</ButtonScroll>
         </div>
+
 
         <div className="flex md:justify-center h-full min-w-[25rem] max-w-[50rem]   ">
           <Image
