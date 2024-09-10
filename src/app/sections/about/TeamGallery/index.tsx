@@ -7,7 +7,7 @@ import { teams } from "../../../../lib/teamData";
 import teamMembers from "@/lib/teamMemberData.json";
 
 export default function TeamGallery() {
-  const [activeButton, setActiveButton] = useState<string | null>(null);
+  const [activeButton, setActiveButton] = useState<string>(null);
   const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
 
   useEffect(() => {
@@ -49,13 +49,20 @@ export default function TeamGallery() {
         <div className="flex flex-col items-center text-center gap-4">
           <div className="text-caption">About Surge</div>
           <h1 className="max-w-[40rem] title-2 emphasized">
-            SFU Surge began in May 2019 with a vision of a vibrant, inclusive, and community-driven collective for tech enthusiasts at SFU.
+            SFU Surge began in May 2019 with a vision of a vibrant, inclusive,
+            and community-driven collective for tech enthusiasts at SFU.
           </h1>
           <p className=" paragraph ">
-          Co-presidents Hilal Asmat and Jeffrey Leung, driven by their passion for hosting ambitious, career-focused events, rallied together to form a team dedicated to building, learning, and sharing within the tech community. By September 2019, their efforts culminated in the official launch of the club, which attracted an impressive 300 initial members.
+            Co-presidents Hilal Asmat and Jeffrey Leung, driven by their passion
+            for hosting ambitious, career-focused events, rallied together to
+            form a team dedicated to building, learning, and sharing within the
+            tech community. By September 2019, their efforts culminated in the
+            official launch of the club, which attracted an impressive 300
+            initial members.
           </p>
           <p className="paragraph">
-          Since then, we have continued to grow, fostering a space where innovation and collaboration thrive.
+            Since then, we have continued to grow, fostering a space where
+            innovation and collaboration thrive.
           </p>
         </div>
       </section>
@@ -68,10 +75,11 @@ export default function TeamGallery() {
           <div className=" flex flex-col lg:sticky top-24 ">
             <h2 className="text-caption">MEET THE TEAM</h2>
             <h3 className="title-2 emphasized">
-             Introducing the students powering SFU Surge.
+              Introducing the students powering SFU Surge.
             </h3>
             <p className="paragraph ">
-             Meet our executive team of SFU students, bringing together diverse backgrounds in business, computer science, and design.
+              Meet our executive team of SFU students, bringing together diverse
+              backgrounds in business, computer science, and design.
             </p>
             <div className=" grid grid-cols-3 xs:grid-cols-4 md:grid-cols-5  lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
               {teams.map((team) => {
@@ -105,7 +113,7 @@ export default function TeamGallery() {
                   major={member.major}
                   role={member.position}
                   src={member.src}
-                  socials = {member.socials}
+                  socials={member.socials}
                   fallbackSrc="/headshots/placeholder.png"
                 />
               ) : null

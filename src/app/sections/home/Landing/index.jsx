@@ -13,7 +13,7 @@ function Landing() {
     <>
       <div className="flex flex-col items-center justify-center">
         <div className="mt-4 content-wrapper text-center flex flex-col items-center">
-          <h1 className="large-title emphasized">
+          <h1 className="large-title emphasized max-w-5xl">
             {text_content.homepage.landing.heading}
           </h1>
           <p className="mt-5 text-text-secondary paragraph lg:mb-0">

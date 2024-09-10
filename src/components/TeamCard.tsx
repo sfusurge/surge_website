@@ -56,7 +56,7 @@ export default function TeamCard({
         <p className="text-base font-light text-text-secondary">{role}</p>
         <div className="flex gap-3 mt-auto py-2">
           {socials?.map((link: SocialLink, index) => {
-            return <a className="hover:scale-125 transition-all" href={link?.url}>{svgIconArray[link.platform]}</a>;
+            return <a key={index} className="hover:scale-125 transition-all" href={link?.url}>{svgIconArray[link.platform]}</a>;
           })}
         </div>
       </div>
