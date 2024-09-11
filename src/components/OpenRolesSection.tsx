@@ -25,11 +25,12 @@ export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
 
   return (
     <section id={id} className="flex items-center flex-col gap-12">
-      <div className=" max-w-xl text-center">
+      <div className=" max-w-lg text-center flex flex-col gap-4">
         <span className="text-caption">Open Roles</span>
         <h2 className="title-1 emphasized">
           We want you to help us run hackathons and events
         </h2>
+        <p className="paragraph text-pretty">SFU Surge is an all-inclusive organization to promote curiosity and excitement for a future in technology, while guiding students on their paths to career success.</p>
       </div>
 
       <div className=" flex items-center justify-center max-w-3xl gap-2 flex-wrap">
@@ -91,7 +92,7 @@ export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
             )
           ) : (
             // Otherwise there is no jobs and we're not selected on all
-            <div className="col-span-full w-full relative h-56 bg-overlay/80 rounded-2xl flex justify-center items-center">
+            <div className="col-span-full w-full relative h-56 flex justify-center items-center">
               <p className=" paragraph text-center text-pretty ">
                 {`There are currently no jobs available in ${activeButton}, check back later!`}
               </p>
