@@ -5,15 +5,17 @@ type CardProps = {
   title: string;
   description: string;
   src: string;
+  url: string
 };
 export default function Card({
   title,
   description,
   src,
   className,
+  url
 }: CardProps) {
   return (
-    <div
+    <a href={url}
       className={`${className} w-full min-h-[30vh] rounded-3xl grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-8 hover:scale-105 transition-all duration-300 overflow-clip`}
     >
       <div className="flex flex-col gap-3 pl-4 xs:pl-6 lg:px-8 lg:pt-8  justify-center lg:justify-start">
@@ -33,6 +35,6 @@ export default function Card({
           className="lg:h-auto lg:w-full h-full w-auto object-cover  "
         />
       </div>
-    </div>
+    </a>
   );
 }
