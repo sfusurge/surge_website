@@ -7,7 +7,7 @@ import { teams } from "../../../../lib/teamData";
 import teamMembers from "@/lib/teamMemberData.json";
 
 export default function TeamGallery() {
-  const [activeButton, setActiveButton] = useState<string>(null);
+  const [activeButton, setActiveButton] = useState<string>('');
   const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
 
   useEffect(() => {
