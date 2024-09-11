@@ -39,7 +39,7 @@ const EventSection = () => {
             className="bg-[#32269F]"
           />
           <HomeCard
-            title="workshops"
+            title="Workshops"
             description="Learn new skills"
             src="/workshops.png"
             className="bg-[#1E293B]"
