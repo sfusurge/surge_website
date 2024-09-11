@@ -6,7 +6,6 @@
     "major": "Computing Science",
     "src": "/headshots/matthewwong.jpg",
     "team": "Directors",
-    
    "socials": [
     { "platform": "Portfolio", "url": "https://wongmatt.dev/" },
     { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/matthewwong1129/" },
@@ -36,18 +35,11 @@
     "src": "/headshots/brianrahadi.jpg",
     "team": "Logistics",
     "socials": [
-      {
-        "platform": "Portfolio",
-        "url": "https://brianrahadi.com/"
-      },
-      {
-        "platform": "LinkedIn",
-        "url": "https://www.linkedin.com/in/brianrahadi/"
-      },
-      {
-        "platform": "GitHub",
-        "url": "https://github.com/brianrahadi"
-      }
+      { "platform": "Portfolio", "url": "https://brianrahadi.com/" },
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/brianrahadi/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/brianrahadi" },
+      { "platform": "Devpost", "url": "https://devpost.com/brian-rahadi" },
+      { "platform": "GitHub", "url": "https://github.com/brianrahadi" }
     ]
   },
   {
@@ -78,7 +70,10 @@
     "position": "Logistics Coordinator",
     "major": "Business",
     "src": "/headshots/christinevu.jpg",
-    "team": "Logistics"
+    "team": "Logistics",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/christine-vu-8b2121264/" }
+    ]
   },
   {
     "id": "7",
@@ -86,7 +81,11 @@
     "position": "Logistics Coordinator",
     "major": "Business",
     "src": "/headshots/angelalim.jpg",
-    "team": "Logistics"
+    "team": "Logistics",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/darrick-gunawan/" },
+      { "platform": "GitHub", "url": "https://github.com/Darrickg" }
+    ]
   },
   {
     "id": "8",
@@ -94,7 +93,11 @@
     "position": "Logistics Coordinator",
     "major": "Computing Science",
     "src": "/headshots/fadynasr.jpg",
-    "team": "Logistics"
+    "team": "Logistics",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/fady-nasr-9431aa2a1/" }
+    ]
+    
   },
   {
     "id": "9",
@@ -102,7 +105,10 @@
     "position": "Logistics Coordinator",
     "major": "Computing Science",
     "src": "/headshots/alexmei.jpg",
-    "team": "Logistics"
+    "team": "Logistics",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/alex-mei-720279313/" }
+    ]
   },
   {
     "id": "10",
@@ -118,7 +124,10 @@
     "position": "External Relations Coordinator",
     "major": "Business (MIS and Operations)",
     "src": "/headshots/paullee.jpg",
-    "team": "External Relations"
+    "team": "External Relations",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/pauldklee/" }
+    ]
   },
   {
     "id": "12",
@@ -126,7 +135,10 @@
     "position": "External Relations Coordinator",
     "major": "Computing Science",
     "src": "/headshots/michaeltran.jpg",
-    "team": "External Relations"
+    "team": "External Relations",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/michael-tran-sfu/" }
+    ]
   },
   {
     "id": "13",
@@ -134,7 +146,12 @@
     "position": "Director of Visual Design",
     "major": "SIAT Business Joint Major",
     "src": "/headshots/keyaanvegdani.jpg",
-    "team": "Visual Design"
+    "team": "Visual Design",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://keyaanvegdani.framer.website/" },
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/keyaan-vegdani/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/keyaanvegdani/" }
+    ]
   },
   {
     "id": "14",
@@ -142,7 +159,11 @@
     "position": "Visual Design Coordinator",
     "major": "Interactive Art and Technology ",
     "src": "/headshots/arriyanali.jpg",
-    "team": "Visual design"
+    "team": "Visual design",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/arriyanali/" }
+    ]
+
   },
   {
     "id": "15",
@@ -150,7 +171,10 @@
     "position": "Visual Design Coordinator",
     "major": "SIAT Major, CS Minor",
     "src": "/headshots/nataliekayda.jpg",
-    "team": "Visual Design"
+    "team": "Visual Design",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/nataliekayda/" }
+    ]
   },
   {
     "id": "16",
@@ -158,7 +182,10 @@
     "position": "Visual Design Coordinator",
     "major": "CMNS Joint SIAT",
     "src": "/headshots/angelashen.jpg",
-    "team": "Visual Design"
+    "team": "Visual Design",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/angelashenca/" }
+    ]
   },
   {
     "id": "17",
@@ -166,7 +193,10 @@
     "position": "Visual Design Coordinator",
     "major": "Business",
     "src": "/headshots/tinayyernazarova.jpg",
-    "team": "Visual Design"
+    "team": "Visual Design",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/tinai-yernazarova/" }
+    ]
   },
   {
     "id": "18",
@@ -174,7 +204,10 @@
     "position": "Visual Design Coordinator",
     "major": "Interactive Arts and Technology",
     "src": "/headshots/lindajolly.jpg",
-    "team": "Visual Design"
+    "team": "Visual Design",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/linda-jolly-5849a5224/" }
+    ]
   },
   {
     "id": "19",
@@ -182,7 +215,10 @@
     "position": "Visual Design Coordinator",
     "major": "Interactive Arts and Technology",
     "src": "/headshots/yifeiwang.jpg",
-    "team": "Visual Design"
+    "team": "Visual Design",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/yifeiwangdesigner/" }
+    ]
   },
   {
     "id": "20",
@@ -190,7 +226,11 @@
     "position": "Director of Marketing",
     "major": "Business",
     "src": "/headshots/kaiado.jpg",
-    "team": "Marketing"
+    "team": "Marketing",
+    "socials": [
+      { "platform": "LinkedIn", "url": "www.linkedin.com/in/kaiado" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/_kaiado/" }
+    ]
   },
   {
     "id": "21",
@@ -198,7 +238,11 @@
     "position": "Social Media Coordinator",
     "major": "Communication Major, Print & Digital Publishing Minor",
     "src": "/headshots/sabinayelyubayeva.jpg",
-    "team": "Marketing"
+    "team": "Marketing",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/sabina-yel/" }
+    ]
+
   },
   {
     "id": "22",
@@ -206,7 +250,11 @@
     "position": "Social Media Coordinator",
     "major": "Business",
     "src": "/headshots/josietrinh.jpg",
-    "team": "Marketing"
+    "team": "Marketing",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/nghi-trinh-josie/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/iseedathaongi?utm_source=qr" }
+    ]
   },
   {
     "id": "23",
@@ -214,7 +262,11 @@
     "position": "Photgrapher/videographer",
     "major": "Interactive Arts and Technology",
     "src": "/headshots/mackenziescholz.jpg",
-    "team": "Marketing"
+    "team": "Marketing",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://www.sfu.ca/~mscholz/index.html" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/mscholz.studio/" }
+    ]
   },
   {
     "id": "24",
@@ -222,7 +274,10 @@
     "position": "Video Editor",
     "major": "Interactive Arts and Technology",
     "src": "/headshots/nafishadjamalus.jpg",
-    "team": "Marketing"
+    "team": "Marketing",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/nafisha-d-b67516218/" }
+    ]
   },
   {
     "id": "25",
@@ -230,7 +285,11 @@
     "position": "Co-Director of Technology",
     "major": "Computing Science",
     "src": "/headshots/christopherfong.jpg",
-    "team": "Technology"
+    "team": "Technology",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/chrisfong604/" },
+      { "platform": "GitHub", "url": "https://github.com/ChrisFong604" }
+    ]
   },
   {
     "id": "26",
@@ -238,7 +297,13 @@
     "position": "Co-Director of Technology",
     "major": "Interactive Arts and Technology",
     "src": "/headshots/christinaraganit.jpg",
-    "team": "Technology"
+    "team": "Technology",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://christinaraganit.github.io/" },
+      { "platform": "LinkedIn", "url": "https://linkedin.com/in/christinaraganit" },
+      { "platform": "Devpost", "url": "https://devpost.com/christinaraganit" },
+      { "platform": "GitHub", "url": "https://github.com/christinaraganit" }
+    ]
   },
   {
     "id": "27",
@@ -246,7 +311,11 @@
     "position": "Project Manager",
     "major": "Business",
     "src": "/headshots/kylieseto.jpg",
-    "team": "Technology"
+    "team": "Technology",
+    "socials": [
+      { "platform": "LinkedIn", "url": "www.linkedin.com/in/kylie-seto" },
+      { "platform": "Instagram", "url": "Kylie (@its.totally.kylie) • Instagram photos and videos" }
+    ]
   },
   {
     "id": "28",
@@ -254,7 +323,11 @@
     "position": "Developer",
     "major": "Computing Science",
     "src": "/headshots/kevinshi.jpg",
-    "team": "Technology"
+    "team": "Technology",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/kevinshi10/" },
+      { "platform": "GitHub", "url": "https://github.com/kevins10" }
+    ]
   },
   {
     "id": "29",
@@ -262,7 +335,13 @@
     "position": "Developer",
     "major": "Computing Science and Business Joint Major",
     "src": "/headshots/brendanshen.jpg",
-    "team": "Technology"
+    "team": "Technology",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://brendanshen.me/" },
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/brendan-shen/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/c41brendan/" },
+      { "platform": "GitHub", "url": "https://github.com/brendanshen24" }
+    ]
   },
   {
     "id": "30",
@@ -270,7 +349,10 @@
     "position": "Developer",
     "major": "Computing Science",
     "src": "/headshots/jennalee.jpg",
-    "team": "Technology"
+    "team": "Technology",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/jennaolee/" }
+    ]
   },
   {
     "id": "31",
@@ -278,7 +360,10 @@
     "position": "Developer",
     "major": "Computing Science",
     "src": "/headshots/ayanahussain.jpg",
-    "team": "Technology"
+    "team": "Technology",
+    "socials": [
+    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/ayana-hussain/" }
+  ]
   },
   {
     "id": "32",
@@ -294,7 +379,10 @@
     "position": "Product Design Team",
     "major": "Interactive Arts and Technology",
     "src": "/headshots/kaseyle.jpg",
-    "team": "Technology"
+    "team": "Technology",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/kasey-le" }
+    ]
   },
   {
     "id": "34",
@@ -310,7 +398,10 @@
     "position": "Product Design Team",
     "major": "Interactive Arts and Technology",
     "src": "/headshots/kelvinkwan.jpg",
-    "team": "Technology"
+    "team": "Technology",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/kelvin-kwan-8906b1230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" }
+    ]
   },
   {
     "id": "36",
@@ -318,7 +409,11 @@
     "position": "Director of Finance",
     "major": "Business",
     "src": "/headshots/vickyxu.jpg",
-    "team": "Finance"
+    "team": "Finance",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/vickykxu/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/vickykxu/" }
+    ]
   },
 
   {

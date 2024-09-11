@@ -29,21 +29,21 @@ const EventSection = () => {
           <HomeCard
             title="Stormhacks"
             description="Our flagship hackathon"
-            src="/stormhacks.png"
+            src= {StormHacksImage}
             className="bg-[#2d1367]"
             url="https://stormhacks.com/"
           />
           <HomeCard
             title="Journeyhacks"
             description="Our beginner-friendly hackathon"
-            src="/journeyhacks.png"
+            src={JourneyHacksImage}
             className="bg-[#32269F]"
             url="https://journeyhacks2024.devpost.com/"
           />
           <HomeCard
             title="workshops"
             description="Learn new skills"
-            src="/workshops.png"
+            src={WorkshopsImage}
             className="bg-[#1E293B]"
             url="/events"
           />
