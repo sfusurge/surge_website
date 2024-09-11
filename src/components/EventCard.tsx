@@ -18,7 +18,7 @@ type EventCardProps = {
         <div className="text-text-secondary text-sm md:text-base">{location}</div>
         </div>
 
-        <div className="aspect-square h-20 md:h-[7.5rem] bg-gray-600 rounded-lg ml-4"></div>
+        {/*<div className="aspect-square h-20 md:h-[7.5rem] bg-gray-600 rounded-lg ml-4"></div>*/}
       </div>
     );
   }

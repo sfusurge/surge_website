@@ -1,32 +1,22 @@
 [
   {
-    "title": "Tech Talk 2024",
-    "time": "Sept 15, 2024 - 2:00 PM",
+    "title": "Meet n' Eat",
+    "time": "Sept 20, 2024 - 3:00PM",
     "location": "SFU Burnaby"
   },
   {
-    "title": "Hackathon Kickoff",
-    "time": "Oct 1, 2024 - 9:00 AM",
-    "location": "SFU Surrey"
+    "title": "Stormhacks Pre-Hack",
+    "time": "Oct 1, 2024 - Oct 4, 2024",
+    "location": "SFU Burnaby/Surrey"
   },
   {
-    "title": "Design Workshop",
-    "time": "Nov 12, 2024 - 10:00 AM",
-    "location": "SFU Vancouver"
-  },
-  {
-    "title": "Tech Talk 2024",
-    "time": "Sept 15, 2024 - 2:00 PM",
+    "title": "Stormhacks V2",
+    "time": "Oct 5/6, 2024",
     "location": "SFU Burnaby"
   },
   {
-    "title": "Hackathon Kickoff",
-    "time": "Oct 1, 2024 - 9:00 AM",
-    "location": "SFU Surrey"
-  },
-  {
-    "title": "Design Workshop",
-    "time": "Nov 12, 2024 - 10:00 AM",
-    "location": "SFU Vancouver"
+    "title": "Intro to Git/Github",
+    "time": "Oct 25, 2024",
+    "location": "SFU Burnaby"
   }
 ]
