@@ -11,15 +11,17 @@ const config: Config = {
       colors: {
         sunken: "rgb(var(--sunken) / <alpha-value>)",
         raised: "rgb(var(--raised) / <alpha-value>)",
+        overlay: "rgb(var(--overlay) / <alpha-value>)",
         "raised-hover": "rgb(var(--raised-hover) / <alpha-value>)",
         "text-primary": "rgb(var(--text-primary) / <alpha-value>)",
         "text-secondary": "rgb(var(--text-secondary) / <alpha-value>)",
+        "text-brand-primary": "rgb(var(--text-brand-primary) / <alpha-value>)",
         "brand-primary": "rgb(var(--brand-primary) / <alpha-value>)",
         "brand-primary-hover":
           "rgb(var(--brand-primary-hover) / <alpha-value>)",
         "brand-primary-pressed":
           "rgb(var(--brand-primary-pressed) / <alpha-value>)",
-        "border-tertiary": "var(--border-tertiary)",
+        "border-tertiary": "rgb(var(--border-tertiary) / <alpha-value>)",
       },
       backgroundColor: {
         "surface": "rgb(var(--surface) / <alpha-value>)"
@@ -63,6 +65,14 @@ const config: Config = {
           "3.25rem",
           { lineHeight: "112.5%", letterSpacing: "0rem" },
         ] /* 52px */,
+      },
+      screens: {
+        xs: "430px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
     },
     fontFamily: {

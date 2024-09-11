@@ -1,0 +1,59 @@
+{
+  "homepage": {
+    "landing": {
+      "callout": "Apply to Stormhacks × Enactus × MSESS! →",
+      "heading": "SFU Surge Empowers Students to Thrive in Tech",
+      "description": "SFU Surge is an inclusive, student-led organization that aims to ignite curiosity and excitement for the future of technology while guiding students in developing the skills they need for career success."
+    },
+    "about": {
+      "callout": "What's SFU Surge?",
+      "heading": "Home to Simon Fraser University's largest hackathon",
+      "description": "A super cracked team of technology enthusiasts dedicated to hosting events, workshops and programs that help students explore their passion for technology, connect with industry professionals, and gain valuable skills.",
+      "cta": "Read our lore"
+    },
+    "events": {
+      "callout": "EVENTS",
+      "heading": "Check out our exciting lineup of events designed to inspire, educate, and connect tech enthusiasts!",
+      "description": " ",
+      "cta": " "
+    },
+    "sponsors": {
+      "callout": "Sponsor our events",
+      "heading": "We are looking for passionate companies and organizations looking to foster talent across the tech community.",
+      "description": " ",
+      "cta": "Send us an email"
+    },
+    "get_involved": {
+      "callout": "Get Involved",
+      "heading": "Join SFU Surge in shaping the future of technology.",
+      "description": "If you're as passionate about technology as we are, we would love to have you! Help us organize workshops and events to inspire and educate the students who shape the future of technology while also building valuable connections and developing your own skills in the process.",
+      "cta": "View opportunities"
+    },
+    "join_discord": {
+      "callout": "Stay in the loop",
+      "heading": "Be the first to hear about upcoming events and hackathons.",
+      "description": "Don't miss out on any of our exciting hackathons and workshops! Join our Discord server to stay updated on new opportunities and network with fellow tech enthusiasts. We also play a lot of League of Legends.",
+      "cta": "Join our Discord server"
+    }
+  },
+  "join": {
+    "heading": "Ready to Make an Impact with Surge?",
+    "description": "Join Surge and be a part of a community driving innovation in technology, design, and beyond. Whether you're passionate about coding, logistics, or media, your skills can make a difference.",
+    "cta": "See Open Positions",
+    "benefits": {
+      "callout": "Benefits",
+      "heading": "Why volunteer with Surge?",
+      "cards": {}
+    },
+    "opportunities": {
+      "callout": "Upcoming Opportunity",
+      "heading": "Stormhacks 2024",
+      "description": " Join us as we prepare for our upcoming Hackathon event, where your contributions could help shape the future of technology! Be part of the team that brings innovative ideas to life."
+    }
+  },
+  "under_construction": {
+    "caption": "Hey, sorry to inform but...",
+    "title": "This page is currently under construction. Check back later to see what's changed!",
+    "redirect_button": "Back to homepage"
+  }
+}

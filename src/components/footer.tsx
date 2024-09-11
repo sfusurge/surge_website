@@ -1,15 +1,17 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-border-tertiary my-8 mb-12 md:my-12 px-8 lg:my-20 md:px-16 pt-12 grid grid-rows-2 md:grid-rows-1 gap-12 md:grid-cols-4">
-      <div className="col-span-2 flex flex-col items-center sm:items-start">
+    <footer className="mt-32">
+      <div className="h-[1px] bg-gradient-to-r from-border-tertiary/0 via-border-tertiary/15 to-border-tertiary/0"></div>
+    <div className="py-12 grid grid-rows-2 md:grid-rows-1 gap-12 md:grid-cols-5 content-wrapper">
+      <div className="col-span-3 flex flex-col items-center sm:items-start">
         <img src="surge-logomark.svg" className="h-5 mb-4 w-fit"></img>
         <p className="text-text-secondary font-light text-center sm:text-left">
-          Some cheesy tagline here <br></br>
+          Engage. Empower. Innovate. <br></br>
           Built by the SFU Surge tech team 💪
         </p>
 
         <div className="mt-5 flex flex-row gap-2.5 -ml-0.5">
-          <a href="" className="icon-link">
+          <a href="https://ca.linkedin.com/company/sfu-surge" className="icon-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5em"
@@ -23,7 +25,7 @@ export default function Footer() {
             </svg>
           </a>
 
-          <a href="" className="icon-link">
+          <a href="https://www.instagram.com/sfusurge" className="icon-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5em"
@@ -37,7 +39,7 @@ export default function Footer() {
             </svg>
           </a>
 
-          <a href="" className="icon-link">
+          <a href="https://discord.gg/U5q6RkHHtA" className="icon-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5em"
@@ -51,7 +53,7 @@ export default function Footer() {
             </svg>
           </a>
 
-          <a href="" className="icon-link">
+          <a href="https://devpost.com/hackathons?organization=SFU%20Surge" className="icon-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5em"
@@ -65,7 +67,7 @@ export default function Footer() {
             </svg>
           </a>
 
-          <a href="" className="icon-link">
+          <a href="https://github.com/sfusurge" className="icon-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5em"
@@ -79,7 +81,7 @@ export default function Footer() {
             </svg>
           </a>
 
-          <a href="" className="icon-link">
+          <a href="https://www.facebook.com/sfusurge/" className="icon-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5em"
@@ -93,7 +95,7 @@ export default function Footer() {
             </svg>
           </a>
 
-          <a href="" className="icon-link">
+          <a href="https://open.spotify.com/show/5GAuw7brERfbZSfnKpURvE?si=09bf7b886d3a448b&nd=1&dlsi=64585ddad8c247dc" className="icon-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5em"
@@ -111,34 +113,35 @@ export default function Footer() {
 
       <div className="col-span-1 flex flex-col gap-4">
         <p className="text-text-secondary text-s mb-1">Navigation</p>
-        <a href="" className="link">
+        <a href="/" className="link">
           Home
         </a>
-        <a href="" className="link">
+        <a href="/about" className="link">
           About Us
         </a>
-        <a href="" className="link">
+        <a href="/sponsor" className="link">
           Sponsor Us
         </a>
-        <a href="" className="link">
+        <a href="/join" className="link">
           Join Our Team
         </a>
       </div>
       <div className="col-span-1 flex flex-col gap-4">
         <p className="text-text-secondary text-s mb-1">Events</p>
-        <a href="" className="link">
+        <a href="https://stormhacks.com/" className="link">
           StormHacks
         </a>
-        <a href="" className="link">
+        <a href="/" className="link">
           JourneyHacks
         </a>
-        <a href="" className="link">
+        <a href="/events" className="link">
           Workshops
         </a>
-        <a href="" className="link">
+        <a href="/" className="link">
           Projects
         </a>
       </div>
+    </div>
     </footer>
   );
 }
