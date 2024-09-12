@@ -5,11 +5,12 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import Nav from "../components/Nav";
 import Footer from "../components/footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SFU Surge's main website",
+  title: "SFU Surge",
   description:
     "Engage, Empower, and Innovate. SFU Surge is an all-inclusive organization to promote curiosity and excitement for a future in technology, while guiding students on their paths to career success.",
 };
@@ -23,6 +24,7 @@ export default function RootLayout({
 
   return (
     <html className={`${GeistSans.variable} ${GeistMono.variable}  !scroll-p-24 `} lang="en">
+      <GoogleTagManager gtmId="GTM-PJKGX34K" />
       <body className="font-GeistSans ">
         <div className="content-wrapper mt-[calc(5rem+3.5rem)]">
         <div className="surge-radial-gradient"></div>
