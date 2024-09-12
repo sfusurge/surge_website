@@ -27,21 +27,21 @@ const EventSection = () => {
      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
 
           <HomeCard
-            title="Stormhacks"
+            title="StormHacks"
             description="Our flagship hackathon"
             src= {StormHacksImage}
             className="bg-[#2d1367]"
             url="https://stormhacks.com/"
           />
           <HomeCard
-            title="Journeyhacks"
+            title="JourneyHacks"
             description="Our beginner-friendly hackathon"
             src={JourneyHacksImage}
             className="bg-[#32269F]"
             url="https://journeyhacks2024.devpost.com/"
           />
           <HomeCard
-            title="workshops"
+            title="Workshops"
             description="Learn new skills"
             src={WorkshopsImage}
             className="bg-[#1E293B]"

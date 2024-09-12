@@ -73,11 +73,11 @@ export default function TeamGallery() {
       >
         <div className="w-full lg:w-[40%]">
           <div className=" flex flex-col lg:sticky top-24 ">
-            <h2 className="text-caption">MEET THE TEAM</h2>
-            <h3 className="title-2 emphasized">
+            <h2 className="text-caption mb-2">MEET THE TEAM</h2>
+            <h3 className="title-2 emphasized mb-4">
               Introducing the students powering SFU Surge.
             </h3>
-            <p className="paragraph ">
+            <p className="paragraph mb-8">
               Meet our executive team of SFU students, bringing together diverse
               backgrounds in business, computer science, and design.
             </p>
@@ -104,7 +104,7 @@ export default function TeamGallery() {
           className=" flex flex-col w-full lg:w-[65%] lg:ml-8 rounded-2xl
        "
         >
-          <div className=" flex flex-col  bg-[#121318]/80  p-5 rounded-2xl  gap-5 transition-all ">
+          <div className=" flex flex-col rounded-2xl  gap-5 transition-all ">
             {teamMembers.map((member) =>
               activeButton === member.team ? (
                 <TeamCard
