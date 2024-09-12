@@ -5,6 +5,7 @@ type JobTeamButtonProps = {
     title: string,
     icon: JSX.Element,
     isActive: boolean,
+    count?: number,
     buttonFunction?:()=> void,
 
   };
@@ -14,15 +15,17 @@ type JobTeamButtonProps = {
     className,
     icon,
     isActive,
+    count,
     buttonFunction,
   }: JobTeamButtonProps) {
 
     
 
     return (
-      <button onClick={buttonFunction} className={`${className} flex gap-2  button-link md ${isActive?" primary text-text-primary": " secondary text-text-secondary"}`}>
+      <button onClick={buttonFunction} className={`${className} ${count?"flex":"hidden"} flex gap-2  button-link md ${isActive?" primary text-text-primary": " secondary text-text-secondary"}`}>
       <div className=" " >{icon}</div>
-      {title}</button>
+      {title} {"(" + count + ")"}
+      </button>
     );
   }
   
