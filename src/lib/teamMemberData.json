@@ -116,7 +116,12 @@
     "position": "Director of External Relations",
     "major": "Computing Science",
     "src": "/headshots/johnsonluong.jpg",
-    "team": "External Relations"
+    "team": "External Relations",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://johnsonl111.github.io/quartz/" },
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/johnson-luong/" },
+      { "platform": "GitHub", "url": "https://github.com/johnsonl111" }
+    ]
   },
   {
     "id": "11",
@@ -422,7 +427,11 @@
     "position": "Finance Coordinator",
     "major": "Business",
     "src": "/headshots/samiharaida.jpg",
-    "team": "Finance"
+    "team": "Finance",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/samiharaida/" }
+    ]
+    
   },
 
   {
@@ -431,7 +440,10 @@
     "position": "Finance Coordinator",
     "major": "Business",
     "src": "/headshots/lilyli.jpg",
-    "team": "Finance"
+    "team": "Finance",
+    "socials": [
+    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/lilyli0302/" }
+  ]
   },
 
   {
@@ -440,7 +452,10 @@
     "position": "Finance Coordinator",
     "major": "Business",
     "src": "/headshots/rosachen.jpg",
-    "team": "Finance"
+    "team": "Finance",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/rosaychen/" }
+    ]
   },
 
   {
@@ -449,7 +464,12 @@
     "position": "Director of Human Resources",
     "major": "Business (Marketing), Minor in SIAT",
     "src": "/headshots/alexandrasvoboda.jpg",
-    "team": "HR"
+    "team": "HR",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/a-svoboda/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/alexandra.svoboda/" }
+    ]
+
   },
 
   {
@@ -458,7 +478,10 @@
     "position": "Human Resources Coordinator",
     "major": "Math and Computing Science",
     "src": "/headshots/darianwong.jpg",
-    "team": "HR"
+    "team": "HR",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/thedarianwong/" }
+    ]
   },
 
   {
@@ -467,7 +490,10 @@
     "position": "Human Resources Coordinator",
     "major": "Business",
     "src": "/headshots/angelakurian.jpg",
-    "team": "HR"
+    "team": "HR",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/angela-mary-kurian-a84a09251/" }
+    ]
   },
 
   {
@@ -476,7 +502,13 @@
     "position": "Co-Director\nof Logistics",
     "major": "Computing Science",
     "src": "/headshots/mariazia.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/maria-zia-2m2z/"
+      }
+    ]
   },
   {
     "id": "44",
@@ -484,7 +516,14 @@
     "position": "Co-Director\nof Logistics",
     "major": "Software Systems",
     "src": "/headshots/brianrahadi.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://brianrahadi.com/" },
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/brianrahadi/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/brianrahadi" },
+      { "platform": "Devpost", "url": "https://devpost.com/brian-rahadi" },
+      { "platform": "GitHub", "url": "https://github.com/brianrahadi" }
+    ]
   },
   {
     "id": "45",
@@ -492,7 +531,12 @@
     "position": "Director of Visual Design",
     "major": "Interactive Art and Technology Business Joint Major",
     "src": "/headshots/keyaanvegdani.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://keyaanvegdani.framer.website/" },
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/keyaan-vegdani/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/keyaanvegdani/" }
+    ]
   },
   {
     "id": "46",
@@ -500,7 +544,11 @@
     "position": "Director of Marketing",
     "major": "Business",
     "src": "/headshots/kaiado.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "LinkedIn", "url": "www.linkedin.com/in/kaiado" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/_kaiado/" }
+    ]
   },
   {
     "id": "47",
@@ -508,7 +556,11 @@
     "position": "Co-Director of Technology",
     "major": "Computing Science",
     "src": "/headshots/christopherfong.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/chrisfong604/" },
+      { "platform": "GitHub", "url": "https://github.com/ChrisFong604" }
+    ]
   },
   {
     "id": "48",
@@ -516,7 +568,13 @@
     "position": "Co-Director of Technology",
     "major": "Interactive Arts and Technology",
     "src": "/headshots/christinaraganit.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://christinaraganit.github.io/" },
+      { "platform": "LinkedIn", "url": "https://linkedin.com/in/christinaraganit" },
+      { "platform": "Devpost", "url": "https://devpost.com/christinaraganit" },
+      { "platform": "GitHub", "url": "https://github.com/christinaraganit" }
+    ]
   },
   {
     "id": "49",
@@ -524,7 +582,11 @@
     "position": "Director of Finance",
     "major": "Business",
     "src": "/headshots/vickyxu.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/vickykxu/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/vickykxu/" }
+    ]
   },
   {
     "id": "50",
@@ -532,7 +594,11 @@
     "position": "Director of Human Resources",
     "major": "Business (Marketing), Minor in SIAT",
     "src": "/headshots/alexandrasvoboda.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/a-svoboda/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/alexandra.svoboda/" }
+    ]
   },
   {
     "id": "51",
@@ -540,6 +606,11 @@
     "position": "Director of External Relations",
     "major": "Computing Science",
     "src": "/headshots/johnsonluong.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://johnsonl111.github.io/quartz/" },
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/johnson-luong/" },
+      { "platform": "GitHub", "url": "https://github.com/johnsonl111" }
+    ]
   }
 ]
