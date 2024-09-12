@@ -20,16 +20,13 @@ const Involvement = () => {
           <p className="paragraph mb-6">
             {text_content.homepage.get_involved.description}
           </p>
-              <Button gtmEvent={{event_type: "buttonClick", browser_type: "firefox"}}>
-                <a href="">{text_content.homepage.join_discord.cta}</a>
-              </Button>
-          {/* <button className="bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 px-6 rounded-custom-radius transition">
+          <button className="bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 px-6 rounded-custom-radius transition">
             <a
               href="/join#openroles" // TODO: Replace with the actual link URL
             >
               {text_content.homepage.get_involved.cta}
             </a>
-          </button> */}
+          </button>
         </div>
       </div>
       <JoinDiscord/>
