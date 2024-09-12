@@ -62,7 +62,7 @@
   }
 
   .title-1 {
-    @apply text-3xl text-balance;
+    @apply text-3xl text-balance tracking-tight;
   }
 
   .title-1.emphasized {
@@ -70,7 +70,7 @@
   }
 
   .title-2 {
-    @apply text-2xl text-balance;
+    @apply text-2xl text-balance tracking-tight;
   }
 
   .title-2.emphasized {
@@ -78,7 +78,7 @@
   }
 
   .title-3 {
-    @apply text-xl text-balance;
+    @apply text-xl text-balance tracking-tight;
   }
 
   .title-3.emphasized {
@@ -86,7 +86,7 @@
   }
 
   .paragraph {
-    @apply text-text-secondary font-light max-w-xl;
+    @apply text-text-secondary font-light max-w-xl tracking-normal;
   }
 
   .paragraph-lg {

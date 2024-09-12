@@ -42,9 +42,9 @@ const config: Config = {
           { lineHeight: "100%", letterSpacing: "0rem" },
         ] /* 14px */,
         base: [
-          "1.125rem",
+          "1rem",
           { lineHeight: "150%", letterSpacing: "0rem" },
-        ] /* 18px */,
+        ] /* 16px */,
         lg: [
           "1.25rem",
           { lineHeight: "100%", letterSpacing: "0rem" },
