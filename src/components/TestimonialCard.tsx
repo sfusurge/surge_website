@@ -17,7 +17,7 @@ export default function TestimonialCard({
       <div
         className={`${className} w-full h-full bg-surface gap-4 rounded-2xl md:rounded-3xl flex flex-col  p-8 `}
       >
-        <p className="text-base leading-[150%] font-normal mt-auto xl:mt-0 text-text-secondary">{testimonial}</p>
+        <p className="text-base leading-[150%] font-normal mt-auto  text-text-secondary">{testimonial}</p>
         <div className="flex flex-row gap-4 mt-auto">
           <div className=" rounded-full w-10 h-10 bg-slate-600"></div>
           <div className="flex flex-col">

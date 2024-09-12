@@ -4,6 +4,9 @@ import Card from "@/components/Card";
 import OpenRolesSection from "@/components/OpenRolesSection";
 import ButtonScroll from "@/components/ButtonScroll";
 import InfoItem from "@/components/InfoItem";
+import skills from "/public/join/skills.png"
+import experience from "/public/join/experience.png"
+import friends from "/public/join/friends.png"
 
 import text_content from "@/lib/content/text_content.json";
 import HomeCard from "@/components/HomeCard";
@@ -50,17 +53,17 @@ export default function JoinTeam() {
           <Card
             title="Learn New Skills"
             description="Learn to blend tech, design, and business for comprehensive projects."
-            src="/join/skills.png"
+            src={skills}
           />
           <Card
             title="Hands-on Experience"
             description="Work on real-world projects and enhance your tech skills."
-            src="/join/experience.png"
+            src={experience}
           />
           <Card
             title="Meet Friends"
             description="Connect with like-minded peers and build lasting friendships."
-            src="/join/friends.png"
+            src={friends}
           />
          
         </div>
