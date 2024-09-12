@@ -14,7 +14,7 @@ export default function Card({
 }: CardProps) {
   return (
     <div
-      className={`${className} w-full min-h-[30vh] p-8 lg:p-12  bg-surface rounded-3xl grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-12 hover:scale-105 transition-all duration-300 `}
+      className={`${className} w-full min-h-[30vh] p-8 lg:p-12  bg-surface rounded-3xl grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-12`}
     >
       <div className="flex flex-col gap-3   justify-center lg:justify-start">
       <h2 className=" leading-[140%] text-lg md:text-xl font-medium">{title}</h2>

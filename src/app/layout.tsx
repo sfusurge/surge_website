@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import Nav from "../components/Nav";
 import Footer from "../components/footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,8 @@ export default function RootLayout({
 }>) {
 
   return (
-      <html className={`${GeistSans.variable} ${GeistMono.variable}  !scroll-p-24 `} lang="en">
+    <html className={`${GeistSans.variable} ${GeistMono.variable}  !scroll-p-24 `} lang="en">
+      <GoogleTagManager gtmId="GTM-PJKGX34K" />
       <head>
         <link rel="icon" href="/surge-logo.svg" type="image/x-icon"/>
       </head>
