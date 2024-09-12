@@ -3,6 +3,7 @@ import InvolvementImage from "/public/Discord image.png";
 import Image from "next/image";
 
 import text_content from "@/lib/content/text_content.json";
+import Button from "@/components/Button";
 
 const Involvement = () => {
   return (
@@ -40,11 +41,14 @@ const Involvement = () => {
               <p className="paragraph mb-6">
                 {text_content.homepage.join_discord.description}
               </p>
-              <button className="button-link bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 my-8 px-6 rounded-custom-radius transition mb-8">
+              <Button gtmEvent={{event_type: "buttonClick", browser_type: "firefox"}}>
+                <a href="">{text_content.homepage.join_discord.cta}</a>
+              </Button>
+              {/* <button className="button-link bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 my-8 px-6 rounded-custom-radius transition mb-8">
                 <a href="https://discord.gg/UcFkUktxfy">
                   {text_content.homepage.join_discord.cta}
                 </a>
-              </button>
+              </button> */}
             </div>
           </div>
 
