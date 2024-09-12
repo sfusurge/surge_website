@@ -24,7 +24,7 @@ export default function RootLayout({
 
   return (
     <html className={`${GeistSans.variable} ${GeistMono.variable}  !scroll-p-24 `} lang="en">
-      <GoogleTagManager gtmId="G-8WC6K9MY1R" />
+      <GoogleTagManager gtmId="GTM-PJKGX34K" />
       <body className="font-GeistSans ">
         <div className="content-wrapper mt-[calc(5rem+3.5rem)]">
         <div className="surge-radial-gradient"></div>
