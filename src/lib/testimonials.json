@@ -1,19 +1,19 @@
 [
     {
-      "name": "Christopher Fong",
-      "position": "Software Developer at ICBC, Co-Director of Technology",
-      "testimonial": "Surge has not only been a catalyst for both my personal and professional growth, but it's also been a platform for me and like-minded people to connect and bring our passion for tech and hackathons to reality at SFU. I can wholeheartedly attest that Surge has provided me opportunities to become a better leader, event planner, decision-maker, speaker, teammate, and the list goes on.",
+     "name": "Karren Susanto",
+      "position": "Digital Marketing Executive at Vertical Green, Former Director of Social Media",
+      "testimonial": "Through the club I gained my 'for life' friends, those who'll be with me by my side constantly. The club experience also helped me understand where I want to be career wise and helped me gain more experience before joining the workforce. Absolutely cherished my memories with the club!",
       "area": "a",
       "cardStyle": "small",
-      "src": "/testimonials/christopherfong.jpg"
+      "src": "/testimonials/karrensusanto.jpeg"
     },
     {
-      "name": "Karren Susanto",
-      "position": "Digital Marketing Executive at Vertical Green, Former Director of Social Media",
-      "testimonial": "Through the club I gained my 'for life' friends, those who'll be with me by my side constantly.\n\nThe club experience also helped me understand where I want to be career wise and helped me gain more experience before joining the workforce. Absolutely cherished my memories with the club!",
+      "name": "Christopher Fong",
+      "position": "Software Developer at ICBC, Co-Director of Technology",
+      "testimonial": "Surge has not only been a catalyst for both my personal and professional growth, but it's also been a platform for me and like-minded people to connect and bring our passion for tech and hackathons to reality at SFU.\n\nI can wholeheartedly attest that Surge has provided me opportunities to become a better leader, event planner, decision-maker, speaker, teammate, and the list goes on.",
       "area": "b",
       "cardStyle": "big",
-      "src": "/testimonials/karrensusanto.jpeg"
+      "src": "/testimonials/christopherfong.jpg"
     },
     {
       "name": "Johnson Luong",
@@ -26,7 +26,7 @@
     {
       "name": "Christina Raganit",
       "position": "UA Design Intern at SAP, Former Director of Visual Design",
-      "testimonial": "Leading the design team was an incredible experience that not only boosted my confidence but also sharpened my leadership and creative skills.",
+      "testimonial": "Surge will always have a special place in my heart for helping me realize my limitless potential. Some of the most talented people I've had the pleasure of working with.",
       "area": "d",
       "cardStyle": "small",
       "src": "/testimonials/christinaraganit.jpg"
@@ -40,12 +40,12 @@
       "src": "/testimonials/vickyxu.jpg"
     },
     {
-      "name": "Chris Nguyen",
-      "position": "Software Engineer",
-      "testimonial": "The technical challenges pushed me to grow in a supportive, learning-focused environment.",
+      "name": "Linda Jolly",
+      "position": "Design Coordinator, Interactive Arts and Communications Major at Simon Fraser University",
+      "testimonial": "My involvement with SFU Surge helped me refine my skills in branding, UI/UX design, and project management, as we developed a cohesive visual identity and user-friendly website under tight deadlines for StormHacks. Working alongside other creatives pushed me to think outside the box and manage my time more effectively. Surge has also provided valuable networking opportunities with industry professionals and fellow designers, contributing to both my personal and professional growth.",
       "area": "f",
       "cardStyle": "small",
-      "src": "/placeholder.jpg"
+      "src": "/testimonials/lindajolly.jpg"
     },
     {
       "name": "Sydney Patel",
