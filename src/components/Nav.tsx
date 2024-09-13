@@ -47,8 +47,8 @@ export default function NavBar() {
       <div
       ref={navRef}
         className={` ${
-          isOpen ? "h-[23rem]" : "h-[3.5rem]"
-        } mx-auto  bg-raised/80 border border-white/5 transition-all duration-300  mt-4 backdrop-blur-md rounded-xl overflow-hidden flex flex-col sm:flex-row sm:justify-between p-4 max-w-[40rem] z-[1000]`}
+          isOpen ? " rounded-3xl h-[23rem]" : "rounded-[32px]  h-[3.5rem]"
+        } mx-auto  bg-raised/80  border border-white/5 transition-all duration-300  mt-4 backdrop-blur-md  overflow-hidden flex flex-col sm:flex-row sm:justify-between p-4 max-w-[40rem] z-[1000]`}
       >
         <ul className={` flex w-full sm:w-auto items-center  `}>
           {/* surge logo */}
@@ -109,11 +109,6 @@ export default function NavBar() {
         {/* content box for nav links */}
         <div className="flex justify-center sm:justify-normal">
           <ul className="flex flex-col sm:flex-row sm:gap-4  gap-6 font-GeistMono mt-8 sm:mt-0 items-center uppercase">
-            <li>
-              <Link className="link" href="/">
-                Home
-              </Link>
-            </li>
             <li>
               <Link className="link" href="/about">
                 About
