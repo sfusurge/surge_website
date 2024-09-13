@@ -24,15 +24,18 @@ export default function RootLayout({
 
   return (
     <html className={`${GeistSans.variable} ${GeistMono.variable}  !scroll-p-24 `} lang="en">
-      <GoogleTagManager gtmId="GTM-PJKGX34K" />
+      <head>
+        <GoogleTagManager gtmId="GTM-PJKGX34K" />
+        <link rel="icon" href="/surge-logo.svg" type="image/x-icon"/>
+      </head>
       <body className="font-GeistSans ">
-        <div className="content-wrapper mt-[calc(5rem+3.5rem)]">
+      <div className="content-wrapper mt-[calc(5rem+3.5rem)]">
         <div className="surge-radial-gradient"></div>
-        <Nav />
+        <Nav/>
         {children}
-        </div>
-        <Footer />
+      </div>
+      <Footer/>
       </body>
-    </html>
+      </html>
   );
 }
