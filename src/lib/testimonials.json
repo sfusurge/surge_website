@@ -1,52 +1,59 @@
 [
     {
-      "name": "Jordan Taylor",
-      "position": "Web Developer",
-      "testimonial": "\"This project gave me a fantastic opportunity to grow my skills and collaborate with a great team.\"",
+     "name": "Karren Susanto",
+      "position": "Digital Marketing Executive at Vertical Green, Former Director of Social Media",
+      "testimonial": "Through the club I gained my 'for life' friends, those who'll be with me by my side constantly. The club experience also helped me understand where I want to be career wise and helped me gain more experience before joining the workforce. Absolutely cherished my memories with the club!",
       "area": "a",
-      "cardStyle": "small"
+      "cardStyle": "small",
+      "src": "/testimonials/karrensusanto.jpeg"
     },
     {
-      "name": "Alexis Martinez",
-      "position": "Project Manager",
-      "testimonial": "\"Collaborating with this team made everything feel achievable, and the outcome exceeded my expectations.\"",
+      "name": "Christopher Fong",
+      "position": "Software Developer at ICBC, Co-Director of Technology",
+      "testimonial": "Surge has not only been a catalyst for both my personal and professional growth, but it's also been a platform for me and like-minded people to connect and bring our passion for tech and hackathons to reality at SFU.\n\nI can wholeheartedly attest that Surge has provided me opportunities to become a better leader, event planner, decision-maker, speaker, teammate, and the list goes on.",
       "area": "b",
-      "cardStyle": "big"
+      "cardStyle": "big",
+      "src": "/testimonials/christopherfong.jpg"
     },
     {
-      "name": "Cameron Lee",
-      "position": "UI/UX Designer",
-      "testimonial": "\"This project was a rewarding challenge, with a focus on user experience and attention to detailThis project was a rewarding challenge, with a focus on user experience and attention to detail.\"",
+      "name": "Johnson Luong",
+      "position": "Software Engineer Intern at Motorola Solutions",
+      "testimonial": "Being part of SFU Surge has placed me in the midst of incredibly inspiring and hardworking individuals who have motivated me to continuously improve myself.\n\nSurrounded by people passionate about technology and innovation, I’ve been driven to push my limits and stay committed to my growth and develop skills that I actively use in my day-to-day role at Motorola, contributing to my professional success.",
       "area": "c",
-      "cardStyle": "small"
+      "cardStyle": "small",
+      "src": "/testimonials/johnsonluong.jpg"
     },
     {
-      "name": "Morgan Chen",
-      "position": "Content Strategist",
-      "testimonial": "\"I loved being part of a creative, collaborative team where everyone's ideas were valued.\"",
+      "name": "Christina Raganit",
+      "position": "UA Design Intern at SAP, Former Director of Visual Design",
+      "testimonial": "Surge will always have a special place in my heart for helping me realize my limitless potential. Some of the most talented people I've had the pleasure of working with.",
       "area": "d",
-      "cardStyle": "small"
+      "cardStyle": "small",
+      "src": "/testimonials/christinaraganit.jpg"
     },
     {
-      "name": "Taylor Morgan",
-      "position": "Marketing Specialist",
-      "testimonial": "\"This was one of the most organized and well-executed projects I’ve been a part of.\"",
+      "name": "Vicky Xu",
+      "position": "Director of Finance, Business Student at Beedie School of Business",
+      "testimonial": "Surge creates a warm and welcoming work environment. Their commitment to the club’s growth inspires me to excel in my role and continuously strive for new accomplishments. ",
       "area": "e",
-      "cardStyle": "small"
+      "cardStyle": "small",
+      "src": "/testimonials/vickyxu.jpg"
     },
     {
-      "name": "Chris Nguyen",
-      "position": "Software Engineer",
-      "testimonial": "\"The technical challenges pushed me to grow in a supportive, learning-focused environment.\"",
+      "name": "Linda Jolly",
+      "position": "Design Coordinator, Interactive Arts and Communications Major at Simon Fraser University",
+      "testimonial": "My involvement with SFU Surge helped me refine my skills in branding, UI/UX design, and project management, as we developed a cohesive visual identity and user-friendly website under tight deadlines for StormHacks. Working alongside other creatives pushed me to think outside the box and manage my time more effectively. Surge has also provided valuable networking opportunities with industry professionals and fellow designers, contributing to both my personal and professional growth.",
       "area": "f",
-      "cardStyle": "small"
+      "cardStyle": "small",
+      "src": "/testimonials/lindajolly.jpg"
     },
     {
       "name": "Sydney Patel",
       "position": "Graphic Designer",
-      "testimonial": "\"This project stretched my design skills, and the team's feedback helped me deliver work I'm proud of.\"",
+      "testimonial": "This project stretched my design skills, and the team's feedback helped me deliver work I'm proud of.",
       "area": "g",
-      "cardStyle": "small"
+      "cardStyle": "small",
+      "src": "/placeholder.jpg"
     }
   ]
   

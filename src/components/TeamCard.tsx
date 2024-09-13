@@ -36,29 +36,40 @@ export default function TeamCard({
 
   return (
     <div
-      className={` w-full  bg-[#1B1D21]/60  p-3 flex flex-col md:flex-row gap-6 rounded-lg ${className}`}
+      className={` w-full  bg-raised/60  p-4 md:p-3 flex flex-col md:flex-row gap-2 md:gap-6 rounded-lg ${className}`}
     >
-      <div className="aspect-square w-[5rem] rounded-full md:rounded-lg md:w-auto md:h-[8rem] overflow-hidden">
+      <div className="aspect-square w-[4rem] rounded-full md:rounded-lg md:w-auto md:h-[8rem] overflow-hidden">
         <Image
           onError={handleError}
           src={imgSrc}
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           alt="Portait of SFU Surge team member"
           loading="lazy"
         />
       </div>
-      <div className="flex flex-col gap-2 py-2">
-        <span className="title-3 font-base">{name}</span>
-        <span className="text-base font-light text-text-secondary">
+      <div className="flex flex-col pt-1.5">
+        <span className="title-3 pb-1">{name}</span>
+        <p className="text-base font-light text-text-secondary">{role}</p>
+        <span className="text-[1rem] font-light text-text-secondary">
           {major}
         </span>
-        <p className="text-base font-light text-text-secondary">{role}</p>
-        <div className="flex gap-3 mt-auto py-2">
-          {socials?.map((link: SocialLink, index) => {
-            return <a key={index} className="hover:scale-125 transition-all" href={link?.url}>{svgIconArray[link.platform]}</a>;
-          })}
-        </div>
+
+        {socials && (
+          <div className="flex gap-2 pt-3 md:mt-auto -ml-0.5">
+            {socials?.map((link: SocialLink, index) => {
+              return (
+                <a
+                  key={index}
+                  className="hover:scale-125 transition-all"
+                  href={link?.url}
+                >
+                  {svgIconArray[link.platform]}
+                </a>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );

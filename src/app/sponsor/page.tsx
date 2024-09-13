@@ -64,7 +64,7 @@ const SponsorImages = () => {
 
 const Sponsors = () => {
     return (
-      <div className="flex flex-col gap-12"> {/* Add gap between sections here */}
+      <div className="flex flex-col gap-12">
         <TextSection />
         <SponsorImages />
       </div>
