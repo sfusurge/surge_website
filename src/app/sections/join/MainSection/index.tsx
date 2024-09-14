@@ -7,6 +7,7 @@ import InfoItem from "@/components/InfoItem";
 import skills from "/public/join/skills.png"
 import experience from "/public/join/experience.png"
 import friends from "/public/join/friends.png"
+import rocket from "/public/join/rocket.png"
 
 import text_content from "@/lib/content/text_content.json";
 import HomeCard from "@/components/HomeCard";
@@ -32,9 +33,7 @@ export default function JoinTeam() {
 
         <div className="flex md:justify-center h-full min-w-[25rem] max-w-[50rem]   ">
           <Image
-            src={"/workshop.png"}
-            width={1824}
-            height={1099}
+            src={rocket}
             alt={"hello"}
             className="object-contain max-h-full"
           />
