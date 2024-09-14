@@ -2,7 +2,6 @@ import Image from "next/image"
 import text_content from "@/lib/content/text_content.json";
 import InvolvementImage from "/public/Discord image.png";
 import Button from "./Button";
-import { InteractionType } from "@/lib/modules/GoogleTagManager/types/InteractionType";
 
 export default function JoinDiscord() {
     return (<div className="bg-surface rounded-custom-radius p-8 pb-0 lg:pb-0 w-full flex sm:flex-row md:flex-row lg:flex-col items-start">
@@ -18,15 +17,10 @@ export default function JoinDiscord() {
               <p className="paragraph mb-6">
                 {text_content.homepage.join_discord.description}
               </p>
-              <Button>
-                <a href="https://discord.gg/UcFkUktxfy">
+              <button className="button-link bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 my-8 px-6 rounded-custom-radius transition mb-8"> <a href="https://discord.gg/UcFkUktxfy">
                   {text_content.homepage.join_discord.cta}
                 </a>
-              </Button>
-              {/* <button className="button-link bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 my-8 px-6 rounded-custom-radius transition mb-8"> <a href="https://discord.gg/UcFkUktxfy">
-                  {text_content.homepage.join_discord.cta}
-                </a>
-              </button> */}
+              </button>
             </div>
           </div>
 
