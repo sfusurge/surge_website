@@ -83,8 +83,8 @@
     "src": "/headshots/angelalim.jpg",
     "team": "Logistics",
     "socials": [
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/darrick-gunawan/" },
-      { "platform": "GitHub", "url": "https://github.com/Darrickg" }
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/angelalim-/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/angelaxlim/" }
     ]
   },
   {
@@ -161,7 +161,7 @@
     "src": "/headshots/arriyanali.jpg",
     "team": "Visual design",
     "socials": [
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/arriyanali/" }
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/Arriyanali/" }
     ]
 
   },
@@ -541,5 +541,17 @@
     "major": "Computing Science",
     "src": "/headshots/johnsonluong.jpg",
     "team": "Directors"
+  },
+  {
+    "id": "52",
+    "name": "Darrick Gunawan",
+    "position": "Logistics Coordinator",
+    "major": "Computing Science",
+    "src": "/headshots/darrickgunawan.jpg",
+    "team": "Logistics",
+    "socials": [
+      {"platform": "LinkedIn", "url": "https://www.linkedin.com/in/darrick-gunawan/"},
+      {"platform": "GitHub", "url": "https://github.com/Darrickg"}
+    ]
   }
 ]
