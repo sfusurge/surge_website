@@ -24,6 +24,7 @@ export default function EventsHero() {
         alt={""}
         className="object-contain max-h-full"
         sizes="(max-width: 640px) 91vw, (max-width: 940px) 85vw, 800px"
+        quality={100}
       />
     </div>
   </section>

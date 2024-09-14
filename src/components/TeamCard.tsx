@@ -47,6 +47,7 @@ export default function TeamCard({
           alt="Portait of SFU Surge team member"
           loading="lazy"
           sizes="(max-width: 768px) 80px, 128px"
+          quality={100}
         />
       </div>
       <div className="flex flex-col pt-1.5">

@@ -1,14 +1,45 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, SVGProps, ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import path from "path";
+
+type NavLink = {
+  name: string,
+  url: string,
+  
+}
 
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const navRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname();
+
+  const surgeIcon =  <svg
+  width="20"
+  height="20"
+  viewBox="0 0 16 16"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    fillRule="evenodd"
+    clipRule="evenodd"
+    d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM5.68665 8.57212L8.49201 1.38689L10.6568 5.07739L7.9332 6.98924L9.29675 8.69076L10.6602 10.3924L6.32222 13.7182L7.64217 9.28822L5.68665 8.57212Z"
+    fill="white"
+  />
+</svg>
+
+  const navlinks:NavLink [] = [
+    {name:"home", url: "/"},
+    {name:"about", url: "/about"},
+    {name:"events", url: "/events"},
+    {name:"sponsor us", url: "/sponsor"},
+    {name:"join our team", url: "/join"},
+
+  ]
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -48,31 +79,18 @@ export default function NavBar() {
       ref={navRef}
         className={` ${
           isOpen ? " rounded-3xl h-[23rem]" : "rounded-[32px]  h-[3.5rem]"
-        } mx-auto  bg-raised/80  border border-white/5 transition-all duration-300  mt-4 backdrop-blur-md  overflow-hidden flex flex-col sm:flex-row sm:justify-between p-4 max-w-[40rem] z-[1000]`}
+        } mx-auto  bg-raised/90  border border-white/5 transition-all duration-300  mt-4 backdrop-blur-md  overflow-hidden flex flex-col sm:flex-row   px-8 max-w-[40rem] z-[1000]`}
       >
-        <ul className={` flex w-full sm:w-auto items-center  `}>
+        <ul className={` flex w-full sm:w-auto items-center py-4 `}>
           {/* surge logo */}
-          <li className="flex items-center ml-0.5">
+          <li className="flex items-center ">
             <Link href="/">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM5.68665 8.57212L8.49201 1.38689L10.6568 5.07739L7.9332 6.98924L9.29675 8.69076L10.6602 10.3924L6.32222 13.7182L7.64217 9.28822L5.68665 8.57212Z"
-                  fill="white"
-                />
-              </svg>
+             {surgeIcon}
             </Link>
           </li>
           {/* hamburger and x buttons for nav toggle */}
           <li className="flex items-center ml-auto">
-            <button className="sm:hidden relative ml-auto" onClick={toggleMenu}>
+            <button className="sm:hidden relative ml-auto " onClick={toggleMenu}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -107,28 +125,15 @@ export default function NavBar() {
         </ul>
 
         {/* content box for nav links */}
-        <div className="flex justify-center sm:justify-normal">
-          <ul className="flex flex-col sm:flex-row sm:gap-4  gap-6 font-GeistMono mt-8 sm:mt-0 items-center uppercase">
-            <li>
-              <Link className="link" href="/about">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link className="link" href="/events">
-                Events
-              </Link>
-            </li>
-            <li>
-              <Link className="link" href="/sponsor">
-                Sponsor Us
-              </Link>
-            </li>
-            <li>
-              <Link className="link mr-0.5" href="/join">
-                Join Our Team
-              </Link>
-            </li>
+        <div className="flex sm:ml-auto justify-center ">
+          <ul className="flex flex-col justify-center sm:flex-row sm:gap-4  gap-6 font-GeistMono mt-8 sm:mt-0 items-center uppercase">
+            {navlinks.map((link , index)=>(
+              <li key={index}>
+                <Link className={`link text-sm ${pathname === link.url? "text-text-brand-primary": "text-white"}`} href={link.url}>{link.name}</Link>
+              </li>
+            
+            ))}
+           
             {/* social media icons and links */}
             <li className="flex sm:hidden gap-6">
               <Link href="https://discord.gg/UcFkUktxfy">
@@ -210,4 +215,5 @@ export default function NavBar() {
       </div>
     </div>
   );
+ 
 }

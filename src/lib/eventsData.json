@@ -1,22 +1,30 @@
 [
   {
     "title": "Meet n' Eat",
-    "time": "Sept 20, 2024 - 3:00PM",
-    "location": "SFU Burnaby"
+    "time": "8:00 pm",
+    "location": "SFU Burnaby",
+    "date": "December 24 2024",
+    "src" : "/events/stormhacks.png"
   },
   {
     "title": "Stormhacks Pre-Hack",
-    "time": "Oct 1, 2024 - Oct 4, 2024",
-    "location": "SFU Burnaby/Surrey"
+    "time": "8:00 pm",
+    "location": "SFU Burnaby/Surrey",
+    "date": "December 24 2024",
+    "src" : "/events/event.png"
   },
   {
     "title": "Stormhacks V2",
-    "time": "Oct 5/6, 2024",
-    "location": "SFU Burnaby"
+    "time": "8:00 ",
+    "location": "SFU Burnaby",
+    "date": "December 24 2024",
+    "src" : "/events/pizza.png"
   },
   {
     "title": "Intro to Git/Github",
-    "time": "Oct 25, 2024",
-    "location": "SFU Burnaby"
+    "time": "8:00 pm",
+    "location": "SFU Burnaby",
+    "date": "December 24 2024",
+    "src" : "/events/github.png"
   }
 ]
