@@ -1,7 +1,6 @@
 import Image from "next/image"
 import text_content from "@/lib/content/text_content.json";
 import InvolvementImage from "/public/Discord image.png";
-import Button from "./Button";
 
 export default function JoinDiscord() {
     return (<div className="bg-surface rounded-custom-radius p-8 pb-0 lg:pb-0 w-full flex sm:flex-row md:flex-row lg:flex-col items-start">
