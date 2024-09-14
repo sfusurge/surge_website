@@ -13,7 +13,7 @@ const TitleSection = () => {
         <h6 className="text-caption text-center">
           {text_content.homepage.events.callout}
         </h6>
-        <h2 className="text-center title-3 text-balance max-w-3xl mx-auto">
+        <h2 className="text-center title-1 emphasized text-balance max-w-3xl mx-auto">
           {text_content.homepage.events.heading}
         </h2>
       </section>
