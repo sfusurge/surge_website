@@ -46,6 +46,7 @@ export default function TeamCard({
           height={400}
           alt="Portait of SFU Surge team member"
           loading="lazy"
+          sizes="(max-width: 768px) 80px, 128px"
         />
       </div>
       <div className="flex flex-col pt-1.5">
@@ -102,7 +103,7 @@ const svgIconArray: { [key: string]: JSX.Element } = {
       />
     </svg>
   ),
-  github: (
+  GitHub: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1.5em"

@@ -4,7 +4,13 @@ import JobCard from "@/components/JobCard";
 import { teams } from "@/lib/teamData";
 import { useEffect, useState } from "react";
 
+
 import JobTeamButton from "./JobTeamButton";
+
+type numberOfJobs = {
+  name: string;
+  count: number;
+}
 
 type OpenRolesSectionProps = {
   id: string;
@@ -12,10 +18,23 @@ type OpenRolesSectionProps = {
 
 export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
   const [activeButton, setActiveButton] = useState<string | null>(null);
+  const jobMap = new Map<string, number>();
+
+
+  jobs.forEach(job => {
+    jobMap.set(job.team, (jobMap.get(job.team) || 0) + 1);
+  });
+
+  const totalJobCount = Array.from(jobMap.values()).reduce((total, count) => total + count, 0);
 
   useEffect(() => {
     const selectedJobTeam = localStorage.getItem("selectedJobTeam") || "All";
     setActiveButton(selectedJobTeam);
+    console.log(totalJobCount)
+
+
+
+
   }, []);
 
   const changeTeam = (buttonId: string) => {
@@ -38,6 +57,7 @@ export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
           buttonFunction={() => changeTeam("All")}
           key={0}
           title="All"
+          count={totalJobCount}
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +85,7 @@ export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
               key={team.id}
               title={team.name}
               icon={team.icon}
+              count={jobMap.get(team.name)}
               isActive={activeButton === team.name}
             />
           );

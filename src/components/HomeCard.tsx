@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 type CardProps = {
   className?: string;
   title: string;
   description: string;
-  src: string;
+  src: StaticImageData;
   url: string
 };
 export default function Card({
@@ -28,8 +29,6 @@ export default function Card({
       <div className="flex  object-cover ">
         <Image
           src={src}
-          width={1659}
-          height={1421}
           alt={"hello"}
           objectFit="cover"
           className="lg:h-auto w-full h-full object-cover  "
