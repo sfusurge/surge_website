@@ -30,7 +30,8 @@ export default function JobPage({ job }: JobPageProps) {
         <h1 className="large-title emphasized">{pagejob?.title}</h1>
         <div className=" flex flex-col gap-2">
           <span className="text-base text-text-secondary  flex gap-2">
-            {pagejob? svgIcons[pagejob.team]:null}
+            <div className="w-6 h-6">{pagejob? svgIcons[pagejob.team]:null}</div>
+         
             {pagejob?.team}
           </span>
           <span className="text-base text-text-secondary  flex gap-2 items-center">
@@ -50,8 +51,8 @@ export default function JobPage({ job }: JobPageProps) {
             </svg>
             {pagejob?.description}
           </span>
-          <span className="text-base text-text-secondary  flex gap-2">
-            {pagejob? svgIcons["Directors"]:null}
+          <span className="text-base text-text-secondary   flex gap-2">
+            <div className="w-6 h-6">{pagejob? svgIcons["Directors"]:null}</div>
             {`Director of ${pagejob?.team}: ${pagejob?.director}`}
           </span>
         </div>

@@ -18,19 +18,25 @@ export default function EventCard({
   src,
   className,
 }: EventCardProps) {
-  const splitDate = date.split(" ")
+  const splitDate = date.split(" ");
   return (
     <div
-      className={`${className} w-full group  rounded-2xl overflow-hidden lg:h-[30rem] xl:h-[35rem] md:rounded-3xl flex flex-col justify-between  transition-all duration-300 cursor-pointer relative`}
+      className={`${className} w-full group rounded-2xl overflow-hidden md:h-[30rem] xl:h-[35rem] md:rounded-3xl grid grid-cols-3 md:flex-col md:justify-between  transition-all duration-300 cursor-pointer relative bg-surface md:bg-transparent`}
     >
-      <div className="flex flex-col gap-4 p-8 mt-auto">
-        <h2 className="title-1 font-medium">{title}</h2>
+      <div className="overflow-hidden h-full">
+      {/* <Image src={src} alt="" width={500} height={500} className="md:hidden h-full w-full object-cover" /> */}
+
+      </div>
+
+      {/* <div className="bg-red-500 h-full w-48"></div> */}
+      <div className="flex flex-col gap-4 p-8 mt-auto col-span-2">
+        <h2 className="md:title-1 title-3 font-medium">{title}</h2>
         <div className="flex flex-row gap-4">
           <div className="rounded-lg flex-col  items-centers ">
             <p className="text-sm text-center uppercase text-white font-normal p-1 bg-brand-primary rounded-t-xl">
               {splitDate[0].slice(0, 3)}
             </p>
-            <p className="text-xl text-center  text-white font-normal bg-surface px-5 py-2 rounded-b-xl">
+            <p className="text-xl text-center  text-white font-normal bg-raised px-5 py-2 rounded-b-xl">
               {splitDate[1]}
             </p>
           </div>
@@ -51,7 +57,8 @@ export default function EventCard({
       <div className=" absolute bottom-0 w-screen h-[50%] bg-[linear-gradient(0deg,_rgba(18,19,24,1)_0%,_rgba(18,19,24,0.9)_40%,_rgba(18,19,24,0)_100%)] -z-[9] "></div>
       <div className=" w-screen h-[60%] absolute bottom-0 left-0 bg-black/30  [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_20%,_rgba(255,255,255,0)_100%)] -z-[8]  backdrop-blur-[124px]"></div>
 
-      <Image src={src} alt="" fill className=" group-hover:scale-110 transition-all duration-300 object-cover -z-[10]" />
+      <Image src={src} alt="" fill className=" md:flex group-hover:scale-110 transition-all duration-300 object-cover -z-[10]" />
+
     </div>
   );
 }

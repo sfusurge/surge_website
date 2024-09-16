@@ -23,7 +23,7 @@ type JobTeamButtonProps = {
 
     return (
       <button onClick={buttonFunction} className={`${className} ${count?"flex":"hidden"} flex gap-2  button-link md ${isActive?" primary text-text-primary": " secondary text-text-secondary"}`}>
-      <div className=" " >{icon}</div>
+      <div className=" w-8 " >{icon}</div>
       {title} {"(" + count + ")"}
       </button>
     );

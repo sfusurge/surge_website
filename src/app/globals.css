@@ -94,7 +94,7 @@
   }
 
   .link {
-    @apply text-s font-medium font-GeistMono uppercase underline hover:decoration-brand-primary/100 underline-offset-4 transition duration-300 decoration-2 decoration-brand-primary/0;
+    @apply text-s font-medium font-GeistMono uppercase underline hover:decoration-brand-primary/100 underline-offset-4 transition duration-200 decoration-2 decoration-brand-primary/0;
   }
 
   .icon-link {

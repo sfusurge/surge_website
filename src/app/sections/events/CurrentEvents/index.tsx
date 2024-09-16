@@ -3,7 +3,7 @@ import eventData from "@/lib/eventsData.json";
 
 export default function CurrentEvents() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <section className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  gap-8">
       {eventData.map((thisEvent, index) => {
         return (
           <EventCard
