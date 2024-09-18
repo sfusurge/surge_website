@@ -15,9 +15,6 @@ export default function Testimonials() {
       <div className="grid gridSmall md:gridMedium xl:gridLarge  gap-6 ">
         {
         eventData.map((thisEvent, index) => {
-
-          console.log(thisEvent.testimonial);
-          
           return (
             <div key={index} style={{ gridArea: thisEvent.area }}>
               <TestimonialCard

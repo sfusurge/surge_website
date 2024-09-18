@@ -1,7 +1,6 @@
 import React from "react";
 import InvolvementImage from "/public/Discord image.png";
 import Image from "next/image";
-import Button from "@/components/Button";
 
 import text_content from "@/lib/content/text_content.json";
 import JoinDiscord from "@/components/JoinDiscord";
@@ -22,7 +21,7 @@ const Involvement = () => {
           </p>
           <button className="bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 px-6 rounded-custom-radius transition">
             <a
-              href="/join#openroles" // TODO: Replace with the actual link URL
+              href="/join#openroles" 
             >
               {text_content.homepage.get_involved.cta}
             </a>
