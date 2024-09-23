@@ -116,7 +116,12 @@
     "position": "Director of External Relations",
     "major": "Computing Science",
     "src": "/headshots/johnsonluong.jpg",
-    "team": "External Relations"
+    "team": "External Relations",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://johnsonl111.github.io/quartz/" },
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/johnson-luong/" },
+      { "platform": "GitHub", "url": "https://github.com/johnsonl111" }
+    ]
   },
   {
     "id": "11",
@@ -234,18 +239,6 @@
   },
   {
     "id": "21",
-    "name": "Sabina Yelyubayeva",
-    "position": "Social Media Coordinator",
-    "major": "Communication Major, Print & Digital Publishing Minor",
-    "src": "/headshots/sabinayelyubayeva.jpg",
-    "team": "Marketing",
-    "socials": [
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/sabina-yel/" }
-    ]
-
-  },
-  {
-    "id": "22",
     "name": "Josie Trinh",
     "position": "Social Media Coordinator",
     "major": "Business",
@@ -257,7 +250,7 @@
     ]
   },
   {
-    "id": "23",
+    "id": "22",
     "name": "Mackenzie Scholz",
     "position": "Photgrapher/videographer",
     "major": "Interactive Arts and Technology",
@@ -269,7 +262,7 @@
     ]
   },
   {
-    "id": "24",
+    "id": "23",
     "name": "Nafisha Djamalus",
     "position": "Video Editor",
     "major": "Interactive Arts and Technology",
@@ -280,7 +273,7 @@
     ]
   },
   {
-    "id": "25",
+    "id": "24",
     "name": "Christopher Fong",
     "position": "Co-Director of Technology",
     "major": "Computing Science",
@@ -292,7 +285,7 @@
     ]
   },
   {
-    "id": "26",
+    "id": "25",
     "name": "Christina Raganit",
     "position": "Co-Director of Technology",
     "major": "Interactive Arts and Technology",
@@ -306,7 +299,7 @@
     ]
   },
   {
-    "id": "27",
+    "id": "26",
     "name": "Kylie Seto",
     "position": "Project Manager",
     "major": "Business",
@@ -318,7 +311,7 @@
     ]
   },
   {
-    "id": "28",
+    "id": "27",
     "name": "Kevin Shi",
     "position": "Developer",
     "major": "Computing Science",
@@ -330,7 +323,7 @@
     ]
   },
   {
-    "id": "29",
+    "id": "28",
     "name": "Brendan Shen",
     "position": "Developer",
     "major": "Computing Science and Business Joint Major",
@@ -344,7 +337,7 @@
     ]
   },
   {
-    "id": "30",
+    "id": "29",
     "name": "Jenna Lee",
     "position": "Developer",
     "major": "Computing Science",
@@ -355,7 +348,7 @@
     ]
   },
   {
-    "id": "31",
+    "id": "30",
     "name": "Ayana Hussain",
     "position": "Developer",
     "major": "Computing Science",
@@ -366,7 +359,7 @@
   ]
   },
   {
-    "id": "32",
+    "id": "31",
     "name": "Celine August Santoso",
     "position": "Product Design Team",
     "major": "Interactive Arts and Technology",
@@ -374,7 +367,7 @@
     "team": "Technology"
   },
   {
-    "id": "33",
+    "id": "32",
     "name": "Kasey Le",
     "position": "Product Design Team",
     "major": "Interactive Arts and Technology",
@@ -385,7 +378,7 @@
     ]
   },
   {
-    "id": "34",
+    "id": "33",
     "name": "Michael Dresler",
     "position": "Product Design Team",
     "major": "Interactive Arts and Technology",
@@ -393,7 +386,7 @@
     "team": "Technology"
   },
   {
-    "id": "35",
+    "id": "34",
     "name": "Kelvin Kwan",
     "position": "Product Design Team",
     "major": "Interactive Arts and Technology",
@@ -404,7 +397,7 @@
     ]
   },
   {
-    "id": "36",
+    "id": "35",
     "name": "Vicky Xu",
     "position": "Director of Finance",
     "major": "Business",
@@ -417,125 +410,186 @@
   },
 
   {
-    "id": "37",
+    "id": "36",
     "name": "Samiha Raida",
     "position": "Finance Coordinator",
     "major": "Business",
     "src": "/headshots/samiharaida.jpg",
-    "team": "Finance"
+    "team": "Finance",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/samiharaida/" }
+    ]
+    
   },
 
   {
-    "id": "38",
+    "id": "37",
     "name": "Lily Li",
     "position": "Finance Coordinator",
     "major": "Business",
     "src": "/headshots/lilyli.jpg",
-    "team": "Finance"
+    "team": "Finance",
+    "socials": [
+    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/lilyli0302/" }
+  ]
   },
 
   {
-    "id": "39",
+    "id": "38",
     "name": "Rosa Chen",
     "position": "Finance Coordinator",
     "major": "Business",
     "src": "/headshots/rosachen.jpg",
-    "team": "Finance"
+    "team": "Finance",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/rosaychen/" }
+    ]
+  },
+
+  {
+    "id": "39",
+    "name": "Alexandra Svoboda",
+    "position": "Director of Human Resources",
+    "major": "Business (Marketing), Minor in SIAT",
+    "src": "/headshots/alexandrasvoboda.jpg",
+    "team": "HR",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/a-svoboda/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/alexandra.svoboda/" }
+    ]
+
   },
 
   {
     "id": "40",
-    "name": "Alexandra Svoboda",
-    "position": "Director of Human Resources",
-    "major": "Business (Marketing), Minor in SIAT",
-    "src": "/headshots/alexandrasvoboda.jpg",
-    "team": "HR"
-  },
-
-  {
-    "id": "41",
     "name": "Darian Wong",
     "position": "Human Resources Coordinator",
     "major": "Math and Computing Science",
     "src": "/headshots/darianwong.jpg",
-    "team": "HR"
+    "team": "HR",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/thedarianwong/" }
+    ]
   },
 
   {
-    "id": "42",
+    "id": "41",
     "name": "Angela Kurian",
     "position": "Human Resources Coordinator",
     "major": "Business",
     "src": "/headshots/angelakurian.jpg",
-    "team": "HR"
+    "team": "HR",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/angela-mary-kurian-a84a09251/" }
+    ]
   },
 
   {
-    "id": "43",
+    "id": "42",
     "name": "Maria Zia",
     "position": "Co-Director\nof Logistics",
     "major": "Computing Science",
     "src": "/headshots/mariazia.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/maria-zia-2m2z/"
+      }
+    ]
   },
   {
-    "id": "44",
+    "id": "43",
     "name": "Brian Rahadi",
     "position": "Co-Director\nof Logistics",
     "major": "Software Systems",
     "src": "/headshots/brianrahadi.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://brianrahadi.com/" },
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/brianrahadi/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/brianrahadi" },
+      { "platform": "Devpost", "url": "https://devpost.com/brian-rahadi" },
+      { "platform": "GitHub", "url": "https://github.com/brianrahadi" }
+    ]
   },
   {
-    "id": "45",
+    "id": "44",
     "name": "Keyaan Vegdani",
     "position": "Director of Visual Design",
     "major": "Interactive Art and Technology Business Joint Major",
     "src": "/headshots/keyaanvegdani.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://keyaanvegdani.framer.website/" },
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/keyaan-vegdani/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/keyaanvegdani/" }
+    ]
   },
   {
-    "id": "46",
+    "id": "45",
     "name": "Kaia Do",
     "position": "Director of Marketing",
     "major": "Business",
     "src": "/headshots/kaiado.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "LinkedIn", "url": "www.linkedin.com/in/kaiado" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/_kaiado/" }
+    ]
   },
   {
-    "id": "47",
+    "id": "46",
     "name": "Christopher Fong",
     "position": "Co-Director of Technology",
     "major": "Computing Science",
     "src": "/headshots/christopherfong.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/chrisfong604/" },
+      { "platform": "GitHub", "url": "https://github.com/ChrisFong604" }
+    ]
   },
   {
-    "id": "48",
+    "id": "47",
     "name": "Christina Raganit",
     "position": "Co-Director of Technology",
     "major": "Interactive Arts and Technology",
     "src": "/headshots/christinaraganit.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://christinaraganit.github.io/" },
+      { "platform": "LinkedIn", "url": "https://linkedin.com/in/christinaraganit" },
+      { "platform": "Devpost", "url": "https://devpost.com/christinaraganit" },
+      { "platform": "GitHub", "url": "https://github.com/christinaraganit" }
+    ]
   },
   {
-    "id": "49",
+    "id": "48",
     "name": "Vicky Xu",
     "position": "Director of Finance",
     "major": "Business",
     "src": "/headshots/vickyxu.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/vickykxu/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/vickykxu/" }
+    ]
   },
   {
-    "id": "50",
+    "id": "49",
     "name": "Alexandra Svoboda",
     "position": "Director of Human Resources",
     "major": "Business (Marketing), Minor in SIAT",
     "src": "/headshots/alexandrasvoboda.jpg",
-    "team": "Directors"
+    "team": "Directors",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/a-svoboda/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/alexandra.svoboda/" }
+    ]
   },
   {
-    "id": "51",
+    "id": "50",
     "name": "Johnson Luong",
     "position": "Director of External Relations",
     "major": "Computing Science",

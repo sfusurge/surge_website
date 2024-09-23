@@ -24,7 +24,7 @@ type JobTeamButtonProps = {
 
 
     return (
-      <button onClick={() => scroll(section)} className=" button-link primary md ">
+      <button onClick={() => scroll(section)} className={ `${className} button-link primary md `}>
         {children}
       </button>
     );

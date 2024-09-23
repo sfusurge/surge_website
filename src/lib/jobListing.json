@@ -1,6 +1,6 @@
 [
     {
-      "id": 2,
+      "id": 1,
       "url": "design-graphic-designer",
       "title": "Graphic Designer",
       "description": "8-12 hours/week",
@@ -31,7 +31,7 @@
       "listing": "https:\\youtube.com"
     },
     {
-      "id": 3,
+      "id": 2,
       "url": "marketing-content-writer",
       "title": "Content Writer",
       "description": "6-10 hours/week",
@@ -62,11 +62,73 @@
       "listing": "https:\\youtube.com"
     },
     {
-      "id": 4,
+      "id": 3,
       "url": "technology-web-developer",
       "title": "Web Developer",
       "description": "12-16 hours/week",
       "director" : "Christopher phong",
+      "about": "Develop and maintain the club’s website and other digital platforms.",
+      "responsibilities": [
+        "Build and maintain the club’s website",
+        "Ensure the website is up-to-date and functioning properly",
+        "Implement new features and improvements",
+        "Collaborate with the design team on website layout",
+        "Troubleshoot and fix website issues"
+      ],
+      "skills": [
+        "Proficient in HTML, CSS, and JavaScript",
+        "Experience with WordPress or other CMS platforms",
+        "Understanding of web design principles",
+        "Attention to detail and problem-solving skills",
+        "Ability to work with cross-functional teams"
+      ],
+      "commitment": [
+        "Regularly update website content",
+        "Attend weekly tech team meetings",
+        "Respond promptly to website issues",
+        "Implement feature requests from other teams",
+        "Stay up-to-date with the latest web development trends"
+      ],
+      "team": "Technology",
+      "listing": "https:\\youtube.com"
+    },
+    {
+      "id": 3,
+      "url": "technology-web-developer",
+      "title": "Web Developer",
+      "description": "12-16 hours/week",
+      "director" : "Christopher phong",
+      "about": "Develop and maintain the club’s website and other digital platforms.",
+      "responsibilities": [
+        "Build and maintain the club’s website",
+        "Ensure the website is up-to-date and functioning properly",
+        "Implement new features and improvements",
+        "Collaborate with the design team on website layout",
+        "Troubleshoot and fix website issues"
+      ],
+      "skills": [
+        "Proficient in HTML, CSS, and JavaScript",
+        "Experience with WordPress or other CMS platforms",
+        "Understanding of web design principles",
+        "Attention to detail and problem-solving skills",
+        "Ability to work with cross-functional teams"
+      ],
+      "commitment": [
+        "Regularly update website content",
+        "Attend weekly tech team meetings",
+        "Respond promptly to website issues",
+        "Implement feature requests from other teams",
+        "Stay up-to-date with the latest web development trends"
+      ],
+      "team": "Technology",
+      "listing": "https:\\youtube.com"
+    },
+    {
+      "id": 3,
+      "url": "technology-web-developer",
+      "title": "Web Developer",
+      "description": "12-16 hours/week",
+      "director" : "Christopher Fong",
       "about": "Develop and maintain the club’s website and other digital platforms.",
       "responsibilities": [
         "Build and maintain the club’s website",

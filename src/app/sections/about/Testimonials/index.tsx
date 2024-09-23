@@ -8,16 +8,13 @@ export default function Testimonials() {
       <div className="text-center flex flex-col items-center">
         <p className="text-caption mb-2">OUR STORIES</p>
         <h1 className="max-w-[40rem] title-2 emphasized mb-8">
-        Discover how being part of SFU Surge has shaped their journeys in technology and beyond.
+          Discover how being part of SFU Surge has shaped their journeys in
+          technology and beyond.
         </h1>
       </div>
 
       <div className="grid gridSmall md:gridMedium xl:gridLarge  gap-6 ">
-        {
-        eventData.map((thisEvent, index) => {
-
-          console.log(thisEvent.testimonial);
-          
+        {eventData.map((thisEvent, index) => {
           return (
             <div key={index} style={{ gridArea: thisEvent.area }}>
               <TestimonialCard

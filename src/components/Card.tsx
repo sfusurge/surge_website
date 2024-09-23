@@ -1,14 +1,15 @@
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 type CardProps = {
   className?: string;
   title: string;
   description: string;
-  src: string;
+  src: StaticImageData;
 };
 export default function Card({
   title,
-  description,
+  description, 
   src,
   className,
 }: CardProps) {
@@ -26,10 +27,9 @@ export default function Card({
       <div className="flex items-center justify-center">
         <Image
           src={src}
-          width={1659}
-          height={1421}
           alt={"hello"}
           className="h-auto w-full  "
+          sizes="(max-width: 1023px) 42vw, (max-width: 1439px) 28vw, 416px"
         />
       </div>
     </div>
