@@ -1,7 +1,4 @@
 import React from "react";
-import InvolvementImage from "/public/Discord image.png";
-import Image from "next/image";
-import Button from "@/components/Button";
 
 import text_content from "@/lib/content/text_content.json";
 import JoinDiscord from "@/components/JoinDiscord";
@@ -21,15 +18,13 @@ const Involvement = () => {
             {text_content.homepage.get_involved.description}
           </p>
           <button className="bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 px-6 rounded-custom-radius transition">
-            <a
-              href="/join#openroles" 
-            >
+            <a href="/join#openroles">
               {text_content.homepage.get_involved.cta}
             </a>
           </button>
         </div>
       </div>
-      <JoinDiscord/>
+      <JoinDiscord />
     </div>
   );
 };
