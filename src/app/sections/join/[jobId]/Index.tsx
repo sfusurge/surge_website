@@ -22,6 +22,7 @@ type JobPageProps = {
 
 export default function JobPage({ job }: JobPageProps) {
   const pagejob = jobs.find((role) => role.url === job?.url);
+  console.log(pagejob?.team)
 
   return (
     <main className="flex gap-12 xl:gap-48 flex-col md:flex-row w-full justify-center">

@@ -1,6 +1,7 @@
 import React from "react";
 import InvolvementImage from "/public/Discord image.png";
 import Image from "next/image";
+import Button from "@/components/Button";
 
 import text_content from "@/lib/content/text_content.json";
 import JoinDiscord from "@/components/JoinDiscord";

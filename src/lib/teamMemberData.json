@@ -83,8 +83,8 @@
     "src": "/headshots/angelalim.jpg",
     "team": "Logistics",
     "socials": [
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/darrick-gunawan/" },
-      { "platform": "GitHub", "url": "https://github.com/Darrickg" }
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/angelalim-/" },
+      { "platform": "Instagram", "url": "https://www.instagram.com/angelaxlim/" }
     ]
   },
   {
@@ -164,9 +164,9 @@
     "position": "Visual Design Coordinator",
     "major": "Interactive Art and Technology ",
     "src": "/headshots/arriyanali.jpg",
-    "team": "Visual design",
+    "team": "Visual Design",
     "socials": [
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/arriyanali/" }
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/Arriyanali/" }
     ]
 
   },
@@ -606,11 +606,18 @@
     "position": "Director of External Relations",
     "major": "Computing Science",
     "src": "/headshots/johnsonluong.jpg",
-    "team": "Directors",
+    "team": "Directors"
+  },
+  {
+    "id": "52",
+    "name": "Darrick Gunawan",
+    "position": "Logistics Coordinator",
+    "major": "Computing Science",
+    "src": "/headshots/darrickgunawan.jpg",
+    "team": "Logistics",
     "socials": [
-      { "platform": "Portfolio", "url": "https://johnsonl111.github.io/quartz/" },
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/johnson-luong/" },
-      { "platform": "GitHub", "url": "https://github.com/johnsonl111" }
+      {"platform": "LinkedIn", "url": "https://www.linkedin.com/in/darrick-gunawan/"},
+      {"platform": "GitHub", "url": "https://github.com/Darrickg"}
     ]
   }
 ]

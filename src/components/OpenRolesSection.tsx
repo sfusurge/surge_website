@@ -30,11 +30,6 @@ export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
   useEffect(() => {
     const selectedJobTeam = localStorage.getItem("selectedJobTeam") || "All";
     setActiveButton(selectedJobTeam);
-    console.log(totalJobCount)
-
-
-
-
   }, []);
 
   const changeTeam = (buttonId: string) => {
@@ -57,7 +52,6 @@ export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
           buttonFunction={() => changeTeam("All")}
           key={0}
           title="All"
-          count={totalJobCount}
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
