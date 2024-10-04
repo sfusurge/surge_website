@@ -1,157 +1,33 @@
 [
-    {
-      "id": 1,
-      "url": "design-graphic-designer",
-      "title": "Graphic Designer",
-      "description": "8-12 hours/week",
-      "director" : "Christina Raganit",
-      "about": "Create visual content for marketing materials, events, and social media campaigns.",
-      "responsibilities": [
-        "Design posters, brochures, and other visual content for marketing",
-        "Create event branding and promotional materials",
-        "Collaborate with the marketing team to develop engaging graphics",
-        "Ensure consistency in branding across all platforms",
-        "Prepare graphics for print and digital distribution"
-      ],
-      "skills": [
-        "Proficient in Adobe Photoshop, Illustrator, and InDesign",
-        "Strong understanding of color theory and typography",
-        "Creativity and attention to detail",
-        "Time management and ability to meet deadlines",
-        "Experience in digital and print media"
-      ],
-      "commitment": [
-        "Attend weekly design meetings",
-        "Complete design tasks within assigned deadlines",
-        "Collaborate with other departments to meet project goals",
-        "Be responsive to feedback and iterate on designs",
-        "Manage multiple design projects simultaneously"
-      ],
-      "team": "Visual Design",
-      "listing": "https:\\youtube.com"
-    },
-    {
-      "id": 2,
-      "url": "marketing-content-writer",
-      "title": "Content Writer",
-      "description": "6-10 hours/week",
-      "director" : "Christina Raganit",
-      "about": "Craft engaging copy for blogs, newsletters, and social media posts.",
-      "responsibilities": [
-        "Write blog posts and articles that align with our mission",
-        "Draft engaging content for social media platforms",
-        "Assist in writing newsletters and press releases",
-        "Collaborate with the design team on content presentation",
-        "Edit and proofread content for clarity and accuracy"
-      ],
-      "skills": [
-        "Strong writing and editing skills",
-        "Experience with SEO best practices",
-        "Ability to write in a clear and concise manner",
-        "Familiarity with social media platforms",
-        "Attention to detail and creativity"
-      ],
-      "commitment": [
-        "Produce 2-3 blog posts per month",
-        "Draft weekly social media posts",
-        "Collaborate with the marketing team on content strategy",
-        "Meet deadlines for content submission",
-        "Incorporate feedback and revise content as needed"
-      ],
-      "team": "Marketing",
-      "listing": "https:\\youtube.com"
-    },
-    {
-      "id": 3,
-      "url": "technology-web-developer",
-      "title": "Web Developer",
-      "description": "12-16 hours/week",
-      "director" : "Christopher phong",
-      "about": "Develop and maintain the club’s website and other digital platforms.",
-      "responsibilities": [
-        "Build and maintain the club’s website",
-        "Ensure the website is up-to-date and functioning properly",
-        "Implement new features and improvements",
-        "Collaborate with the design team on website layout",
-        "Troubleshoot and fix website issues"
-      ],
-      "skills": [
-        "Proficient in HTML, CSS, and JavaScript",
-        "Experience with WordPress or other CMS platforms",
-        "Understanding of web design principles",
-        "Attention to detail and problem-solving skills",
-        "Ability to work with cross-functional teams"
-      ],
-      "commitment": [
-        "Regularly update website content",
-        "Attend weekly tech team meetings",
-        "Respond promptly to website issues",
-        "Implement feature requests from other teams",
-        "Stay up-to-date with the latest web development trends"
-      ],
-      "team": "Technology",
-      "listing": "https:\\youtube.com"
-    },
-    {
-      "id": 3,
-      "url": "technology-web-developer",
-      "title": "Web Developer",
-      "description": "12-16 hours/week",
-      "director" : "Christopher phong",
-      "about": "Develop and maintain the club’s website and other digital platforms.",
-      "responsibilities": [
-        "Build and maintain the club’s website",
-        "Ensure the website is up-to-date and functioning properly",
-        "Implement new features and improvements",
-        "Collaborate with the design team on website layout",
-        "Troubleshoot and fix website issues"
-      ],
-      "skills": [
-        "Proficient in HTML, CSS, and JavaScript",
-        "Experience with WordPress or other CMS platforms",
-        "Understanding of web design principles",
-        "Attention to detail and problem-solving skills",
-        "Ability to work with cross-functional teams"
-      ],
-      "commitment": [
-        "Regularly update website content",
-        "Attend weekly tech team meetings",
-        "Respond promptly to website issues",
-        "Implement feature requests from other teams",
-        "Stay up-to-date with the latest web development trends"
-      ],
-      "team": "Technology",
-      "listing": "https:\\youtube.com"
-    },
-    {
-      "id": 3,
-      "url": "technology-web-developer",
-      "title": "Web Developer",
-      "description": "12-16 hours/week",
-      "director" : "Christopher Fong",
-      "about": "Develop and maintain the club’s website and other digital platforms.",
-      "responsibilities": [
-        "Build and maintain the club’s website",
-        "Ensure the website is up-to-date and functioning properly",
-        "Implement new features and improvements",
-        "Collaborate with the design team on website layout",
-        "Troubleshoot and fix website issues"
-      ],
-      "skills": [
-        "Proficient in HTML, CSS, and JavaScript",
-        "Experience with WordPress or other CMS platforms",
-        "Understanding of web design principles",
-        "Attention to detail and problem-solving skills",
-        "Ability to work with cross-functional teams"
-      ],
-      "commitment": [
-        "Regularly update website content",
-        "Attend weekly tech team meetings",
-        "Respond promptly to website issues",
-        "Implement feature requests from other teams",
-        "Stay up-to-date with the latest web development trends"
-      ],
-      "team": "Technology",
-      "listing": "https:\\youtube.com"
-    }
+  {
+    "id": 1,
+    "url": "technology-web-developer",
+    "title": "Front-end Developer",
+    "description": "6-12 hours/week",
+    "director": "Christopher Fong",
+    "about": "Develop and maintain the club’s website and other digital platforms.",
+    "responsibilities": [
+      "Build and maintain high-quality web applications using Next.js and Tailwind CSS, ensuring cross-browser compatibility and responsiveness across devices.",
+      "Develop and document reusable components and patterns of Strike, SFU Surge’s design system, to streamline future development and maintain consistency across our products.",
+      "Implement new features and improvementsWork closely with UI designers to implement intuitive and engaging user interfaces that adhere to our design system guidelines and deliver a good user experience.",
+      "Conduct performance optimization and troubleshooting to ensure fast load times and efficient use of resources, enhancing overall application performance."
+    ],
+    "skills": [
+      "Skilled in using GitHub for version control, collaboration, branching, and code reviews.",
+      "A solid foundation in HTML, CSS, and JavaScript is required. Knowledge of React and/or Next.js, and Tailwind CSS is preferred. Understanding Typescript and async/await programming is a bonus.",
+      "Ability to troubleshoot complex issues, analyze problems, and propose effective solutions in a timely manner.",
+      "Excellent communication skills to facilitate collaboration with team members, including designers, product managers, and backend developers.",
+      "Experience with creating responsive layouts and implementing design patterns that enhance usability across different devices and screen sizes.",
+      "Commitment to applying frontend development best practices, including coding standards, performance optimization, and maintainability, to ensure high-quality, scalable, and efficient code.",
+      " A positive attitude towards receiving and incorporating constructive feedback from peers and stakeholders and an ability to engage in collaborative discussions to refine ideas and improve the quality of work."
+    ],
+    "commitment": [
+      "Attend weekly tech team meetings",
+      "Respond promptly to technical issues when available",
+      "Implement feature requests from other teams",
+      "Stay up-to-date with the latest web development trends"
+    ],
+    "team": "Technology",
+    "listing": "https://forms.gle/qjZFaymi65vceSyx6"
+  }
 ]
