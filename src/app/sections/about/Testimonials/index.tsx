@@ -1,4 +1,3 @@
-import EventCard from "@/components/EventCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import eventData from "@/lib/testimonials.json";
 
