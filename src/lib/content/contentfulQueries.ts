@@ -1,5 +1,6 @@
 import { contentfulClient } from "./contentfulConnector";
 import { ContentTypeEnum } from "./types/ContentTypeEnum";
+import { Event } from "./types/Event";
 
 export async function fetchSpace() {
   const data = await contentfulClient.getSpace();
@@ -11,15 +12,21 @@ export async function fetchSpace() {
 }
 
 export async function fetchEventCollection() {
-  const events = await contentfulClient.getEntries({
-    content_type: ContentTypeEnum.EVENT,
-  });
+  let data: Event[] = [];
 
-  if (events.items) {
-    return {
-      items: events.items,
-    };
-  }
+  try {
+    const events = await contentfulClient.withoutLinkResolution
+      .getEntries({
+        content_type: ContentTypeEnum.EVENT,
+      })
+      .then((data) => {
+        return data.items.map((e) => e.fields as unknown as Event);
+      });
+
+    data = events;
+  } catch (e) {}
+
+  return data;
 }
 
 export async function fetchJobListingCollection() {
