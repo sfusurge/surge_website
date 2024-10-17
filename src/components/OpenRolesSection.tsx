@@ -1,31 +1,27 @@
 "use client";
-import jobs from "@/lib/jobListing.json";
 import JobCard from "@/components/JobCard";
 import { teams } from "@/lib/teamData";
 import { useEffect, useState } from "react";
-
+import { JobListing, JobListingDTO } from "@/lib/content/types/JobListing";
 
 import JobTeamButton from "./JobTeamButton";
 
-type numberOfJobs = {
-  name: string;
-  count: number;
-}
-
 type OpenRolesSectionProps = {
-  id: string;
+  jobs: JobListingDTO[];
 };
 
-export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
+export default function OpenRolesSection({ jobs }: OpenRolesSectionProps) {
   const [activeButton, setActiveButton] = useState<string | null>(null);
   const jobMap = new Map<string, number>();
 
-
-  jobs.forEach(job => {
+  jobs.forEach((job) => {
     jobMap.set(job.team, (jobMap.get(job.team) || 0) + 1);
   });
 
-  const totalJobCount = Array.from(jobMap.values()).reduce((total, count) => total + count, 0);
+  const totalJobCount = Array.from(jobMap.values()).reduce(
+    (total, count) => total + count,
+    0
+  );
 
   useEffect(() => {
     const selectedJobTeam = localStorage.getItem("selectedJobTeam") || "All";
@@ -38,13 +34,17 @@ export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
   };
 
   return (
-    <section id={id} className="flex items-center flex-col gap-12">
+    <section id="openroles" className="flex items-center flex-col gap-12">
       <div className=" max-w-lg text-center flex flex-col gap-4">
         <span className="text-caption">Open Roles</span>
         <h2 className="title-1 emphasized">
           We want you to help us run hackathons and events
         </h2>
-        <p className="paragraph text-pretty">SFU Surge is an all-inclusive organization to promote curiosity and excitement for a future in technology, while guiding students on their paths to career success.</p>
+        <p className="paragraph text-pretty">
+          SFU Surge is an all-inclusive organization to promote curiosity and
+          excitement for a future in technology, while guiding students on their
+          paths to career success.
+        </p>
       </div>
 
       <div className=" flex items-center justify-center max-w-3xl gap-2 flex-wrap">

@@ -4,19 +4,22 @@ import Card from "@/components/Card";
 import OpenRolesSection from "@/components/OpenRolesSection";
 import ButtonScroll from "@/components/ButtonScroll";
 import InfoItem from "@/components/InfoItem";
-import skills from "/public/join/skills.png"
-import experience from "/public/join/experience.png"
-import friends from "/public/join/friends.png"
-import rocket from "/public/join/rocket.png"
+import skills from "/public/join/skills.png";
+import experience from "/public/join/experience.png";
+import friends from "/public/join/friends.png";
+import rocket from "/public/join/rocket.png";
 
 import text_content from "@/lib/content/text_content.json";
 import HomeCard from "@/components/HomeCard";
+import { fetchJobListingCollection } from "@/lib/content/contentfulQueries";
 
 export const metadata: Metadata = {
   title: "Join SFU Surge",
 };
 
-export default function JoinTeam() {
+export default async function JoinTeam() {
+  let jobListingData = await fetchJobListingCollection();
+
   return (
     <main className="flex flex-col gap-24 md:gap-48">
       <section className="flex flex-col items-center justify-center text-center overflow-hidden gap-16">
@@ -64,7 +67,6 @@ export default function JoinTeam() {
             description="Connect with like-minded peers and build lasting friendships."
             src={friends}
           />
-         
         </div>
       </section>
 
@@ -87,7 +89,7 @@ export default function JoinTeam() {
         </div>
       </section>
 
-      <OpenRolesSection id="openroles" />
+      <OpenRolesSection jobs={jobListingData} />
     </main>
   );
 }
