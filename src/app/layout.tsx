@@ -27,7 +27,7 @@ export default function RootLayout({
       lang="en"
     >
       <head>
-        <link rel="icon" href="/surge-logo.svg" type="image/x-icon" />
+        <link rel="icon" href="/surge-logo-blue.svg" type="image/x-icon" />
       </head>
       <CSPostHogProvider>
         <body className="font-GeistSans ">
