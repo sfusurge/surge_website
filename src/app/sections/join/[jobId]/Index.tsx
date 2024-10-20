@@ -16,13 +16,12 @@ type Job = {
 };
 
 type JobPageProps = {
-    job?: Job;
+  job?: Job;
 };
-
 
 export default function JobPage({ job }: JobPageProps) {
   const pagejob = jobs.find((role) => role.url === job?.url);
-  console.log(pagejob?.team)
+  console.log(pagejob?.team);
 
   return (
     <main className="flex gap-12 xl:gap-48 flex-col md:flex-row w-full justify-center">
@@ -30,7 +29,7 @@ export default function JobPage({ job }: JobPageProps) {
         <h1 className="large-title emphasized">{pagejob?.title}</h1>
         <div className=" flex flex-col gap-2">
           <span className="text-base text-text-secondary  flex gap-2">
-            {pagejob? svgIcons[pagejob.team]:null}
+            {pagejob ? svgIcons[pagejob.team] : null}
             {pagejob?.team}
           </span>
           <span className="text-base text-text-secondary  flex gap-2 items-center">
@@ -51,12 +50,15 @@ export default function JobPage({ job }: JobPageProps) {
             {pagejob?.description}
           </span>
           <span className="text-base text-text-secondary  flex gap-2">
-            {pagejob? svgIcons["Directors"]:null}
+            {pagejob ? svgIcons["Directors"] : null}
             {`Director of ${pagejob?.team}: ${pagejob?.director}`}
           </span>
         </div>
 
-        <a href={`${pagejob?.listing}`} className=" button-link primary md w-full md:w-fit items-center justify-center ">
+        <a
+          href={`${pagejob?.listing}`}
+          className=" button-link primary md w-full md:w-fit items-center justify-center "
+        >
           Apply Now
         </a>
       </div>
@@ -86,7 +88,7 @@ export default function JobPage({ job }: JobPageProps) {
           </ul>
         </div>
         <div>
-          <h2 className="title-2 mb-4">Commitement</h2>
+          <h2 className="title-2 mb-4">Commitment</h2>
           <ul className="paragraph flex flex-col gap-2 text-text-secondary list-disc list-outside px-5">
             {pagejob?.commitment.map((responsibility, index) => (
               <li className="paragraph leading-8" key={index}>
