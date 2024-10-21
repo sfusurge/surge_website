@@ -1,11 +1,11 @@
-import EventsHero from "@/app/sections/events/EventsHero";
+import EventsHero from "../sections/events/EventsHero";
 import JoinDiscord from "@/components/JoinDiscord";
-import CurrentEvents from "@/app/sections/events/CurrentEvents";
+import CurrentEvents from "../sections/events/CurrentEvents";
 
-export default function Page() {
+export default async function Page() {
   return (
     <main className="flex flex-col gap-36">
-      <EventsHero/>
+      <EventsHero />
       <CurrentEvents />
       <JoinDiscord />
     </main>
