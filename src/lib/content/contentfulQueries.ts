@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { contentfulClient } from "./contentfulConnector";
 import { ContentTypeEnum } from "./types/ContentTypeEnum";
 import { Event, EventDTO, EventSkeleton } from "./types/Event";
@@ -16,7 +17,7 @@ export async function fetchSpace() {
   }
 }
 
-export async function fetchEventCollection(): Promise<EventDTO[]> {
+async function fetchEventCollection(): Promise<EventDTO[]> {
   try {
     const events: EventDTO[] = await contentfulClient.withoutLinkResolution
       .getEntries<EventSkeleton>({
@@ -37,8 +38,9 @@ export async function fetchEventCollection(): Promise<EventDTO[]> {
     return [];
   }
 }
+export const getEventCollection = cache(fetchEventCollection);
 
-export async function fetchJobListingCollection(): Promise<JobListingDTO[]> {
+async function fetchJobListingCollection(): Promise<JobListingDTO[]> {
   try {
     const jobListings = await contentfulClient
       .getEntries<JobListingSkeleton>({
@@ -59,3 +61,4 @@ export async function fetchJobListingCollection(): Promise<JobListingDTO[]> {
     return [];
   }
 }
+export const getJobListingsCollection = cache(fetchJobListingCollection);

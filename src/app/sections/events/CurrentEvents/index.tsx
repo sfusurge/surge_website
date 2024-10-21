@@ -1,5 +1,5 @@
 import EventCard from "@/components/EventCard";
-import { fetchEventCollection } from "@/lib/content/contentfulQueries";
+import { getEventCollection } from "@/lib/content/contentfulQueries";
 
 // revise the type declarations -- using any might not be best practice
 // people -- socials
@@ -8,7 +8,7 @@ import { fetchEventCollection } from "@/lib/content/contentfulQueries";
 // finish CMS and work on other content models
 
 export default async function CurrentEvents() {
-  let eventData = await fetchEventCollection();
+  let eventData = await getEventCollection();
 
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">

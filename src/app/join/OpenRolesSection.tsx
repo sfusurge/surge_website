@@ -1,10 +1,10 @@
 "use client";
-import JobCard from "@/components/JobCard";
 import { teams } from "@/lib/teamData";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { JobListing, JobListingDTO } from "@/lib/content/types/JobListing";
+import { JobListingDTO } from "@/lib/content/types/JobListing";
 
-import JobTeamButton from "./JobTeamButton";
+import JobTeamButton from "../../components/JobTeamButton";
 
 type OpenRolesSectionProps = {
   jobs: JobListingDTO[];
@@ -87,7 +87,6 @@ export default function OpenRolesSection({ jobs }: OpenRolesSectionProps) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
-        {/* check if theres jobs? */}
         {jobs.length !== 0 ? (
           // there is jobs. Does the chosen team (active button) have any roles in the array OR is the active button set to all?
           jobs.some((job) => job.team === activeButton) ||
@@ -95,13 +94,22 @@ export default function OpenRolesSection({ jobs }: OpenRolesSectionProps) {
             jobs.map((job, index) =>
               // there is a role in the chosen team available. what role is available OR is it the active button thats checked? if first then spit out roles, if second spit out all
               activeButton === job.team || activeButton === "All" ? (
-                <JobCard
-                  url={`join/${job.url}`}
+                <Link
                   key={index}
-                  title={job.title}
-                  description={job.about}
-                  team={job.team}
-                />
+                  href={{
+                    pathname: `join/${job.id}`,
+                  }}
+                  className="w-full bg-surface rounded-3xl flex flex-col p-8 gap-4 border border-gray-500/0 hover:border-border-tertiary/10 transition-all duration-500 cursor-pointer"
+                >
+                  <span className="text-caption">{job.team}</span>
+                  <h2 className="text-xl font-medium">{job.title}</h2>
+                  <p className="text-base text-text-secondary font-normal line-clamp-3 text-ellipsis">
+                    {job.description}
+                  </p>
+                  <button className="button-link secondary md align ml-auto mt-auto font-normal">
+                    Learn more
+                  </button>
+                </Link>
               ) : // otherwise dont render anything (applies to other indexes when looping)
               null
             )
