@@ -1,19 +1,24 @@
-import { JobListingDTO } from "@/lib/content/types/JobListing";
-import { Metadata } from "next";
 import { svgIcons } from "@/lib/teamData";
-import JobError from "@/app/sections/join/JobError";
+import JobError from "../JobError";
 import { getJobListingsCollection } from "@/lib/content/contentfulQueries";
+import { Metadata } from "next";
 
 type JobListingPageProps = {
   params: { jobId: string };
 };
 
-// export function generateMetadata({ params }: JobListingPageProps): Metadata {
-//   return {
-//     title: `${job ? job.team + " " + job.title : "Job not found "}`,
-//     description: "job",
-//   };
-// }
+export async function generateMetadata({
+  params,
+}: JobListingPageProps): Promise<Metadata> {
+  const jobId = Number(params.jobId);
+  const job = await getJobListingsCollection().then((data) =>
+    data.find((job) => job.id === jobId)
+  );
+  return {
+    title: `${job ? job.title : "Job not found "}`,
+    description: "job",
+  };
+}
 
 export default async function JobListingPage({ params }: JobListingPageProps) {
   const jobId = Number(params.jobId);
