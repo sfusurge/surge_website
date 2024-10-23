@@ -8,28 +8,26 @@ export type JobListingSkeleton = {
 
 export type JobListing = {
   id: EFT.Integer;
-  url: EFT.Text;
   team: EFT.Text;
   title: EFT.Text;
-  description: EFT.Text;
+  expected_time: EFT.Text;
   director: EFT.Text;
   about: EFT.Text;
   responsibilities: EFT.Text[];
   skills: EFT.Text[];
   commitment: EFT.Text[];
-  listing: EFT.Text;
+  application_link: EFT.Text;
 };
 
 export type JobListingDTO = {
   id: number;
-  url: string;
   team: string;
   title: string;
-  description: string;
+  expected_time: string;
   director: string;
   about: string;
   responsibilities: string[];
   skills: string[];
   commitment: string[];
-  listing: string;
+  application_link: string;
 };
