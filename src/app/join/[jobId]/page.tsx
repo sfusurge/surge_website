@@ -51,7 +51,7 @@ export default async function JobListingPage({ params }: JobListingPageProps) {
                     d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                   />
                 </svg>
-                {job?.description}
+                {job?.expected_time}
               </span>
               <span className="text-base text-text-secondary  flex gap-2">
                 {job ? svgIcons["Directors"] : null}
@@ -60,7 +60,7 @@ export default async function JobListingPage({ params }: JobListingPageProps) {
             </div>
 
             <a
-              href={`${job?.listing}`}
+              href={`${job?.application_link}`}
               className=" button-link primary md w-full md:w-fit items-center justify-center "
             >
               Apply Now

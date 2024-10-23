@@ -104,7 +104,7 @@ export default function OpenRolesSection({ jobs }: OpenRolesSectionProps) {
                   <span className="text-caption">{job.team}</span>
                   <h2 className="text-xl font-medium">{job.title}</h2>
                   <p className="text-base text-text-secondary font-normal line-clamp-3 text-ellipsis">
-                    {job.description}
+                    {job.about}
                   </p>
                   <button className="button-link secondary md align ml-auto mt-auto font-normal">
                     Learn more
