@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type TestimonialCardProps = {
   className?: string;
   name: string;
@@ -20,7 +22,13 @@ export default function TestimonialCard({
       >
         <p className="text-base leading-[150%] font-normal mt-auto text-text-secondary">“{testimonial}”</p>
         <div className="flex flex-row gap-4 mt-auto items-center">
-          <img src={imageLink} className="rounded-full w-10 h-10"></img>
+        <Image
+            src={imageLink}
+            alt={`${name}'s profile picture`}
+            className="rounded-full"
+            width={40} 
+            height={40} 
+          />
           <div className="flex flex-col">
             <h2>{name}</h2>
             <h3 className="text-text-secondary text-sm">{position}</h3>
@@ -35,7 +43,13 @@ export default function TestimonialCard({
       >
         <p className="text-text-primary text-center tracking-tight mt-4 lg:my-auto  xl:text-left font-medium text-xl">“{testimonial}”</p>
         <div className="flex justify-center xl:justify-normal items-center xl:flex-row gap-4">
-          <img src={imageLink} className="rounded-full w-10 h-10"></img>
+          <Image
+              src={imageLink}
+              alt={`${name}'s profile picture`}
+              className="rounded-full"
+              width={40} 
+              height={40} 
+            />
           <div className="flex flex-col">
             <h2>{name}</h2>
             <h3 className="text-text-secondary text-sm">{position}</h3>
