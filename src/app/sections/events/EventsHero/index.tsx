@@ -1,6 +1,6 @@
 import ButtonScroll from "@/components/ButtonScroll";
 import Image from "next/image";
-import workshop from "/public/workshop.avif"
+import workshop from "/public/workshop.webp"
 import { Work_Sans } from "next/font/google";
 
 export default function EventsHero() {

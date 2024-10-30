@@ -1,6 +1,6 @@
 import Image from "next/image";
 import text_content from "@/lib/content/text_content.json";
-import InvolvementImage from "/public/Discord-image.svg";
+import InvolvementImage from "/public/Discord-image.webp";
 
 export default function JoinDiscord() {
   return (

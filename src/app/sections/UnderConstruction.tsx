@@ -1,5 +1,5 @@
 import Image from "next/image";
-import StormHacksImage from "/public/stormhacks.avif";
+import StormHacksImage from "/public/stormhacks.webp";
 import Link from "next/link";
 
 import text_content from "@/lib/content/text_content.json";

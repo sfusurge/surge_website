@@ -1,6 +1,6 @@
-import StormHacksImage from "/public/stormhacks.avif";
-import JourneyHacksImage from "/public/journeyhacks.avif";
-import WorkshopsImage from "/public/workshops.avif";
+import StormHacksImage from "/public/stormhacks.webp";
+import JourneyHacksImage from "/public/journeyhacks.webp";
+import WorkshopsImage from "/public/workshops.webp";
 import Image from "next/image";
 import HomeCard from "@/components/HomeCard";
 

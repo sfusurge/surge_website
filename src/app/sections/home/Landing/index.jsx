@@ -1,8 +1,8 @@
 "use client";
 
-import Background from "/public/assets/landing.avif";
-import BodyImage from "/public/aboutus.avif";
-import Rocket from "/public/rocket-no-elements.avif";
+import Background from "/public/assets/landing.webp";
+import BodyImage from "/public/aboutus.webp";
+import Rocket from "/public/rocket-no-elements.webp";
 import Image from "next/image";
 
 import text_content from "@/lib/content/text_content.json";
