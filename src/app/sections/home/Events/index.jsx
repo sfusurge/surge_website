@@ -52,6 +52,7 @@ const EventSection = () => {
   );
 };
 
+/*
 const SurgeEvent = ({ heading, subheading, image, description }) => {
   return (
     <>
@@ -74,6 +75,7 @@ const SurgeEvent = ({ heading, subheading, image, description }) => {
     </>
   );
 };
+*/
 
 const InfoSection = () => {
   return (
