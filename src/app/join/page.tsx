@@ -4,10 +4,10 @@ import Card from "@/components/Card";
 import OpenRolesSection from "./OpenRolesSection";
 import ButtonScroll from "@/components/ButtonScroll";
 import InfoItem from "@/components/InfoItem";
-import skills from "/public/join/skills.png";
-import experience from "/public/join/experience.png";
-import friends from "/public/join/friends.png";
-import rocket from "/public/join/rocket.png";
+import skills from "/public/join/skills.avif";
+import experience from "/public/join/experience.avif";
+import friends from "/public/join/friends.avif";
+import rocket from "/public/join/rocket.avif";
 
 import text_content from "@/lib/content/text_content.json";
 import { getJobListingsCollection } from "@/lib/content/contentfulQueries";
