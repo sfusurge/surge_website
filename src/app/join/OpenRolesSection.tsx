@@ -1,31 +1,27 @@
 "use client";
-import jobs from "@/lib/jobListing.json";
-import JobCard from "@/components/JobCard";
 import { teams } from "@/lib/teamData";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { JobListingDTO } from "@/lib/content/types/JobListing";
 
-
-import JobTeamButton from "./JobTeamButton";
-
-type numberOfJobs = {
-  name: string;
-  count: number;
-}
+import JobTeamButton from "../../components/JobTeamButton";
 
 type OpenRolesSectionProps = {
-  id: string;
+  jobs: JobListingDTO[];
 };
 
-export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
+export default function OpenRolesSection({ jobs }: OpenRolesSectionProps) {
   const [activeButton, setActiveButton] = useState<string | null>(null);
   const jobMap = new Map<string, number>();
 
-
-  jobs.forEach(job => {
+  jobs.forEach((job) => {
     jobMap.set(job.team, (jobMap.get(job.team) || 0) + 1);
   });
 
-  const totalJobCount = Array.from(jobMap.values()).reduce((total, count) => total + count, 0);
+  const totalJobCount = Array.from(jobMap.values()).reduce(
+    (total, count) => total + count,
+    0
+  );
 
   useEffect(() => {
     const selectedJobTeam = localStorage.getItem("selectedJobTeam") || "All";
@@ -38,13 +34,17 @@ export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
   };
 
   return (
-    <section id={id} className="flex items-center flex-col gap-12">
+    <section id="openroles" className="flex items-center flex-col gap-12">
       <div className=" max-w-lg text-center flex flex-col gap-4">
         <span className="text-caption">Open Roles</span>
         <h2 className="title-1 emphasized">
           We want you to help us run hackathons and events
         </h2>
-        <p className="paragraph text-pretty">SFU Surge is an all-inclusive organization to promote curiosity and excitement for a future in technology, while guiding students on their paths to career success.</p>
+        <p className="paragraph text-pretty">
+          SFU Surge is an all-inclusive organization to promote curiosity and
+          excitement for a future in technology, while guiding students on their
+          paths to career success.
+        </p>
       </div>
 
       <div className=" flex items-center justify-center max-w-3xl gap-2 flex-wrap">
@@ -87,7 +87,6 @@ export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
-        {/* check if theres jobs? */}
         {jobs.length !== 0 ? (
           // there is jobs. Does the chosen team (active button) have any roles in the array OR is the active button set to all?
           jobs.some((job) => job.team === activeButton) ||
@@ -95,13 +94,22 @@ export default function OpenRolesSection({ id }: OpenRolesSectionProps) {
             jobs.map((job, index) =>
               // there is a role in the chosen team available. what role is available OR is it the active button thats checked? if first then spit out roles, if second spit out all
               activeButton === job.team || activeButton === "All" ? (
-                <JobCard
-                  url={`join/${job.url}`}
+                <Link
                   key={index}
-                  title={job.title}
-                  description={job.about}
-                  team={job.team}
-                />
+                  href={{
+                    pathname: `join/${job.id}`,
+                  }}
+                  className="w-full bg-surface rounded-3xl flex flex-col p-8 gap-4 border border-gray-500/0 hover:border-border-tertiary/10 transition-all duration-500 cursor-pointer"
+                >
+                  <span className="text-caption">{job.team}</span>
+                  <h2 className="text-xl font-medium">{job.title}</h2>
+                  <p className="text-base text-text-secondary font-normal line-clamp-3 text-ellipsis">
+                    {job.about}
+                  </p>
+                  <button className="button-link secondary md align ml-auto mt-auto font-normal">
+                    Learn more
+                  </button>
+                </Link>
               ) : // otherwise dont render anything (applies to other indexes when looping)
               null
             )
