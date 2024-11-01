@@ -1,4 +1,4 @@
-import { EntryFieldType, EntryFieldTypes, EntrySkeletonType } from "contentful";
+import { EntryFieldTypes} from "contentful";
 import { ContentTypeEnum } from "./ContentTypeEnum";
 
 export type EventSkeleton = {
@@ -7,13 +7,25 @@ export type EventSkeleton = {
 };
 
 export type Event = {
+  id: EntryFieldTypes.Integer;
   title: EntryFieldTypes.Text;
   location: EntryFieldTypes.Text;
   time: EntryFieldTypes.Text;
+  about: EntryFieldTypes.Text;
+  responsibilities: EntryFieldTypes.Text[];
+  application_link: EntryFieldTypes.Text;
+  commitment: EntryFieldTypes.Text[];
+  skills: EntryFieldTypes.Text[];
 };
 
 export type EventDTO = {
+  id: number;
   title: string;
   location: string;
   time: string;
+  about: string;
+  responsibilities: string[];
+  application_link: string;
+  commitment: string[];
+  skills: string[];
 };
