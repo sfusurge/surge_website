@@ -74,7 +74,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/stars.png"
+              src="/stars.webp"
               alt="Stars"
               width={544}
               height={544}
