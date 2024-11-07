@@ -43,12 +43,24 @@
     ]
   },
   {
+    "id": "53",
+    "name": "Andrew Kim",
+    "position": "Co-Director of External Relations",
+    "major": "Computing Science",
+    "src": "/headshots/andrewkim.jpg",
+    "team": "External Relations",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/jung-hyun-andrew-kim-bb04822b6/"},
+      { "platform": "Portfolio", "url": "https://jung-hyun-andrew-kims-portfolio.vercel.app" }
+    ]
+  },
+  {
     "id": "4",
     "name": "Brian Wang",
-    "position": "Logistics Coordinator",
+    "position": "Co-Director of External Relations",
     "major": "Business",
     "src": "/headshots/brianwang.jpg",
-    "team": "Logistics",
+    "team": "External Relations",
     "socials": [
       {"platform": "LinkedIn", "url": "https://www.linkedin.com/in/brian-c-wang"},
       {"platform": "Instagram", "url": "https://www.instagram.com/__brian_wang__/"}
@@ -57,10 +69,10 @@
   {
     "id": "5",
     "name": "Rasya Hadaayaa",
-    "position": "Logistics Coordinator",
+    "position": "External Relations Coordinator",
     "major": "Business",
     "src": "/headshots/rasyahadaayaa.jpg",
-    "team": "Logistics",
+    "team": "External Relations",
     "socials": [{"platform": "LinkedIn", "url": "https://www.linkedin.com/in/rah99/"}]
     
   },
@@ -108,30 +120,6 @@
     "team": "Logistics",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/alex-mei-720279313/" }
-    ]
-  },
-  {
-    "id": "10",
-    "name": "Johnson Luong",
-    "position": "Director of External Relations",
-    "major": "Computing Science",
-    "src": "/headshots/johnsonluong.jpg",
-    "team": "External Relations",
-    "socials": [
-      { "platform": "Portfolio", "url": "https://johnsonl111.github.io/quartz/" },
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/johnson-luong/" },
-      { "platform": "GitHub", "url": "https://github.com/johnsonl111" }
-    ]
-  },
-  {
-    "id": "11",
-    "name": "Paul Lee",
-    "position": "External Relations Coordinator",
-    "major": "Business (MIS and Operations)",
-    "src": "/headshots/paullee.jpg",
-    "team": "External Relations",
-    "socials": [
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/pauldklee/" }
     ]
   },
   {
@@ -359,6 +347,32 @@
   ]
   },
   {
+    "id": "54",
+    "name": "Scott Lai",
+    "position": "Developer",
+    "major": "Computing Science",
+    "src": "/headshots/scottlai.jpg",
+    "team": "Technology",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/tuong-lai/" },
+      { "platform": "Portfolio", "url": "https://scottdlai.github.io/" },
+      { "platform": "GitHub", "url": "https://github.com/scottdlai" }
+    ]
+  },
+  {
+    "id": "55",
+    "name": "Ray Gong",
+    "position": "Developer",
+    "major": "Computing Science",
+    "src": "/headshots/raygong.jpg",
+    "team": "Technology",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/ray-gong/" },
+      { "platform": "Portfolio", "url": "https://goldentoaste.github.io/" },
+      { "platform": "GitHub", "url": "https://github.com/goldentoaste" }
+    ]
+  },
+  {
     "id": "31",
     "name": "Celine August Santoso",
     "position": "Product Design Team",
@@ -408,7 +422,19 @@
       { "platform": "Instagram", "url": "https://www.instagram.com/vickykxu/" }
     ]
   },
-
+  {
+    "id": "10",
+    "name": "Johnson Luong",
+    "position": "Finance Coordinator",
+    "major": "Computing Science",
+    "src": "/headshots/johnsonluong.jpg",
+    "team": "Finance",
+    "socials": [
+      { "platform": "Portfolio", "url": "https://johnsonl111.github.io/quartz/" },
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/johnson-luong/" },
+      { "platform": "GitHub", "url": "https://github.com/johnsonl111" }
+    ]
+  },
   {
     "id": "36",
     "name": "Samiha Raida",
@@ -457,9 +483,18 @@
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/a-svoboda/" },
       { "platform": "Instagram", "url": "https://www.instagram.com/alexandra.svoboda/" }
     ]
-
   },
-
+  {
+    "id": "11",
+    "name": "Paul Lee",
+    "position": "Human Resources Coordinator",
+    "major": "Business (MIS and Operations)",
+    "src": "/headshots/paullee.jpg",
+    "team": "HR",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/pauldklee/" }
+    ]
+  },
   {
     "id": "40",
     "name": "Darian Wong",
@@ -565,6 +600,30 @@
     ]
   },
   {
+    "id": "53",
+    "name": "Andrew Kim",
+    "position": "Co-Director of External Relations",
+    "major": "Computing Science",
+    "src": "/headshots/andrewkim.jpg",
+    "team": "Directors",
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/jung-hyun-andrew-kim-bb04822b6/"},
+      { "platform": "Portfolio", "url": "https://jung-hyun-andrew-kims-portfolio.vercel.app" }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Brian Wang",
+    "position": "Co-Director of External Relations",
+    "major": "Business",
+    "src": "/headshots/brianwang.jpg",
+    "team": "Directors",
+    "socials": [
+      {"platform": "LinkedIn", "url": "https://www.linkedin.com/in/brian-c-wang"},
+      {"platform": "Instagram", "url": "https://www.instagram.com/__brian_wang__/"}
+    ]
+  },
+  {
     "id": "48",
     "name": "Vicky Xu",
     "position": "Director of Finance",
@@ -587,14 +646,6 @@
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/a-svoboda/" },
       { "platform": "Instagram", "url": "https://www.instagram.com/alexandra.svoboda/" }
     ]
-  },
-  {
-    "id": "50",
-    "name": "Johnson Luong",
-    "position": "Director of External Relations",
-    "major": "Computing Science",
-    "src": "/headshots/johnsonluong.jpg",
-    "team": "Directors"
   },
   {
     "id": "52",
