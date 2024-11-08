@@ -16,6 +16,7 @@ export type Event = {
   application_link: EntryFieldTypes.Text;
   commitment: EntryFieldTypes.Text[];
   skills: EntryFieldTypes.Text[];
+  image: EntryFieldTypes.Object;
 };
 
 export type EventDTO = {
@@ -28,4 +29,5 @@ export type EventDTO = {
   application_link: string;
   commitment: string[];
   skills: string[];
+  image: object;
 };
