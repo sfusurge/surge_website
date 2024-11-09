@@ -186,9 +186,9 @@ function Landing() {
             {text_content.homepage.about.heading}
           </h1>
           <p className="paragraph">{text_content.homepage.about.description}</p>
-          <button className="mt-5 bg-brand-primary text-text-primary px-4 py-2 rounded-custom-radius hover:bg-brand-primary-hover">
+          <a href="/about" className="block w-fit mt-5 bg-brand-primary text-text-primary px-4 py-2 rounded-custom-radius hover:bg-brand-primary-hover">
             {text_content.homepage.about.cta}
-          </button>
+          </a>
         </div>
         <img src="about us.png" className="w-full md:w-3/4 lg:w-1/2" />
       </div>
