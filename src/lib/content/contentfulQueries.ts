@@ -1,9 +1,10 @@
 import { cache } from "react";
 import { contentfulClient } from "./contentfulConnector";
 import { ContentTypeEnum } from "./types/ContentTypeEnum";
-import { Event, EventDTO, EventSkeleton } from "./types/Event";
+import { EventDTO, EventSkeleton } from "./types/Event";
+import { TeamMemberDTO, TeamMemberSkeleton } from "./types/TeamMember";
+
 import {
-  JobListing,
   JobListingDTO,
   JobListingSkeleton,
 } from "./types/JobListing";
@@ -62,3 +63,26 @@ async function fetchJobListingCollection(): Promise<JobListingDTO[]> {
   }
 }
 export const getJobListingsCollection = cache(fetchJobListingCollection);
+
+async function fetchTeamMembersCollection(): Promise<TeamMemberDTO[]> {
+  try {
+    const TeamMembers = await contentfulClient
+        .getEntries<TeamMemberSkeleton>({
+          content_type: ContentTypeEnum.TEAM_MEMBER,
+        })
+        .then((TeamMembers) => {
+          return TeamMembers.items.map((TeamMember) => {
+            const dto: TeamMemberDTO = { ...TeamMember.fields };
+            return dto;
+          });
+        });
+    return TeamMembers;
+  } catch (e) {
+    console.log(
+        e,
+        "TeamMember type does not match the requested content. Please check if the content type has been updated"
+    );
+    return [];
+  }
+}
+export const getTeamMembersCollection = cache(fetchTeamMembersCollection);

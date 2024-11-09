@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react";
 import RoleButton from "@/components/RoleButton";
 import TeamCard from "@/components/TeamCard";
-import { teams } from "../../../../lib/teamData";
-import teamMembers from "@/lib/teamMemberData.json";
+import { teams } from "@/lib/teamData";
 
 export default function TeamGallery() {
   const [activeButton, setActiveButton] = useState<string>('');
   const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
+  const [teamMembers, setTeamMembers] = useState<any[]>([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,6 +32,19 @@ export default function TeamGallery() {
       window.removeEventListener("resize", handleResize);
     };
   }, [isDesktop]);
+
+  useEffect(() => {
+    const fetchTeamMembers = async () => {
+      try {
+        const response = await fetch('api/team');
+        const data = await response.json();
+        setTeamMembers(data);
+      } catch (error) {
+        console.error("Error fetching team members:", error);
+      }
+    };
+    fetchTeamMembers();
+  }, []);
 
   const changeTeam = (buttonId: string) => {
     setActiveButton(buttonId);
@@ -105,14 +118,14 @@ export default function TeamGallery() {
        "
         >
           <div className=" flex flex-col rounded-2xl  gap-5 transition-all ">
-            {teamMembers.map((member) =>
+            {teamMembers.sort((a, b) => a.order - b.order).map((member) =>
               activeButton === member.team ? (
                 <TeamCard
                   key={member.id}
                   name={member.name}
                   major={member.major}
                   role={member.position}
-                  src={member.src}
+                  src={"https://"+member?.image?.fields?.file?.url}
                   socials={member.socials}
                   fallbackSrc="/headshots/placeholder.png"
                 />

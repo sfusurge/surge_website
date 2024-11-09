@@ -3,8 +3,10 @@ import { useState } from "react";
 import Image from "next/image";
 
 type SocialLink = {
-  platform: string;
-  url: string;
+  fields: {
+    platform: string;
+    url: string;
+  }
 };
 
 type TeamCardProps = {
@@ -63,9 +65,9 @@ export default function TeamCard({
                 <a
                   key={index}
                   className="hover:scale-125 transition-all"
-                  href={link?.url}
+                  href={link?.fields?.url}
                 >
-                  {svgIconArray[link.platform]}
+                  {svgIconArray[link.fields?.platform]}
                 </a>
               );
             })}
