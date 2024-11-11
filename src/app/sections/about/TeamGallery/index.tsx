@@ -125,7 +125,7 @@ export default function TeamGallery() {
                   name={member.name}
                   major={member.major}
                   role={member.position}
-                  src={"https://"+member?.image?.fields?.file?.url}
+                  src={"https:"+member?.image?.fields?.file?.url}
                   socials={member.socials}
                   fallbackSrc="/headshots/placeholder.png"
                 />
