@@ -21,7 +21,7 @@ export default function Testimonials() {
                 name={thisEvent.name}
                 position={thisEvent.position}
                 testimonial={thisEvent.testimonial}
-                imageLink={thisEvent.src}
+                src={thisEvent.src}
               />
             </div>
           );
