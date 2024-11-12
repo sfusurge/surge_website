@@ -1,5 +1,4 @@
-
-
+/* For caldender date widget */
 .dateContainer {
     display: flex;
     flex-direction: column;
@@ -7,81 +6,164 @@
     border-radius: 8px;
     overflow: hidden;
 
-    width: 60px;
-    height: 64px;
+    width: 55px;
+    height: 58px;
 }
 
-
-.month{
+/* 3 letter month abbrev */
+.month {
     background-color: #364FB8;
-    height: 24px;
+    height: 20px;
 
     font-weight: 600;
     font-size: 11px;
-    line-height: 24px;
+    line-height: 20px;
 
     text-align: center;
 }
 
-.day{
+/* Date in the calender */
+.day {
     background-color: #292A2F;
 
     font-weight: 500;
     font-size: 24px;
     letter-spacing: -0.025em;
 
-    flex:1;
+    flex: 1;
 
     text-align: center;
 }
 
-.info{
+/* location info and date */
+.info {
     font-size: 16px;
-    line-height: 16px;  
+    line-height: 16px;
 }
 
-.cardContainer{
+/* used to style the root <a> tag */
+.cardContainer {
     position: relative;
     display: block;
 
-    width: 392px;
-    height: 600px;
+    width: 300px;
+    min-width: 300px;
+    height: 500px;
 
     border-radius: 20px;
-
+    
     background: black;
-    z-index: 1;
-    overflow: hidden;
+    overflow: clip;
 
-    background-repeat: no-repeat;
-    background-size: contain;
+    /* https://non-boring-gradients.netlify.app/ */
+    /* Non-linear gradient for a more intense bottom gradient and blur*/
+    --background: linear-gradient(180deg, rgb(0% 0% 0% / 0) 0%, rgb(1.606% 1.695% 2.141% / 0.2275238037109375) 6.25%, rgb(2.921% 3.083% 3.895% / 0.413818359375) 12.5%, rgb(3.983% 4.204% 5.31% / 0.5641937255859375) 18.75%, rgb(4.825% 5.093% 6.434% / 0.68359375) 25%, rgb(5.482% 5.786% 7.309% / 0.7765960693359375) 31.25%, rgb(5.982% 6.314% 7.976% / 0.847412109375) 37.5%, rgb(6.352% 6.705% 8.47% / 0.8998870849609375) 43.75%, rgb(6.618% 6.985% 8.824% / 0.9375) 50%, rgb(6.8% 7.178% 9.067% / 0.9633636474609375) 56.25%, rgb(6.919% 7.304% 9.226% / 0.980224609375) 62.5%, rgb(6.992% 7.38% 9.322% / 0.9904632568359375) 68.75%, rgb(7.031% 7.422% 9.375% / 0.99609375) 75%, rgb(7.05% 7.442% 9.4% / 0.9987640380859375) 81.25%, rgb(7.057% 7.449% 9.409% / 0.999755859375) 87.5%, rgb(7.059% 7.451% 9.412% / 0.9999847412109375) 93.75%, rgb(7.059% 7.451% 9.412%) 100% );
+    --background-left: linear-gradient(90deg,  #12131800, #121318ff 20%);
+    
+    will-change: transform;
+    transition: transform ease-out 250ms;
 }
 
-.description{
+/* hover and click animation */
+/* sub pixel madness */
+.cardContainer:hover, .cardContainer:focus{
+    transform: scale(1.02);
+   
+}
+.cardContainer:active{
+    transform: scale(1);
+
+
+}
+
+.background {
+    height: calc(100% - 20px);
+}
+
+.description {
     position: absolute;
     bottom: 43px;
     left: 30px;
-    z-index: 1;
+    z-index: 2;
 }
 
-.cardContainer::after{
-content: "";
+.cardContainer::after {
+    content: "";
 
-    width:calc(100% + 4px);
-    height: calc(50% + 4px);
+    width: 100%;
+    height: 50%;
 
     position: absolute;
-    left: -2px;
-    bottom: -2px;
+    left: 0;
+    bottom: 0;
 
-  
-    z-index: 0;
+    z-index: 1;
 
-    background: linear-gradient(#12131800, #121318ff),
-  linear-gradient(#12131800, #121318ff) ;
-    /* mask: linear-gradient(#12131800, #121318ff); */
-
-    /* backdrop-filter: blur(8px); */
-
+    background: var(--background);
 }
 
+
+.cardContainer::before {
+    content: "";
+
+    width: 100%;
+    height: 50%;
+
+    left: 0;
+    bottom: 0;
+
+    position: absolute;
+
+
+    z-index: 0;
+    backdrop-filter: blur(8px);
+    mask: var(--background);
+}
+
+
+.title {
+    font-weight: 500;
+    font-size: 30px;
+
+    letter-spacing: -0.015rem;
+}
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+    .cardContainer {
+        height: 220px;
+        width: 500px;
+        max-width: 100%;
+    }
+
+    .cardContainer::after {
+        top: 0;
+        right: 0;
+        left: auto;
+
+        height: 100%;
+        width: 75%;
+        
+        background: var(--background-left);
+    }
+
+    .cardContainer::before {
+        top: 0;
+        right: 0;
+        left: auto;
+        height: 100%;
+        width: 75%;
+        
+
+        mask: var(--background-left);
+    }
+    .description{
+        left: auto;
+        right: 50px;
+        align-items: flex-end;
+    }
+
+}

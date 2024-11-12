@@ -2,8 +2,8 @@ import StormHacksImage from "/public/stormhacks.png";
 import JourneyHacksImage from "/public/journeyhacks.png";
 import WorkshopsImage from "/public/workshops.png";
 import Image from "next/image";
-import HomeCard from "@/components/HomeCard";
 
+import {  HomeCardProps, HomeCard} from "@/components/HomeCard/HomeCard"
 import text_content from "@/lib/content/text_content.json";
 
 const TitleSection = () => {
@@ -22,11 +22,40 @@ const TitleSection = () => {
 };
 
 const EventSection = () => {
+  const events: HomeCardProps[] = [
+    {
+      title:"StormHacks",
+      description: "Our flagship hackathon",
+      src:StormHacksImage.src,
+      url:"https://stormhacks.com/",
+    },
+    {
+      title:"JourneyHacks",
+      description: "Our beginner-friendly hackathon",
+      src:JourneyHacksImage.src,
+      url:"https://journeyhacks2024.devpost.com/"
+    },
+    {
+      title:"Workshops",
+      description:"Learn new skills",
+      src: WorkshopsImage.src,
+      url: "https://journeyhacks2024.devpost.com/"
+
+    }
+  ]
   return (
 
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
-
-      <HomeCard
+    <div style={{
+      width:"100%",
+      display:"flex",
+      justifyContent:"center",
+      alignItems:"center",
+      flexFlow:"wrap",
+      gap:"4rem",
+      margin:"2rem"
+    }}>
+      {events.map((item)=><HomeCard key={item.title} {...item}/>)}
+      {/* <HomeCard
         title="StormHacks"
         description="Our flagship hackathon"
         src={StormHacksImage}
@@ -46,13 +75,13 @@ const EventSection = () => {
         src={WorkshopsImage}
         className="bg-[#1E293B]"
         url="/events"
-      />
+      /> */}
     </div>
 
   );
 };
 
-const SurgeEvent = ({ heading, subheading, image, description }) => {
+const SurgeEvent = ({ heading, subheading, image, description } : {heading:string, subheading:string, image:string, description:string}) => {
   return (
 
     <div
@@ -91,7 +120,7 @@ const InfoSection = () => {
   );
 };
 
-const InfoItem = ({ stat, description }) => {
+const InfoItem = ({ stat, description } : {stat:string, description:string}) => {
   return (
     <section
       className="flex flex-col items-center justify-center

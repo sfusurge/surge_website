@@ -21,18 +21,22 @@ function DateIcon({ date }: { date: Date }) {
     );
 }
 
-export function HomeCard({ title, description, src, url, date, location }: HomeCardProps) {
+export  function HomeCard({ title, description, src, url, date, location }: HomeCardProps) {
     return (
-        <a href={url} className={style.cardContainer} >
-            <img src={src} alt="" className="background" />
-            <div className={style.description}>
-            <h1>{title}</h1>
+        <a href={url} className={style.cardContainer} title={title}>
+            <img src={src} alt="" className={style.background} />
+            <div className={style.description} style={{
+                display:"flex",
+                flexDirection:"column",
+                gap:"12px"
+            }}>
+            <h1 className={style.title}>{title}</h1>
             {
                 // only show event date and location if both are visible
                 date && location && (
-                    <div className=" flex flex-row gap-4">
+                    <div className="flex flex-row gap-[12px]">
                         <DateIcon date={date} />
-                        <div className="flex flex-col gap-[8px]">
+                        <div className="flex flex-col gap-[4px]" >
                             <span className={style.info}>
                                 {date.toLocaleDateString("default", {
                                     month: "long",
@@ -52,6 +56,7 @@ export function HomeCard({ title, description, src, url, date, location }: HomeC
                     </div>
                 )
             }
+            <p>{description}</p>
             </div>
         </a>
     );
