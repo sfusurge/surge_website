@@ -46,63 +46,20 @@ const EventSection = () => {
   return (
 
     <div style={{
-      width:"100%",
+      width:"calc(100% - 4rem)",
       display:"flex",
       justifyContent:"center",
-      alignItems:"center",
       flexFlow:"wrap",
-      gap:"4rem",
-      margin:"2rem"
+      alignItems:"center",
+      margin:"2rem",
+      gap:"32px"
     }}>
       {events.map((item)=><HomeCard key={item.title} {...item}/>)}
-      {/* <HomeCard
-        title="StormHacks"
-        description="Our flagship hackathon"
-        src={StormHacksImage}
-        className="bg-[#2d1367]"
-        url="https://stormhacks.com/"
-      />
-      <HomeCard
-        title="JourneyHacks"
-        description="Our beginner-friendly hackathon"
-        src={JourneyHacksImage}
-        className="bg-[#32269F]"
-        url="https://journeyhacks2024.devpost.com/"
-      />
-      <HomeCard
-        title="Workshops"
-        description="Learn new skills"
-        src={WorkshopsImage}
-        className="bg-[#1E293B]"
-        url="/events"
-      /> */}
     </div>
 
   );
 };
 
-const SurgeEvent = ({ heading, subheading, image, description } : {heading:string, subheading:string, image:string, description:string}) => {
-  return (
-
-    <div
-      className="bg-surface flex flex-row lg:flex-col items-center
-                flex-[1_0_0]
-                pb-0 gap-8
-                rounded-custom-radius w-full hover:scale-105 transition-transform"
-    >
-      <section className="gap-custom-gap w-1/2 lg:w-full px-10 pt-10">
-        <h2 className="title-2 emphasized mb-2">{heading}</h2>
-        <h2 className="paragraph-lg text-text-primary">{subheading}</h2>
-      </section>
-      <Image
-        alt={description}
-        src={image}
-        className="w-1/2 lg:w-full aspect-square object-top object-cover rounded-bl-custom-radius rounded-br-custom-radius"
-      />
-    </div>
-
-  );
-};
 
 const InfoSection = () => {
   return (
