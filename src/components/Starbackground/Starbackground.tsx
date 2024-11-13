@@ -13,7 +13,9 @@ export default function Starbackground() {
             renderer.current = new StarRenderer(canvasRef.current);
         }
 
-        return renderer.current?.cleanUp;
+        return ()=>{
+            renderer.current?.cleanUp();
+        };
     }, []);
 
     return (

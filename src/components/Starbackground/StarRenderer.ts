@@ -76,17 +76,22 @@ export class StarRenderer {
     canvasWidth: number = 0;
     canvasHeight: number = 0;
 
+    renderHandle: number = 0;
+
     constructor(canvas: HTMLCanvasElement) {
         this.ctx = canvas.getContext("2d")!;
         this.setupEvents();
+        this.startRender();
     }
 
-    startRender(){
-        requestAnimationFrame()
+    startRender() {
+        this.renderHandle = requestAnimationFrame(this.render);
     }
 
-    render(){
+    render(dt: number) {
+        console.log(dt, this.canvasHeight, this.canvasWidth);
 
+        this.renderHandle = requestAnimationFrame(this.render);
     }
 
     /**
@@ -112,5 +117,6 @@ export class StarRenderer {
 
     cleanUp() {
         // FIXME add a proper clean up function
+        cancelAnimationFrame(this.renderHandle);
     }
 }
