@@ -8,7 +8,9 @@ export default function Starbackground() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const renderer = useRef<StarRenderer | null>(null);
     useEffect(() => {
-        if (canvasRef.current && !renderer.current) {
+        console.log('what the');
+        
+        if (canvasRef.current) {
             // only make the renderer once
             renderer.current = new StarRenderer(canvasRef.current);
         }
