@@ -1,5 +1,5 @@
 export interface StarRendererOptions {
-    density: number; // how many stars for every 100px of canvas
+    density: number; // how many stars for every 200x200px of canvas
 
     starColors: [string, number][]; // list of hex color codes paired to their chance of appearing.
     //Note that the chances should between 0 - 1, and sum to 1.
@@ -56,7 +56,7 @@ function randRange(center: number, range: number) {
 export class StarRenderer {
     options: StarRendererOptions = {
         // default params for testing.
-        density: 10,
+        density: 1,
 
         starColors: [["#ffffff", 1]],
 
@@ -64,10 +64,10 @@ export class StarRenderer {
         birghtnessRange: 0.1,
 
         size: 5, //5px
-        sizeRange: 1,
+        sizeRange: 2,
 
-        period: 2000, // 2 seconds
-        periodRange: 500, // +/- half a second
+        period: 5000, // 2 seconds
+        periodRange: 2000, // +/- half a second
 
         distributionCellSize: 15,
     };
@@ -124,16 +124,34 @@ export class StarRenderer {
         // new canvas each time
         this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
 
-        for(const key of this.stars.keys()){
+        let count = 0;
+        for (const key of this.stars.keys()) {
             const star = this.stars.get(key)!;
+            count++;
+            if (star.removeTime < currentTime) {
+                // remove stars past expriation and dont render.
+                this.stars.delete(key);
+            }
 
             // updates star brightness
             this.updateStar(star, currentTime);
 
             // render single star
-            
+            this.ctx.fillStyle = star.color + star.currentBrightness;
+            this.ctx.fillRect(star.x, star.y, star.radius, star.radius);
         }
 
+        // number of 100x100 zones times density for each zone.
+        const desiredStarCount = Math.floor(
+            this.options.density * (this.canvasWidth / 200) * (this.canvasHeight / 200),
+        );
+        // if current number of stars is less than desired amount, then lets generate some.
+        if (this.stars.size < desiredStarCount) {
+            while(this.stars.size < desiredStarCount) {
+                this.generateStar(currentTime);
+            }
+        }
+        
         // render finished, request next frame
         this.renderHandle = requestAnimationFrame(this.render.bind(this));
 
@@ -171,7 +189,7 @@ export class StarRenderer {
         this.cols = Math.ceil(this.canvasHeight / this.options.distributionCellSize);
     }
 
-    smoothApproach(dt:number){
+    smoothApproach(dt: number) {
         this.currentCursorX = lerp(this.currentCursorX, this.targetCursorX, this.lerpFactor * dt);
         this.currentCursorY = lerp(this.currentCursorY, this.targetCursorY, this.lerpFactor * dt);
         this.currentScrollY = lerp(this.currentScrollY, this.targetScrollY, this.lerpFactor * dt);
@@ -236,7 +254,6 @@ export class StarRenderer {
         if (i < 3) {
             this.stars.set(`${row}|${col}`, star);
         } else {
-            // Tie breaker
             this.stars.set(`${row}|${col}${Math.floor(i * 100 * Math.random())}`, star);
         }
     }
@@ -251,13 +268,10 @@ export class StarRenderer {
         return this.options.starColors[this.options.starColors.length - 1][0];
     }
 
-
-    
     cleanUp() {
         // FIXME add a proper clean up function
         console.log("cleaning up starbackgrond");
 
         cancelAnimationFrame(this.renderHandle);
     }
-
 }
