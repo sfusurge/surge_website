@@ -13,10 +13,7 @@ export interface StarRendererOptions {
     period: number; // time in milliseconds that it takes for a star to created to be destroyed
     periodRange: number; // ...
 
-    distributionCellSize: number; // when choosing star location randomly,
-    // first randomly choose a cell of size of this variable, then truely randomly choose a spot within the cell
-    // this is to avoid stars colliding with eachother, and make it feel more evenly distributed.
-    // NOTE: during the cell selection, no more than 3 tries should be made. Collision is acceptable if cell size is large.
+    scrollScale: number;
 }
 
 interface Star {
@@ -58,24 +55,25 @@ export class StarRenderer {
         // default params for testing.
         density: 1,
 
-        starColors: [["#ffffff", 1]],
+        starColors: [["#666666", 1]],
 
         brightness: 0.8,
         birghtnessRange: 0.1,
 
-        size: 5, //5px
+        size: 3, //5px
         sizeRange: 2,
 
-        period: 5000, // 2 seconds
+        period: 8000, // 2 seconds
         periodRange: 2000, // +/- half a second
 
-        distributionCellSize: 15,
+        scrollScale: 0.35,
     };
 
     canvas: HTMLCanvasElement;
     ctx: CanvasRenderingContext2D;
+    fullClearRequired = true;
 
-    stars: Map<string, Star> = new Map();
+    stars: Star[] = [];
 
     // track browser state for interactivity
     targetCursorX: number = 0;
@@ -104,9 +102,6 @@ export class StarRenderer {
         this.ctx = canvas.getContext("2d")!;
         this.setupEvents();
         this.startRender();
-
-        this.ctx.fillStyle = "red";
-        this.ctx.fillRect(100, 0, 100, 100);
     }
 
     startRender() {
@@ -117,41 +112,62 @@ export class StarRenderer {
     }
 
     render(currentTime: number) {
-        const deltaTime = currentTime - this.lastFrameTime;
-
+        const deltaTime = (currentTime - this.lastFrameTime) / 1000;
         this.smoothApproach(deltaTime);
 
-        // new canvas each time
-        this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+        if (!this.fullClearRequired && deltaTime < 0.1) {
+            // force ~30fps, or 60fps when screen is repainted.
+            this.renderHandle = requestAnimationFrame(this.render.bind(this));
+            return;
+        }
 
-        let count = 0;
-        for (const key of this.stars.keys()) {
-            const star = this.stars.get(key)!;
-            count++;
+        // number of 200x200 zones times density for each zone.
+        const desiredStarCount = Math.floor(
+            this.options.density * (this.canvasWidth / 200) * (this.canvasHeight / 200),
+        );
+
+        if (this.fullClearRequired) {
+            this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+            this.fullClearRequired = false;
+        }
+
+        for (let i = 0; i < this.stars.length; i++) {
+            let star = this.stars[i];
             if (star.removeTime < currentTime) {
-                // remove stars past expriation and dont render.
-                this.stars.delete(key);
+                // star expired
+                if (this.stars.length > desiredStarCount) {
+                    // too many stars
+                    const temp = this.stars[this.stars.length - 1];
+                    this.stars[this.stars.length - 1] = star;
+                    this.stars[i] = temp;
+                    star = temp;
+                    this.stars.pop();
+                } else {
+                    // not too many, just replace
+                    this.stars[i] = this.generateStar(currentTime);
+                    star = this.stars[i];
+                }
             }
 
             // updates star brightness
             this.updateStar(star, currentTime);
+            const y = star.y - ((this.currentScrollY * this.options.scrollScale) % this.canvasHeight);
 
+            this.ctx.clearRect(star.x - star.radius, y - star.radius, star.radius * 2, star.radius * 2);
             // render single star
             this.ctx.fillStyle = star.color + star.currentBrightness;
-            this.ctx.fillRect(star.x, star.y, star.radius, star.radius);
+            // this.ctx.fillRect(star.x, y, star.radius, star.radius);
+
+            this.ctx.beginPath();
+            this.ctx.ellipse(star.x, y, star.radius, star.radius, 0, 0, Math.PI * 2, false);
+            this.ctx.fill();
         }
 
-        // number of 100x100 zones times density for each zone.
-        const desiredStarCount = Math.floor(
-            this.options.density * (this.canvasWidth / 200) * (this.canvasHeight / 200),
-        );
         // if current number of stars is less than desired amount, then lets generate some.
-        if (this.stars.size < desiredStarCount) {
-            while(this.stars.size < desiredStarCount) {
-                this.generateStar(currentTime);
-            }
+        while (this.stars.length < desiredStarCount) {
+            this.stars.push(this.generateStar(currentTime));
         }
-        
+
         // render finished, request next frame
         this.renderHandle = requestAnimationFrame(this.render.bind(this));
 
@@ -185,14 +201,18 @@ export class StarRenderer {
         this.canvasWidth = window.innerWidth;
         this.canvasHeight = window.innerHeight;
 
-        this.rows = Math.ceil(this.canvasWidth / this.options.distributionCellSize);
-        this.cols = Math.ceil(this.canvasHeight / this.options.distributionCellSize);
+        this.fullClearRequired = true;
     }
 
     smoothApproach(dt: number) {
         this.currentCursorX = lerp(this.currentCursorX, this.targetCursorX, this.lerpFactor * dt);
         this.currentCursorY = lerp(this.currentCursorY, this.targetCursorY, this.lerpFactor * dt);
-        this.currentScrollY = lerp(this.currentScrollY, this.targetScrollY, this.lerpFactor * dt);
+        const newScroll = lerp(this.currentScrollY, this.targetScrollY, this.lerpFactor * dt);
+
+        if (Math.abs(newScroll - this.targetScrollY) > 1) {
+            this.currentScrollY = newScroll;
+            this.fullClearRequired = true;
+        }
     }
 
     /**
@@ -221,18 +241,6 @@ export class StarRenderer {
      * @param currentTime
      */
     generateStar(currentTime: number) {
-        let row = 0;
-        let col = 0;
-        let i = 0;
-        for (; i < 3; i++) {
-            row = Math.floor(this.rows * Math.random());
-            col = Math.floor(this.cols * Math.random());
-
-            if (!this.stars.has(`${row}|${col}`)) {
-                break;
-            }
-        }
-
         const star: Star = {
             color: this.randomColor(),
             maxBrightness: randRange(this.options.brightness, this.options.birghtnessRange),
@@ -242,20 +250,12 @@ export class StarRenderer {
             startTime: Math.floor(currentTime),
 
             // put the star in a grid, then random position within the grid cell
-            x: Math.floor(row * this.options.distributionCellSize + this.options.distributionCellSize * Math.random()),
+            x: Math.floor(this.canvasWidth * Math.random()),
             // then offset by vertical scroll to fake a scroll effect
-            y: Math.floor(
-                col * this.options.distributionCellSize +
-                    this.options.distributionCellSize * Math.random() +
-                    (this.currentScrollY % this.canvasHeight),
-            ),
+            y: Math.floor(this.canvasHeight * Math.random()),
         };
 
-        if (i < 3) {
-            this.stars.set(`${row}|${col}`, star);
-        } else {
-            this.stars.set(`${row}|${col}${Math.floor(i * 100 * Math.random())}`, star);
-        }
+        return star;
     }
 
     randomColor() {
