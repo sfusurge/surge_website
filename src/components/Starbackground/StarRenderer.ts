@@ -50,23 +50,27 @@ function randRange(center: number, range: number) {
     return center + Math.random() * range * 2 - range;
 }
 
+function mod(n: number, m: number) {
+    return ((n % m) + m) % m
+}
+
 export class StarRenderer {
     options: StarRendererOptions = {
         // default params for testing.
-        density: 1,
+        density: 3,
 
-        starColors: [["#666666", 1]],
+        starColors: [["#90d5ff",0.1],["#dab1da", 0.2], ["#666666", 1]],
 
         brightness: 0.8,
         birghtnessRange: 0.1,
 
-        size: 3, //5px
-        sizeRange: 2,
+        size: 2, //5px
+        sizeRange: 1,
 
         period: 8000, // 2 seconds
         periodRange: 2000, // +/- half a second
 
-        scrollScale: 0.35,
+        scrollScale: 0.55,
     };
 
     canvas: HTMLCanvasElement;
@@ -115,7 +119,7 @@ export class StarRenderer {
         const deltaTime = (currentTime - this.lastFrameTime) / 1000;
         this.smoothApproach(deltaTime);
 
-        if (!this.fullClearRequired && deltaTime < 0.1) {
+        if (!this.fullClearRequired && deltaTime < 0.2) {
             // force ~30fps, or 60fps when screen is repainted.
             this.renderHandle = requestAnimationFrame(this.render.bind(this));
             return;
@@ -126,8 +130,8 @@ export class StarRenderer {
             this.options.density * (this.canvasWidth / 200) * (this.canvasHeight / 200),
         );
 
+        this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
         if (this.fullClearRequired) {
-            this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
             this.fullClearRequired = false;
         }
 
@@ -151,9 +155,9 @@ export class StarRenderer {
 
             // updates star brightness
             this.updateStar(star, currentTime);
-            const y = star.y - ((this.currentScrollY * this.options.scrollScale) % this.canvasHeight);
+            const y = mod((star.y - this.currentScrollY * this.options.scrollScale) , this.canvasHeight);
 
-            this.ctx.clearRect(star.x - star.radius, y - star.radius, star.radius * 2, star.radius * 2);
+            // this.ctx.clearRect(star.x - star.radius, y - star.radius, star.radius * 2, star.radius * 2);
             // render single star
             this.ctx.fillStyle = star.color + star.currentBrightness;
             // this.ctx.fillRect(star.x, y, star.radius, star.radius);
@@ -261,7 +265,7 @@ export class StarRenderer {
     randomColor() {
         const rand = Math.random();
         for (const [color, chance] of this.options.starColors) {
-            if (rand > chance) {
+            if (rand < chance) {
                 return color;
             }
         }
