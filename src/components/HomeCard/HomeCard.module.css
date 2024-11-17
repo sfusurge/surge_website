@@ -52,7 +52,7 @@
 
     border-radius: 20px;
 
-    background: black;
+    background: transparent;
     overflow: clip;
 
     /* https://non-boring-gradients.netlify.app/ */
@@ -94,7 +94,10 @@
 }
 
 .background {
-    height: calc(100% - 20px);
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: calc(100% - 2px);
 }
 
 .description {
