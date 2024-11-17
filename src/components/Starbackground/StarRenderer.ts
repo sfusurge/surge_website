@@ -74,23 +74,12 @@ function choseRandom<T>(options: [T, number][]) {
     return options[options.length][0];
 }
 
-function distanceLessThan(x1: number, y1: number, x2: number, y2: number, distance: number) {
-    const dx = x2 - x1;
-    const dy = y2 - y1;
 
-    return dx * dx + dy * dy <= distance * distance;
-}
-
-function distance(x1: number, y1: number, x2: number, y2: number) {
-    const dx = x2 - x1;
-    const dy = y2 - y1;
-    return Math.sqrt(dx * dx + dy * dy);
-}
 
 export class StarRenderer {
     options: StarRendererOptions = {
         // default params for testing.
-        density: 3,
+        density: 4,
 
         starColors: [
             ["#90d5ff", 0.1],
@@ -166,7 +155,6 @@ export class StarRenderer {
         this.buffer.width = this.options.glowRange;
         this.buffer.height = this.buffer.width;
 
-        
         this.bctx = this.buffer.getContext("2d")!;
     }
 
@@ -185,13 +173,12 @@ export class StarRenderer {
             this.stars.push(this.generateStar(-Math.random() * this.options.period));
         }
 
-
         // create gradient for glow effect
         const glowRange = this.options.glowRange;
         this.glowGradient = this.ctx.createRadialGradient(
             glowRange / 2,
             glowRange / 2,
-            0,
+            10,
             glowRange / 2,
             glowRange / 2,
             this.options.glowRange * 0.5,
@@ -208,21 +195,20 @@ export class StarRenderer {
 
         // skip frame is delta time is less than some limit
         // basically restricting fps on idle
-        if (!this.unthrottleRender && this.deltaTime < 0.1) {
-            // force ~30fps, or 60fps when screen is repainted.
+        if ( !this.unthrottleRender && this.deltaTime < 0.15) {
+            // force ~30fps, or 60fps when screen is repainted
             this.renderHandle = requestAnimationFrame(this.render.bind(this));
-            return;
-        }
-        if (this.unthrottleRender) {
-            this.unthrottleRender = false;
+            return;     
         }
 
+        this.unthrottleRender = false; 
         // clear canvas to star new render
         this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
 
         // really do render now
         this.renderStars(currentTime);
-        this.renderGlow();
+        // this.renderGlow();
+
 
         // current frame is now last frame
         this.lastFrameTime = currentTime;
@@ -237,9 +223,8 @@ export class StarRenderer {
         const x = this.targetCursorX;
         const y = this.targetCursorY;
 
-        const data = this.ctx.getImageData(x - halfRange, y - halfRange, range, range);
-
-        this.bctx.putImageData(data, 0, 0);
+        this.bctx.globalCompositeOperation = "copy";
+        this.bctx.drawImage(this.canvas, x - halfRange, y - halfRange, range, range, 0, 0, range, range);
         this.bctx.globalCompositeOperation = "source-atop";
         this.bctx.fillStyle = this.glowGradient!;
         this.bctx.fillRect(0, 0, range, range);
@@ -257,8 +242,6 @@ export class StarRenderer {
         const desiredStarCount = Math.floor(
             this.options.density * (this.canvasWidth / 200) * (this.canvasHeight / 200),
         );
-
-
 
         for (let i = 0; i < this.stars.length; i++) {
             let star = this.stars[i];
@@ -313,7 +296,6 @@ export class StarRenderer {
      */
     setupEvents() {
         // WARNING client side only! will error in ssr!
-
         window.addEventListener("mousemove", (e: MouseEvent) => {
             this.targetCursorX = e.clientX;
             this.targetCursorY = e.clientY;
@@ -342,14 +324,11 @@ export class StarRenderer {
     }
 
     smoothApproach(dt: number) {
-        this.currentCursorX = lerp(this.currentCursorX, this.targetCursorX, this.lerpFactor * dt);
-        this.currentCursorY = lerp(this.currentCursorY, this.targetCursorY, this.lerpFactor * dt);
         const newScroll = lerp(this.currentScrollY, this.targetScrollY, this.lerpFactor * dt);
         if (Math.abs(newScroll - this.targetScrollY) > 1) {
             this.currentScrollY = newScroll;
             this.unthrottleRender = true;
         }
-
     }
 
     /**
@@ -397,8 +376,6 @@ export class StarRenderer {
     }
 
     cleanUp() {
-        console.log("cleaning up starbackgrond");
-
         cancelAnimationFrame(this.renderHandle);
     }
 }

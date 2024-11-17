@@ -1,5 +1,6 @@
 "use client";
-
+// this component attaches to a canvas, and creates a background canvas
+// thus must be client side
 import { useEffect, useRef } from "react";
 import style from "./Starbackground.module.css";
 import { StarRenderer } from "./StarRenderer";
