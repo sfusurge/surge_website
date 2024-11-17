@@ -153,11 +153,21 @@ export class StarRenderer {
 
     glowGradient: CanvasGradient | undefined;
 
+    buffer: HTMLCanvasElement;
+    bctx: CanvasRenderingContext2D;
+
     constructor(canvas: HTMLCanvasElement) {
         this.canvas = canvas;
         this.ctx = canvas.getContext("2d")!;
         this.setupEvents();
         this.startRender();
+
+        this.buffer = document.createElement("canvas") as HTMLCanvasElement;
+        this.buffer.width = this.options.glowRange;
+        this.buffer.height = this.buffer.width;
+
+        
+        this.bctx = this.buffer.getContext("2d")!;
     }
 
     startRender() {
@@ -174,6 +184,7 @@ export class StarRenderer {
         for (let i = 0; i < desiredStarCount; i++) {
             this.stars.push(this.generateStar(-Math.random() * this.options.period));
         }
+
 
         // create gradient for glow effect
         const glowRange = this.options.glowRange;
@@ -194,7 +205,7 @@ export class StarRenderer {
     render(currentTime: number) {
         // calc delta time
         this.deltaTime = (currentTime - this.lastFrameTime) / 1000;
-        
+
         // skip frame is delta time is less than some limit
         // basically restricting fps on idle
         if (!this.unthrottleRender && this.deltaTime < 0.1) {
@@ -221,11 +232,20 @@ export class StarRenderer {
     }
 
     renderGlow() {
-        this.ctx.globalCompositeOperation = "source-atop";
-        this.ctx.fillStyle = this.glowGradient!;
-        this.ctx.translate(this.targetCursorX - this.options.glowRange/2, this.targetCursorY- this.options.glowRange/2)
-        this.ctx.fillRect(0,0, this.options.glowRange, this.options.glowRange);
-        this.ctx.resetTransform()
+        const range = this.options.glowRange;
+        const halfRange = this.options.glowRange / 2;
+        const x = this.targetCursorX;
+        const y = this.targetCursorY;
+
+        const data = this.ctx.getImageData(x - halfRange, y - halfRange, range, range);
+
+        this.bctx.putImageData(data, 0, 0);
+        this.bctx.globalCompositeOperation = "source-atop";
+        this.bctx.fillStyle = this.glowGradient!;
+        this.bctx.fillRect(0, 0, range, range);
+
+        this.bctx.globalCompositeOperation = "lighter"
+        this.ctx.drawImage(this.buffer, x - halfRange, y - halfRange);
         this.ctx.globalCompositeOperation = "source-over";
 
     }
@@ -238,7 +258,7 @@ export class StarRenderer {
             this.options.density * (this.canvasWidth / 200) * (this.canvasHeight / 200),
         );
 
-        
+
 
         for (let i = 0; i < this.stars.length; i++) {
             let star = this.stars[i];
@@ -329,7 +349,7 @@ export class StarRenderer {
             this.currentScrollY = newScroll;
             this.unthrottleRender = true;
         }
-      
+
     }
 
     /**
