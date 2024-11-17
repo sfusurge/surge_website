@@ -4,6 +4,9 @@ export interface StarRendererOptions {
     starColors: [string, number][]; // list of hex color codes paired to their chance of appearing.
     //Note that the chances should between 0 - 1, and sum to 1.
 
+    starPaths: [string, number][];
+    pathNameToPath: { [id: string]: Path2D | undefined }
+
     brightness: number; // base brightness of each star, will be implemented with alpha value
     birghtnessRange: number; // actual brightness will be chosen randomly from [brighness - range, brightness + range]
 
@@ -17,6 +20,8 @@ export interface StarRendererOptions {
 }
 
 interface Star {
+    pathName: string,
+
     x: number;
     y: number; // location of star
 
@@ -54,13 +59,31 @@ function mod(n: number, m: number) {
     return ((n % m) + m) % m
 }
 
+
+function choseRandom<T>(options: [T, number][]) {
+    const rand = Math.random();
+
+    for (const [val, chance] of options) {
+        if (rand < chance) {
+            return val;
+        }
+    }
+
+    return options[options.length][0];
+}
+
 export class StarRenderer {
     options: StarRendererOptions = {
         // default params for testing.
         density: 3,
 
-        starColors: [["#90d5ff",0.1],["#dab1da", 0.2], ["#666666", 1]],
-
+        starColors: [["#90d5ff", 0.1], ["#dab1da", 0.2], ["#666666", 1]],
+        pathNameToPath: {
+            "4point": new Path2D("M.1742.5458C.2162.5598.2543.5834.2856.6147C.3168.6460.3404.6841.3542.7261L.3990.8638C.4027.8741.4094.8831.4182.8896C.4270.8960.4376.8997.4485.9000C.4594.9004.4702.8975.4794.8916C.4887.8858.4959.8773.5002.8672L.5003.8669L.5015.8648L.5064.8497L.5063.8492L.5463.7262C.5591.6877.5799.6525.6074.6229L.6087.6222C.6285.6013.6513.5835.6763.5692L.6759.5687C.6919.5597.7087.5523.7261.5465L.8639.5017C.8745.4980.8837.4910.8902.4819C.8966.4727.9001.4617.9001.4505C.9001.4393.8966.4283.8902.4191C.8837.4100.8745.4030.8639.3992L.8611.3985L.7233.3537C.6815.3398.6434.3163.6122.2852C.5810.2540.5575.2160.5435.1741L.4989.0364C.4952.0258.4883.0166.4791.0100C.4699.0035.4589.0000.4476.0000C.4363.0000.4253.0035.4161.0100C.4069.0166.4000.0258.3962.0364L.3514.1741L.3503.1775C.3363.2183.3131.2554.2827.2858C.2522.3163.2151.3395.1743.3535L.0366.3983C.0260.4020.0167.4089.0101.4181C.0035.4274.0000.4384.0000.4497C.0000.4610.0035.4720.0101.4812C.0167.4904.0260.4974.0366.5010L.1742.5458Z"),
+            "undefined": undefined
+        },
+        starPaths: [["4point", 0.1],
+        ["undefined", 1]], // undefined gives circle
         brightness: 0.8,
         birghtnessRange: 0.1,
 
@@ -70,7 +93,7 @@ export class StarRenderer {
         period: 8000, // 2 seconds
         periodRange: 2000, // +/- half a second
 
-        scrollScale: 0.55,
+        scrollScale: 0.6,
     };
 
     canvas: HTMLCanvasElement;
@@ -110,7 +133,18 @@ export class StarRenderer {
 
     startRender() {
         // properly scale canvas before rendering
-        this.updateWindowSize();
+        setTimeout(() => {
+            this.updateWindowSize();
+        }, 50);
+
+        const desiredStarCount = Math.floor(
+            this.options.density * (this.canvasWidth / 200) * (this.canvasHeight / 200),
+        );
+
+        // generate initial stars with random timings
+        for (let i =0; i< desiredStarCount; i++){
+            this.stars.push(this.generateStar(Math.random() * this.options.period))
+        }
 
         this.renderHandle = requestAnimationFrame(this.render.bind(this));
     }
@@ -119,7 +153,7 @@ export class StarRenderer {
         const deltaTime = (currentTime - this.lastFrameTime) / 1000;
         this.smoothApproach(deltaTime);
 
-        if (!this.fullClearRequired && deltaTime < 0.2) {
+        if (!this.fullClearRequired && deltaTime < 0.1) {
             // force ~30fps, or 60fps when screen is repainted.
             this.renderHandle = requestAnimationFrame(this.render.bind(this));
             return;
@@ -130,11 +164,11 @@ export class StarRenderer {
             this.options.density * (this.canvasWidth / 200) * (this.canvasHeight / 200),
         );
 
-        this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+        
         if (this.fullClearRequired) {
             this.fullClearRequired = false;
         }
-
+        this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
         for (let i = 0; i < this.stars.length; i++) {
             let star = this.stars[i];
             if (star.removeTime < currentTime) {
@@ -155,18 +189,29 @@ export class StarRenderer {
 
             // updates star brightness
             this.updateStar(star, currentTime);
-            const y = mod((star.y - this.currentScrollY * this.options.scrollScale) , this.canvasHeight);
+            const y = mod((star.y - this.currentScrollY * this.options.scrollScale), this.canvasHeight);
 
             // this.ctx.clearRect(star.x - star.radius, y - star.radius, star.radius * 2, star.radius * 2);
             // render single star
+            
+            
             this.ctx.fillStyle = star.color + star.currentBrightness;
             // this.ctx.fillRect(star.x, y, star.radius, star.radius);
 
-            this.ctx.beginPath();
-            this.ctx.ellipse(star.x, y, star.radius, star.radius, 0, 0, Math.PI * 2, false);
-            this.ctx.fill();
-        }
 
+            const pathToPaint = this.options.pathNameToPath[star.pathName];
+            if (pathToPaint === undefined ) {
+                this.ctx.beginPath();
+                this.ctx.ellipse(star.x, y, star.radius, star.radius, 0, 0, Math.PI * 2, false);
+                this.ctx.fill();
+            }
+            else {
+                this.ctx.translate(star.x, y);
+                this.ctx.scale(star.radius * 4, star.radius * 4);
+                this.ctx.fill(pathToPaint);
+                this.ctx.resetTransform()
+            }
+        }
         // if current number of stars is less than desired amount, then lets generate some.
         while (this.stars.length < desiredStarCount) {
             this.stars.push(this.generateStar(currentTime));
@@ -204,6 +249,10 @@ export class StarRenderer {
         this.canvas.height = window.innerHeight;
         this.canvasWidth = window.innerWidth;
         this.canvasHeight = window.innerHeight;
+
+        // instant update scroll on initial render
+        this.targetScrollY = window.scrollY;
+        this.currentScrollY = this.targetScrollY;
 
         this.fullClearRequired = true;
     }
@@ -246,7 +295,8 @@ export class StarRenderer {
      */
     generateStar(currentTime: number) {
         const star: Star = {
-            color: this.randomColor(),
+            pathName: choseRandom(this.options.starPaths),
+            color: choseRandom(this.options.starColors),
             maxBrightness: randRange(this.options.brightness, this.options.birghtnessRange),
             currentBrightness: "00",
             radius: Math.ceil(randRange(this.options.size, this.options.sizeRange)),
@@ -262,15 +312,7 @@ export class StarRenderer {
         return star;
     }
 
-    randomColor() {
-        const rand = Math.random();
-        for (const [color, chance] of this.options.starColors) {
-            if (rand < chance) {
-                return color;
-            }
-        }
-        return this.options.starColors[this.options.starColors.length - 1][0];
-    }
+
 
     cleanUp() {
         // FIXME add a proper clean up function
