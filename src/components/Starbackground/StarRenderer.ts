@@ -324,7 +324,7 @@ export class StarRenderer {
     }
 
     smoothApproach(dt: number) {
-        const newScroll = lerp(this.currentScrollY, this.targetScrollY, this.lerpFactor * dt);
+        const newScroll = lerp(this.currentScrollY, this.targetScrollY, Math.min(1, this.lerpFactor * dt));
         if (Math.abs(newScroll - this.targetScrollY) > 1) {
             this.currentScrollY = newScroll;
             this.unthrottleRender = true;
