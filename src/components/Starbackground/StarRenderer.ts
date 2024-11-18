@@ -207,7 +207,7 @@ export class StarRenderer {
 
         // really do render now
         this.renderStars(currentTime);
-        // this.renderGlow();
+        this.renderGlow();
 
 
         // current frame is now last frame
