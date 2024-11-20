@@ -34,7 +34,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/green star 1.png"
+              src="/green star 1.webp"
               alt="Green Star"
               width={52}
               height={52}
@@ -44,7 +44,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/purple star 1.png"
+              src="/purple star 1.webp"
               alt="Purple Star"
               width={65}
               height={65}
@@ -54,7 +54,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/yellow star 1.png"
+              src="/yellow star 1.webp"
               alt="Yellow Star"
               width={66}
               height={66}
@@ -64,7 +64,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/small purple star 1.png"
+              src="/small purple star 1.webp"
               alt="Small Purple Star"
               width={39}
               height={39}
@@ -84,7 +84,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/large pink star 1.png"
+              src="/large pink star 1.webp"
               alt="Large Pink Star"
               width={59}
               height={59}
@@ -94,7 +94,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/large pink star 2.png"
+              src="/large pink star 2.webp"
               alt="Large Pink Star 2"
               width={42}
               height={42}
@@ -104,7 +104,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/large purple star.png"
+              src="/large purple star.webp"
               alt="Large Purple Star"
               width={63}
               height={63}
@@ -114,7 +114,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/small green star.png"
+              src="/small green star.webp"
               alt="Small Green Star"
               width={33}
               height={33}
@@ -124,7 +124,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/glasses.png"
+              src="/glasses.webp"
               alt="Glasses"
               width={72}
               height={72}
@@ -134,7 +134,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/big-bubble.png"
+              src="/big-bubble.webp"
               alt="Big Bubble"
               width={64}
               height={64}
@@ -144,7 +144,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/small-bubble.png"
+              src="/small-bubble.webp"
               alt="Small Bubble"
               width={14}
               height={14}
@@ -154,7 +154,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/bubble.png"
+              src="/bubble.webp"
               alt="Bubble"
               width={28}
               height={28}
@@ -164,7 +164,7 @@ function Landing() {
 
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src="/light-bubble.png"
+              src="/light-bubble.webp"
               alt="Light Bubble"
               width={24}
               height={24}

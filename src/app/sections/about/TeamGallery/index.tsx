@@ -114,7 +114,7 @@ export default function TeamGallery() {
                   role={member.position}
                   src={member.src}
                   socials={member.socials}
-                  fallbackSrc="/headshots/placeholder.png"
+                  fallbackSrc="/headshots/placeholder.webp"
                 />
               ) : null
             )}
