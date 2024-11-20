@@ -19,7 +19,7 @@ export async function fetchSpace() {
 
 async function fetchEventCollection(): Promise<EventDTO[]> {
   try {
-    const events: EventDTO[] = await contentfulClient.withoutLinkResolution
+    const events: EventDTO[] = await contentfulClient
       .getEntries<EventSkeleton>({
         content_type: ContentTypeEnum.EVENT,
       })
