@@ -1,6 +1,6 @@
 import ButtonScroll from "@/components/ButtonScroll";
 import Image from "next/image";
-import workshop from "/public/workshop.png"
+import workshop from "/public/workshop.webp"
 import { Work_Sans } from "next/font/google";
 
 export default function EventsHero() {
@@ -31,7 +31,7 @@ export default function EventsHero() {
     //   <section className="flex  md:flex-row  w-full gap-16 lg:gap-12 flex-col-reverse items-center justify-center ">
     //     <div className="flex md:justify-center h-full md:w-[40%]   ">
     //       <Image
-    //         src={"/events.png"}
+    //         src={"/events.avif"}
     //         width={1659}
     //         height={1421}
     //         alt={"hello"}

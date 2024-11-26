@@ -13,7 +13,7 @@
       "testimonial": "Surge has not only been a catalyst for both my personal and professional growth, but it's also been a platform for me and like-minded people to connect and bring our passion for tech and hackathons to reality at SFU.\n\nI can wholeheartedly attest that Surge has provided me opportunities to become a better leader, event planner, decision-maker, speaker, teammate, and the list goes on.",
       "area": "b",
       "cardStyle": "big",
-      "src": "/testimonials/christopherfong.jpg"
+      "src": "/testimonials/christopherfong.webp"
     },
     {
       "name": "Johnson Luong",
@@ -21,7 +21,7 @@
       "testimonial": "Being part of SFU Surge has placed me in the midst of incredibly inspiring and hardworking individuals who have motivated me to continuously improve myself.\n\nSurrounded by people passionate about technology and innovation, I’ve been driven to push my limits and stay committed to my growth and develop skills that I actively use in my day-to-day role at Motorola, contributing to my professional success.",
       "area": "c",
       "cardStyle": "small",
-      "src": "/testimonials/johnsonluong.jpg"
+      "src": "/testimonials/johnsonluong.webp"
     },
     {
       "name": "Christina Raganit",
@@ -29,7 +29,7 @@
       "testimonial": "Surge will always have a special place in my heart for helping me realize my limitless potential. Some of the most talented people I've had the pleasure of working with.",
       "area": "d",
       "cardStyle": "small",
-      "src": "/testimonials/christinaraganit.jpg"
+      "src": "/testimonials/christinaraganit.webp"
     },
     {
       "name": "Vicky Xu",
@@ -37,7 +37,7 @@
       "testimonial": "Surge creates a warm and welcoming work environment. Their commitment to the club’s growth inspires me to excel in my role and continuously strive for new accomplishments. ",
       "area": "e",
       "cardStyle": "small",
-      "src": "/testimonials/vickyxu.jpg"
+      "src": "/testimonials/vickyxu.webp"
     },
     {
       "name": "Linda Jolly",
@@ -45,7 +45,7 @@
       "testimonial": "My involvement with SFU Surge helped me refine my skills in branding, UI/UX design, and project management, as we developed a cohesive visual identity and user-friendly website under tight deadlines for StormHacks. Working alongside other creatives pushed me to think outside the box and manage my time more effectively. Surge has also provided valuable networking opportunities with industry professionals and fellow designers, contributing to both my personal and professional growth.",
       "area": "f",
       "cardStyle": "small",
-      "src": "/testimonials/lindajolly.jpg"
+      "src": "/testimonials/lindajolly.webp"
     },
     {
       "name": "Sydney Patel",
@@ -53,7 +53,7 @@
       "testimonial": "This project stretched my design skills, and the team's feedback helped me deliver work I'm proud of.",
       "area": "g",
       "cardStyle": "small",
-      "src": "/placeholder.jpg"
+      "src": "/placeholder.webp"
     }
   ]
   

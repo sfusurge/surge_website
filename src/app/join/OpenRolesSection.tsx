@@ -18,10 +18,12 @@ export default function OpenRolesSection({ jobs }: OpenRolesSectionProps) {
     jobMap.set(job.team, (jobMap.get(job.team) || 0) + 1);
   });
 
+  /*
   const totalJobCount = Array.from(jobMap.values()).reduce(
     (total, count) => total + count,
     0
   );
+  */
 
   useEffect(() => {
     const selectedJobTeam = localStorage.getItem("selectedJobTeam") || "All";

@@ -1,6 +1,6 @@
-import StormHacksImage from "/public/stormhacks.png";
-import JourneyHacksImage from "/public/journeyhacks.png";
-import WorkshopsImage from "/public/workshops.png";
+import StormHacksImage from "/public/stormhacks.webp";
+import JourneyHacksImage from "/public/journeyhacks.webp";
+import WorkshopsImage from "/public/workshops.webp";
 import Image from "next/image";
 import HomeCard from "@/components/HomeCard";
 
@@ -52,6 +52,7 @@ const EventSection = () => {
   );
 };
 
+/*
 const SurgeEvent = ({ heading, subheading, image, description }) => {
   return (
     <>
@@ -74,6 +75,7 @@ const SurgeEvent = ({ heading, subheading, image, description }) => {
     </>
   );
 };
+*/
 
 const InfoSection = () => {
   return (
