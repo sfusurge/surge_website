@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import RoleButton from "@/components/RoleButton";
 import TeamCard from "@/components/TeamCard";
-import { teams } from "../../../../lib/teamData";
+import { teams } from "@/lib/teamData";
 import teamMembers from "@/lib/teamMemberData.json";
 
 export default function TeamGallery() {
