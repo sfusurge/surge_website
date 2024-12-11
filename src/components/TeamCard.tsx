@@ -1,13 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-
-type SocialLink = {
-  fields: {
-    platform: string;
-    url: string;
-  }
-};
+import {SocialLink} from "@/lib/content/types/TeamMember";
 
 type TeamCardProps = {
   className?: string;
@@ -17,7 +11,7 @@ type TeamCardProps = {
   // picture temporary for now
   src: string;
   fallbackSrc: string;
-  socials: SocialLink[] | undefined;
+  socialLinks: SocialLink[];
   buttonFunction?: () => void;
 };
 export default function TeamCard({
@@ -27,7 +21,7 @@ export default function TeamCard({
   src,
   fallbackSrc,
   className,
-  socials,
+  socialLinks,
   buttonFunction,
 }: TeamCardProps) {
   const [imgSrc, setImgSrc] = useState(src);
@@ -58,16 +52,16 @@ export default function TeamCard({
           {major}
         </span>
 
-        {socials && (
+        {socialLinks && (
           <div className="flex gap-2 pt-3 md:mt-auto -ml-0.5">
-            {socials?.map((link: SocialLink, index) => {
+            {socialLinks?.map((link: SocialLink, index) => {
               return (
                 <a
                   key={index}
                   className="hover:scale-125 transition-all"
-                  href={link?.fields?.url}
+                  href={link.url}
                 >
-                  {svgIconArray[link.fields?.platform]}
+                  {svgIconArray[link.platform]}
                 </a>
               );
             })}

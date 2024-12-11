@@ -2,12 +2,9 @@ import { cache } from "react";
 import { contentfulClient } from "./contentfulConnector";
 import { ContentTypeEnum } from "./types/ContentTypeEnum";
 import { EventDTO, EventSkeleton } from "./types/Event";
-import { TeamMemberDTO, TeamMemberSkeleton } from "./types/TeamMember";
-
-import {
-  JobListingDTO,
-  JobListingSkeleton,
-} from "./types/JobListing";
+import {SocialLink, SocialObject, TeamMemberDTO, TeamMemberSkeleton} from "./types/TeamMember";
+import {JobListingDTO, JobListingSkeleton} from "./types/JobListing";
+import {Image} from "@/lib/content/types/ContentfulImage";
 
 export async function fetchSpace() {
   const data = await contentfulClient.getSpace();
@@ -26,7 +23,11 @@ async function fetchEventCollection(): Promise<EventDTO[]> {
       })
       .then((events) => {
         return events.items.map((event) => {
-          const dto: EventDTO = { ...event.fields };
+          const {id, title, location, time, about, responsibilities, application_link, commitment, skills, image} = event.fields;
+
+          const imageUrl: string = ("https:"+ (image as Image).fields.file.url) || '';
+
+          const dto: EventDTO = {id, title, location, time, about, responsibilities, application_link, commitment, skills, imageUrl};
           return dto;
         });
       });
@@ -72,7 +73,12 @@ async function fetchTeamMembersCollection(): Promise<TeamMemberDTO[]> {
         })
         .then((TeamMembers) => {
           return TeamMembers.items.map((TeamMember) => {
-            const dto: TeamMemberDTO = { ...TeamMember.fields };
+            const {id, name, position, major, team, socials, image, order} = TeamMember.fields;
+
+            const imageUrl: string = ("https:"+ (image as Image).fields.file.url) || '';
+            const socialLinks: SocialLink[] =  (socials as SocialObject[]).map((x) => x?.fields)
+
+            const dto: TeamMemberDTO = {id, name, position, major, team, socialLinks, imageUrl, order};
             return dto;
           });
         });

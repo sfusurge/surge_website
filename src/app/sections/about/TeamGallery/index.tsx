@@ -4,11 +4,15 @@ import { useEffect, useState } from "react";
 import RoleButton from "@/components/RoleButton";
 import TeamCard from "@/components/TeamCard";
 import { teams } from "@/lib/teamData";
+import FetchTeamMembers from "@/app/sections/about/FetchTeamMembers";
+import {TeamMemberDTO} from "@/lib/content/types/TeamMember";
 
 export default function TeamGallery() {
   const [activeButton, setActiveButton] = useState<string>('');
   const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
-  const [teamMembers, setTeamMembers] = useState<any[]>([]);
+  const [teamMembers, setTeamMembers] = useState<TeamMemberDTO[]>([]);
+
+  const cacheKey = "teamMembersCache";
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,12 +39,17 @@ export default function TeamGallery() {
 
   useEffect(() => {
     const fetchTeamMembers = async () => {
-      try {
-        const response = await fetch('api/team');
-        const data = await response.json();
-        setTeamMembers(data);
-      } catch (error) {
-        console.error("Error fetching team members:", error);
+      //Check cache in localStorage
+      const cachedData = localStorage.getItem(cacheKey);
+      if (cachedData) {
+        setTeamMembers(JSON.parse(cachedData));
+      }
+      else {
+        //Fetch data if not cached
+        const TeamMembers = await FetchTeamMembers();
+        console.log(TeamMembers);
+        setTeamMembers(TeamMembers);
+        localStorage.setItem(cacheKey, JSON.stringify(TeamMembers)); // Cache the fetched data
       }
     };
     fetchTeamMembers();
@@ -125,8 +134,8 @@ export default function TeamGallery() {
                   name={member.name}
                   major={member.major}
                   role={member.position}
-                  src={"https:"+member?.image?.fields?.file?.url}
-                  socials={member.socials}
+                  src={member.imageUrl}
+                  socialLinks={member.socialLinks}
                   fallbackSrc="/headshots/placeholder.png"
                 />
               ) : null

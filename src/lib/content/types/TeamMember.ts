@@ -17,13 +17,25 @@ export type TeamMember = {
     order: EFT.Integer;
 };
 
+export type SocialObject = {
+    fields: {
+        platform: string;
+        url: string;
+    }
+};
+
+export type SocialLink = {
+    platform: string;
+    url: string;
+};
+
 export type TeamMemberDTO = {
     id: number;
     name: string;
     position: string;
     major: string;
     team: string;
-    socials: object | null;
-    image: object | null;
+    socialLinks: SocialLink[];
+    imageUrl: string;
     order: number;
 };

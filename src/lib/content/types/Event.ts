@@ -29,5 +29,5 @@ export type EventDTO = {
   application_link: string;
   commitment: string[];
   skills: string[];
-  image: object | null;
+  imageUrl: string;
 };
