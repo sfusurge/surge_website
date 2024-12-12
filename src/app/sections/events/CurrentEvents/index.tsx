@@ -14,6 +14,7 @@ export default async function CurrentEvents() {
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
       {eventData.map((event: any, index: any) => {
         const { title, time, location, id, imageUrl } = event;
+
         return (
           <EventCard
             key={index}

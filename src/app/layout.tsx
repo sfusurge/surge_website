@@ -7,6 +7,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import Nav from "../components/Nav";
 import Footer from "../components/footer";
+import Starbackground from "@/components/Starbackground/Starbackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         <body className="font-GeistSans ">
           <div className="content-wrapper mt-[calc(5rem+3.5rem)]">
             <div className="surge-radial-gradient"></div>
+            <Starbackground/>
             <Nav />
             {children}
           </div>

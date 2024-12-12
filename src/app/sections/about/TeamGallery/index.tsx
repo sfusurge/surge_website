@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import RoleButton from "@/components/RoleButton";
 import TeamCard from "@/components/TeamCard";
 import { teams } from "@/lib/teamData";
+
 import FetchTeamMembers from "@/app/sections/about/FetchTeamMembers";
 import {TeamMemberDTO} from "@/lib/content/types/TeamMember";
+
 
 export default function TeamGallery() {
   const [activeButton, setActiveButton] = useState<string>('');
