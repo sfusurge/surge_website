@@ -3,11 +3,16 @@
 import { useEffect, useState } from "react";
 import RoleButton from "@/components/RoleButton";
 import TeamCard from "@/components/TeamCard";
-import { teams } from "../../../../lib/teamData";
-import teamMembers from "@/lib/teamMemberData.json";
+import { teams } from "@/lib/teamData";
 
-export default function TeamGallery() {
-  const [activeButton, setActiveButton] = useState<string>('');
+import { TeamMemberDTO } from "@/lib/content/types/TeamMember";
+
+export interface TeamGalleryProps {
+  teamCollection: TeamMemberDTO[];
+}
+
+export default function TeamGallery({ teamCollection }: TeamGalleryProps) {
+  const [activeButton, setActiveButton] = useState<string>("");
   const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
 
   useEffect(() => {
@@ -105,19 +110,21 @@ export default function TeamGallery() {
        "
         >
           <div className=" flex flex-col rounded-2xl  gap-5 transition-all ">
-            {teamMembers.map((member) =>
-              activeButton === member.team ? (
-                <TeamCard
-                  key={member.id}
-                  name={member.name}
-                  major={member.major}
-                  role={member.position}
-                  src={member.src}
-                  socials={member.socials}
-                  fallbackSrc="/headshots/placeholder.webp"
-                />
-              ) : null
-            )}
+            {teamCollection
+              .sort((a, b) => a.order - b.order)
+              .map((teamMember) =>
+                activeButton === teamMember.team ? (
+                  <TeamCard
+                    key={teamMember.id}
+                    name={teamMember.name}
+                    major={teamMember.major}
+                    role={teamMember.position}
+                    src={teamMember.imageUrl}
+                    socialLinks={teamMember.socialLinks}
+                    fallbackSrc="/headshots/placeholder.png"
+                  />
+                ) : null
+              )}
           </div>
         </div>
       </section>

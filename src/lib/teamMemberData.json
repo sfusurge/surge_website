@@ -647,5 +647,16 @@
       {"platform": "LinkedIn", "url": "https://www.linkedin.com/in/darrick-gunawan/"},
       {"platform": "GitHub", "url": "https://github.com/Darrickg"}
     ]
+  }, 
+  {
+    "id":"53",
+    "name": "Minh Duc Ngo",
+    "team":"Technology",
+    "major":"Interactive Arts and Technology",
+    "src":"/headshots/duc_ngo.webp",
+    "position":"UX Designer",
+    "socials":[
+      {"platform":"LinkedIn", "url":"https://www.linkedin.com/in/duc-n-0346a4203"}
+    ]
   }
 ]
