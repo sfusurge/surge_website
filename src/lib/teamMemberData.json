@@ -4,7 +4,7 @@
     "name": "Matthew Wong",
     "position": "President",
     "major": "Computing Science",
-    "src": "https://images.ctfassets.net/c1uwktyzlrjn/16pRayAdEwiDBS3rWnZQpo/a53ba19764d8b2dfa0ce1f3db97229d6/matthewwong2.jpg",
+    "src": "/headshots/matthewwong.webp",
     "team": "Directors",
    "socials": [
     { "platform": "Portfolio", "url": "https://wongmatt.dev/" },
@@ -18,7 +18,7 @@
     "name": "Maria Zia",
     "position": "Co-Director of Logistics",
     "major": "Computing Science",
-    "src": "/headshots/mariazia.jpg",
+    "src": "/headshots/mariazia.webp",
     "team": "Logistics",
     "socials": [
       {
@@ -32,7 +32,7 @@
     "name": "Brian Rahadi",
     "position": "Co-Director of Logistics",
     "major": "Software Systems",
-    "src": "/headshots/brianrahadi.jpg",
+    "src": "/headshots/brianrahadi.webp",
     "team": "Logistics",
     "socials": [
       { "platform": "Portfolio", "url": "https://brianrahadi.com/" },
@@ -59,7 +59,7 @@
     "name": "Brian Wang",
     "position": "Co-Director of External Relations",
     "major": "Business",
-    "src": "/headshots/brianwang.jpg",
+    "src": "/headshots/brianwang.webp",
     "team": "External Relations",
     "socials": [
       {"platform": "LinkedIn", "url": "https://www.linkedin.com/in/brian-c-wang"},
@@ -71,7 +71,7 @@
     "name": "Rasya Hadaayaa",
     "position": "External Relations Coordinator",
     "major": "Business",
-    "src": "/headshots/rasyahadaayaa.jpg",
+    "src": "/headshots/rasyahadaayaa.webp",
     "team": "External Relations",
     "socials": [{"platform": "LinkedIn", "url": "https://www.linkedin.com/in/rah99/"}]
     
@@ -81,7 +81,7 @@
     "name": "Christine Vu",
     "position": "Logistics Coordinator",
     "major": "Business",
-    "src": "/headshots/christinevu.jpg",
+    "src": "/headshots/christinevu.webp",
     "team": "Logistics",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/christine-vu-8b2121264/" }
@@ -92,7 +92,7 @@
     "name": "Angela Lim",
     "position": "Logistics Coordinator",
     "major": "Business",
-    "src": "/headshots/angelalim.jpg",
+    "src": "/headshots/angelalim.webp",
     "team": "Logistics",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/angelalim-/" },
@@ -104,7 +104,7 @@
     "name": "Fady Nasr",
     "position": "Logistics Coordinator",
     "major": "Computing Science",
-    "src": "/headshots/fadynasr.jpg",
+    "src": "/headshots/fadynasr.webp",
     "team": "Logistics",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/fady-nasr-9431aa2a1/" }
@@ -116,21 +116,10 @@
     "name": "Alex Mei",
     "position": "Logistics Coordinator",
     "major": "Computing Science",
-    "src": "/headshots/alexmei.jpg",
+    "src": "/headshots/alexmei.webp",
     "team": "Logistics",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/alex-mei-720279313/" }
-    ]
-  },
-  {
-    "id": "12",
-    "name": "Michael Tran",
-    "position": "External Relations Coordinator",
-    "major": "Computing Science",
-    "src": "/headshots/michaeltran.jpg",
-    "team": "External Relations",
-    "socials": [
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/michael-tran-sfu/" }
     ]
   },
   {
@@ -138,7 +127,7 @@
     "name": "Keyaan Vegdani",
     "position": "Director of Visual Design",
     "major": "SIAT Business Joint Major",
-    "src": "/headshots/keyaanvegdani.jpg",
+    "src": "/headshots/keyaanvegdani.webp",
     "team": "Visual Design",
     "socials": [
       { "platform": "Portfolio", "url": "https://keyaanvegdani.framer.website/" },
@@ -151,7 +140,7 @@
     "name": "Arriyan Ali",
     "position": "Visual Design Coordinator",
     "major": "Interactive Art and Technology ",
-    "src": "/headshots/arriyanali.jpg",
+    "src": "/headshots/arriyanali.webp",
     "team": "Visual Design",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/Arriyanali/" }
@@ -163,7 +152,7 @@
     "name": "Natalie Kayda",
     "position": "Visual Design Coordinator",
     "major": "SIAT Major, CS Minor",
-    "src": "/headshots/nataliekayda.jpg",
+    "src": "/headshots/nataliekayda.webp",
     "team": "Visual Design",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/nataliekayda/" }
@@ -174,7 +163,7 @@
     "name": "Angela Shen",
     "position": "Visual Design Coordinator",
     "major": "CMNS Joint SIAT",
-    "src": "/headshots/angelashen.jpg",
+    "src": "/headshots/angelashen.webp",
     "team": "Visual Design",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/angelashenca/" }
@@ -185,7 +174,7 @@
     "name": "Tinay Yernazarova",
     "position": "Visual Design Coordinator",
     "major": "Business",
-    "src": "/headshots/tinayyernazarova.jpg",
+    "src": "/headshots/tinayyernazarova.webp",
     "team": "Visual Design",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/tinai-yernazarova/" }
@@ -196,7 +185,7 @@
     "name": "Linda Jolly",
     "position": "Visual Design Coordinator",
     "major": "Interactive Arts and Technology",
-    "src": "/headshots/lindajolly.jpg",
+    "src": "/headshots/lindajolly.webp",
     "team": "Visual Design",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/linda-jolly-5849a5224/" }
@@ -207,7 +196,7 @@
     "name": "Yifei Wang",
     "position": "Visual Design Coordinator",
     "major": "Interactive Arts and Technology",
-    "src": "/headshots/yifeiwang.jpg",
+    "src": "/headshots/yifeiwang.webp",
     "team": "Visual Design",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/yifeiwangdesigner/" }
@@ -218,7 +207,7 @@
     "name": "Kaia Do",
     "position": "Director of Marketing",
     "major": "Business",
-    "src": "/headshots/kaiado.jpg",
+    "src": "/headshots/kaiado.webp",
     "team": "Marketing",
     "socials": [
       { "platform": "LinkedIn", "url": "www.linkedin.com/in/kaiado" },
@@ -230,7 +219,7 @@
     "name": "Josie Trinh",
     "position": "Social Media Coordinator",
     "major": "Business",
-    "src": "/headshots/josietrinh.jpg",
+    "src": "/headshots/josietrinh.webp",
     "team": "Marketing",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/nghi-trinh-josie/" },
@@ -242,7 +231,7 @@
     "name": "Mackenzie Scholz",
     "position": "Photgrapher/videographer",
     "major": "Interactive Arts and Technology",
-    "src": "/headshots/mackenziescholz.jpg",
+    "src": "/headshots/mackenziescholz.webp",
     "team": "Marketing",
     "socials": [
       { "platform": "Portfolio", "url": "https://www.sfu.ca/~mscholz/index.html" },
@@ -254,7 +243,7 @@
     "name": "Nafisha Djamalus",
     "position": "Video Editor",
     "major": "Interactive Arts and Technology",
-    "src": "/headshots/nafishadjamalus.jpg",
+    "src": "/headshots/nafishadjamalus.webp",
     "team": "Marketing",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/nafisha-d-b67516218/" }
@@ -265,7 +254,7 @@
     "name": "Christopher Fong",
     "position": "Co-Director of Technology",
     "major": "Computing Science",
-    "src": "/headshots/christopherfong.jpg",
+    "src": "/headshots/christopherfong.webp",
     "team": "Technology",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/chrisfong604/" },
@@ -277,7 +266,7 @@
     "name": "Christina Raganit",
     "position": "Co-Director of Technology",
     "major": "Interactive Arts and Technology",
-    "src": "/headshots/christinaraganit.jpg",
+    "src": "/headshots/christinaraganit.webp",
     "team": "Technology",
     "socials": [
       { "platform": "Portfolio", "url": "https://christinaraganit.github.io/" },
@@ -291,7 +280,7 @@
     "name": "Kylie Seto",
     "position": "Project Manager",
     "major": "Business",
-    "src": "/headshots/kylieseto.jpg",
+    "src": "/headshots/kylieseto.webp",
     "team": "Technology",
     "socials": [
       { "platform": "LinkedIn", "url": "www.linkedin.com/in/kylie-seto" },
@@ -303,7 +292,7 @@
     "name": "Kevin Shi",
     "position": "Developer",
     "major": "Computing Science",
-    "src": "/headshots/kevinshi.jpg",
+    "src": "/headshots/kevinshi.webp",
     "team": "Technology",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/kevinshi10/" },
@@ -315,7 +304,7 @@
     "name": "Brendan Shen",
     "position": "Developer",
     "major": "Computing Science and Business Joint Major",
-    "src": "/headshots/brendanshen.jpg",
+    "src": "/headshots/brendanshen.webp",
     "team": "Technology",
     "socials": [
       { "platform": "Portfolio", "url": "https://brendanshen.me/" },
@@ -329,7 +318,7 @@
     "name": "Jenna Lee",
     "position": "Developer",
     "major": "Computing Science",
-    "src": "/headshots/jennalee.jpg",
+    "src": "/headshots/jennalee.webp",
     "team": "Technology",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/jennaolee/" }
@@ -340,7 +329,7 @@
     "name": "Ayana Hussain",
     "position": "Developer",
     "major": "Computing Science",
-    "src": "/headshots/ayanahussain.jpg",
+    "src": "/headshots/ayanahussain.webp",
     "team": "Technology",
     "socials": [
     { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/ayana-hussain/" }
@@ -351,7 +340,7 @@
     "name": "Scott Lai",
     "position": "Developer",
     "major": "Computing Science",
-    "src": "/headshots/scottlai.jpg",
+    "src": "/headshots/scottlai.webp",
     "team": "Technology",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/tuong-lai/" },
@@ -364,7 +353,7 @@
     "name": "Ray Gong",
     "position": "Developer",
     "major": "Computing Science",
-    "src": "/headshots/raygong.jpg",
+    "src": "/headshots/raygong.webp",
     "team": "Technology",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/ray-gong/" },
@@ -377,7 +366,7 @@
     "name": "Celine August Santoso",
     "position": "Product Design Team",
     "major": "Interactive Arts and Technology",
-    "src": "/headshots/celineaugustsantoso.jpg",
+    "src": "/headshots/celineaugustsantoso.webp",
     "team": "Technology"
   },
   {
@@ -385,7 +374,7 @@
     "name": "Kasey Le",
     "position": "Product Design Team",
     "major": "Interactive Arts and Technology",
-    "src": "/headshots/kaseyle.jpg",
+    "src": "/headshots/kaseyle.webp",
     "team": "Technology",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/kasey-le" }
@@ -396,7 +385,7 @@
     "name": "Michael Dresler",
     "position": "Product Design Team",
     "major": "Interactive Arts and Technology",
-    "src": "/headshots/michaeldresler.jpg",
+    "src": "/headshots/michaeldresler.webp",
     "team": "Technology"
   },
   {
@@ -404,7 +393,7 @@
     "name": "Kelvin Kwan",
     "position": "Product Design Team",
     "major": "Interactive Arts and Technology",
-    "src": "/headshots/kelvinkwan.jpg",
+    "src": "/headshots/kelvinkwan.webp",
     "team": "Technology",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/kelvin-kwan-8906b1230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" }
@@ -415,7 +404,7 @@
     "name": "Vicky Xu",
     "position": "Director of Finance",
     "major": "Business",
-    "src": "/headshots/vickyxu.jpg",
+    "src": "/headshots/vickyxu.webp",
     "team": "Finance",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/vickykxu/" },
@@ -427,7 +416,7 @@
     "name": "Johnson Luong",
     "position": "Finance Coordinator",
     "major": "Computing Science",
-    "src": "/headshots/johnsonluong.jpg",
+    "src": "/headshots/johnsonluong.webp",
     "team": "Finance",
     "socials": [
       { "platform": "Portfolio", "url": "https://johnsonl111.github.io/quartz/" },
@@ -440,7 +429,7 @@
     "name": "Samiha Raida",
     "position": "Finance Coordinator",
     "major": "Business",
-    "src": "/headshots/samiharaida.jpg",
+    "src": "/headshots/samiharaida.webp",
     "team": "Finance",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/samiharaida/" }
@@ -453,7 +442,7 @@
     "name": "Lily Li",
     "position": "Finance Coordinator",
     "major": "Business",
-    "src": "/headshots/lilyli.jpg",
+    "src": "/headshots/lilyli.webp",
     "team": "Finance",
     "socials": [
     { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/lilyli0302/" }
@@ -465,7 +454,7 @@
     "name": "Rosa Chen",
     "position": "Finance Coordinator",
     "major": "Business",
-    "src": "/headshots/rosachen.jpg",
+    "src": "/headshots/rosachen.webp",
     "team": "Finance",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/rosaychen/" }
@@ -477,7 +466,7 @@
     "name": "Alexandra Svoboda",
     "position": "Director of Human Resources",
     "major": "Business (Marketing), Minor in SIAT",
-    "src": "/headshots/alexandrasvoboda.jpg",
+    "src": "/headshots/alexandrasvoboda.webp",
     "team": "HR",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/a-svoboda/" },
@@ -489,7 +478,7 @@
     "name": "Paul Lee",
     "position": "Human Resources Coordinator",
     "major": "Business (MIS and Operations)",
-    "src": "/headshots/paullee.jpg",
+    "src": "/headshots/paullee.webp",
     "team": "HR",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/pauldklee/" }
@@ -500,7 +489,7 @@
     "name": "Darian Wong",
     "position": "Human Resources Coordinator",
     "major": "Math and Computing Science",
-    "src": "/headshots/darianwong.jpg",
+    "src": "/headshots/darianwong.webp",
     "team": "HR",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/thedarianwong/" }
@@ -512,7 +501,7 @@
     "name": "Angela Kurian",
     "position": "Human Resources Coordinator",
     "major": "Business",
-    "src": "/headshots/angelakurian.jpg",
+    "src": "/headshots/angelakurian.webp",
     "team": "HR",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/angela-mary-kurian-a84a09251/" }
@@ -524,7 +513,7 @@
     "name": "Maria Zia",
     "position": "Co-Director\nof Logistics",
     "major": "Computing Science",
-    "src": "/headshots/mariazia.jpg",
+    "src": "/headshots/mariazia.webp",
     "team": "Directors",
     "socials": [
       {
@@ -538,7 +527,7 @@
     "name": "Brian Rahadi",
     "position": "Co-Director\nof Logistics",
     "major": "Software Systems",
-    "src": "/headshots/brianrahadi.jpg",
+    "src": "/headshots/brianrahadi.webp",
     "team": "Directors",
     "socials": [
       { "platform": "Portfolio", "url": "https://brianrahadi.com/" },
@@ -553,7 +542,7 @@
     "name": "Keyaan Vegdani",
     "position": "Director of Visual Design",
     "major": "Interactive Art and Technology Business Joint Major",
-    "src": "/headshots/keyaanvegdani.jpg",
+    "src": "/headshots/keyaanvegdani.webp",
     "team": "Directors",
     "socials": [
       { "platform": "Portfolio", "url": "https://keyaanvegdani.framer.website/" },
@@ -566,7 +555,7 @@
     "name": "Kaia Do",
     "position": "Director of Marketing",
     "major": "Business",
-    "src": "/headshots/kaiado.jpg",
+    "src": "/headshots/kaiado.webp",
     "team": "Directors",
     "socials": [
       { "platform": "LinkedIn", "url": "www.linkedin.com/in/kaiado" },
@@ -578,7 +567,7 @@
     "name": "Christopher Fong",
     "position": "Co-Director of Technology",
     "major": "Computing Science",
-    "src": "/headshots/christopherfong.jpg",
+    "src": "/headshots/christopherfong.webp",
     "team": "Directors",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/chrisfong604/" },
@@ -590,7 +579,7 @@
     "name": "Christina Raganit",
     "position": "Co-Director of Technology",
     "major": "Interactive Arts and Technology",
-    "src": "/headshots/christinaraganit.jpg",
+    "src": "/headshots/christinaraganit.webp",
     "team": "Directors",
     "socials": [
       { "platform": "Portfolio", "url": "https://christinaraganit.github.io/" },
@@ -616,7 +605,7 @@
     "name": "Brian Wang",
     "position": "Co-Director of External Relations",
     "major": "Business",
-    "src": "/headshots/brianwang.jpg",
+    "src": "/headshots/brianwang.webp",
     "team": "Directors",
     "socials": [
       {"platform": "LinkedIn", "url": "https://www.linkedin.com/in/brian-c-wang"},
@@ -628,7 +617,7 @@
     "name": "Vicky Xu",
     "position": "Director of Finance",
     "major": "Business",
-    "src": "/headshots/vickyxu.jpg",
+    "src": "/headshots/vickyxu.webp",
     "team": "Directors",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/vickykxu/" },
@@ -640,7 +629,7 @@
     "name": "Alexandra Svoboda",
     "position": "Director of Human Resources",
     "major": "Business (Marketing), Minor in SIAT",
-    "src": "/headshots/alexandrasvoboda.jpg",
+    "src": "/headshots/alexandrasvoboda.webp",
     "team": "Directors",
     "socials": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/a-svoboda/" },
@@ -652,7 +641,7 @@
     "name": "Darrick Gunawan",
     "position": "Logistics Coordinator",
     "major": "Computing Science",
-    "src": "/headshots/darrickgunawan.jpg",
+    "src": "/headshots/darrickgunawan.webp",
     "team": "Logistics",
     "socials": [
       {"platform": "LinkedIn", "url": "https://www.linkedin.com/in/darrick-gunawan/"},
