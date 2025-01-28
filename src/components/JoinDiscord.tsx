@@ -1,6 +1,6 @@
 import Image from "next/image";
 import text_content from "@/lib/content/text_content.json";
-import InvolvementImage from "/public/Discord image.png";
+import InvolvementImage from "/public/Discord-image.webp";
 
 export default function JoinDiscord() {
   return (
@@ -18,7 +18,6 @@ export default function JoinDiscord() {
               {text_content.homepage.join_discord.description}
             </p>
             <button className="button-link bg-brand-primary hover:bg-brand-primary-hover text-primary py-2 my-8 px-6 rounded-custom-radius transition mb-8">
-              {" "}
               <a href="https://discord.gg/UcFkUktxfy">
                 {text_content.homepage.join_discord.cta}
               </a>

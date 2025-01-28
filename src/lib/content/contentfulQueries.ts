@@ -1,12 +1,10 @@
 import { cache } from "react";
 import { contentfulClient } from "./contentfulConnector";
 import { ContentTypeEnum } from "./types/ContentTypeEnum";
-import { Event, EventDTO, EventSkeleton } from "./types/Event";
-import {
-  JobListing,
-  JobListingDTO,
-  JobListingSkeleton,
-} from "./types/JobListing";
+import { EventDTO, EventSkeleton } from "./types/Event";
+import {SocialLink, SocialObject, TeamMemberDTO, TeamMemberSkeleton} from "./types/TeamMember";
+import {JobListingDTO, JobListingSkeleton} from "./types/JobListing";
+import {Image} from "@/lib/content/types/ContentfulImage";
 
 export async function fetchSpace() {
   const data = await contentfulClient.getSpace();
@@ -25,7 +23,11 @@ async function fetchEventCollection(): Promise<EventDTO[]> {
       })
       .then((events) => {
         return events.items.map((event) => {
-          const dto: EventDTO = { ...event.fields };
+          const {id, title, location, time, about, responsibilities, application_link, commitment, skills, image} = event.fields;
+
+          const imageUrl: string = ("https:"+ (image as Image).fields.file.url) || '';
+
+          const dto: EventDTO = {id, title, location, time, about, responsibilities, application_link, commitment, skills, imageUrl};
           return dto;
         });
       });
@@ -62,3 +64,31 @@ async function fetchJobListingCollection(): Promise<JobListingDTO[]> {
   }
 }
 export const getJobListingsCollection = cache(fetchJobListingCollection);
+
+async function fetchTeamMembersCollection(): Promise<TeamMemberDTO[]> {
+  try {
+    const TeamMembers = await contentfulClient
+        .getEntries<TeamMemberSkeleton>({
+          content_type: ContentTypeEnum.TEAM_MEMBER,
+        })
+        .then((TeamMembers) => {
+          return TeamMembers.items.map((TeamMember) => {
+            const {id, name, position, major, team, socials, image, order} = TeamMember.fields;
+
+            const imageUrl: string = ("https:"+ (image as Image).fields.file.url) || '';
+            const socialLinks: SocialLink[] =  (socials as SocialObject[]).map((x) => x?.fields)
+
+            const dto: TeamMemberDTO = {id, name, position, major, team, socialLinks, imageUrl, order};
+            return dto;
+          });
+        });
+    return TeamMembers;
+  } catch (e) {
+    console.log(
+        e,
+        "TeamMember type does not match the requested content. Please check if the content type has been updated"
+    );
+    return [];
+  }
+}
+export const getTeamMembersCollection = cache(fetchTeamMembersCollection);

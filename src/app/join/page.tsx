@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Card from "@/components/Card";
+import ImageCard from "@/components/ImageCard";
 import OpenRolesSection from "./OpenRolesSection";
 import ButtonScroll from "@/components/ButtonScroll";
 import InfoItem from "@/components/InfoItem";
-import skills from "/public/join/skills.png";
-import experience from "/public/join/experience.png";
-import friends from "/public/join/friends.png";
-import rocket from "/public/join/rocket.png";
+import skills from "/public/join/skills.webp";
+import experience from "/public/join/experience.webp";
+import friends from "/public/join/friends.webp";
+import rocket from "/public/join/rocket.webp";
 
 import text_content from "@/lib/content/text_content.json";
 import { getJobListingsCollection } from "@/lib/content/contentfulQueries";
@@ -51,17 +51,17 @@ export default async function JoinTeam() {
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <Card
+          <ImageCard
             title="Learn New Skills"
             description="Learn to blend tech, design, and business for comprehensive projects."
             src={skills}
           />
-          <Card
+          <ImageCard
             title="Hands-on Experience"
             description="Work on real-world projects and enhance your tech skills."
             src={experience}
           />
-          <Card
+          <ImageCard
             title="Meet Friends"
             description="Connect with like-minded peers and build lasting friendships."
             src={friends}

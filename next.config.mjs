@@ -6,6 +6,7 @@ const nextConfig = {images: {
         hostname: "images.ctfassets.net",
       },
     ],
+    formats: ['image/avif', 'image/webp'],
   },};
 
 export default nextConfig;

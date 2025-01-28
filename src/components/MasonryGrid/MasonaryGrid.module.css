@@ -1,0 +1,21 @@
+.masonryContainer {
+    columns: 3;
+    column-gap: 16px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .masonryContainer {
+        columns: 2;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .masonryContainer {
+        columns: 1;
+    }
+}
+
+.masonryItem {
+    break-inside:avoid;
+    margin-bottom: 16px;
+}
