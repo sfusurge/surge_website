@@ -38,7 +38,7 @@ const EventSection = () => {
             description="Our beginner-friendly hackathon"
             src={JourneyHacksImage}
             className="bg-[#32269F]"
-            url="https://journeyhacks2024.devpost.com/"
+            url="https://journeyhacks.sfusurge.com/"
           />
           <HomeCard
             title="Workshops"

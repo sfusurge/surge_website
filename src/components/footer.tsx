@@ -139,7 +139,7 @@ export default function Footer() {
         <a href="https://stormhacks.com/" className="link">
           StormHacks
         </a>
-        <a href="/" className="link">
+        <a href="https://journeyhacks.sfusurge.com/" className="link">
           JourneyHacks
         </a>
         <a href="/events" className="link">
