@@ -77,13 +77,6 @@ export default async function Page() {
         "Being part of SFU Surge has expanded my knowledge in technology and computer science while also sharpening my business-related skills. As the Director of Marketing, I’ve enjoyed the creative freedom to explore new ideas, working alongside a talented and dedicated team from diverse academic backgrounds, which has been incredibly inspiring for my personal growth. Beyond professional development, the lifelong friendships I've formed at Surge are truly one of a kind.",
       src: "/headshots/kaiado.webp",
     },
-    {
-      name: "Angela Shen",
-      position: "Marketing Director",
-      testimonial:
-        "Being part of SFU Surge has expanded my knowledge in technology and computer science while also sharpening my business-related skills. As the Director of Marketing, I’ve enjoyed the creative freedom to explore new ideas, working alongside a talented and dedicated team from diverse academic backgrounds, which has been incredibly inspiring for my personal growth. Beyond professional development, the lifelong friendships I've formed at Surge are truly one of a kind.",
-      src: "/headshots/angelashen.webp",
-    },
   ];
 
   return (
