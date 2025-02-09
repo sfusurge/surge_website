@@ -47,7 +47,7 @@ export default function Footer() {
             </svg>
           </a>
 
-          <a href="https://discord.gg/U5q6RkHHtA" className="icon-link">
+          <a href="https://discord.gg/Rg4mwHvKjd" className="icon-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5em"
