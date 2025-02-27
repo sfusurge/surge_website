@@ -1,3 +1,4 @@
+// @ts-ignore
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 export interface EventInfo<D extends string|Date = Date> {
@@ -97,7 +98,7 @@ export function EventsProvider(props: React.PropsWithChildren<{}>) {
                     status: EventsLoaded
                 });
             } else {
-                setState((state) => ({
+                setState((state: any) => ({
                     ...state,
                     status: EventsError,
                 }));

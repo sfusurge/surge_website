@@ -12,5 +12,7 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "noEmit": true,
+        "target": "ES5",
+        "lib": ["ES2017", "DOM"]
     }
 }
