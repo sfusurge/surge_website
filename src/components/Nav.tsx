@@ -129,7 +129,7 @@ export default function NavBar() {
             </li>
             {/* social media icons and links */}
             <li className="flex sm:hidden gap-6">
-              <Link href="https://discord.gg/UcFkUktxfy">
+              <Link href="https://discord.gg/Rg4mwHvKjd">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

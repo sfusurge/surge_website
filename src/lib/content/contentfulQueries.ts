@@ -76,7 +76,9 @@ async function fetchTeamMembersCollection(): Promise<TeamMemberDTO[]> {
             const {id, name, position, major, team, socials, image, order} = TeamMember.fields;
 
             const imageUrl: string = ("https:"+ (image as Image).fields.file.url) || '';
-            const socialLinks: SocialLink[] =  (socials as SocialObject[]).map((x) => x?.fields)
+            const socialLinks: SocialLink[] = socials
+              ? (socials as SocialObject[]).map((x) => x?.fields).filter(Boolean)
+              : [];
 
             const dto: TeamMemberDTO = {id, name, position, major, team, socialLinks, imageUrl, order};
             return dto;
