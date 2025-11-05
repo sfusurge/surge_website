@@ -81,10 +81,10 @@ export default async function JoinTeam() {
           {text_content.join.opportunities.description}
         </p>
         <div className="grid grid-cols-1 xs:grid-cols-2 gap-8 gap-y-16 md:grid-cols-4 mt-8">
-          <InfoItem stat={"2,543"} description={"total hackers"} />
-          <InfoItem stat={"134"} description={"Projects"} />
+          <InfoItem stat={"1,300+"} description={"Total Applications"} />
+          <InfoItem stat={"777"} description={"Projects Submitted"} />
           <InfoItem stat={"$12,000"} description={"awarded in prizes"} />
-          <InfoItem stat={"300"} description={"participants"} />
+          <InfoItem stat={"800+"} description={"participants"} />
         </div>
       </section>
 
