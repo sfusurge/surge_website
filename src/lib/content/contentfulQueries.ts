@@ -25,7 +25,7 @@ async function fetchEventCollection(): Promise<EventDTO[]> {
         return events.items.map((event) => {
           const {id, title, location, time, about, responsibilities, application_link, commitment, skills, image} = event.fields;
 
-          const imageUrl: string = ("https:"+ (image as Image).fields.file.url) || '';
+          const imageUrl: string = (image as Image)?.fields?.file?.url ? ("https:" + (image as Image).fields.file.url) : '';
 
           const dto: EventDTO = {id, title, location, time, about, responsibilities, application_link, commitment, skills, imageUrl};
           return dto;
@@ -74,8 +74,7 @@ async function fetchTeamMembersCollection(): Promise<TeamMemberDTO[]> {
         .then((TeamMembers) => {
           return TeamMembers.items.map((TeamMember) => {
             const {id, name, position, major, team, socials, image, order} = TeamMember.fields;
-
-            const imageUrl: string = ("https:"+ (image as Image).fields.file.url) || '';
+            const imageUrl: string = (image as Image)?.fields?.file?.url ? ("https:" + (image as Image).fields.file.url) : '';
             const socialLinks: SocialLink[] = socials
               ? (socials as SocialObject[]).map((x) => x?.fields).filter(Boolean)
               : [];
