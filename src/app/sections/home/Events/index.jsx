@@ -85,10 +85,10 @@ const InfoSection = () => {
         min-[1230px]:flex-row max-[1230px]:flex-col
         items-center justify-center"
     >
-      <InfoItem stat={"800+"} description={"applicants"} />
-      <InfoItem stat={"300+"} description={"total hackers"} />
-      <InfoItem stat={"$12,520"} description={"awarded in prizes"} />
-      <InfoItem stat={"700"} description={"diverse projects"} />
+      <InfoItem stat={"2000+"} description={"applicants across all events"} />
+      <InfoItem stat={"1000+"} description={"event participants"} />
+      <InfoItem stat={"$35,000"} description={"awarded in prizes"} />
+      <InfoItem stat={"700+"} description={"diverse projects"} />
     </section>
   );
 };

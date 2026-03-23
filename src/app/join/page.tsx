@@ -83,7 +83,7 @@ export default async function JoinTeam() {
         <div className="grid grid-cols-1 xs:grid-cols-2 gap-8 gap-y-16 md:grid-cols-4 mt-8">
           <InfoItem stat={"1,300+"} description={"Total Applications"} />
           <InfoItem stat={"777"} description={"Projects Submitted"} />
-          <InfoItem stat={"$12,000"} description={"awarded in prizes"} />
+          <InfoItem stat={"$35,000"} description={"awarded in prizes"} />
           <InfoItem stat={"800+"} description={"participants"} />
         </div>
       </section>
