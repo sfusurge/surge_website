@@ -86,7 +86,7 @@ export default function TeamGallery({ teamCollection }: TeamGalleryProps) {
               Meet our executive team of SFU students, bringing together diverse
               backgrounds in business, computer science, and design.
             </p>
-            <div className=" grid grid-cols-3 xs:grid-cols-4 md:grid-cols-5  lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
+            <div className=" grid grid-cols-3 gap-4 ">
               {teams.map((team) => {
                 return (
                   <RoleButton
