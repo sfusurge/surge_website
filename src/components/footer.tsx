@@ -9,9 +9,9 @@ export default function Footer() {
         <Image 
           src="/surge-logomark.svg" 
           alt="Surge Logo" 
-          width={20}  
-          height={20} 
-          className="h-5 mb-4 w-fit" 
+          width={321}  
+          height={45} 
+          className="h-5 w-auto mb-4" 
         />
         <p className="text-text-secondary font-light text-center sm:text-left">
           Engage. Empower. Innovate. <br></br>

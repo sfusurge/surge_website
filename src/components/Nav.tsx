@@ -58,6 +58,7 @@ export default function NavBar() {
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="w-4 h-4 shrink-0"
               >
                 <path
                   fillRule="evenodd"
